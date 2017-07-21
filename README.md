@@ -1,4 +1,4 @@
-OSEP_BESTEST
+OS_EP_Bestest
 =============
 
 BESTEST
@@ -122,6 +122,7 @@ The 'results' folder at the top of the repository is used to pouplate the 'YourD
 * There are three scrips, one for each of the three sections (Enelope, Cooling, Heating).
 * The 'resources' folder contains raw Excel files from ASHRAE Standard 140-2014.
 * Copies of these Excel files are created at the top of the 'results' folder. There are four files here because the Coooling script generates two Excel files.
+* There is an extra copy of each resulting Excel file with "_OS" at the end of the name. These contain the same results but have program infomraiton for OpenStudio instead of EnergyPlus.
 
 ##### How the reporting script works.
 * Raw Excel File opened and copied.
@@ -130,11 +131,10 @@ The 'results' folder at the top of the repository is used to pouplate the 'YourD
 * Excel file is saved when changes are done.
 * This should be re-run anytime a new Analysis Spreadsheet is run.
 * The script is setup to run from the 'results' directory.
+* Sometimes Excel Charts won't update unless you copy and paste data in "YourData" worksheet after running the script and opening the file; maybe Excel does not always recognize when file changed via RubyXL?
 
 ### Next Steps
 
-* Review results and validate against earlier EnergyPlus 179D submissions
-* Submit for use with 179D
 * Add to EnergyPlus integration testing
     * Branches can be checked for unexpected changes in BESTEST results
 * Extend tests to additional ASHRAE Standard 140-2014 sections beyond 179D requireemnts.
