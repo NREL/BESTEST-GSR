@@ -2,8 +2,8 @@
   <schema_version>3.0</schema_version>
   <name>bestest_he_reporting</name>
   <uid>0c315265-09b3-40ae-a50f-e8920b468264</uid>
-  <version_id>93c3fae1-f316-4554-9ca2-47aa2c4f44b5</version_id>
-  <version_modified>20170512T170638Z</version_modified>
+  <version_id>4de76828-260d-47af-8630-786e258b4eca</version_id>
+  <version_modified>20171003T163924Z</version_modified>
   <xml_checksum>9BF1E6AC</xml_checksum>
   <class_name>BestestHeReporting</class_name>
   <display_name>Bestest He Reporting</display_name>
@@ -102,12 +102,6 @@
       <checksum>A6430141</checksum>
     </file>
     <file>
-      <filename>os_lib_reporting_bestest.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>F1B8A18B</checksum>
-    </file>
-    <file>
       <filename>HE100_test_output.osm</filename>
       <filetype>osm</filetype>
       <usage_type>test</usage_type>
@@ -129,6 +123,12 @@
       <filetype>rb</filetype>
       <usage_type>test</usage_type>
       <checksum>B9237192</checksum>
+    </file>
+    <file>
+      <filename>os_lib_reporting_bestest.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>43950C65</checksum>
     </file>
   </files>
 </measure>

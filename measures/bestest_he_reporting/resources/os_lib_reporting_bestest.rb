@@ -160,6 +160,43 @@ module OsLib_Reporting_Bestest
     return general_building_information
   end
 
+  def self.process_output_timeseries (sqlFile, runner, ann_env_pd, time_step, variable_name, key_value)
+
+    output_timeseries = sqlFile.timeSeries(ann_env_pd, time_step, variable_name, key_value)
+    if output_timeseries.empty?
+      runner.registerWarning("Timeseries not found for #{variable_name}.")
+      return false
+    else
+      runner.registerInfo("Found timeseries for #{variable_name}.")
+      output_values = output_timeseries.get.values
+      output_times = output_timeseries.get.dateTimes
+      array = []
+      sum = 0.0
+      min = nil
+      min_date_time = nil
+      max = nil
+      max_date_time = nil
+
+      for i in 0..(output_values.size - 1)
+
+        # using this to get average
+        array << output_values[i]
+        sum += output_values[i]
+
+        # code for min and max
+        if min.nil? || output_values[i] < min
+          min = output_values[i]
+        end
+        if max.nil? || output_values[i] > max
+          max = output_values[i]
+        end
+
+      end
+      return {:array => array, :sum => sum, :avg => sum/array.size.to_f, :min => min, :max => max, :min_time => min_date_time, :max_date_time => max_date_time}
+    end
+
+  end
+
   # create output_6_2_1_1_section
   def self.output_6_2_1_1_section(model, sqlFile, runner, name_only = false)
     # array to hold tables
@@ -240,12 +277,18 @@ module OsLib_Reporting_Bestest
       display = 'Peak Heating Value'
       source_units = 'W'
       target_units = 'kW'
-      value = OpenStudio.convert(query_results.get, source_units, target_units).get
-      peak_htg_value_neat = OpenStudio.toNeatString(value, 4, true)
-      runner.registerValue(display.downcase.gsub(" ","_"), value, target_units)
+      #value = OpenStudio.convert(query_results.get, source_units, target_units).get
+      #peak_htg_value_neat = OpenStudio.toNeatString(value, 4, true)
+      #runner.registerValue(display.downcase.gsub(" ","_"), value, target_units)
+
+      # change peak heating to look at max hourly consumption.
+      hourly_heating_kwh = OsLib_Reporting_Bestest.hourly_heating_peak(model, sqlFile, runner)
+      runner.registerValue(display.downcase.gsub(" ","_"), hourly_heating_kwh.max, target_units)
+
     end
 
     # peak heating time
+    # todo - update peak cooling time to use hourly consumption instead of tabular results
     query = 'SELECT Value FROM tabulardatawithstrings WHERE '
     query << "ReportName='EnergyMeters' and "
     query << "ReportForString='Entire Facility' and "
@@ -259,11 +302,10 @@ module OsLib_Reporting_Bestest
       return false
     else
       display = 'Peak Heating Time'
-      source_units = 'TIMESTEP'
-      target_units = 'TIMESTEP'
       peak_htg_time = query_results.get
-      runner.registerValue(display.downcase.gsub(" ","_"), peak_htg_time, target_units)
+      runner.registerValue(display.downcase.gsub(" ","_"), peak_htg_time)
     end
+
 
     # peak cooling
     query = 'SELECT Value FROM tabulardatawithstrings WHERE '
@@ -281,12 +323,18 @@ module OsLib_Reporting_Bestest
       display = 'Peak Cooling Value'
       source_units = 'W'
       target_units = 'kW'
-      value = OpenStudio.convert(query_results.get, source_units, target_units).get
-      peak_clg_value_neat = OpenStudio.toNeatString(value, 4, true)
-      runner.registerValue(display.downcase.gsub(" ","_"), value, target_units)
+      #value = OpenStudio.convert(query_results.get, source_units, target_units).get
+      #peak_clg_value_neat = OpenStudio.toNeatString(value, 4, true)
+      #runner.registerValue(display.downcase.gsub(" ","_"), value, target_units)
+
+      # change peak heating to look at max hourly consumption
+      hourly_cooling_kwh = OsLib_Reporting_Bestest.hourly_cooling_peak(model, sqlFile, runner)
+      runner.registerValue(display.downcase.gsub(" ","_"), hourly_cooling_kwh.max, target_units)
+
     end
 
     # peak cooling time
+    # todo - update peak cooling time to use hourly consumption instead of tabular results
     query = 'SELECT Value FROM tabulardatawithstrings WHERE '
     query << "ReportName='EnergyMeters' and "
     query << "ReportForString='Entire Facility' and "
@@ -300,10 +348,8 @@ module OsLib_Reporting_Bestest
       return false
     else
       display = 'Peak Cooling Time'
-      source_units = 'TIMESTEP'
-      target_units = 'TIMESTEP'
       peak_clg_time = query_results.get
-      runner.registerValue(display.downcase.gsub(" ","_"), peak_clg_time, target_units)
+      runner.registerValue(display.downcase.gsub(" ","_"), peak_clg_time)
     end
 
     # add rows to table
@@ -315,7 +361,7 @@ module OsLib_Reporting_Bestest
 
     return @output_6_2_1_1_section
   end
-  
+
   # create table_6_1_section
   def self.table_6_1_section(model, sqlFile, runner, name_only = false)
     # array to hold tables
@@ -401,7 +447,9 @@ module OsLib_Reporting_Bestest
     end
 
     # add table to array of tables
-    table_6_1_tables << table_01
+    if table_01[:data].size > 0
+      table_6_1_tables << table_01
+    end
 
     # use helper method that generates additional table for section
     table_6_1_tables << OsLib_Reporting_Bestest.hourly_heating_cooling_table(model, sqlFile, runner)
@@ -432,8 +480,8 @@ module OsLib_Reporting_Bestest
 
       if keys.include? 'ZONE ONE'
         key = 'ZONE ONE'
-      elsif keys.include? 'SUN ZONE'
-        key = 'SUN ZONE'
+      elsif keys.include? 'BACK ZONE'
+        key = 'BACK ZONE'
       end
 
       source_units = 'J'
@@ -500,6 +548,88 @@ module OsLib_Reporting_Bestest
     end
 
     return table
+  end
+
+  # get peak hourly heating value (maximum hourly consumption)
+  def self.hourly_heating_peak(model, sqlFile, runner)
+
+    # FF case gives ruby error on server for this but not local. This should skip it to avoid server
+    if model.getBuilding.name.get.include?("FF")
+      return nil
+    end
+
+    array_8760 = [] # values
+
+    ann_env_pd = OsLib_Reporting_Bestest.ann_env_pd(sqlFile)
+    if ann_env_pd
+      # get keys
+      keys = sqlFile.availableKeyValues(ann_env_pd, 'Hourly', 'Zone Air System Sensible Heating Energy')
+
+      if keys.include? 'ZONE ONE'
+        key = 'ZONE ONE'
+      elsif keys.include? 'BACK ZONE'
+        key = 'BACK ZONE'
+      end
+
+      source_units = 'J'
+      target_units = 'kWh'
+
+      # get heating values
+      output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', 'Zone Air System Sensible Heating Energy', key.to_s)
+      if output_timeseries.is_initialized # checks to see if time_series exists
+
+        output_timeseries = output_timeseries.get.values
+        for i in 0..(output_timeseries.size - 1)
+          value = OpenStudio.convert(output_timeseries[i], source_units, target_units).get
+          array_8760 << value
+        end
+
+      end
+    end
+
+    return array_8760
+
+  end
+
+  # get peak hourly cooling value (maximum hourly consumption)
+  def self.hourly_cooling_peak(model, sqlFile, runner)
+
+    # FF case gives ruby error on server for this but not local. This should skip it to avoid server
+    if model.getBuilding.name.get.include?("FF")
+      return nil
+    end
+
+    array_8760 = []
+
+    ann_env_pd = OsLib_Reporting_Bestest.ann_env_pd(sqlFile)
+    if ann_env_pd
+      # get keys
+      keys = sqlFile.availableKeyValues(ann_env_pd, 'Hourly', 'Zone Air System Sensible Cooling Energy')
+
+      if keys.include? 'ZONE ONE'
+        key = 'ZONE ONE'
+      elsif keys.include? 'BACK ZONE'
+        key = 'BACK ZONE'
+      end
+
+      source_units = 'J'
+      target_units = 'kWh'
+
+      # get heating values
+      output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', 'Zone Air System Sensible Cooling Energy', key)
+      if output_timeseries.is_initialized # checks to see if time_series exists
+
+        output_timeseries = output_timeseries.get.values
+        for i in 0..(output_timeseries.size - 1)
+          value = OpenStudio.convert(output_timeseries[i], source_units, target_units).get
+          array_8760 << value
+        end
+
+      end
+    end
+
+    return array_8760
+
   end
 
   # create free_floating_temp
@@ -582,12 +712,54 @@ module OsLib_Reporting_Bestest
     table_01[:units] = ['','kWh/m^2']
     table_01[:data] = []
 
-    # add rows to table
-    table_01[:data] << ['North',]
-    table_01[:data] << ['East',]
-    table_01[:data] << ['West',]
-    table_01[:data] << ['South',]
-    table_01[:data] << ['Horizontal',]
+    # TODO -  should update to fail gracefully if this isn't valid
+    # get the weather file run period (as opposed to design day run period)
+    ann_env_pd = nil
+    sqlFile.availableEnvPeriods.each do |env_pd|
+      env_type = sqlFile.environmentType(env_pd)
+      if env_type.is_initialized
+        if env_type.get == OpenStudio::EnvironmentType.new("WeatherRunPeriod")
+          ann_env_pd = env_pd
+          break
+        end
+      end
+    end
+
+    # north_incident_solar_radiation
+    key_value =  "ZONE SURFACE NORTH"
+    variable_name = "Surface Outside Face Incident Solar Radiation Rate per Area"
+    timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value)
+    value_kwh_m2 = OpenStudio.convert(timeseries_hash[:sum],'Wh/m^2','kWh/m^2').get # using Wh since timestep is hourly
+    runner.registerValue('north_incident_solar_radiation',value_kwh_m2,'kWh/m^2')
+    table_01[:data] << ['North',value_kwh_m2.round(2)]
+    # east_incident_solar_radiation
+    key_value =  "ZONE SURFACE EAST"
+    variable_name = "Surface Outside Face Incident Solar Radiation Rate per Area"
+    timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value)
+    value_kwh_m2 = OpenStudio.convert(timeseries_hash[:sum],'Wh/m^2','kWh/m^2').get # using Wh since timestep is hourly
+    runner.registerValue('east_incident_solar_radiation',value_kwh_m2,'kWh/m^2')
+    table_01[:data] << ['East',value_kwh_m2.round(2)]
+    # west_incident_solar_radiation
+    key_value =  "ZONE SURFACE WEST"
+    variable_name = "Surface Outside Face Incident Solar Radiation Rate per Area"
+    timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value)
+    value_kwh_m2 = OpenStudio.convert(timeseries_hash[:sum],'Wh/m^2','kWh/m^2').get # using Wh since timestep is hourly
+    runner.registerValue('west_incident_solar_radiation',value_kwh_m2,'kWh/m^2')
+    table_01[:data] << ['West',value_kwh_m2.round(2)]
+    # south_incident_solar_radiation
+    key_value =  "ZONE SURFACE SOUTH"
+    variable_name = "Surface Outside Face Incident Solar Radiation Rate per Area"
+    timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value)
+    value_kwh_m2 = OpenStudio.convert(timeseries_hash[:sum],'Wh/m^2','kWh/m^2').get # using Wh since timestep is hourly
+    runner.registerValue('south_incident_solar_radiation',value_kwh_m2,'kWh/m^2')
+    table_01[:data] << ['South',value_kwh_m2.round(2)]
+    # horizontal_incident_solar_radiation
+    key_value =  "ZONE SURFACE ROOF"
+    variable_name = "Surface Outside Face Incident Solar Radiation Rate per Area"
+    timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value)
+    value_kwh_m2 = OpenStudio.convert(timeseries_hash[:sum],'Wh/m^2','kWh/m^2').get # using Wh since timestep is hourly
+    runner.registerValue('horizontal_incident_solar_radiation',value_kwh_m2,'kWh/m^2')
+    table_01[:data] << ['Horizontal',value_kwh_m2.round(2)]
 
     # add table to array of tables
     case_600_only_tables << table_01
@@ -603,9 +775,48 @@ module OsLib_Reporting_Bestest
     table_02[:data] << ['South',]
 
     # add table to array of tables
-    case_600_only_tables << table_02
+    # case_600_only_tables << table_02
 
     return @case_600_only_section
+  end
+
+  # create case_9xx_only_section
+  def self.case_9xx_only_section(model, sqlFile, runner, name_only = false)
+    # array to hold tables
+    case_9xx_only_tables = []
+
+    # gather data for section
+    @case_9xx_only_section = {}
+    @case_9xx_only_section[:title] = 'runner.registerValues for 9xx cases'
+    @case_9xx_only_section[:tables] = case_9xx_only_tables
+
+    # stop here if only name is requested this is used to populate display name for arguments
+    if name_only == true
+      return @case_9xx_only_section
+    end
+
+    # TODO -  should update to fail gracefully if this isn't valid
+    # get the weather file run period (as opposed to design day run period)
+    ann_env_pd = nil
+    sqlFile.availableEnvPeriods.each do |env_pd|
+      env_type = sqlFile.environmentType(env_pd)
+      if env_type.is_initialized
+        if env_type.get == OpenStudio::EnvironmentType.new("WeatherRunPeriod")
+          ann_env_pd = env_pd
+          break
+        end
+      end
+    end
+
+    # zone_total_transmitted_beam_solar_radiation
+    key_value =  "ZONE ONE"
+    variable_name = "Zone Windows Total Transmitted Solar Radiation Rate"
+    timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value)
+    value_kwh = OpenStudio.convert(timeseries_hash[:sum],'Wh','kWh').get # using Wh since timestep is hourly
+    value_kwh_m2 = value_kwh / 12.0 # all zones with windows have 12m^2
+    runner.registerValue('zone_total_transmitted_solar_radiation',value_kwh_m2,'kWh/m^2')
+
+    return @case_9xx_only_section
   end
 
   # create case_610_only_section
@@ -700,7 +911,7 @@ module OsLib_Reporting_Bestest
 
     return @case_630_only_section
   end
-  
+
   # create ff_temp_bins_section
   def self.ff_temp_bins_section(model, sqlFile, runner, name_only = false)
     # array to hold tables
@@ -725,8 +936,6 @@ module OsLib_Reporting_Bestest
 
     # gather data (we can pre-poplulate 0 value from -20C to 70C if needed)
     hourly_values_rnd = {}
-    min = nil
-    max = nil
     array_8760 = []
 
     # get time series data for main zone
@@ -750,15 +959,6 @@ module OsLib_Reporting_Bestest
 
           # using this to get average
           array_8760 << output_timeseries[i]
-
-          # code for min and max
-          if min.nil? || output_timeseries[i] < min
-            min = output_timeseries[i]
-          end
-          if max.nil? || output_timeseries[i] > max
-            max = output_timeseries[i]
-          end
-
 
           if output_timeseries[i].truncate != output_timeseries[i] and output_timeseries[i] < 0
             # without this negeative numbers seem to truncate towards zero vs. colder temp
@@ -785,7 +985,6 @@ module OsLib_Reporting_Bestest
 
     # create array from -20C through 70C for register value
     full_temp_bin = []
-    puts hourly_values_rnd
     (-20..70).each do |i|
       if hourly_values_rnd[i]
         full_temp_bin << hourly_values_rnd[i]
@@ -795,14 +994,17 @@ module OsLib_Reporting_Bestest
     end
     runner.registerValue("temp_bins",full_temp_bin.to_s)
 
-    # store min and max and avg temps as register value
-    runner.registerValue('min_temp',min,'C')
-    runner.registerValue('max_temp',max,'C')
+    # store min and max and avg temps as register value, along with index position
+    # will convert index to date/time downstream
+    runner.registerValue('min_temp',array_8760.min,'C')
+    runner.registerValue('min_index_position',array_8760.each_with_index.min[1])
+    runner.registerValue('max_temp',array_8760.max,'C')
+    runner.registerValue('max_index_position',array_8760.each_with_index.max[1])
     runner.registerValue('avg_temp',array_8760.reduce(:+) / array_8760.size.to_f,'C')
 
     # add table to array of tables
     ff_temp_bins_tables << table_01
-    
+
     return @ff_temp_bins_section
   end
 

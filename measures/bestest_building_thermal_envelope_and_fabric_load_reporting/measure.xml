@@ -2,8 +2,8 @@
   <schema_version>3.0</schema_version>
   <name>bestest_building_thermal_envelope_and_fabric_load_reporting</name>
   <uid>a0b598a6-96b9-4704-bc23-ac403d9f6b1b</uid>
-  <version_id>30a34077-1508-4335-b5cd-9d8835c441cb</version_id>
-  <version_modified>20170516T203809Z</version_modified>
+  <version_id>21fdfd3b-3120-44a5-b397-815a7a59be7f</version_id>
+  <version_modified>20171003T163924Z</version_modified>
   <xml_checksum>69BA4D91</xml_checksum>
   <class_name>BestestBuildingThermalEnvelopeAndFabricLoadReporting</class_name>
   <display_name>Bestest Building Thermal Envelope and Fabric Load Reporting</display_name>
@@ -85,6 +85,60 @@
     <argument>
       <name>case_9xx_only_section</name>
       <display_name>runner.registerValues for 9xx cases</display_name>
+      <type>Boolean</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>true</default_value>
+      <choices>
+        <choice>
+          <value>true</value>
+          <display_name>true</display_name>
+        </choice>
+        <choice>
+          <value>false</value>
+          <display_name>false</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>case_610_only_section</name>
+      <display_name>Section 6.2.1.3 Case 610 Only</display_name>
+      <type>Boolean</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>true</default_value>
+      <choices>
+        <choice>
+          <value>true</value>
+          <display_name>true</display_name>
+        </choice>
+        <choice>
+          <value>false</value>
+          <display_name>false</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>case_620_only_section</name>
+      <display_name>Section 6.2.1.4 Case 620 Only</display_name>
+      <type>Boolean</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>true</default_value>
+      <choices>
+        <choice>
+          <value>true</value>
+          <display_name>true</display_name>
+        </choice>
+        <choice>
+          <value>false</value>
+          <display_name>false</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>case_630_only_section</name>
+      <display_name>Section 6.2.1.5 Case 630 Only</display_name>
       <type>Boolean</type>
       <required>true</required>
       <model_dependent>false</model_dependent>
@@ -234,7 +288,7 @@
       <filename>os_lib_reporting_bestest.rb</filename>
       <filetype>rb</filetype>
       <usage_type>resource</usage_type>
-      <checksum>C5985D8A</checksum>
+      <checksum>169E41DE</checksum>
     </file>
   </files>
 </measure>
