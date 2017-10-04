@@ -16,7 +16,7 @@ require "#{File.dirname(__FILE__)}/resources/common_info"
 
 
 # Load in CSV file
-csv_file = 'bestest_os_server_output.csv'
+csv_file = 'PAT_BESTEST_EN.csv'
 csv_hash = {}
 CSV.foreach(csv_file, :headers => true, :header_converters => :symbol, :converters => :all) do |row|
   short_name = row.fields[6].split(" ").first

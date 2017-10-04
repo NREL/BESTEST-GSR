@@ -6,16 +6,16 @@ module BestestResults
     hash = {}
 
     if program == "OS"
-      hash[:program_name_and_version] = "OpenStudio 2.1.0"
-      hash[:program_version_release_date] = "4/04/2017"
+      hash[:program_name_and_version] = "OpenStudio 2.3.0"
+      hash[:program_version_release_date] = "9/30/2017"
       hash[:program_name_short] = "OS"
     else
-      hash[:program_name_and_version] = "EnergyPlus 8.7.0"
-      hash[:program_version_release_date] = "3/30/2017"
+      hash[:program_name_and_version] = "EnergyPlus 8.8.0"
+      hash[:program_version_release_date] = "9/30/2017"
       hash[:program_name_short] = "E+"
     end
 
-    hash[:results_submission_date] = "05/19/2017"
+    hash[:results_submission_date] = "10/04/2017"
     hash[:organization] = "National Renewable Energy Laboratory"
     hash[:organization_short] = "NREL"
 

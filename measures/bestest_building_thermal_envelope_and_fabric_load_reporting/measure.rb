@@ -60,6 +60,38 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
     result
   end
 
+  def outputs
+    result = OpenStudio::IdfObjectVector.new
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('annual_heating')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('annual_cooling')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('peak_heating_value')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('peak_cooling_value')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('peak_heating_time')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('peak_cooling_time')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('sens_htg_clg_0104')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('temp_0104')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('temp_0727')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('surf_out_inst_slr_rad_0305_zone_surface_south')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('surf_out_inst_slr_rad_0305_zone_surface_west')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('surf_out_inst_slr_rad_0727_zone_surface_south')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('surf_out_inst_slr_rad_0727_zone_surface_west')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('temp_bins')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('max_temp')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('min_temp')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('avg_temp')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('north_incident_solar_radiation')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('east_incident_solar_radiation')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('west_incident_solar_radiation')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('south_incident_solar_radiation')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('horizontal_incident_solar_radiation')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('zone_total_transmitted_solar_radiation')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('max_index_position')
+    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('min_index_position')
+
+    return result
+
+  end
+
   # define what happens when the measure is run
   def run(runner, user_arguments)
     super(runner, user_arguments)

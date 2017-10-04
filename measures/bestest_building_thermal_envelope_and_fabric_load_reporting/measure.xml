@@ -1,9 +1,11 @@
 <measure>
   <schema_version>3.0</schema_version>
+  <error>Expected argument 1 of type std::vector&lt; openstudio::IdfObject >::value_type const &amp;, but got OpenStudio::Measure::OSOutput #&lt;OpenStudio::Measure::OSOutpu...
+	in SWIG method 'push'</error>
   <name>bestest_building_thermal_envelope_and_fabric_load_reporting</name>
   <uid>a0b598a6-96b9-4704-bc23-ac403d9f6b1b</uid>
-  <version_id>21fdfd3b-3120-44a5-b397-815a7a59be7f</version_id>
-  <version_modified>20171003T163924Z</version_modified>
+  <version_id>4e74b823-7a1f-4168-8497-a9657254f574</version_id>
+  <version_modified>20171003T205340Z</version_modified>
   <xml_checksum>69BA4D91</xml_checksum>
   <class_name>BestestBuildingThermalEnvelopeAndFabricLoadReporting</class_name>
   <display_name>Bestest Building Thermal Envelope and Fabric Load Reporting</display_name>
@@ -268,17 +270,6 @@
       <checksum>36AF3CEF</checksum>
     </file>
     <file>
-      <version>
-        <software_program>OpenStudio</software_program>
-        <identifier>1.7.5</identifier>
-        <min_compatible>1.7.5</min_compatible>
-      </version>
-      <filename>measure.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>script</usage_type>
-      <checksum>E33FE26A</checksum>
-    </file>
-    <file>
       <filename>measure_Test.rb</filename>
       <filetype>rb</filetype>
       <usage_type>test</usage_type>
@@ -289,6 +280,17 @@
       <filetype>rb</filetype>
       <usage_type>resource</usage_type>
       <checksum>169E41DE</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.7.5</identifier>
+        <min_compatible>1.7.5</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>F1850101</checksum>
     </file>
   </files>
 </measure>
