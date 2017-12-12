@@ -40,25 +40,25 @@ puts "Loading #{worksheet.sheet_name} Worksheet"
 
 # make array for columns on table
 columns = []
-columns << :bestestcereportingclg_energy_consumption_total
-columns << :bestestcereportingclg_energy_consumption_compressor
-columns << :bestestcereportingclg_energy_consumption_supply_fan
-columns << :bestestcereportingclg_energy_consumption_condenser_fan
-columns << :bestestcereportingevaporator_coil_load_total
-columns << :bestestcereportingevaporator_coil_load_sensible
-columns << :bestestcereportingevaporator_coil_load_latent
-columns << :bestestcereportingzone_load_total
-columns << :bestestcereportingzone_load_sensible
-columns << :bestestcereportingzone_load_latent
-columns << :bestestcereportingfeb_mean_cop
-columns << :bestestcereportingfeb_mean_idb
-columns << :bestestcereportingfeb_mean_humidity_ratio
-columns << :bestestcereportingfeb_max_cop
-columns << :bestestcereportingfeb_max_idb
-columns << :bestestcereportingfeb_max_humidity_ratio
-columns << :bestestcereportingfeb_min_cop
-columns << :bestestcereportingfeb_min_idb
-columns << :bestestcereportingfeb_min_humidity_ratio
+columns << :bestest_ce_reportingclg_energy_consumption_total
+columns << :bestest_ce_reportingclg_energy_consumption_compressor
+columns << :bestest_ce_reportingclg_energy_consumption_supply_fan
+columns << :bestest_ce_reportingclg_energy_consumption_condenser_fan
+columns << :bestest_ce_reportingevaporator_coil_load_total
+columns << :bestest_ce_reportingevaporator_coil_load_sensible
+columns << :bestest_ce_reportingevaporator_coil_load_latent
+columns << :bestest_ce_reportingzone_load_total
+columns << :bestest_ce_reportingzone_load_sensible
+columns << :bestest_ce_reportingzone_load_latent
+columns << :bestest_ce_reportingfeb_mean_cop
+columns << :bestest_ce_reportingfeb_mean_idb
+columns << :bestest_ce_reportingfeb_mean_humidity_ratio
+columns << :bestest_ce_reportingfeb_max_cop
+columns << :bestest_ce_reportingfeb_max_idb
+columns << :bestest_ce_reportingfeb_max_humidity_ratio
+columns << :bestest_ce_reportingfeb_min_cop
+columns << :bestest_ce_reportingfeb_min_idb
+columns << :bestest_ce_reportingfeb_min_humidity_ratio
 
 # populate table on YourData
 puts "Populating main table for 5-3A"
@@ -70,8 +70,8 @@ puts "Populating main table for 5-3A"
   columns.each_with_index do |column,j|
 
     # skip specifc columns that can't be calculated
-    next if column == :bestestcereportingclg_energy_consumption_compressor
-    next if column == :bestestcereportingclg_energy_consumption_condenser_fan
+    next if column == :bestest_ce_reportingclg_energy_consumption_compressor
+    next if column == :bestest_ce_reportingclg_energy_consumption_condenser_fan
 
     worksheet.sheet_data[i][j+1].change_contents(csv_hash[target_case][column])
   end
@@ -143,21 +143,21 @@ puts "Loading #{worksheet.sheet_name} Worksheet"
 # make array for columns on table
 columns = []
 
-columns << :bestestcereportingann_sum_clg_energy_consumption_total
-columns << :bestestcereportingann_sum_clg_energy_consumption_compressor
-columns << :bestestcereportingann_sum_clg_energy_consumption_condenser_fan
-columns << :bestestcereportingann_sum_clg_energy_consumption_supply_fan
-columns << :bestestcereportingann_sum_evap_coil_load_total
-columns << :bestestcereportingann_sum_evap_coil_load_sensible
-columns << :bestestcereportingann_sum_evap_coil_load_latent
-columns << :bestestcereportingann_mean_cop_2
-columns << :bestestcereportingann_mean_idb
-columns << :bestestcereportingann_mean_zone_humidity_ratio
-columns << :bestestcereportingann_mean_zone_relative_humidity
+columns << :bestest_ce_reportingann_sum_clg_energy_consumption_total
+columns << :bestest_ce_reportingann_sum_clg_energy_consumption_compressor
+columns << :bestest_ce_reportingann_sum_clg_energy_consumption_condenser_fan
+columns << :bestest_ce_reportingann_sum_clg_energy_consumption_supply_fan
+columns << :bestest_ce_reportingann_sum_evap_coil_load_total
+columns << :bestest_ce_reportingann_sum_evap_coil_load_sensible
+columns << :bestest_ce_reportingann_sum_evap_coil_load_latent
+columns << :bestest_ce_reportingann_mean_cop_2
+columns << :bestest_ce_reportingann_mean_idb
+columns << :bestest_ce_reportingann_mean_zone_humidity_ratio
+columns << :bestest_ce_reportingann_mean_zone_relative_humidity
 
 columns_extra_300 = []
-columns_extra_300 << :bestestcereportingann_mean_odb # CE300 only
-columns_extra_300 << :bestestcereportingann_mean_outdoor_humidity_ratio #CE300 only
+columns_extra_300 << :bestest_ce_reportingann_mean_odb # CE300 only
+columns_extra_300 << :bestest_ce_reportingann_mean_outdoor_humidity_ratio #CE300 only
 
 # populate table on YourData
 puts "Populating Annual Sums and Means Table"
@@ -168,8 +168,8 @@ puts "Populating Annual Sums and Means Table"
   columns.each_with_index do |column,j|
 
     # skip specifc columns that can't be calculated
-    next if column == :bestestcereportingann_sum_clg_energy_consumption_compressor
-    next if column == :bestestcereportingann_sum_clg_energy_consumption_condenser_fan
+    next if column == :bestest_ce_reportingann_sum_clg_energy_consumption_compressor
+    next if column == :bestest_ce_reportingann_sum_clg_energy_consumption_condenser_fan
 
     worksheet.sheet_data[i][j+1].change_contents(csv_hash[target_case][column])
   end
@@ -188,8 +188,8 @@ end
   columns.each_with_index do |column,j|
 
     # skip specifc columns that can't be calculated
-    next if column == :bestestcereportingann_sum_clg_energy_consumption_compressor
-    next if column == :bestestcereportingann_sum_clg_energy_consumption_condenser_fan
+    next if column == :bestest_ce_reportingann_sum_clg_energy_consumption_compressor
+    next if column == :bestest_ce_reportingann_sum_clg_energy_consumption_condenser_fan
 
     worksheet.sheet_data[i][j+1].change_contents(csv_hash[target_case][column])
   end
@@ -197,24 +197,24 @@ end
 
 # Fill in two special rows in table for CE500 and CE510 only
 columns = []
-columns << :bestestcereportingmay_sept_sum_clg_consumption_total
-columns << :bestestcereportingmay_sept_sum_clg_consumption_compressor
-columns << :bestestcereportingmay_sept_sum_clg_consumption_cond_fan
-columns << :bestestcereportingmay_sept_sum_clg_consumption_indoor_fan
-columns << :bestestcereportingmay_sept_sum_evap_coil_load_total
-columns << :bestestcereportingmay_sept_sum_evap_coil_load_sensible
-columns << :bestestcereportingmay_sept_sum_evap_coil_load_latent
-columns << :bestestcereportingmay_sept_mean_cop_2
-columns << :bestestcereportingmay_sept_mean_idb
-columns << :bestestcereportingmay_sept_mean_zone_humidity_ratio
-columns << :bestestcereportingmay_sept_mean_zone_relative_humidity
+columns << :bestest_ce_reportingmay_sept_sum_clg_consumption_total
+columns << :bestest_ce_reportingmay_sept_sum_clg_consumption_compressor
+columns << :bestest_ce_reportingmay_sept_sum_clg_consumption_cond_fan
+columns << :bestest_ce_reportingmay_sept_sum_clg_consumption_indoor_fan
+columns << :bestest_ce_reportingmay_sept_sum_evap_coil_load_total
+columns << :bestest_ce_reportingmay_sept_sum_evap_coil_load_sensible
+columns << :bestest_ce_reportingmay_sept_sum_evap_coil_load_latent
+columns << :bestest_ce_reportingmay_sept_mean_cop_2
+columns << :bestest_ce_reportingmay_sept_mean_idb
+columns << :bestest_ce_reportingmay_sept_mean_zone_humidity_ratio
+columns << :bestest_ce_reportingmay_sept_mean_zone_relative_humidity
 
 # CE500 May-Sep
 columns.each_with_index do |column,j|
 
   # skip specifc columns that can't be calculated
-  next if column == :bestestcereportingmay_sept_sum_clg_consumption_compressor
-  next if column == :bestestcereportingmay_sept_sum_clg_consumption_cond_fan
+  next if column == :bestest_ce_reportingmay_sept_sum_clg_consumption_compressor
+  next if column == :bestest_ce_reportingmay_sept_sum_clg_consumption_cond_fan
 
   worksheet.sheet_data[74][j+1].change_contents(csv_hash["CE500"][column])
 end
@@ -222,34 +222,34 @@ end
 columns.each_with_index do |column,j|
 
   # skip specifc columns that can't be calculated
-  next if column == :bestestcereportingmay_sept_sum_clg_consumption_compressor
-  next if column == :bestestcereportingmay_sept_sum_clg_consumption_cond_fan
+  next if column == :bestest_ce_reportingmay_sept_sum_clg_consumption_compressor
+  next if column == :bestest_ce_reportingmay_sept_sum_clg_consumption_cond_fan
 
   worksheet.sheet_data[75][j+1].change_contents(csv_hash["CE510"][column])
 end
 
 # make array for columns on table
 columns = []
-columns << :bestestcereportingenergy_consumption_comp_both_fans_wh
-columns << :bestestcereportingenergy_consumption_comp_both_fans_date
-columns << :bestestcereportingenergy_consumption_comp_both_fans_hr
-columns << :bestestcereportingevap_coil_load_sensible_wh
-columns << :bestestcereportingevap_coil_load_sensible_date
-columns << :bestestcereportingevap_coil_load_sensible_hr
-columns << :bestestcereportingevap_coil_load_latent_wh
-columns << :bestestcereportingevap_coil_load_latent_date
-columns << :bestestcereportingevap_coil_load_latent_hr
-columns << :bestestcereportingevap_coil_load_sensible_and_latent_wh
-columns << :bestestcereportingevap_coil_load_sensible_and_latent_date
-columns << :bestestcereportingevap_coil_load_sensible_and_latent_hr
+columns << :bestest_ce_reportingenergy_consumption_comp_both_fans_wh
+columns << :bestest_ce_reportingenergy_consumption_comp_both_fans_date
+columns << :bestest_ce_reportingenergy_consumption_comp_both_fans_hr
+columns << :bestest_ce_reportingevap_coil_load_sensible_wh
+columns << :bestest_ce_reportingevap_coil_load_sensible_date
+columns << :bestest_ce_reportingevap_coil_load_sensible_hr
+columns << :bestest_ce_reportingevap_coil_load_latent_wh
+columns << :bestest_ce_reportingevap_coil_load_latent_date
+columns << :bestest_ce_reportingevap_coil_load_latent_hr
+columns << :bestest_ce_reportingevap_coil_load_sensible_and_latent_wh
+columns << :bestest_ce_reportingevap_coil_load_sensible_and_latent_date
+columns << :bestest_ce_reportingevap_coil_load_sensible_and_latent_hr
 
 columns_extra_300 = []
-columns_extra_300 << :bestestcereportingweather_odb_c # CE300 only
-columns_extra_300 << :bestestcereportingweather_odb_date # CE300 only
-columns_extra_300 << :bestestcereportingweather_odb_hr # CE300 only
-columns_extra_300 << :bestestcereportingweather_outdoor_humidity_ratio_c # CE300 only
-columns_extra_300 << :bestestcereportingweather_outdoor_humidity_ratio_date # CE300 only
-columns_extra_300 << :bestestcereportingweather_outdoor_humidity_ratio_hr # CE300 only
+columns_extra_300 << :bestest_ce_reportingweather_odb_c # CE300 only
+columns_extra_300 << :bestest_ce_reportingweather_odb_date # CE300 only
+columns_extra_300 << :bestest_ce_reportingweather_odb_hr # CE300 only
+columns_extra_300 << :bestest_ce_reportingweather_outdoor_humidity_ratio_c # CE300 only
+columns_extra_300 << :bestest_ce_reportingweather_outdoor_humidity_ratio_date # CE300 only
+columns_extra_300 << :bestest_ce_reportingweather_outdoor_humidity_ratio_hr # CE300 only
 
 # populate table on YourData
 puts "Populating Annual Hourly Integrated Maxima Consumptions and Loads Table"
@@ -270,30 +270,30 @@ end
 
 # make array for columns on table
 columns = []
-columns << :bestestcereportingcop_2_max_cop_2
-columns << :bestestcereportingcop_2_max_date
-columns << :bestestcereportingcop_2_max_hr
-columns << :bestestcereportingcop_2_min_cop_2
-columns << :bestestcereportingcop_2_min_date
-columns << :bestestcereportingcop_2_min_hr
-columns << :bestestcereportingidb_max_idb
-columns << :bestestcereportingidb_max_date
-columns << :bestestcereportingidb_max_hr
-columns << :bestestcereportingidb_min_idb
-columns << :bestestcereportingidb_min_date
-columns << :bestestcereportingidb_min_hr
-columns << :bestestcereportinghr_max_humidity_ratio
-columns << :bestestcereportinghr_max_date
-columns << :bestestcereportinghr_max_hr
-columns << :bestestcereportinghr_min_humidity_ratio
-columns << :bestestcereportinghr_min_date
-columns << :bestestcereportinghr_min_hr
-columns << :bestestcereportingrh_max_relative_humidity
-columns << :bestestcereportingrh_max_date
-columns << :bestestcereportingrh_max_hr
-columns << :bestestcereportingrh_min_relative_humidity
-columns << :bestestcereportingrh_min_date
-columns << :bestestcereportingrh_min_hr
+columns << :bestest_ce_reportingcop_2_max_cop_2
+columns << :bestest_ce_reportingcop_2_max_date
+columns << :bestest_ce_reportingcop_2_max_hr
+columns << :bestest_ce_reportingcop_2_min_cop_2
+columns << :bestest_ce_reportingcop_2_min_date
+columns << :bestest_ce_reportingcop_2_min_hr
+columns << :bestest_ce_reportingidb_max_idb
+columns << :bestest_ce_reportingidb_max_date
+columns << :bestest_ce_reportingidb_max_hr
+columns << :bestest_ce_reportingidb_min_idb
+columns << :bestest_ce_reportingidb_min_date
+columns << :bestest_ce_reportingidb_min_hr
+columns << :bestest_ce_reportinghr_max_humidity_ratio
+columns << :bestest_ce_reportinghr_max_date
+columns << :bestest_ce_reportinghr_max_hr
+columns << :bestest_ce_reportinghr_min_humidity_ratio
+columns << :bestest_ce_reportinghr_min_date
+columns << :bestest_ce_reportinghr_min_hr
+columns << :bestest_ce_reportingrh_max_relative_humidity
+columns << :bestest_ce_reportingrh_max_date
+columns << :bestest_ce_reportingrh_max_hr
+columns << :bestest_ce_reportingrh_min_relative_humidity
+columns << :bestest_ce_reportingrh_min_date
+columns << :bestest_ce_reportingrh_min_hr
 
 # populate table on YourData
 puts "Populating Annual Hourly Integrated Maxima - cop_2 and Zone Table"
@@ -308,30 +308,30 @@ end
 
 # make array for columns on table
 columns = []
-columns << :bestestcereportingapr_dec_cop_2_max_cop_2
-columns << :bestestcereportingapr_dec_cop_2_max_date
-columns << :bestestcereportingapr_dec_cop_2_max_hr
-columns << :bestestcereportingapr_dec_cop_2_min_cop_2
-columns << :bestestcereportingapr_dec_cop_2_min_date
-columns << :bestestcereportingapr_dec_cop_2_min_hr
-columns << :bestestcereportingapr_dec_idb_max_idb
-columns << :bestestcereportingapr_dec_idb_max_date
-columns << :bestestcereportingapr_dec_idb_max_hr
-columns << :bestestcereportingapr_dec_idb_min_idb
-columns << :bestestcereportingapr_dec_idb_min_date
-columns << :bestestcereportingapr_dec_idb_min_hr
-columns << :bestestcereportingapr_dec_hr_max_humidity_ratio
-columns << :bestestcereportingapr_dec_hr_max_date
-columns << :bestestcereportingapr_dec_hr_max_hr
-columns << :bestestcereportingapr_dec_hr_min_humidity_ratio
-columns << :bestestcereportingapr_dec_hr_min_date
-columns << :bestestcereportingapr_dec_hr_min_hr
-columns << :bestestcereportingapr_dec_rh_max_relative_humidity
-columns << :bestestcereportingapr_dec_rh_max_date
-columns << :bestestcereportingapr_dec_rh_max_hr
-columns << :bestestcereportingapr_dec_rh_min_relative_humidity
-columns << :bestestcereportingapr_dec_rh_min_date
-columns << :bestestcereportingapr_dec_rh_min_hr
+columns << :bestest_ce_reportingapr_dec_cop_2_max_cop_2
+columns << :bestest_ce_reportingapr_dec_cop_2_max_date
+columns << :bestest_ce_reportingapr_dec_cop_2_max_hr
+columns << :bestest_ce_reportingapr_dec_cop_2_min_cop_2
+columns << :bestest_ce_reportingapr_dec_cop_2_min_date
+columns << :bestest_ce_reportingapr_dec_cop_2_min_hr
+columns << :bestest_ce_reportingapr_dec_idb_max_idb
+columns << :bestest_ce_reportingapr_dec_idb_max_date
+columns << :bestest_ce_reportingapr_dec_idb_max_hr
+columns << :bestest_ce_reportingapr_dec_idb_min_idb
+columns << :bestest_ce_reportingapr_dec_idb_min_date
+columns << :bestest_ce_reportingapr_dec_idb_min_hr
+columns << :bestest_ce_reportingapr_dec_hr_max_humidity_ratio
+columns << :bestest_ce_reportingapr_dec_hr_max_date
+columns << :bestest_ce_reportingapr_dec_hr_max_hr
+columns << :bestest_ce_reportingapr_dec_hr_min_humidity_ratio
+columns << :bestest_ce_reportingapr_dec_hr_min_date
+columns << :bestest_ce_reportingapr_dec_hr_min_hr
+columns << :bestest_ce_reportingapr_dec_rh_max_relative_humidity
+columns << :bestest_ce_reportingapr_dec_rh_max_date
+columns << :bestest_ce_reportingapr_dec_rh_max_hr
+columns << :bestest_ce_reportingapr_dec_rh_min_relative_humidity
+columns << :bestest_ce_reportingapr_dec_rh_min_date
+columns << :bestest_ce_reportingapr_dec_rh_min_hr
 
 # populate table on YourData
 puts "Populating Annual Hourly Integrated Maxima - cop_2 and Zone Table"
@@ -348,17 +348,17 @@ end
 # pouplate table
 # each column is registerValue with string that can be converted to array with 24 items
 columns = []
-columns << :bestestcereportingmmdd_0628_hourly_energy_consumpton_compressor
-columns << :bestestcereportingmmdd_0628_hourly_energy_consumpton_cond_fan
-columns << :bestestcereportingmmdd_0628_hourly_evaporator_coil_load_total
-columns << :bestestcereportingmmdd_0628_hourly_evaporator_coil_load_sensible
-columns << :bestestcereportingmmdd_0628_hourly_evaporator_coil_load_latent
-columns << :bestestcereportingmmdd_0628_hourly_zone_humidity_ratio
-columns << :bestestcereportingmmdd_0628_hourly_cop_2
-columns << :bestestcereportingmmdd_0628_hourly_odb
-columns << :bestestcereportingmmdd_0628_hourly_edb
-columns << :bestestcereportingmmdd_0628_hourly_ewb
-columns << :bestestcereportingmmdd_0628_hourly_outdoor_humidity_ratio
+columns << :bestest_ce_reportingmmdd_0628_hourly_energy_consumpton_compressor
+columns << :bestest_ce_reportingmmdd_0628_hourly_energy_consumpton_cond_fan
+columns << :bestest_ce_reportingmmdd_0628_hourly_evaporator_coil_load_total
+columns << :bestest_ce_reportingmmdd_0628_hourly_evaporator_coil_load_sensible
+columns << :bestest_ce_reportingmmdd_0628_hourly_evaporator_coil_load_latent
+columns << :bestest_ce_reportingmmdd_0628_hourly_zone_humidity_ratio
+columns << :bestest_ce_reportingmmdd_0628_hourly_cop_2
+columns << :bestest_ce_reportingmmdd_0628_hourly_odb
+columns << :bestest_ce_reportingmmdd_0628_hourly_edb
+columns << :bestest_ce_reportingmmdd_0628_hourly_ewb
+columns << :bestest_ce_reportingmmdd_0628_hourly_outdoor_humidity_ratio
 
 puts "Populating Case 300 June 28th Hourly Table"
 # todo - convert string to number for each cell
@@ -367,7 +367,7 @@ columns.each_with_index do |column,j|
   array.each_with_index do |hourly_value,i|
 
     # skip specifc columns that can't be calculated
-    next if column == :bestestcereportingmmdd_0628_hourly_energy_consumpton_cond_fan
+    next if column == :bestest_ce_reportingmmdd_0628_hourly_energy_consumpton_cond_fan
 
     if not hourly_value == "tbd"
       hourly_value = hourly_value.to_f
@@ -381,23 +381,23 @@ puts "Populating Case 500 and 530 Average Daily Outputs"
 
 # make array for columns on table
 columns = []
-columns << :bestestcereportingmmdd_0430_day_energy_consumption_total
-columns << :bestestcereportingmmdd_0430_day_energy_consumption_compressor
-columns << :bestestcereportingmmdd_0430_day_energy_consumption_condenser_fan
-columns << :bestestcereportingmmdd_0430_day_energy_consumption_supply_fan
-columns << :bestestcereportingmmdd_0430_day_evaporator_coil_load_total
-columns << :bestestcereportingmmdd_0430_day_evaporator_coil_load_sensible
-columns << :bestestcereportingmmdd_0430_day_evaporator_coil_load_latent
-columns << :bestestcereportingmmdd_0430_day_zone_humidity_ratio
-columns << :bestestcereportingmmdd_0430_day_cop_2
-columns << :bestestcereportingmmdd_0430_day_odb
-columns << :bestestcereportingmmdd_0430_day_edb
+columns << :bestest_ce_reportingmmdd_0430_day_energy_consumption_total
+columns << :bestest_ce_reportingmmdd_0430_day_energy_consumption_compressor
+columns << :bestest_ce_reportingmmdd_0430_day_energy_consumption_condenser_fan
+columns << :bestest_ce_reportingmmdd_0430_day_energy_consumption_supply_fan
+columns << :bestest_ce_reportingmmdd_0430_day_evaporator_coil_load_total
+columns << :bestest_ce_reportingmmdd_0430_day_evaporator_coil_load_sensible
+columns << :bestest_ce_reportingmmdd_0430_day_evaporator_coil_load_latent
+columns << :bestest_ce_reportingmmdd_0430_day_zone_humidity_ratio
+columns << :bestest_ce_reportingmmdd_0430_day_cop_2
+columns << :bestest_ce_reportingmmdd_0430_day_odb
+columns << :bestest_ce_reportingmmdd_0430_day_edb
 
 columns.each_with_index do |column,j|
 
   # skip specifc columns that can't be calculated
-  next if column == :bestestcereportingmmdd_0430_day_energy_consumption_compressor
-  next if column == :bestestcereportingmmdd_0430_day_energy_consumption_condenser_fan
+  next if column == :bestest_ce_reportingmmdd_0430_day_energy_consumption_compressor
+  next if column == :bestest_ce_reportingmmdd_0430_day_energy_consumption_condenser_fan
 
   worksheet.sheet_data[119][j+1].change_contents(csv_hash['CE500'][column])
   worksheet.sheet_data[128][j+1].change_contents(csv_hash['CE530'][column])
@@ -405,23 +405,23 @@ end
 
 # make array for columns on table
 columns = []
-columns << :bestestcereportingmmdd_0625_day_energy_consumption_total
-columns << :bestestcereportingmmdd_0625_day_energy_consumption_compressor
-columns << :bestestcereportingmmdd_0625_day_energy_consumption_condenser_fan
-columns << :bestestcereportingmmdd_0625_day_energy_consumption_supply_fan
-columns << :bestestcereportingmmdd_0625_day_evaporator_coil_load_total
-columns << :bestestcereportingmmdd_0625_day_evaporator_coil_load_sensible
-columns << :bestestcereportingmmdd_0625_day_evaporator_coil_load_latent
-columns << :bestestcereportingmmdd_0625_day_zone_humidity_ratio
-columns << :bestestcereportingmmdd_0625_day_cop_2
-columns << :bestestcereportingmmdd_0625_day_odb
-columns << :bestestcereportingmmdd_0625_day_edb
+columns << :bestest_ce_reportingmmdd_0625_day_energy_consumption_total
+columns << :bestest_ce_reportingmmdd_0625_day_energy_consumption_compressor
+columns << :bestest_ce_reportingmmdd_0625_day_energy_consumption_condenser_fan
+columns << :bestest_ce_reportingmmdd_0625_day_energy_consumption_supply_fan
+columns << :bestest_ce_reportingmmdd_0625_day_evaporator_coil_load_total
+columns << :bestest_ce_reportingmmdd_0625_day_evaporator_coil_load_sensible
+columns << :bestest_ce_reportingmmdd_0625_day_evaporator_coil_load_latent
+columns << :bestest_ce_reportingmmdd_0625_day_zone_humidity_ratio
+columns << :bestest_ce_reportingmmdd_0625_day_cop_2
+columns << :bestest_ce_reportingmmdd_0625_day_odb
+columns << :bestest_ce_reportingmmdd_0625_day_edb
 
 columns.each_with_index do |column,j|
 
   # skip specifc columns that can't be calculated
-  next if column == :bestestcereportingmmdd_0625_day_energy_consumption_compressor
-  next if column == :bestestcereportingmmdd_0625_day_energy_consumption_condenser_fan
+  next if column == :bestest_ce_reportingmmdd_0625_day_energy_consumption_compressor
+  next if column == :bestest_ce_reportingmmdd_0625_day_energy_consumption_condenser_fan
 
   worksheet.sheet_data[120][j+1].change_contents(csv_hash['CE500'][column])
   worksheet.sheet_data[129][j+1].change_contents(csv_hash['CE530'][column])

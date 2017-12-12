@@ -39,44 +39,44 @@ puts "Loading #{worksheet.sheet_name} Worksheet"
 puts "Populating Total Furnace Load"
 (19..29).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestesthereportingtotal_furnace_load])
+  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingtotal_furnace_load])
 end
 
 puts "Populating Total Furnace Input"
 (35..45).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestesthereportingtotal_furnace_input])
+  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingtotal_furnace_input])
 end
 
 # todo - change units here or in reporting measure
 puts "Populating Fuel Consumption"
 (51..61).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestesthereportingaverage_fuel_consumption])
+  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingaverage_fuel_consumption])
 end
 
 puts "Populating Fan Energy"
 (67..72).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestesthereportingfan_energy])
+  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingfan_energy])
 end
 
 puts "Populating Mean Zone Temperature"
 (78..80).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestesthereportingmean_zone_temperature])
+  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingmean_zone_temperature])
 end
 
 puts "Populating Maximum Zone Temperature"
 (86..88).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestesthereportingmaximum_zone_temperature])
+  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingmaximum_zone_temperature])
 end
 
 puts "Populating Minimum Zone Temperature"
 (94..96).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestesthereportingminimum_zone_temperature])
+  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingminimum_zone_temperature])
 end
 
 puts "Adding General Information"
