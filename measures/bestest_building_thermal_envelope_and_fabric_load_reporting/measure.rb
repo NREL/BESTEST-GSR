@@ -35,21 +35,13 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
   end
 
   # define the arguments that the user will input
-  def arguments
+  def arguments()
     args = OpenStudio::Ruleset::OSArgumentVector.new
 
-    # populate arguments
-    possible_sections.each do |method_name|
-      # get display name
-      arg = OpenStudio::Ruleset::OSArgument.makeBoolArgument(method_name, true)
-      display_name = eval("OsLib_Reporting_Bestest.#{method_name}(nil,nil,nil,true)[:title]")
-      arg.setDisplayName(display_name)
-      arg.setDefaultValue(true)
-      args << arg
-    end
+    # this measure does not require any user arguments, return an empty list
 
-    args
-  end # end the arguments method
+    return args
+  end
 
   # add any outout variable requests here
   def energyPlusOutputRequests(runner, user_arguments)
@@ -152,12 +144,6 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
     sql_file = setup[:sqlFile]
     web_asset_path = setup[:web_asset_path]
 
-    # assign the user inputs to variables
-    args = OsLib_HelperMethods.createRunVariables(runner, model, user_arguments, arguments)
-    unless args
-      return false
-    end
-
     # reporting final condition
     runner.registerInitialCondition('Gathering data from EnergyPlus SQL file.')
 
@@ -172,7 +158,6 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
     possible_sections.each do |method_name|
 
       begin
-        next unless args[method_name]
         section = false
         eval("section = OsLib_Reporting_Bestest.#{method_name}(model,sql_file,runner,false)")
         display_name = eval("OsLib_Reporting_Bestest.#{method_name}(nil,nil,nil,true)[:title]")

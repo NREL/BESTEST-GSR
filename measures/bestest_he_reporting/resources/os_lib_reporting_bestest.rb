@@ -21,6 +21,7 @@ module OsLib_Reporting_Bestest
       return false
     end
     workspace = workspace.get
+    bldg_name = workspace.getObjectsByType("Building".to_IddObjectType).first.getString(0).get
 
     # get the last sql file
     sqlFile = runner.lastEnergyPlusSqlFile
@@ -307,8 +308,13 @@ module OsLib_Reporting_Bestest
       source_units = 'W/m^2'
       target_units = 'W/m^2'
 
+      # create temp model from workspace and check orientation
+      workspace = runner.lastEnergyPlusWorkspace.get
+      rt = OpenStudio::EnergyPlus::ReverseTranslator.new
+      model2 = rt.translateWorkspace(workspace.get)
+
       # loop through surfaces
-      model.getSurfaces.each do |surface|
+      model2.getSurfaces.each do |surface|
         next if OpenStudio::convert(surface.tilt,"rad","deg").get.round == 0
         next if OpenStudio::convert(surface.azimuth,"rad","deg").get.round == 0
         next if OpenStudio::convert(surface.azimuth,"rad","deg").get.round == 90
@@ -369,7 +375,7 @@ module OsLib_Reporting_Bestest
   def self.hourly_heating_cooling_table(model, sqlFile, runner)
 
     # FF case gives ruby error on server for this but not local. This should skip it to avoid server
-    if model.getBuilding.name.get.include?("FF")
+    if runner.lastEnergyPlusWorkspace.get.getObjectsByType("Building".to_IddObjectType).first.getString(0).get.include?("FF")
       return nil
     end
 
@@ -461,7 +467,7 @@ module OsLib_Reporting_Bestest
   def self.hourly_heating_peak(model, sqlFile, runner)
 
     # FF case gives ruby error on server for this but not local. This should skip it to avoid server
-    if model.getBuilding.name.get.include?("FF")
+    if runner.lastEnergyPlusWorkspace.get.getObjectsByType("Building".to_IddObjectType).first.getString(0).get.include?("FF")
       return nil
     end
 
@@ -502,7 +508,7 @@ module OsLib_Reporting_Bestest
   def self.hourly_cooling_peak(model, sqlFile, runner)
 
     # FF case gives ruby error on server for this but not local. This should skip it to avoid server
-    if model.getBuilding.name.get.include?("FF")
+    if runner.lastEnergyPlusWorkspace.get.getObjectsByType("Building".to_IddObjectType).first.getString(0).get.include?("FF")
       return nil
     end
 
