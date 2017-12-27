@@ -2,8 +2,8 @@
   <schema_version>3.0</schema_version>
   <name>bestest_he_reporting</name>
   <uid>0c315265-09b3-40ae-a50f-e8920b468264</uid>
-  <version_id>4de76828-260d-47af-8630-786e258b4eca</version_id>
-  <version_modified>20171003T163924Z</version_modified>
+  <version_id>b0b21486-9c07-4999-8a28-475b958dbe5e</version_id>
+  <version_modified>20171227T185003Z</version_modified>
   <xml_checksum>9BF1E6AC</xml_checksum>
   <class_name>BestestHeReporting</class_name>
   <display_name>Bestest He Reporting</display_name>
@@ -84,22 +84,10 @@
   </attributes>
   <files>
     <file>
-      <filename>report.html.in</filename>
-      <filetype>in</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>3501204C</checksum>
-    </file>
-    <file>
       <filename>HE100WWY2.epw</filename>
       <filetype>epw</filetype>
       <usage_type>test</usage_type>
       <checksum>FB484A5B</checksum>
-    </file>
-    <file>
-      <filename>os_lib_helper_methods.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>A6430141</checksum>
     </file>
     <file>
       <filename>HE100_test_output.osm</filename>
@@ -116,19 +104,19 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>AD647CC7</checksum>
+      <checksum>CD69EE33</checksum>
     </file>
     <file>
       <filename>bestest_he_reporting_test.rb</filename>
       <filetype>rb</filetype>
       <usage_type>test</usage_type>
-      <checksum>B9237192</checksum>
+      <checksum>A5C8D5E6</checksum>
     </file>
     <file>
       <filename>os_lib_reporting_bestest.rb</filename>
       <filetype>rb</filetype>
       <usage_type>resource</usage_type>
-      <checksum>43950C65</checksum>
+      <checksum>0F364E61</checksum>
     </file>
   </files>
 </measure>

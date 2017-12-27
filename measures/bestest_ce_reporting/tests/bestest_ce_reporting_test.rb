@@ -151,9 +151,25 @@ class BestestCEReporting_Test < MiniTest::Unit::TestCase
       argument_map[arg.name] = temp_arg_var
     end
 
+    # only need to run this when osm models are added or updated
+=begin
+    # need to set last workspace early so proper variables can be grabbed
+    # load the test model
+    translator = OpenStudio::OSVersion::VersionTranslator.new
+    model = translator.loadModel(model_in_path)
+    assert((not model.empty?))
+    model = model.get
+    # forward translate OSM file to IDF file
+    ft = OpenStudio::EnergyPlus::ForwardTranslator.new
+    workspace = ft.translateModel(model)
+    workspace_in_path = model_in_path.gsub(".osm",".idf")
+    workspace.save(workspace_in_path,true)
+=end
+
     # get the energyplus output requests, this will be done automatically by OS App and PAT
+    runner.setLastEnergyPlusWorkspacePath(OpenStudio::Path.new(model_in_path.gsub(".osm",".idf")))
     idf_output_requests = measure.energyPlusOutputRequests(runner, argument_map)
-    assert_equal(0, idf_output_requests.size)
+    assert_operator idf_output_requests.size, :>, 0
 
     # mimic the process of running this measure in OS App or PAT
     setup_test(test_name,idf_output_requests,model_in_path,epw_path)
@@ -189,8 +205,8 @@ class BestestCEReporting_Test < MiniTest::Unit::TestCase
       Dir.chdir(start_dir)
     end
 
-    # make sure the report file exists
-    assert(File.exist?(report_path(test_name)))
+    # no report.html is written
+    # assert(File.exist?(report_path(test_name)))
   end
 
   def test_case_CE100

@@ -55,7 +55,53 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
   def energyPlusOutputRequests(runner, user_arguments)
     super(runner, user_arguments)
 
+    # get the last idf (just used for building name)
+    workspace = runner.lastEnergyPlusWorkspace
+    if workspace.empty?
+      runner.registerError('Cannot find last idf file.')
+      return false
+    end
+    workspace = workspace.get
+    bldg_name = workspace.getObjectsByType("Building".to_IddObjectType).first.getString(0).get
+
     result = OpenStudio::IdfObjectVector.new
+
+    # Add output requests (consider adding to case hash instead of adding logic here)
+    # this gather any non standard output requests. Analysis of output such as binning temps for FF will occur in reporting measure
+    # Table 6-1 describes the specific day of results that will be used for testing
+    hourly_variables = []
+    hourly_variables << 'Zone Mean Air Temperature'
+
+    if !bldg_name.include? 'FF' # based on case 600FF
+      hourly_variables << 'Zone Air System Sensible Heating Energy'
+      hourly_variables << 'Zone Air System Sensible Cooling Energy' # not sure why 630,640,650 dont' have anything below here
+
+      # get surface variables for subset of cases
+      if bldg_name.include? "600"
+        hourly_variables << 'Surface Outside Face Sunlit Area'
+        hourly_variables << 'Surface Outside Face Sunlit Fraction'
+        hourly_variables << 'Surface Outside Face Incident Solar Radiation Rate per Area'
+      end
+
+      # get windows variables for subset of cases
+      if bldg_name.include? "600" or bldg_name.include? "610" or bldg_name.include? "620" or bldg_name.include? "630"
+        hourly_variables << 'Surface Window Transmitted Solar Radiation Rate'
+        hourly_variables << 'Surface Window Transmitted Beam Solar Radiation Rate'
+        hourly_variables << 'Surface Window Transmitted Diffuse Solar Radiation Rate'
+        hourly_variables << 'Surface Window Transmitted Solar Radiation Energy'
+        hourly_variables << 'Surface Window Transmitted Beam Solar Radiation Energy'
+        hourly_variables << 'Surface Window Transmitted Diffuse Solar Radiation Energy'
+      end
+
+      # get windows variables for subset of cases
+      if bldg_name.include? "900" or bldg_name.include? "910" or bldg_name.include? "920" or bldg_name.include? "930" or bldg_name.include? "600" or bldg_name.include? "620"
+        hourly_variables << 'Zone Windows Total Transmitted Solar Radiation Rate'
+      end
+
+    end
+    hourly_variables.each do |variable|
+      result << OpenStudio::IdfObject.load("Output:Variable,,#{variable},hourly;").get
+    end
 
     result
   end
@@ -101,7 +147,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
     unless setup
       return false
     end
-    model = setup[:model]
+    model = setup[:model] # no data from model used, just needed to call specific methods
     # workspace = setup[:workspace]
     sql_file = setup[:sqlFile]
     web_asset_path = setup[:web_asset_path]
@@ -113,7 +159,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
     end
 
     # reporting final condition
-    runner.registerInitialCondition('Gathering data from EnergyPlus SQL file and OSM model.')
+    runner.registerInitialCondition('Gathering data from EnergyPlus SQL file.')
 
     # pass measure display name to erb
     @name = name

@@ -67,99 +67,6 @@ module OsLib_Reporting_Bestest
   # defeined in the method as was done with these examples.
   # - You can loop through objects to make a table for each item of that type, such as air loops
 
-  # section for general building information
-  def self.general_building_information_section(model, sqlFile, runner, name_only = false)
-    # array to hold tables
-    tables = []
-
-    # gather data for section
-    @mat_prop = {}
-    @mat_prop[:title] = 'General Building Information'
-    @mat_prop[:tables] = tables
-
-    # stop here if only name is requested this is used to populate display name for arguments
-    if name_only == true
-      return @mat_prop
-    end
-
-    # using helper method that generates table for second example
-    tables << OsLib_Reporting_Bestest.general_building_information_table(model, sqlFile, runner)
-
-    return @mat_prop
-  end
-
-  # create table with general building information
-  # this table shows how to pull information out of the model and the sql file
-  def self.general_building_information_table(model, sqlFile, runner)
-    # general building information type data output
-    general_building_information = {}
-    general_building_information[:title] = 'Building Summary' # name will be with section
-    general_building_information[:header] = %w(Information Value Units)
-    general_building_information[:units] = [] # won't populate for this table since each row has different units.
-    general_building_information[:data] = []
-
-    # structure ID / building name
-    display = 'Building Name'
-    target_units = 'building_name'
-    value = model.getBuilding.name.to_s
-    general_building_information[:data] << [display, value, target_units]
-    runner.registerValue(display.downcase.gsub(" ","_"), value, target_units)
-
-    # net site energy
-    display = 'Net Site Energy'
-    source_units = 'GJ'
-    target_units = 'kBtu'
-    value = OpenStudio.convert(sqlFile.netSiteEnergy.get, source_units, target_units).get
-    value_neat = OpenStudio.toNeatString(value, 0, true)
-    general_building_information[:data] << [display, value_neat, target_units]
-    runner.registerValue(display.downcase.gsub(" ","_"), value, target_units)
-
-    # total building area
-    query = 'SELECT Value FROM tabulardatawithstrings WHERE '
-    query << "ReportName='AnnualBuildingUtilityPerformanceSummary' and "
-    query << "ReportForString='Entire Facility' and "
-    query << "TableName='Building Area' and "
-    query << "RowName='Total Building Area' and "
-    query << "ColumnName='Area' and "
-    query << "Units='m2';"
-    query_results = sqlFile.execAndReturnFirstDouble(query)
-    if query_results.empty?
-      runner.registerWarning('Did not find value for total building area.')
-      return false
-    else
-      display = 'Total Building Area'
-      source_units = 'm^2'
-      target_units = 'ft^2'
-      value = OpenStudio.convert(query_results.get, source_units, target_units).get
-      value_neat = OpenStudio.toNeatString(value, 0, true)
-      general_building_information[:data] << [display, value_neat, target_units]
-      runner.registerValue(display.downcase.gsub(" ","_"), value, target_units)
-    end
-
-    # temp code to check OS vs. E+ area
-    energy_plus_area = query_results.get
-    open_studio_area = model.getBuilding.floorArea
-    if not energy_plus_area == open_studio_area
-      runner.registerWarning("EnergyPlus reported area is #{query_results.get} (m^2). OpenStudio reported area is #{model.getBuilding.floorArea} (m^2).")
-    end
-
-    # EUI
-    eui =  sqlFile.netSiteEnergy.get / query_results.get
-    display = 'EUI'
-    source_units = 'GJ/m^2'
-    target_units = 'kBtu/ft^2'
-    if query_results.get > 0.0 # don't calculate EUI if building doesn't have any area
-      value = OpenStudio.convert(eui, source_units, target_units).get
-      value_neat = OpenStudio.toNeatString(value, 4, true)
-      runner.registerValue(display.downcase.gsub(" ","_"), value, target_units) # is it ok not to calc EUI if no area in model
-    else
-      value_neat = "can't calculate EUI."
-    end
-    general_building_information[:data] << ["#{display} (Based on Net Site Energy and Total Building Area)", value_neat, target_units]
-
-    return general_building_information
-  end
-
   def self.process_output_timeseries (sqlFile, runner, ann_env_pd, time_step, variable_name, key_value)
 
     output_timeseries = sqlFile.timeSeries(ann_env_pd, time_step, variable_name, key_value)
@@ -361,7 +268,7 @@ module OsLib_Reporting_Bestest
 
     return @output_6_2_1_1_section
   end
-
+  
   # create table_6_1_section
   def self.table_6_1_section(model, sqlFile, runner, name_only = false)
     # array to hold tables
@@ -1004,7 +911,7 @@ module OsLib_Reporting_Bestest
 
     # add table to array of tables
     ff_temp_bins_tables << table_01
-
+    
     return @ff_temp_bins_section
   end
 

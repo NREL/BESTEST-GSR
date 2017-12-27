@@ -195,56 +195,9 @@ class BestestSpaceHeatingEquipmentPerformance < OpenStudio::Ruleset::ModelUserSc
     timestep = model.getTimestep
     timestep.setNumberOfTimestepsPerHour(4)
 
-    # note: set interior solar distribution fractions isn't needed if E+ auto calcualtes it
+    # note: set interior solar distribution fractions isn't needed if E+ auto calculates it
 
-    # Add output requests (consider adding to case hash instead of adding logic here)
-    # this gather any non standard output requests. Analysis of output such as binning temps for FF will occur in reporting measure
-    # Table 6-1 describes the specific day of results that will be used for testing
-    hourly_variables = []
-
-    # variables for all HE cases
-    hourly_variables << 'Site Outdoor Air Drybulb Temperature'
-    hourly_variables << 'Site Outdoor Air Wetbulb Temperature'
-    hourly_variables << 'Site Outdoor Air Dewpoint Temperature'
-    hourly_variables << 'Site Outdoor Air Enthalpy'
-    hourly_variables << 'Site Outdoor Air Humidity Ratio'
-    hourly_variables << 'Site Outdoor Air Relative Humidity'
-    hourly_variables << 'Site Outdoor Air Density'
-    hourly_variables << 'Site Outdoor Air Barometric Pressure'
-    hourly_variables << 'Site Wind Speed'
-    hourly_variables << 'Site Direct Solar Radiation Rate per Area'
-    hourly_variables << 'Site Diffuse Solar Radiation Rate per Area'
-    hourly_variables << 'Zone Mean Air Temperature'
-    hourly_variables << 'Zone Air System Sensible Heating Energy'
-    hourly_variables << 'Zone Air System Sensible Cooling Energy'
-    hourly_variables << 'Zone Air Temperature,Hourly'
-    hourly_variables << 'Zone Air Humidity Ratio'
-    hourly_variables << 'Surface Inside face Temperature'
-    hourly_variables << 'Surface Outside face Temperature'
-    hourly_variables << 'Surface Inside Face Convection Heat Transfer Coefficient'
-    hourly_variables << 'Surface Outside Face Convection Heat Transfer Coefficient'
-    hourly_variables << 'Zone Air System Sensible Heating Energy'
-    hourly_variables << 'Zone Air System Sensible Cooling Energy'
-    hourly_variables << 'Zone Air Temperature'
-    hourly_variables << 'Zone Total Internal Latent Gain Energy'
-    hourly_variables << 'Zone Air Humidity Ratio'
-    hourly_variables << 'Fan Electric Power'
-    hourly_variables << 'Fan Rise in Air Temperature'
-    hourly_variables << 'Fan Electric Energy'
-    hourly_variables << 'Heating Coil Air Heating Energy'
-    hourly_variables << 'Heating Coil Air Heating Rate'
-    hourly_variables << 'Heating Coil Gas Energy'
-    hourly_variables << 'Heating Coil Gas Rate'
-    hourly_variables << 'Fan Runtime Fraction'
-    hourly_variables << 'System Node Temperature'
-    hourly_variables << 'System Node Mass Flow Rate'
-
-    # parasitic heating coil output that represents draft fan
-    hourly_variables << 'Heating Coil Electric Power'
-
-    hourly_variables.each do |variable|
-      BestestModelMethods.add_output_variable(runner,model,nil,variable,'hourly')
-    end
+    # note: moved variable requests to reporting measure in energyPlusOutputReqests method
 
     # report final condition of model
     runner.registerFinalCondition("The final model named #{model.getBuilding.name} has #{model.numObjects} objects.")

@@ -398,43 +398,6 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
 
     # note: set interior solar distribution fractions isn't needed if E+ auto calcualtes it
 
-    # Add output requests (consider adding to case hash instead of adding logic here)
-    # this gather any non standard output requests. Analysis of output such as binning temps for FF will occur in reporting measure
-    # Table 6-1 describes the specific day of results that will be used for testing
-    hourly_variables = []
-    hourly_variables << 'Zone Mean Air Temperature'
-
-    if !case_num.include? 'FF' # based on case 600FF
-      hourly_variables << 'Zone Air System Sensible Heating Energy'
-      hourly_variables << 'Zone Air System Sensible Cooling Energy' # not sure why 630,640,650 dont' have anything below here
-
-      # get surface variables for subset of cases
-      if case_num.include? "600"
-        hourly_variables << 'Surface Outside Face Sunlit Area'
-        hourly_variables << 'Surface Outside Face Sunlit Fraction'
-        hourly_variables << 'Surface Outside Face Incident Solar Radiation Rate per Area'
-      end
-
-      # get windows variables for subset of cases
-      if case_num.include? "600" or case_num.include? "610" or case_num.include? "620" or case_num.include? "630"
-        hourly_variables << 'Surface Window Transmitted Solar Radiation Rate'
-        hourly_variables << 'Surface Window Transmitted Beam Solar Radiation Rate'
-        hourly_variables << 'Surface Window Transmitted Diffuse Solar Radiation Rate'
-        hourly_variables << 'Surface Window Transmitted Solar Radiation Energy'
-        hourly_variables << 'Surface Window Transmitted Beam Solar Radiation Energy'
-        hourly_variables << 'Surface Window Transmitted Diffuse Solar Radiation Energy'
-      end
-
-      # get windows variables for subset of cases
-      if case_num.include? "900" or case_num.include? "910" or case_num.include? "920" or case_num.include? "930" or case_num.include? "600" or case_num.include? "620"
-        hourly_variables << 'Zone Windows Total Transmitted Solar Radiation Rate'
-      end
-
-    end
-    hourly_variables.each do |variable|
-      BestestModelMethods.add_output_variable(runner,model,nil,variable,'Hourly')
-    end
-
     # report final condition of model
     runner.registerFinalCondition("The final model named #{model.getBuilding.name} has #{model.numObjects} objects.")
 

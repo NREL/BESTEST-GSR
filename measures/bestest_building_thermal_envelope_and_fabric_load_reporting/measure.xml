@@ -4,8 +4,8 @@
 	in SWIG method 'push'</error>
   <name>bestest_building_thermal_envelope_and_fabric_load_reporting</name>
   <uid>a0b598a6-96b9-4704-bc23-ac403d9f6b1b</uid>
-  <version_id>4e74b823-7a1f-4168-8497-a9657254f574</version_id>
-  <version_modified>20171003T205340Z</version_modified>
+  <version_id>8f519d48-89d5-4e3b-b640-66b9e955d3b4</version_id>
+  <version_modified>20171227T190550Z</version_modified>
   <xml_checksum>69BA4D91</xml_checksum>
   <class_name>BestestBuildingThermalEnvelopeAndFabricLoadReporting</class_name>
   <display_name>Bestest Building Thermal Envelope and Fabric Load Reporting</display_name>
@@ -273,7 +273,25 @@
       <filename>measure_Test.rb</filename>
       <filetype>rb</filetype>
       <usage_type>test</usage_type>
-      <checksum>F14361D7</checksum>
+      <checksum>3F3B9B4C</checksum>
+    </file>
+    <file>
+      <filename>600_test_output.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>test</usage_type>
+      <checksum>1D6A2BC7</checksum>
+    </file>
+    <file>
+      <filename>910_test_output.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>test</usage_type>
+      <checksum>6D3770AB</checksum>
+    </file>
+    <file>
+      <filename>950FF_test_output.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>test</usage_type>
+      <checksum>2F7B6F25</checksum>
     </file>
     <file>
       <filename>os_lib_reporting_bestest.rb</filename>
@@ -290,7 +308,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>F1850101</checksum>
+      <checksum>BF6C962A</checksum>
     </file>
   </files>
 </measure>

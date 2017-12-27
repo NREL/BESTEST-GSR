@@ -1,0 +1,1850 @@
+
+Version,
+  8.8;                                    !- Version Identifier
+
+LifeCycleCost:Parameters,
+  {bbaa389c-d7fd-4c84-b945-39d72512f235}, !- Name
+  EndOfYear,                              !- Discounting Convention
+  ConstantDollar,                         !- Inflation Approach
+  0.03,                                   !- Real Discount Rate
+  ,                                       !- Nominal Discount Rate
+  ,                                       !- Inflation
+  ,                                       !- Base Date Month
+  2011,                                   !- Base Date Year
+  ,                                       !- Service Date Month
+  2011,                                   !- Service Date Year
+  25,                                     !- Length of Study Period in Years
+  ,                                       !- Tax rate
+  None;                                   !- Depreciation Method
+
+LifeCycleCost:UsePriceEscalation,
+  U.S. Avg  Commercial-Electricity,       !- LCC Price Escalation Name
+  Electricity,                            !- Resource
+  2011,                                   !- Escalation Start Year
+  January,                                !- Escalation Start Month
+  0.9838,                                 !- Year Escalation 1
+  0.9730,                                 !- Year Escalation 2
+  0.9632,                                 !- Year Escalation 3
+  0.9611,                                 !- Year Escalation 4
+  0.9571,                                 !- Year Escalation 5
+  0.9553,                                 !- Year Escalation 6
+  0.9539,                                 !- Year Escalation 7
+  0.9521,                                 !- Year Escalation 8
+  0.9546,                                 !- Year Escalation 9
+  0.9550,                                 !- Year Escalation 10
+  0.9553,                                 !- Year Escalation 11
+  0.9564,                                 !- Year Escalation 12
+  0.9575,                                 !- Year Escalation 13
+  0.9596,                                 !- Year Escalation 14
+  0.9618,                                 !- Year Escalation 15
+  0.9614,                                 !- Year Escalation 16
+  0.9618,                                 !- Year Escalation 17
+  0.9618,                                 !- Year Escalation 18
+  0.9593,                                 !- Year Escalation 19
+  0.9589,                                 !- Year Escalation 20
+  0.9607,                                 !- Year Escalation 21
+  0.9625,                                 !- Year Escalation 22
+  0.9650,                                 !- Year Escalation 23
+  0.9708,                                 !- Year Escalation 24
+  0.9751,                                 !- Year Escalation 25
+  0.9762,                                 !- Year Escalation 26
+  0.9766,                                 !- Year Escalation 27
+  0.9766,                                 !- Year Escalation 28
+  0.9769,                                 !- Year Escalation 29
+  0.9773;                                 !- Year Escalation 30
+
+LifeCycleCost:UsePriceEscalation,
+  U.S. Avg  Commercial-Distillate Oil,    !- LCC Price Escalation Name
+  FuelOil#1,                              !- Resource
+  2011,                                   !- Escalation Start Year
+  January,                                !- Escalation Start Month
+  0.9714,                                 !- Year Escalation 1
+  0.9730,                                 !- Year Escalation 2
+  0.9942,                                 !- Year Escalation 3
+  1.0164,                                 !- Year Escalation 4
+  1.0541,                                 !- Year Escalation 5
+  1.0928,                                 !- Year Escalation 6
+  1.1267,                                 !- Year Escalation 7
+  1.1580,                                 !- Year Escalation 8
+  1.1792,                                 !- Year Escalation 9
+  1.1967,                                 !- Year Escalation 10
+  1.2200,                                 !- Year Escalation 11
+  1.2333,                                 !- Year Escalation 12
+  1.2566,                                 !- Year Escalation 13
+  1.2709,                                 !- Year Escalation 14
+  1.2826,                                 !- Year Escalation 15
+  1.2985,                                 !- Year Escalation 16
+  1.3102,                                 !- Year Escalation 17
+  1.3250,                                 !- Year Escalation 18
+  1.3261,                                 !- Year Escalation 19
+  1.3282,                                 !- Year Escalation 20
+  1.3324,                                 !- Year Escalation 21
+  1.3356,                                 !- Year Escalation 22
+  1.3431,                                 !- Year Escalation 23
+  1.3510,                                 !- Year Escalation 24
+  1.3568,                                 !- Year Escalation 25
+  1.3606,                                 !- Year Escalation 26
+  1.3637,                                 !- Year Escalation 27
+  1.3674,                                 !- Year Escalation 28
+  1.3706,                                 !- Year Escalation 29
+  1.3743;                                 !- Year Escalation 30
+
+LifeCycleCost:UsePriceEscalation,
+  U.S. Avg  Commercial-Residual Oil,      !- LCC Price Escalation Name
+  FuelOil#2,                              !- Resource
+  2011,                                   !- Escalation Start Year
+  January,                                !- Escalation Start Month
+  0.8469,                                 !- Year Escalation 1
+  0.8257,                                 !- Year Escalation 2
+  0.8681,                                 !- Year Escalation 3
+  0.8988,                                 !- Year Escalation 4
+  0.9289,                                 !- Year Escalation 5
+  0.9604,                                 !- Year Escalation 6
+  0.9897,                                 !- Year Escalation 7
+  1.0075,                                 !- Year Escalation 8
+  1.0314,                                 !- Year Escalation 9
+  1.0554,                                 !- Year Escalation 10
+  1.0861,                                 !- Year Escalation 11
+  1.1278,                                 !- Year Escalation 12
+  1.1497,                                 !- Year Escalation 13
+  1.1620,                                 !- Year Escalation 14
+  1.1743,                                 !- Year Escalation 15
+  1.1852,                                 !- Year Escalation 16
+  1.1948,                                 !- Year Escalation 17
+  1.2037,                                 !- Year Escalation 18
+  1.2071,                                 !- Year Escalation 19
+  1.2119,                                 !- Year Escalation 20
+  1.2139,                                 !- Year Escalation 21
+  1.2194,                                 !- Year Escalation 22
+  1.2276,                                 !- Year Escalation 23
+  1.2365,                                 !- Year Escalation 24
+  1.2420,                                 !- Year Escalation 25
+  1.2461,                                 !- Year Escalation 26
+  1.2509,                                 !- Year Escalation 27
+  1.2550,                                 !- Year Escalation 28
+  1.2591,                                 !- Year Escalation 29
+  1.2638;                                 !- Year Escalation 30
+
+LifeCycleCost:UsePriceEscalation,
+  U.S. Avg  Commercial-Natural gas,       !- LCC Price Escalation Name
+  NaturalGas,                             !- Resource
+  2011,                                   !- Escalation Start Year
+  January,                                !- Escalation Start Month
+  0.9823,                                 !- Year Escalation 1
+  0.9557,                                 !- Year Escalation 2
+  0.9279,                                 !- Year Escalation 3
+  0.9257,                                 !- Year Escalation 4
+  0.9346,                                 !- Year Escalation 5
+  0.9412,                                 !- Year Escalation 6
+  0.9512,                                 !- Year Escalation 7
+  0.9645,                                 !- Year Escalation 8
+  0.9856,                                 !- Year Escalation 9
+  1.0067,                                 !- Year Escalation 10
+  1.0222,                                 !- Year Escalation 11
+  1.0410,                                 !- Year Escalation 12
+  1.0610,                                 !- Year Escalation 13
+  1.0787,                                 !- Year Escalation 14
+  1.0942,                                 !- Year Escalation 15
+  1.1098,                                 !- Year Escalation 16
+  1.1220,                                 !- Year Escalation 17
+  1.1308,                                 !- Year Escalation 18
+  1.1386,                                 !- Year Escalation 19
+  1.1486,                                 !- Year Escalation 20
+  1.1619,                                 !- Year Escalation 21
+  1.1763,                                 !- Year Escalation 22
+  1.1918,                                 !- Year Escalation 23
+  1.2118,                                 !- Year Escalation 24
+  1.2284,                                 !- Year Escalation 25
+  1.2439,                                 !- Year Escalation 26
+  1.2605,                                 !- Year Escalation 27
+  1.2772,                                 !- Year Escalation 28
+  1.2938,                                 !- Year Escalation 29
+  1.3115;                                 !- Year Escalation 30
+
+LifeCycleCost:UsePriceEscalation,
+  U.S. Avg  Commercial-Coal,              !- LCC Price Escalation Name
+  Coal,                                   !- Resource
+  2011,                                   !- Escalation Start Year
+  January,                                !- Escalation Start Month
+  0.9970,                                 !- Year Escalation 1
+  1.0089,                                 !- Year Escalation 2
+  1.0089,                                 !- Year Escalation 3
+  0.9941,                                 !- Year Escalation 4
+  0.9941,                                 !- Year Escalation 5
+  1.0000,                                 !- Year Escalation 6
+  1.0030,                                 !- Year Escalation 7
+  1.0059,                                 !- Year Escalation 8
+  1.0089,                                 !- Year Escalation 9
+  1.0119,                                 !- Year Escalation 10
+  1.0148,                                 !- Year Escalation 11
+  1.0178,                                 !- Year Escalation 12
+  1.0208,                                 !- Year Escalation 13
+  1.0267,                                 !- Year Escalation 14
+  1.0297,                                 !- Year Escalation 15
+  1.0356,                                 !- Year Escalation 16
+  1.0415,                                 !- Year Escalation 17
+  1.0534,                                 !- Year Escalation 18
+  1.0564,                                 !- Year Escalation 19
+  1.0593,                                 !- Year Escalation 20
+  1.0653,                                 !- Year Escalation 21
+  1.0712,                                 !- Year Escalation 22
+  1.0742,                                 !- Year Escalation 23
+  1.0801,                                 !- Year Escalation 24
+  1.0831,                                 !- Year Escalation 25
+  1.0831,                                 !- Year Escalation 26
+  1.0861,                                 !- Year Escalation 27
+  1.0890,                                 !- Year Escalation 28
+  1.0920,                                 !- Year Escalation 29
+  1.0950;                                 !- Year Escalation 30
+
+Building,
+  BESTEST Case CE300 - Base Case 15% OA,  !- Name
+  0,                                      !- North Axis {deg}
+  Country,                                !- Terrain
+  ,                                       !- Loads Convergence Tolerance Value
+  ,                                       !- Temperature Convergence Tolerance Value {deltaC}
+  FullInteriorAndExterior,                !- Solar Distribution
+  ,                                       !- Maximum Number of Warmup Days
+  6;                                      !- Minimum Number of Warmup Days
+
+Zone,
+  ZONE ONE,                               !- Name
+  0,                                      !- Direction of Relative North {deg}
+  0,                                      !- X Origin {m}
+  0,                                      !- Y Origin {m}
+  0,                                      !- Z Origin {m}
+  ,                                       !- Type
+  1,                                      !- Multiplier
+  3,                                      !- Ceiling Height {m}
+  588,                                    !- Volume {m3}
+  ,                                       !- Floor Area {m2}
+  ,                                       !- Zone Inside Convection Algorithm
+  ;                                       !- Zone Outside Convection Algorithm
+
+BuildingSurface:Detailed,
+  ZONE SURFACE EAST,                      !- Name
+  Wall,                                   !- Surface Type
+  LTWALL,                                 !- Construction Name
+  ZONE ONE,                               !- Zone Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  0.5,                                    !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  14, 0, 3,                               !- X,Y,Z Vertex 1 {m}
+  14, 0, 0,                               !- X,Y,Z Vertex 2 {m}
+  14, 14, 0,                              !- X,Y,Z Vertex 3 {m}
+  14, 14, 3;                              !- X,Y,Z Vertex 4 {m}
+
+BuildingSurface:Detailed,
+  ZONE SURFACE FLOOR,                     !- Name
+  Floor,                                  !- Surface Type
+  LTWALL,                                 !- Construction Name
+  ZONE ONE,                               !- Zone Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  0,                                      !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  14, 14, 0,                              !- X,Y,Z Vertex 1 {m}
+  14, 0, 0,                               !- X,Y,Z Vertex 2 {m}
+  0, 0, 0,                                !- X,Y,Z Vertex 3 {m}
+  0, 14, 0;                               !- X,Y,Z Vertex 4 {m}
+
+BuildingSurface:Detailed,
+  ZONE SURFACE NORTH,                     !- Name
+  Wall,                                   !- Surface Type
+  LTWALL,                                 !- Construction Name
+  ZONE ONE,                               !- Zone Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  0.5,                                    !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  14, 14, 3,                              !- X,Y,Z Vertex 1 {m}
+  14, 14, 0,                              !- X,Y,Z Vertex 2 {m}
+  0, 14, 0,                               !- X,Y,Z Vertex 3 {m}
+  0, 14, 3;                               !- X,Y,Z Vertex 4 {m}
+
+BuildingSurface:Detailed,
+  ZONE SURFACE ROOF,                      !- Name
+  Roof,                                   !- Surface Type
+  LTWALL,                                 !- Construction Name
+  ZONE ONE,                               !- Zone Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  0,                                      !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  14, 0, 3,                               !- X,Y,Z Vertex 1 {m}
+  14, 14, 3,                              !- X,Y,Z Vertex 2 {m}
+  0, 14, 3,                               !- X,Y,Z Vertex 3 {m}
+  0, 0, 3;                                !- X,Y,Z Vertex 4 {m}
+
+BuildingSurface:Detailed,
+  ZONE SURFACE SOUTH,                     !- Name
+  Wall,                                   !- Surface Type
+  LTWALL,                                 !- Construction Name
+  ZONE ONE,                               !- Zone Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  0.5,                                    !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  0, 0, 3,                                !- X,Y,Z Vertex 1 {m}
+  0, 0, 0,                                !- X,Y,Z Vertex 2 {m}
+  14, 0, 0,                               !- X,Y,Z Vertex 3 {m}
+  14, 0, 3;                               !- X,Y,Z Vertex 4 {m}
+
+BuildingSurface:Detailed,
+  ZONE SURFACE WEST,                      !- Name
+  Wall,                                   !- Surface Type
+  LTWALL,                                 !- Construction Name
+  ZONE ONE,                               !- Zone Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  0.5,                                    !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  0, 14, 3,                               !- X,Y,Z Vertex 1 {m}
+  0, 14, 0,                               !- X,Y,Z Vertex 2 {m}
+  0, 0, 0,                                !- X,Y,Z Vertex 3 {m}
+  0, 0, 3;                                !- X,Y,Z Vertex 4 {m}
+
+OtherEquipment,
+  CE_lat_mid_inst,                        !- Name
+  None,                                   !- Fuel Type
+  ZONE ONE,                               !- Zone or ZoneList Name
+  CE300_lat_mid,                          !- Schedule Name
+  EquipmentLevel,                         !- Design Level Calculation Method
+  1466,                                   !- Design Level {W}
+  ,                                       !- Power per Zone Floor Area {W/m2}
+  ,                                       !- Power per Person {W/Person}
+  1,                                      !- Fraction Latent
+  0,                                      !- Fraction Radiant
+  ;                                       !- Fraction Lost
+
+OtherEquipment,
+  CE_sens_mid_inst,                       !- Name
+  None,                                   !- Fuel Type
+  ZONE ONE,                               !- Zone or ZoneList Name
+  CE300_sens_mid,                         !- Schedule Name
+  EquipmentLevel,                         !- Design Level Calculation Method
+  18758,                                  !- Design Level {W}
+  ,                                       !- Power per Zone Floor Area {W/m2}
+  ,                                       !- Power per Person {W/Person}
+  ,                                       !- Fraction Latent
+  ,                                       !- Fraction Radiant
+  ;                                       !- Fraction Lost
+
+ZoneControl:Thermostat,
+  ZONE ONE Thermostat,                    !- Name
+  ZONE ONE,                               !- Zone or ZoneList Name
+  ZONE ONE Thermostat Schedule,           !- Control Type Schedule Name
+  ThermostatSetpoint:DualSetpoint,        !- Control Object Type 1
+  Thermostat Setpoint Dual Setpoint 1;    !- Control Name 1
+
+Schedule:Compact,
+  ZONE ONE Thermostat Schedule,           !- Name
+  ZONE ONE Thermostat Schedule Type Limits, !- Schedule Type Limits Name
+  Through: 12/31,                         !- Field 1
+  For: AllDays,                           !- Field 2
+  Until: 24:00,                           !- Field 3
+  4;                                      !- Field 4
+
+ScheduleTypeLimits,
+  ZONE ONE Thermostat Schedule Type Limits, !- Name
+  0,                                      !- Lower Limit Value {BasedOnField A3}
+  4,                                      !- Upper Limit Value {BasedOnField A3}
+  DISCRETE;                               !- Numeric Type
+
+ThermostatSetpoint:DualSetpoint,
+  Thermostat Setpoint Dual Setpoint 1,    !- Name
+  No Heating,                             !- Heating Setpoint Temperature Schedule Name
+  25.0 C;                                 !- Cooling Setpoint Temperature Schedule Name
+
+ScheduleTypeLimits,
+  Temperature,                            !- Name
+  ,                                       !- Lower Limit Value {BasedOnField A3}
+  ,                                       !- Upper Limit Value {BasedOnField A3}
+  Continuous,                             !- Numeric Type
+  temperature;                            !- Unit Type
+
+Schedule:Day:Interval,
+  Schedule Day 2,                         !- Name
+  Temperature,                            !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  24:00,                                  !- Time 1 {hh:mm}
+  -100;                                   !- Value Until Time 1
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {bf46b8e7-6d43-406b-af2f-81cae38d2fd0}, !- Name
+  Schedule Day 2,                         !- Sunday Schedule:Day Name
+  Schedule Day 2,                         !- Monday Schedule:Day Name
+  Schedule Day 2,                         !- Tuesday Schedule:Day Name
+  Schedule Day 2,                         !- Wednesday Schedule:Day Name
+  Schedule Day 2,                         !- Thursday Schedule:Day Name
+  Schedule Day 2,                         !- Friday Schedule:Day Name
+  Schedule Day 2,                         !- Saturday Schedule:Day Name
+  Schedule Day 2,                         !- Holiday Schedule:Day Name
+  Schedule Day 2,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 2,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 2,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 2;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Year,
+  No Heating,                             !- Name
+  Temperature,                            !- Schedule Type Limits Name
+  Schedule:Week:Daily {bf46b8e7-6d43-406b-af2f-81cae38d2fd0}, !- Schedule:Week Name 1
+  1,                                      !- Start Month 1
+  1,                                      !- Start Day 1
+  12,                                     !- End Month 1
+  31;                                     !- End Day 1
+
+Schedule:Constant,
+  25.0 C,                                 !- Name
+  Temperature,                            !- Schedule Type Limits Name
+  25;                                     !- Hourly Value
+
+ZoneHVAC:EquipmentConnections,
+  ZONE ONE,                               !- Zone Name
+  ZONE ONE Equipment List,                !- Zone Conditioning Equipment List Name
+  ZONE ONE Inlet Node List,               !- Zone Air Inlet Node or NodeList Name
+  ,                                       !- Zone Air Exhaust Node or NodeList Name
+  Node 1,                                 !- Zone Air Node Name
+  Node 10;                                !- Zone Return Air Node or NodeList Name
+
+NodeList,
+  ZONE ONE Inlet Node List,               !- Name
+  Node 6;                                 !- Node Name 1
+
+AirTerminal:SingleDuct:Uncontrolled,
+  Air Terminal Single Duct Uncontrolled 1, !- Name
+  Always On Discrete,                     !- Availability Schedule Name
+  Node 6,                                 !- Zone Supply Air Node Name
+  1.888;                                  !- Maximum Air Flow Rate {m3/s}
+
+ZoneHVAC:EquipmentList,
+  ZONE ONE Equipment List,                !- Name
+  AirTerminal:SingleDuct:Uncontrolled,    !- Zone Equipment Object Type 1
+  Air Terminal Single Duct Uncontrolled 1, !- Zone Equipment Name 1
+  1,                                      !- Zone Equipment Cooling Sequence 1
+  1;                                      !- Zone Equipment Heating or No-Load Sequence 1
+
+Sizing:Zone,
+  ZONE ONE,                               !- Zone or ZoneList Name
+  SupplyAirTemperature,                   !- Zone Cooling Design Supply Air Temperature Input Method
+  14,                                     !- Zone Cooling Design Supply Air Temperature {C}
+  11.11,                                  !- Zone Cooling Design Supply Air Temperature Difference {deltaC}
+  SupplyAirTemperature,                   !- Zone Heating Design Supply Air Temperature Input Method
+  40,                                     !- Zone Heating Design Supply Air Temperature {C}
+  11.11,                                  !- Zone Heating Design Supply Air Temperature Difference {deltaC}
+  0.0085,                                 !- Zone Cooling Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+  0.008,                                  !- Zone Heating Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+  oa_gen,                                 !- Design Specification Outdoor Air Object Name
+  ,                                       !- Zone Heating Sizing Factor
+  ,                                       !- Zone Cooling Sizing Factor
+  DesignDay,                              !- Cooling Design Air Flow Method
+  0,                                      !- Cooling Design Air Flow Rate {m3/s}
+  0.000762,                               !- Cooling Minimum Air Flow per Zone Floor Area {m3/s-m2}
+  0,                                      !- Cooling Minimum Air Flow {m3/s}
+  0,                                      !- Cooling Minimum Air Flow Fraction
+  DesignDay,                              !- Heating Design Air Flow Method
+  0,                                      !- Heating Design Air Flow Rate {m3/s}
+  0.002032,                               !- Heating Maximum Air Flow per Zone Floor Area {m3/s-m2}
+  0.1415762,                              !- Heating Maximum Air Flow {m3/s}
+  0.3,                                    !- Heating Maximum Air Flow Fraction
+  ZONE ONE Design Spec Zone Air Dist,     !- Design Specification Zone Air Distribution Object Name
+  No;                                     !- Account for Dedicated Outdoor Air System
+
+DesignSpecification:ZoneAirDistribution,
+  ZONE ONE Design Spec Zone Air Dist,     !- Name
+  1,                                      !- Zone Air Distribution Effectiveness in Cooling Mode {dimensionless}
+  1;                                      !- Zone Air Distribution Effectiveness in Heating Mode {dimensionless}
+
+Schedule:Constant,
+  Always On Discrete,                     !- Name
+  OnOff,                                  !- Schedule Type Limits Name
+  1;                                      !- Hourly Value
+
+Controller:MechanicalVentilation,
+  Controller Mechanical Ventilation 1,    !- Name
+  Always On Discrete,                     !- Availability Schedule Name
+  No,                                     !- Demand Controlled Ventilation
+  ZoneSum,                                !- System Outdoor Air Method
+  ,                                       !- Zone Maximum Outdoor Air Fraction {dimensionless}
+  ZONE ONE,                               !- Zone Name 1
+  oa_gen,                                 !- Design Specification Outdoor Air Object Name 1
+  ZONE ONE Design Spec Zone Air Dist;     !- Design Specification Zone Air Distribution Object Name 1
+
+DesignSpecification:OutdoorAir,
+  oa_gen,                                 !- Name
+  Sum,                                    !- Outdoor Air Method
+  0,                                      !- Outdoor Air Flow per Person {m3/s-person}
+  0,                                      !- Outdoor Air Flow per Zone Floor Area {m3/s-m2}
+  0,                                      !- Outdoor Air Flow per Zone {m3/s}
+  1.734,                                  !- Outdoor Air Flow Air Changes per Hour {1/hr}
+  Always On Ruleset Fractional;           !- Outdoor Air Schedule Name
+
+SimulationControl,
+  Yes,                                    !- Do Zone Sizing Calculation
+  Yes,                                    !- Do System Sizing Calculation
+  No,                                     !- Do Plant Sizing Calculation
+  No,                                     !- Run Simulation for Sizing Periods
+  Yes;                                    !- Run Simulation for Weather File Run Periods
+
+HeatBalanceAlgorithm,
+  ConductionTransferFunction,             !- Algorithm
+  200;                                    !- Surface Temperature Upper Limit {C}
+
+RunPeriod,
+  Run Period 1,                           !- Name
+  1,                                      !- Begin Month
+  1,                                      !- Begin Day of Month
+  12,                                     !- End Month
+  31,                                     !- End Day of Month
+  Tuesday,                                !- Day of Week for Start Day
+  No,                                     !- Use Weather File Holidays and Special Days
+  No,                                     !- Use Weather File Daylight Saving Period
+  No,                                     !- Apply Weekend Holiday Rule
+  Yes,                                    !- Use Weather File Rain Indicators
+  Yes,                                    !- Use Weather File Snow Indicators
+  1;                                      !- Number of Times Runperiod to be Repeated
+
+ShadowCalculation,
+  AverageOverDaysInFrequency,             !- Calculation Method
+  20,                                     !- Calculation Frequency
+  15000;                                  !- Maximum Figures in Shadow Overlap Calculations
+
+SurfaceConvectionAlgorithm:Inside,
+  TARP;                                   !- Algorithm
+
+SurfaceConvectionAlgorithm:Outside,
+  TARP;                                   !- Algorithm
+
+Timestep,
+  4;                                      !- Number of Timesteps per Hour
+
+Sizing:Parameters,
+  1.25,                                   !- Heating Sizing Factor
+  1.15;                                   !- Cooling Sizing Factor
+
+GlobalGeometryRules,
+  UpperLeftCorner,                        !- Starting Vertex Position
+  Counterclockwise,                       !- Vertex Entry Direction
+  Relative,                               !- Coordinate System
+  Relative,                               !- Daylighting Reference Point Coordinate System
+  Relative;                               !- Rectangular Surface Coordinate System
+
+Material:NoMass,
+  INSULATION-EXT,                         !- Name
+  VerySmooth,                             !- Roughness
+  162.5,                                  !- Thermal Resistance {m2-K/W}
+  0.9,                                    !- Thermal Absorptance
+  0.1,                                    !- Solar Absorptance
+  0.1;                                    !- Visible Absorptance
+
+Material:NoMass,
+  INSULATION-INT,                         !- Name
+  VerySmooth,                             !- Roughness
+  162.5,                                  !- Thermal Resistance {m2-K/W}
+  0.9,                                    !- Thermal Absorptance
+  0.6,                                    !- Solar Absorptance
+  0.6;                                    !- Visible Absorptance
+
+Construction,
+  LTWALL,                                 !- Name
+  INSULATION-EXT,                         !- Layer 1
+  INSULATION-INT;                         !- Layer 2
+
+ScheduleTypeLimits,
+  Fractional,                             !- Name
+  0,                                      !- Lower Limit Value {BasedOnField A3}
+  1,                                      !- Upper Limit Value {BasedOnField A3}
+  Continuous;                             !- Numeric Type
+
+ScheduleTypeLimits,
+  OnOff,                                  !- Name
+  0,                                      !- Lower Limit Value {BasedOnField A3}
+  1,                                      !- Upper Limit Value {BasedOnField A3}
+  Discrete,                               !- Numeric Type
+  availability;                           !- Unit Type
+
+ScheduleTypeLimits,
+  OnOff 1,                                !- Name
+  0,                                      !- Lower Limit Value {BasedOnField A3}
+  1,                                      !- Upper Limit Value {BasedOnField A3}
+  Discrete,                               !- Numeric Type
+  availability;                           !- Unit Type
+
+Schedule:Constant,
+  Always Off Discrete,                    !- Name
+  OnOff 1,                                !- Schedule Type Limits Name
+  0;                                      !- Hourly Value
+
+Schedule:Day:Interval,
+  Schedule Day 14,                        !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  08:00,                                  !- Time 1 {hh:mm}
+  0.15625,                                !- Value Until Time 1
+  19:00,                                  !- Time 2 {hh:mm}
+  0.5,                                    !- Value Until Time 2
+  24:00,                                  !- Time 3 {hh:mm}
+  0.15625;                                !- Value Until Time 3
+
+Schedule:Day:Interval,
+  Schedule Day 16,                        !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  08:00,                                  !- Time 1 {hh:mm}
+  0.375,                                  !- Value Until Time 1
+  12:00,                                  !- Time 2 {hh:mm}
+  0.5,                                    !- Value Until Time 2
+  14:00,                                  !- Time 3 {hh:mm}
+  0.75,                                   !- Value Until Time 3
+  16:00,                                  !- Time 4 {hh:mm}
+  1,                                      !- Value Until Time 4
+  20:00,                                  !- Time 5 {hh:mm}
+  0.5,                                    !- Value Until Time 5
+  24:00,                                  !- Time 6 {hh:mm}
+  0.375;                                  !- Value Until Time 6
+
+Schedule:Day:Interval,
+  Schedule Day 18,                        !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  08:00,                                  !- Time 1 {hh:mm}
+  0.15625,                                !- Value Until Time 1
+  16:00,                                  !- Time 2 {hh:mm}
+  0.5,                                    !- Value Until Time 2
+  24:00,                                  !- Time 3 {hh:mm}
+  0.15625;                                !- Value Until Time 3
+
+Schedule:Day:Interval,
+  Schedule Day 20,                        !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  08:00,                                  !- Time 1 {hh:mm}
+  0.15625,                                !- Value Until Time 1
+  12:00,                                  !- Time 2 {hh:mm}
+  0.5,                                    !- Value Until Time 2
+  14:00,                                  !- Time 3 {hh:mm}
+  0.75,                                   !- Value Until Time 3
+  16:00,                                  !- Time 4 {hh:mm}
+  1,                                      !- Value Until Time 4
+  20:00,                                  !- Time 5 {hh:mm}
+  0.5,                                    !- Value Until Time 5
+  24:00,                                  !- Time 6 {hh:mm}
+  0.375;                                  !- Value Until Time 6
+
+Schedule:Day:Interval,
+  Schedule Day 21,                        !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  08:00,                                  !- Time 1 {hh:mm}
+  0,                                      !- Value Until Time 1
+  20:00,                                  !- Time 2 {hh:mm}
+  0.25,                                   !- Value Until Time 2
+  24:00,                                  !- Time 3 {hh:mm}
+  0;                                      !- Value Until Time 3
+
+Schedule:Day:Interval,
+  Schedule Day 22,                        !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  08:00,                                  !- Time 1 {hh:mm}
+  0,                                      !- Value Until Time 1
+  20:00,                                  !- Time 2 {hh:mm}
+  1,                                      !- Value Until Time 2
+  24:00,                                  !- Time 3 {hh:mm}
+  0;                                      !- Value Until Time 3
+
+Schedule:Day:Interval,
+  Schedule Day 23,                        !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  08:00,                                  !- Time 1 {hh:mm}
+  0,                                      !- Value Until Time 1
+  16:00,                                  !- Time 2 {hh:mm}
+  1,                                      !- Value Until Time 2
+  24:00,                                  !- Time 3 {hh:mm}
+  0;                                      !- Value Until Time 3
+
+Schedule:Day:Interval,
+  Schedule Day 24,                        !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  08:00,                                  !- Time 1 {hh:mm}
+  0,                                      !- Value Until Time 1
+  20:00,                                  !- Time 2 {hh:mm}
+  1,                                      !- Value Until Time 2
+  24:00,                                  !- Time 3 {hh:mm}
+  0;                                      !- Value Until Time 3
+
+Schedule:Day:Interval,
+  Schedule Day 25,                        !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  08:00,                                  !- Time 1 {hh:mm}
+  0,                                      !- Value Until Time 1
+  19:00,                                  !- Time 2 {hh:mm}
+  1,                                      !- Value Until Time 2
+  24:00,                                  !- Time 3 {hh:mm}
+  0;                                      !- Value Until Time 3
+
+Schedule:Day:Interval,
+  Schedule Day 26,                        !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  09:00,                                  !- Time 1 {hh:mm}
+  0,                                      !- Value Until Time 1
+  18:00,                                  !- Time 2 {hh:mm}
+  1,                                      !- Value Until Time 2
+  24:00,                                  !- Time 3 {hh:mm}
+  0;                                      !- Value Until Time 3
+
+Schedule:Day:Interval,
+  Schedule Day 6,                         !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  24:00,                                  !- Time 1 {hh:mm}
+  1;                                      !- Value Until Time 1
+
+Schedule:Day:Interval,
+  Schedule Day 7,                         !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  24:00,                                  !- Time 1 {hh:mm}
+  0.15625;                                !- Value Until Time 1
+
+Schedule:Day:Interval,
+  Schedule Day 9,                         !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  09:00,                                  !- Time 1 {hh:mm}
+  0.15625,                                !- Value Until Time 1
+  18:00,                                  !- Time 2 {hh:mm}
+  0.375,                                  !- Value Until Time 2
+  24:00,                                  !- Time 3 {hh:mm}
+  0.15625;                                !- Value Until Time 3
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {b3df36f1-c173-4e9b-905f-aef84f7720be}, !- Name
+  Schedule Day 6,                         !- Sunday Schedule:Day Name
+  Schedule Day 6,                         !- Monday Schedule:Day Name
+  Schedule Day 6,                         !- Tuesday Schedule:Day Name
+  Schedule Day 6,                         !- Wednesday Schedule:Day Name
+  Schedule Day 6,                         !- Thursday Schedule:Day Name
+  Schedule Day 6,                         !- Friday Schedule:Day Name
+  Schedule Day 6,                         !- Saturday Schedule:Day Name
+  Schedule Day 6,                         !- Holiday Schedule:Day Name
+  Schedule Day 6,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 6,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 6,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 6;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Year,
+  Always On Ruleset Fractional,           !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  Schedule:Week:Daily {b3df36f1-c173-4e9b-905f-aef84f7720be}, !- Schedule:Week Name 1
+  1,                                      !- Start Month 1
+  1,                                      !- Start Day 1
+  12,                                     !- End Month 1
+  31;                                     !- End Day 1
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {56ea6696-8570-4464-b014-dc76a6393512}, !- Name
+  Schedule Day 21,                        !- Sunday Schedule:Day Name
+  Schedule Day 21,                        !- Monday Schedule:Day Name
+  Schedule Day 21,                        !- Tuesday Schedule:Day Name
+  Schedule Day 21,                        !- Wednesday Schedule:Day Name
+  Schedule Day 21,                        !- Thursday Schedule:Day Name
+  Schedule Day 21,                        !- Friday Schedule:Day Name
+  Schedule Day 21,                        !- Saturday Schedule:Day Name
+  Schedule Day 21,                        !- Holiday Schedule:Day Name
+  Schedule Day 21,                        !- SummerDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- WinterDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- CustomDay1 Schedule:Day Name
+  Schedule Day 21;                        !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {e8c2f86d-1166-49f3-a394-fbce0aea3c32}, !- Name
+  Schedule Day 21,                        !- Sunday Schedule:Day Name
+  Schedule Day 21,                        !- Monday Schedule:Day Name
+  Schedule Day 26,                        !- Tuesday Schedule:Day Name
+  Schedule Day 26,                        !- Wednesday Schedule:Day Name
+  Schedule Day 26,                        !- Thursday Schedule:Day Name
+  Schedule Day 26,                        !- Friday Schedule:Day Name
+  Schedule Day 26,                        !- Saturday Schedule:Day Name
+  Schedule Day 21,                        !- Holiday Schedule:Day Name
+  Schedule Day 21,                        !- SummerDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- WinterDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- CustomDay1 Schedule:Day Name
+  Schedule Day 21;                        !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {013b8364-77ae-465a-b089-c20022a943d6}, !- Name
+  Schedule Day 26,                        !- Sunday Schedule:Day Name
+  Schedule Day 26,                        !- Monday Schedule:Day Name
+  Schedule Day 26,                        !- Tuesday Schedule:Day Name
+  Schedule Day 26,                        !- Wednesday Schedule:Day Name
+  Schedule Day 26,                        !- Thursday Schedule:Day Name
+  Schedule Day 26,                        !- Friday Schedule:Day Name
+  Schedule Day 26,                        !- Saturday Schedule:Day Name
+  Schedule Day 21,                        !- Holiday Schedule:Day Name
+  Schedule Day 21,                        !- SummerDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- WinterDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- CustomDay1 Schedule:Day Name
+  Schedule Day 21;                        !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {eadd97b2-e353-422c-aa21-89898252385b}, !- Name
+  Schedule Day 26,                        !- Sunday Schedule:Day Name
+  Schedule Day 26,                        !- Monday Schedule:Day Name
+  Schedule Day 26,                        !- Tuesday Schedule:Day Name
+  Schedule Day 26,                        !- Wednesday Schedule:Day Name
+  Schedule Day 26,                        !- Thursday Schedule:Day Name
+  Schedule Day 21,                        !- Friday Schedule:Day Name
+  Schedule Day 25,                        !- Saturday Schedule:Day Name
+  Schedule Day 21,                        !- Holiday Schedule:Day Name
+  Schedule Day 21,                        !- SummerDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- WinterDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- CustomDay1 Schedule:Day Name
+  Schedule Day 21;                        !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {e9f7b16c-80c7-494e-b620-7f2bedd1a01b}, !- Name
+  Schedule Day 25,                        !- Sunday Schedule:Day Name
+  Schedule Day 25,                        !- Monday Schedule:Day Name
+  Schedule Day 25,                        !- Tuesday Schedule:Day Name
+  Schedule Day 25,                        !- Wednesday Schedule:Day Name
+  Schedule Day 25,                        !- Thursday Schedule:Day Name
+  Schedule Day 25,                        !- Friday Schedule:Day Name
+  Schedule Day 25,                        !- Saturday Schedule:Day Name
+  Schedule Day 21,                        !- Holiday Schedule:Day Name
+  Schedule Day 21,                        !- SummerDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- WinterDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- CustomDay1 Schedule:Day Name
+  Schedule Day 21;                        !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {150ca84d-630d-48e5-b598-3cb1867c9c49}, !- Name
+  Schedule Day 25,                        !- Sunday Schedule:Day Name
+  Schedule Day 24,                        !- Monday Schedule:Day Name
+  Schedule Day 24,                        !- Tuesday Schedule:Day Name
+  Schedule Day 24,                        !- Wednesday Schedule:Day Name
+  Schedule Day 24,                        !- Thursday Schedule:Day Name
+  Schedule Day 24,                        !- Friday Schedule:Day Name
+  Schedule Day 24,                        !- Saturday Schedule:Day Name
+  Schedule Day 21,                        !- Holiday Schedule:Day Name
+  Schedule Day 21,                        !- SummerDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- WinterDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- CustomDay1 Schedule:Day Name
+  Schedule Day 21;                        !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {7a477cda-df88-4453-a5e0-fe9773dcecf4}, !- Name
+  Schedule Day 24,                        !- Sunday Schedule:Day Name
+  Schedule Day 24,                        !- Monday Schedule:Day Name
+  Schedule Day 24,                        !- Tuesday Schedule:Day Name
+  Schedule Day 24,                        !- Wednesday Schedule:Day Name
+  Schedule Day 24,                        !- Thursday Schedule:Day Name
+  Schedule Day 24,                        !- Friday Schedule:Day Name
+  Schedule Day 24,                        !- Saturday Schedule:Day Name
+  Schedule Day 21,                        !- Holiday Schedule:Day Name
+  Schedule Day 21,                        !- SummerDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- WinterDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- CustomDay1 Schedule:Day Name
+  Schedule Day 21;                        !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {896ac5f0-f49d-4454-8a22-13c6867418c1}, !- Name
+  Schedule Day 24,                        !- Sunday Schedule:Day Name
+  Schedule Day 23,                        !- Monday Schedule:Day Name
+  Schedule Day 23,                        !- Tuesday Schedule:Day Name
+  Schedule Day 23,                        !- Wednesday Schedule:Day Name
+  Schedule Day 23,                        !- Thursday Schedule:Day Name
+  Schedule Day 23,                        !- Friday Schedule:Day Name
+  Schedule Day 23,                        !- Saturday Schedule:Day Name
+  Schedule Day 21,                        !- Holiday Schedule:Day Name
+  Schedule Day 21,                        !- SummerDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- WinterDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- CustomDay1 Schedule:Day Name
+  Schedule Day 21;                        !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {7357a42c-740d-4b0f-87ba-306bcf78cc3b}, !- Name
+  Schedule Day 22,                        !- Sunday Schedule:Day Name
+  Schedule Day 22,                        !- Monday Schedule:Day Name
+  Schedule Day 22,                        !- Tuesday Schedule:Day Name
+  Schedule Day 22,                        !- Wednesday Schedule:Day Name
+  Schedule Day 22,                        !- Thursday Schedule:Day Name
+  Schedule Day 22,                        !- Friday Schedule:Day Name
+  Schedule Day 22,                        !- Saturday Schedule:Day Name
+  Schedule Day 21,                        !- Holiday Schedule:Day Name
+  Schedule Day 21,                        !- SummerDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- WinterDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- CustomDay1 Schedule:Day Name
+  Schedule Day 21;                        !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {e5e6cf59-c419-4f2a-b425-5e50d4675afd}, !- Name
+  Schedule Day 22,                        !- Sunday Schedule:Day Name
+  Schedule Day 22,                        !- Monday Schedule:Day Name
+  Schedule Day 22,                        !- Tuesday Schedule:Day Name
+  Schedule Day 22,                        !- Wednesday Schedule:Day Name
+  Schedule Day 21,                        !- Thursday Schedule:Day Name
+  Schedule Day 21,                        !- Friday Schedule:Day Name
+  Schedule Day 21,                        !- Saturday Schedule:Day Name
+  Schedule Day 21,                        !- Holiday Schedule:Day Name
+  Schedule Day 21,                        !- SummerDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- WinterDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- CustomDay1 Schedule:Day Name
+  Schedule Day 21;                        !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {ef6b7ead-2016-4320-851d-92a80b4e6507}, !- Name
+  Schedule Day 21,                        !- Sunday Schedule:Day Name
+  Schedule Day 21,                        !- Monday Schedule:Day Name
+  Schedule Day 21,                        !- Tuesday Schedule:Day Name
+  Schedule Day 21,                        !- Wednesday Schedule:Day Name
+  Schedule Day 21,                        !- Thursday Schedule:Day Name
+  Schedule Day 21,                        !- Friday Schedule:Day Name
+  Schedule Day 21,                        !- Saturday Schedule:Day Name
+  Schedule Day 21,                        !- Holiday Schedule:Day Name
+  Schedule Day 21,                        !- SummerDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- WinterDesignDay Schedule:Day Name
+  Schedule Day 21,                        !- CustomDay1 Schedule:Day Name
+  Schedule Day 21;                        !- CustomDay2 Schedule:Day Name
+
+Schedule:Year,
+  CE300_lat_mid,                          !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  Schedule:Week:Daily {56ea6696-8570-4464-b014-dc76a6393512}, !- Schedule:Week Name 1
+  1,                                      !- Start Month 1
+  1,                                      !- Start Day 1
+  3,                                      !- End Month 1
+  8,                                      !- End Day 1
+  Schedule:Week:Daily {e8c2f86d-1166-49f3-a394-fbce0aea3c32}, !- Schedule:Week Name 2
+  3,                                      !- Start Month 2
+  9,                                      !- Start Day 2
+  3,                                      !- End Month 2
+  15,                                     !- End Day 2
+  Schedule:Week:Daily {013b8364-77ae-465a-b089-c20022a943d6}, !- Schedule:Week Name 3
+  3,                                      !- Start Month 3
+  16,                                     !- Start Day 3
+  4,                                      !- End Month 3
+  5,                                      !- End Day 3
+  Schedule:Week:Daily {eadd97b2-e353-422c-aa21-89898252385b}, !- Schedule:Week Name 4
+  4,                                      !- Start Month 4
+  6,                                      !- Start Day 4
+  4,                                      !- End Month 4
+  12,                                     !- End Day 4
+  Schedule:Week:Daily {e9f7b16c-80c7-494e-b620-7f2bedd1a01b}, !- Schedule:Week Name 5
+  4,                                      !- Start Month 5
+  13,                                     !- Start Day 5
+  4,                                      !- End Month 5
+  19,                                     !- End Day 5
+  Schedule:Week:Daily {150ca84d-630d-48e5-b598-3cb1867c9c49}, !- Schedule:Week Name 6
+  4,                                      !- Start Month 6
+  20,                                     !- Start Day 6
+  4,                                      !- End Month 6
+  26,                                     !- End Day 6
+  Schedule:Week:Daily {7a477cda-df88-4453-a5e0-fe9773dcecf4}, !- Schedule:Week Name 7
+  4,                                      !- Start Month 7
+  27,                                     !- Start Day 7
+  10,                                     !- End Month 7
+  11,                                     !- End Day 7
+  Schedule:Week:Daily {896ac5f0-f49d-4454-8a22-13c6867418c1}, !- Schedule:Week Name 8
+  10,                                     !- Start Month 8
+  12,                                     !- Start Day 8
+  10,                                     !- End Month 8
+  18,                                     !- End Day 8
+  Schedule:Week:Daily {7357a42c-740d-4b0f-87ba-306bcf78cc3b}, !- Schedule:Week Name 9
+  10,                                     !- Start Month 9
+  19,                                     !- Start Day 9
+  11,                                     !- End Month 9
+  1,                                      !- End Day 9
+  Schedule:Week:Daily {e5e6cf59-c419-4f2a-b425-5e50d4675afd}, !- Schedule:Week Name 10
+  11,                                     !- Start Month 10
+  2,                                      !- Start Day 10
+  11,                                     !- End Month 10
+  8,                                      !- End Day 10
+  Schedule:Week:Daily {ef6b7ead-2016-4320-851d-92a80b4e6507}, !- Schedule:Week Name 11
+  11,                                     !- Start Month 11
+  9,                                      !- Start Day 11
+  12,                                     !- End Month 11
+  31;                                     !- End Day 11
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {b309c07f-c144-404a-933e-4bbb4925ec29}, !- Name
+  Schedule Day 7,                         !- Sunday Schedule:Day Name
+  Schedule Day 7,                         !- Monday Schedule:Day Name
+  Schedule Day 7,                         !- Tuesday Schedule:Day Name
+  Schedule Day 7,                         !- Wednesday Schedule:Day Name
+  Schedule Day 7,                         !- Thursday Schedule:Day Name
+  Schedule Day 7,                         !- Friday Schedule:Day Name
+  Schedule Day 7,                         !- Saturday Schedule:Day Name
+  Schedule Day 7,                         !- Holiday Schedule:Day Name
+  Schedule Day 7,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 7;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {c05a48cd-403b-491b-8fdf-f808f1e3844f}, !- Name
+  Schedule Day 7,                         !- Sunday Schedule:Day Name
+  Schedule Day 7,                         !- Monday Schedule:Day Name
+  Schedule Day 9,                         !- Tuesday Schedule:Day Name
+  Schedule Day 9,                         !- Wednesday Schedule:Day Name
+  Schedule Day 9,                         !- Thursday Schedule:Day Name
+  Schedule Day 9,                         !- Friday Schedule:Day Name
+  Schedule Day 9,                         !- Saturday Schedule:Day Name
+  Schedule Day 7,                         !- Holiday Schedule:Day Name
+  Schedule Day 7,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 7;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {a55b6215-8c24-4769-9f43-faa288ba9fec}, !- Name
+  Schedule Day 9,                         !- Sunday Schedule:Day Name
+  Schedule Day 9,                         !- Monday Schedule:Day Name
+  Schedule Day 9,                         !- Tuesday Schedule:Day Name
+  Schedule Day 9,                         !- Wednesday Schedule:Day Name
+  Schedule Day 9,                         !- Thursday Schedule:Day Name
+  Schedule Day 9,                         !- Friday Schedule:Day Name
+  Schedule Day 9,                         !- Saturday Schedule:Day Name
+  Schedule Day 7,                         !- Holiday Schedule:Day Name
+  Schedule Day 7,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 7;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {5555e578-38a8-4130-b754-8389cefcba6e}, !- Name
+  Schedule Day 9,                         !- Sunday Schedule:Day Name
+  Schedule Day 9,                         !- Monday Schedule:Day Name
+  Schedule Day 9,                         !- Tuesday Schedule:Day Name
+  Schedule Day 9,                         !- Wednesday Schedule:Day Name
+  Schedule Day 9,                         !- Thursday Schedule:Day Name
+  Schedule Day 7,                         !- Friday Schedule:Day Name
+  Schedule Day 14,                        !- Saturday Schedule:Day Name
+  Schedule Day 7,                         !- Holiday Schedule:Day Name
+  Schedule Day 7,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 7;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {c60a7cbe-5505-43e2-b93b-45d855e4eb73}, !- Name
+  Schedule Day 14,                        !- Sunday Schedule:Day Name
+  Schedule Day 14,                        !- Monday Schedule:Day Name
+  Schedule Day 14,                        !- Tuesday Schedule:Day Name
+  Schedule Day 14,                        !- Wednesday Schedule:Day Name
+  Schedule Day 14,                        !- Thursday Schedule:Day Name
+  Schedule Day 14,                        !- Friday Schedule:Day Name
+  Schedule Day 14,                        !- Saturday Schedule:Day Name
+  Schedule Day 7,                         !- Holiday Schedule:Day Name
+  Schedule Day 7,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 7;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {e6c94eb7-3ddc-4a08-ac06-11dfff7dc799}, !- Name
+  Schedule Day 14,                        !- Sunday Schedule:Day Name
+  Schedule Day 16,                        !- Monday Schedule:Day Name
+  Schedule Day 16,                        !- Tuesday Schedule:Day Name
+  Schedule Day 16,                        !- Wednesday Schedule:Day Name
+  Schedule Day 16,                        !- Thursday Schedule:Day Name
+  Schedule Day 16,                        !- Friday Schedule:Day Name
+  Schedule Day 16,                        !- Saturday Schedule:Day Name
+  Schedule Day 7,                         !- Holiday Schedule:Day Name
+  Schedule Day 7,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 7;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {ea883dcd-e64c-4880-8d03-11cdf06f93e1}, !- Name
+  Schedule Day 16,                        !- Sunday Schedule:Day Name
+  Schedule Day 16,                        !- Monday Schedule:Day Name
+  Schedule Day 16,                        !- Tuesday Schedule:Day Name
+  Schedule Day 16,                        !- Wednesday Schedule:Day Name
+  Schedule Day 16,                        !- Thursday Schedule:Day Name
+  Schedule Day 16,                        !- Friday Schedule:Day Name
+  Schedule Day 16,                        !- Saturday Schedule:Day Name
+  Schedule Day 7,                         !- Holiday Schedule:Day Name
+  Schedule Day 7,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 7;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {b328e496-dbd0-4f8a-b35c-5fdcf0e39910}, !- Name
+  Schedule Day 16,                        !- Sunday Schedule:Day Name
+  Schedule Day 18,                        !- Monday Schedule:Day Name
+  Schedule Day 18,                        !- Tuesday Schedule:Day Name
+  Schedule Day 18,                        !- Wednesday Schedule:Day Name
+  Schedule Day 18,                        !- Thursday Schedule:Day Name
+  Schedule Day 18,                        !- Friday Schedule:Day Name
+  Schedule Day 18,                        !- Saturday Schedule:Day Name
+  Schedule Day 7,                         !- Holiday Schedule:Day Name
+  Schedule Day 7,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 7;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {d783b74b-1d9d-497d-93f1-7269b44f6b2d}, !- Name
+  Schedule Day 20,                        !- Sunday Schedule:Day Name
+  Schedule Day 20,                        !- Monday Schedule:Day Name
+  Schedule Day 20,                        !- Tuesday Schedule:Day Name
+  Schedule Day 20,                        !- Wednesday Schedule:Day Name
+  Schedule Day 20,                        !- Thursday Schedule:Day Name
+  Schedule Day 20,                        !- Friday Schedule:Day Name
+  Schedule Day 20,                        !- Saturday Schedule:Day Name
+  Schedule Day 7,                         !- Holiday Schedule:Day Name
+  Schedule Day 7,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 7;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {0d3a8e4c-cd4b-4c5a-a3fb-a812f80d8805}, !- Name
+  Schedule Day 20,                        !- Sunday Schedule:Day Name
+  Schedule Day 20,                        !- Monday Schedule:Day Name
+  Schedule Day 20,                        !- Tuesday Schedule:Day Name
+  Schedule Day 20,                        !- Wednesday Schedule:Day Name
+  Schedule Day 7,                         !- Thursday Schedule:Day Name
+  Schedule Day 7,                         !- Friday Schedule:Day Name
+  Schedule Day 7,                         !- Saturday Schedule:Day Name
+  Schedule Day 7,                         !- Holiday Schedule:Day Name
+  Schedule Day 7,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 7;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {d6f126d9-eabf-4296-8931-9001197d22e1}, !- Name
+  Schedule Day 7,                         !- Sunday Schedule:Day Name
+  Schedule Day 7,                         !- Monday Schedule:Day Name
+  Schedule Day 7,                         !- Tuesday Schedule:Day Name
+  Schedule Day 7,                         !- Wednesday Schedule:Day Name
+  Schedule Day 7,                         !- Thursday Schedule:Day Name
+  Schedule Day 7,                         !- Friday Schedule:Day Name
+  Schedule Day 7,                         !- Saturday Schedule:Day Name
+  Schedule Day 7,                         !- Holiday Schedule:Day Name
+  Schedule Day 7,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 7;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Year,
+  CE300_sens_mid,                         !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  Schedule:Week:Daily {b309c07f-c144-404a-933e-4bbb4925ec29}, !- Schedule:Week Name 1
+  1,                                      !- Start Month 1
+  1,                                      !- Start Day 1
+  3,                                      !- End Month 1
+  8,                                      !- End Day 1
+  Schedule:Week:Daily {c05a48cd-403b-491b-8fdf-f808f1e3844f}, !- Schedule:Week Name 2
+  3,                                      !- Start Month 2
+  9,                                      !- Start Day 2
+  3,                                      !- End Month 2
+  15,                                     !- End Day 2
+  Schedule:Week:Daily {a55b6215-8c24-4769-9f43-faa288ba9fec}, !- Schedule:Week Name 3
+  3,                                      !- Start Month 3
+  16,                                     !- Start Day 3
+  4,                                      !- End Month 3
+  5,                                      !- End Day 3
+  Schedule:Week:Daily {5555e578-38a8-4130-b754-8389cefcba6e}, !- Schedule:Week Name 4
+  4,                                      !- Start Month 4
+  6,                                      !- Start Day 4
+  4,                                      !- End Month 4
+  12,                                     !- End Day 4
+  Schedule:Week:Daily {c60a7cbe-5505-43e2-b93b-45d855e4eb73}, !- Schedule:Week Name 5
+  4,                                      !- Start Month 5
+  13,                                     !- Start Day 5
+  4,                                      !- End Month 5
+  19,                                     !- End Day 5
+  Schedule:Week:Daily {e6c94eb7-3ddc-4a08-ac06-11dfff7dc799}, !- Schedule:Week Name 6
+  4,                                      !- Start Month 6
+  20,                                     !- Start Day 6
+  4,                                      !- End Month 6
+  26,                                     !- End Day 6
+  Schedule:Week:Daily {ea883dcd-e64c-4880-8d03-11cdf06f93e1}, !- Schedule:Week Name 7
+  4,                                      !- Start Month 7
+  27,                                     !- Start Day 7
+  10,                                     !- End Month 7
+  11,                                     !- End Day 7
+  Schedule:Week:Daily {b328e496-dbd0-4f8a-b35c-5fdcf0e39910}, !- Schedule:Week Name 8
+  10,                                     !- Start Month 8
+  12,                                     !- Start Day 8
+  10,                                     !- End Month 8
+  18,                                     !- End Day 8
+  Schedule:Week:Daily {d783b74b-1d9d-497d-93f1-7269b44f6b2d}, !- Schedule:Week Name 9
+  10,                                     !- Start Month 9
+  19,                                     !- Start Day 9
+  11,                                     !- End Month 9
+  1,                                      !- End Day 9
+  Schedule:Week:Daily {0d3a8e4c-cd4b-4c5a-a3fb-a812f80d8805}, !- Schedule:Week Name 10
+  11,                                     !- Start Month 10
+  2,                                      !- Start Day 10
+  11,                                     !- End Month 10
+  8,                                      !- End Day 10
+  Schedule:Week:Daily {d6f126d9-eabf-4296-8931-9001197d22e1}, !- Schedule:Week Name 11
+  11,                                     !- Start Month 11
+  9,                                      !- Start Day 11
+  12,                                     !- End Month 11
+  31;                                     !- End Day 11
+
+Schedule:Constant,
+  Always On Continuous,                   !- Name
+  ,                                       !- Schedule Type Limits Name
+  1;                                      !- Hourly Value
+
+OutdoorAir:Node,
+  Model Outdoor Air Node;                 !- Name
+
+AirLoopHVAC,
+  BESTEST CE air loop,                    !- Name
+  ,                                       !- Controller List Name
+  BESTEST CE air loopAvailability Manager List, !- Availability Manager List Name
+  1.888,                                  !- Design Supply Air Flow Rate {m3/s}
+  BESTEST CE air loop Supply Branches,    !- Branch List Name
+  ,                                       !- Connector List Name
+  Node 2,                                 !- Supply Side Inlet Node Name
+  Node 5,                                 !- Demand Side Outlet Node Name
+  BESTEST CE air loop Demand Inlet Nodes, !- Demand Side Inlet Node Names
+  BESTEST CE air loop Supply Outlet Nodes; !- Supply Side Outlet Node Names
+
+NodeList,
+  BESTEST CE air loop Supply Outlet Nodes, !- Name
+  Node 3;                                 !- Node Name 1
+
+NodeList,
+  BESTEST CE air loop Demand Inlet Nodes, !- Name
+  Node 4;                                 !- Node Name 1
+
+Sizing:System,
+  BESTEST CE air loop,                    !- AirLoop Name
+  Sensible,                               !- Type of Load to Size On
+  1.888,                                  !- Design Outdoor Air Flow Rate {m3/s}
+  0.3,                                    !- Central Heating Maximum System Air Flow Ratio
+  7,                                      !- Preheat Design Temperature {C}
+  0.008,                                  !- Preheat Design Humidity Ratio {kgWater/kgDryAir}
+  12.8,                                   !- Precool Design Temperature {C}
+  0.008,                                  !- Precool Design Humidity Ratio {kgWater/kgDryAir}
+  12.8,                                   !- Central Cooling Design Supply Air Temperature {C}
+  16.7,                                   !- Central Heating Design Supply Air Temperature {C}
+  NonCoincident,                          !- Type of Zone Sum to Use
+  Yes,                                    !- 100% Outdoor Air in Cooling
+  Yes,                                    !- 100% Outdoor Air in Heating
+  0.0085,                                 !- Central Cooling Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+  0.008,                                  !- Central Heating Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+  DesignDay,                              !- Cooling Supply Air Flow Rate Method
+  0,                                      !- Cooling Supply Air Flow Rate {m3/s}
+  0.0099676501,                           !- Cooling Supply Air Flow Rate Per Floor Area {m3/s-m2}
+  1,                                      !- Cooling Fraction of Autosized Cooling Supply Air Flow Rate
+  3.9475456e-05,                          !- Cooling Supply Air Flow Rate Per Unit Cooling Capacity {m3/s-W}
+  DesignDay,                              !- Heating Supply Air Flow Rate Method
+  0,                                      !- Heating Supply Air Flow Rate {m3/s}
+  0.0099676501,                           !- Heating Supply Air Flow Rate Per Floor Area {m3/s-m2}
+  1,                                      !- Heating Fraction of Autosized Heating Supply Air Flow Rate
+  1,                                      !- Heating Fraction of Autosized Cooling Supply Air Flow Rate
+  3.1588213e-05,                          !- Heating Supply Air Flow Rate Per Unit Heating Capacity {m3/s-W}
+  ZoneSum,                                !- System Outdoor Air Method
+  1,                                      !- Zone Maximum Outdoor Air Fraction {dimensionless}
+  CoolingDesignCapacity,                  !- Cooling Design Capacity Method
+  33280,                                  !- Cooling Design Capacity {W}
+  234.7,                                  !- Cooling Design Capacity Per Floor Area {W/m2}
+  1,                                      !- Fraction of Autosized Cooling Design Capacity
+  HeatingDesignCapacity,                  !- Heating Design Capacity Method
+  0,                                      !- Heating Design Capacity {W}
+  157,                                    !- Heating Design Capacity Per Floor Area {W/m2}
+  1,                                      !- Fraction of Autosized Heating Design Capacity
+  OnOff;                                  !- Central Cooling Capacity Control Method
+
+AvailabilityManagerAssignmentList,
+  BESTEST CE air loopAvailability Manager List, !- Name
+  AvailabilityManager:Scheduled,          !- Availability Manager Object Type 1
+  BESTEST CE air loop Availability Manager; !- Availability Manager Name 1
+
+AvailabilityManager:Scheduled,
+  BESTEST CE air loop Availability Manager, !- Name
+  Always On Discrete;                     !- Schedule Name
+
+BranchList,
+  BESTEST CE air loop Supply Branches,    !- Name
+  BESTEST CE air loop Main Branch;        !- Branch Name 1
+
+Branch,
+  BESTEST CE air loop Main Branch,        !- Name
+  ,                                       !- Pressure Drop Curve Name
+  AirLoopHVAC:OutdoorAirSystem,           !- Component Object Type 1
+  Air Loop HVAC Outdoor Air System 1,     !- Component Name 1
+  Node 2,                                 !- Component Inlet Node Name 1
+  Node 9,                                 !- Component Outlet Node Name 1
+  AirLoopHVAC:UnitarySystem,              !- Component Object Type 2
+  Air Loop HVAC Unitary System 1,         !- Component Name 2
+  Node 9,                                 !- Component Inlet Node Name 2
+  Node 3;                                 !- Component Outlet Node Name 2
+
+AirLoopHVAC:OutdoorAirSystem,
+  Air Loop HVAC Outdoor Air System 1,     !- Name
+  Air Loop HVAC Outdoor Air System 1 Controller List, !- Controller List Name
+  Air Loop HVAC Outdoor Air System 1 Equipment List, !- Outdoor Air Equipment List Name
+  Air Loop HVAC Outdoor Air System 1 Availability Manager List; !- Availability Manager List Name
+
+AirLoopHVAC:ControllerList,
+  Air Loop HVAC Outdoor Air System 1 Controller List, !- Name
+  Controller:OutdoorAir,                  !- Controller Object Type 1
+  Controller Outdoor Air 1;               !- Controller Name 1
+
+Controller:OutdoorAir,
+  Controller Outdoor Air 1,               !- Name
+  Node 8,                                 !- Relief Air Outlet Node Name
+  Node 2,                                 !- Return Air Node Name
+  Node 9,                                 !- Mixed Air Node Name
+  Node 7,                                 !- Actuator Node Name
+  0.283166667,                            !- Minimum Outdoor Air Flow Rate {m3/s}
+  1.888,                                  !- Maximum Outdoor Air Flow Rate {m3/s}
+  NoEconomizer,                           !- Economizer Control Type
+  ModulateFlow,                           !- Economizer Control Action Type
+  28,                                     !- Economizer Maximum Limit Dry-Bulb Temperature {C}
+  64000,                                  !- Economizer Maximum Limit Enthalpy {J/kg}
+  ,                                       !- Economizer Maximum Limit Dewpoint Temperature {C}
+  ,                                       !- Electronic Enthalpy Limit Curve Name
+  -100,                                   !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+  NoLockout,                              !- Lockout Type
+  FixedMinimum,                           !- Minimum Limit Type
+  ,                                       !- Minimum Outdoor Air Schedule Name
+  ,                                       !- Minimum Fraction of Outdoor Air Schedule Name
+  ,                                       !- Maximum Fraction of Outdoor Air Schedule Name
+  Controller Mechanical Ventilation 1,    !- Mechanical Ventilation Controller Name
+  ,                                       !- Time of Day Economizer Control Schedule Name
+  No,                                     !- High Humidity Control
+  ,                                       !- Humidistat Control Zone Name
+  ,                                       !- High Humidity Outdoor Air Flow Ratio
+  Yes,                                    !- Control High Indoor Humidity Based on Outdoor Humidity Ratio
+  BypassWhenWithinEconomizerLimits;       !- Heat Recovery Bypass Control Type
+
+AvailabilityManagerAssignmentList,
+  Air Loop HVAC Outdoor Air System 1 Availability Manager List, !- Name
+  AvailabilityManager:Scheduled,          !- Availability Manager Object Type 1
+  Air Loop HVAC Outdoor Air System 1 Availability Manager; !- Availability Manager Name 1
+
+AvailabilityManager:Scheduled,
+  Air Loop HVAC Outdoor Air System 1 Availability Manager, !- Name
+  Always On Discrete;                     !- Schedule Name
+
+OutdoorAir:NodeList,
+  Node 7;                                 !- Node or NodeList Name 1
+
+AirLoopHVAC:OutdoorAirSystem:EquipmentList,
+  Air Loop HVAC Outdoor Air System 1 Equipment List, !- Name
+  OutdoorAir:Mixer,                       !- Component Object Type 1
+  Air Loop HVAC Outdoor Air System 1 Outdoor Air Mixer; !- Component Name 1
+
+OutdoorAir:Mixer,
+  Air Loop HVAC Outdoor Air System 1 Outdoor Air Mixer, !- Name
+  Node 9,                                 !- Mixed Air Node Name
+  Node 7,                                 !- Outdoor Air Stream Node Name
+  Node 8,                                 !- Relief Air Stream Node Name
+  Node 2;                                 !- Return Air Stream Node Name
+
+AirLoopHVAC:UnitarySystem,
+  Air Loop HVAC Unitary System 1,         !- Name
+  Load,                                   !- Control Type
+  ZONE ONE,                               !- Controlling Zone or Thermostat Location
+  None,                                   !- Dehumidification Control Type
+  Always On Discrete,                     !- Availability Schedule Name
+  Node 9,                                 !- Air Inlet Node Name
+  Node 3,                                 !- Air Outlet Node Name
+  Fan:OnOff,                              !- Supply Fan Object Type
+  Fan On Off 1,                           !- Supply Fan Name
+  DrawThrough,                            !- Fan Placement
+  Always On Discrete,                     !- Supply Air Fan Operating Mode Schedule Name
+  ,                                       !- Heating Coil Object Type
+  ,                                       !- Heating Coil Name
+  1,                                      !- DX Heating Coil Sizing Ratio
+  Coil:Cooling:DX:SingleSpeed,            !- Cooling Coil Object Type
+  Coil Cooling DX Single Speed 1,         !- Cooling Coil Name
+  No,                                     !- Use DOAS DX Cooling Coil
+  2,                                      !- Minimum Supply Air Temperature {C}
+  SensibleOnlyLoadControl,                !- Latent Load Control
+  ,                                       !- Supplemental Heating Coil Object Type
+  ,                                       !- Supplemental Heating Coil Name
+  SupplyAirFlowRate,                      !- Cooling Supply Air Flow Rate Method
+  1.888,                                  !- Cooling Supply Air Flow Rate {m3/s}
+  ,                                       !- Cooling Supply Air Flow Rate Per Floor Area {m3/s-m2}
+  ,                                       !- Cooling Fraction of Autosized Cooling Supply Air Flow Rate
+  ,                                       !- Cooling Supply Air Flow Rate Per Unit of Capacity {m3/s-W}
+  ,                                       !- Heating Supply Air Flow Rate Method
+  Autosize,                               !- Heating Supply Air Flow Rate {m3/s}
+  ,                                       !- Heating Supply Air Flow Rate Per Floor Area {m3/s-m2}
+  ,                                       !- Heating Fraction of Autosized Heating Supply Air Flow Rate
+  ,                                       !- Heating Supply Air Flow Rate Per Unit of Capacity {m3/s-W}
+  SupplyAirFlowRate,                      !- No Load Supply Air Flow Rate Method
+  1.888,                                  !- No Load Supply Air Flow Rate {m3/s}
+  ,                                       !- No Load Supply Air Flow Rate Per Floor Area {m3/s-m2}
+  ,                                       !- No Load Fraction of Autosized Cooling Supply Air Flow Rate
+  ,                                       !- No Load Fraction of Autosized Heating Supply Air Flow Rate
+  ,                                       !- No Load Supply Air Flow Rate Per Unit of Capacity During Cooling Operation {m3/s-W}
+  ,                                       !- No Load Supply Air Flow Rate Per Unit of Capacity During Heating Operation {m3/s-W}
+  80,                                     !- Maximum Supply Air Temperature {C}
+  21,                                     !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
+  ,                                       !- Outdoor Dry-Bulb Temperature Sensor Node Name
+  2.5,                                    !- Maximum Cycling Rate {cycles/hr}
+  60,                                     !- Heat Pump Time Constant {s}
+  0.01,                                   !- Fraction of On-Cycle Power Use
+  60,                                     !- Heat Pump Fan Delay Time {s}
+  0,                                      !- Ancillary On-Cycle Electric Power {W}
+  0;                                      !- Ancillary Off-Cycle Electric Power {W}
+
+Fan:OnOff,
+  Fan On Off 1,                           !- Name
+  Always On Discrete,                     !- Availability Schedule Name
+  0.11374,                                !- Fan Total Efficiency
+  74.7,                                   !- Pressure Rise {Pa}
+  1.888,                                  !- Maximum Flow Rate {m3/s}
+  0.94,                                   !- Motor Efficiency
+  1,                                      !- Motor In Airstream Fraction
+  Air Loop HVAC Unitary System 1 Cooling Coil - Fan Node, !- Air Inlet Node Name
+  Node 3,                                 !- Air Outlet Node Name
+  Fan On Off Power Curve,                 !- Fan Power Ratio Function of Speed Ratio Curve Name
+  Fan On Off Efficiency Curve,            !- Fan Efficiency Ratio Function of Speed Ratio Curve Name
+  General;                                !- End-Use Subcategory
+
+Curve:Exponent,
+  Fan On Off Power Curve,                 !- Name
+  1,                                      !- Coefficient1 Constant
+  0,                                      !- Coefficient2 Constant
+  0,                                      !- Coefficient3 Constant
+  0,                                      !- Minimum Value of x {BasedOnField A2}
+  1;                                      !- Maximum Value of x {BasedOnField A2}
+
+Curve:Cubic,
+  Fan On Off Efficiency Curve,            !- Name
+  1,                                      !- Coefficient1 Constant
+  0,                                      !- Coefficient2 x
+  0,                                      !- Coefficient3 x**2
+  0,                                      !- Coefficient4 x**3
+  0,                                      !- Minimum Value of x {BasedOnField A2}
+  1;                                      !- Maximum Value of x {BasedOnField A2}
+
+Curve:Biquadratic,
+  Curve Biquadratic 1,                    !- Name
+  0.825119244,                            !- Coefficient1 Constant
+  0.014461436,                            !- Coefficient2 x
+  0.000525383,                            !- Coefficient3 x**2
+  -0.003805859,                           !- Coefficient4 y
+  -2.71284e-05,                           !- Coefficient5 y**2
+  -0.000198505,                           !- Coefficient6 x*y
+  0,                                      !- Minimum Value of x {BasedOnField A2}
+  100,                                    !- Maximum Value of x {BasedOnField A2}
+  0,                                      !- Minimum Value of y {BasedOnField A3}
+  100;                                    !- Maximum Value of y {BasedOnField A3}
+
+Curve:Quadratic,
+  Curve Quadratic 1,                      !- Name
+  1,                                      !- Coefficient1 Constant
+  0,                                      !- Coefficient2 x
+  0,                                      !- Coefficient3 x**2
+  0,                                      !- Minimum Value of x {BasedOnField A2}
+  1;                                      !- Maximum Value of x {BasedOnField A2}
+
+Curve:Biquadratic,
+  Curve Biquadratic 2,                    !- Name
+  0.630055851,                            !- Coefficient1 Constant
+  -0.011998189,                           !- Coefficient2 x
+  0.000136923,                            !- Coefficient3 x**2
+  0.014636637,                            !- Coefficient4 y
+  0.000164506,                            !- Coefficient5 y**2
+  -0.000238463,                           !- Coefficient6 x*y
+  0,                                      !- Minimum Value of x {BasedOnField A2}
+  100,                                    !- Maximum Value of x {BasedOnField A2}
+  0,                                      !- Minimum Value of y {BasedOnField A3}
+  100;                                    !- Maximum Value of y {BasedOnField A3}
+
+Curve:Quadratic,
+  Curve Quadratic 2,                      !- Name
+  1,                                      !- Coefficient1 Constant
+  0,                                      !- Coefficient2 x
+  0,                                      !- Coefficient3 x**2
+  0,                                      !- Minimum Value of x {BasedOnField A2}
+  1;                                      !- Maximum Value of x {BasedOnField A2}
+
+Curve:Quadratic,
+  Curve Quadratic 3,                      !- Name
+  0.771,                                  !- Coefficient1 Constant
+  0.229,                                  !- Coefficient2 x
+  0,                                      !- Coefficient3 x**2
+  0,                                      !- Minimum Value of x {BasedOnField A2}
+  1;                                      !- Maximum Value of x {BasedOnField A2}
+
+Coil:Cooling:DX:SingleSpeed,
+  Coil Cooling DX Single Speed 1,         !- Name
+  Always On Discrete,                     !- Availability Schedule Name
+  33280,                                  !- Gross Rated Total Cooling Capacity {W}
+  0.78245,                                !- Gross Rated Sensible Heat Ratio
+  3.0448,                                 !- Gross Rated Cooling COP {W/W}
+  1.888,                                  !- Rated Air Flow Rate {m3/s}
+  773.3,                                  !- Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
+  Node 9,                                 !- Air Inlet Node Name
+  Air Loop HVAC Unitary System 1 Cooling Coil - Fan Node, !- Air Outlet Node Name
+  Curve Biquadratic 1,                    !- Total Cooling Capacity Function of Temperature Curve Name
+  Curve Quadratic 1,                      !- Total Cooling Capacity Function of Flow Fraction Curve Name
+  Curve Biquadratic 2,                    !- Energy Input Ratio Function of Temperature Curve Name
+  Curve Quadratic 2,                      !- Energy Input Ratio Function of Flow Fraction Curve Name
+  Curve Quadratic 3,                      !- Part Load Fraction Correlation Curve Name
+  ,                                       !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
+  ,                                       !- Nominal Time for Condensate Removal to Begin {s}
+  ,                                       !- Ratio of Initial Moisture Evaporation Rate and Steady State Latent Capacity {dimensionless}
+  ,                                       !- Maximum Cycling Rate {cycles/hr}
+  ,                                       !- Latent Capacity Time Constant {s}
+  ,                                       !- Condenser Air Inlet Node Name
+  AirCooled,                              !- Condenser Type
+  0,                                      !- Evaporative Condenser Effectiveness {dimensionless}
+  Autosize,                               !- Evaporative Condenser Air Flow Rate {m3/s}
+  Autosize,                               !- Evaporative Condenser Pump Rated Power Consumption {W}
+  0,                                      !- Crankcase Heater Capacity {W}
+  0,                                      !- Maximum Outdoor Dry-Bulb Temperature for Crankcase Heater Operation {C}
+  ,                                       !- Supply Water Storage Tank Name
+  ,                                       !- Condensate Collection Water Storage Tank Name
+  0,                                      !- Basin Heater Capacity {W/K}
+  10;                                     !- Basin Heater Setpoint Temperature {C}
+
+AirLoopHVAC:SupplyPath,
+  BESTEST CE air loop Node 4 Supply Path, !- Name
+  Node 4,                                 !- Supply Air Path Inlet Node Name
+  AirLoopHVAC:ZoneSplitter,               !- Component Object Type 1
+  Air Loop HVAC Zone Splitter 1;          !- Component Name 1
+
+AirLoopHVAC:ZoneSplitter,
+  Air Loop HVAC Zone Splitter 1,          !- Name
+  Node 4,                                 !- Inlet Node Name
+  Node 6;                                 !- Outlet Node Name 1
+
+AirLoopHVAC:ReturnPath,
+  BESTEST CE air loop Return Path,        !- Name
+  Node 5,                                 !- Return Air Path Outlet Node Name
+  AirLoopHVAC:ZoneMixer,                  !- Component Object Type 1
+  Air Loop HVAC Zone Mixer 1;             !- Component Name 1
+
+AirLoopHVAC:ZoneMixer,
+  Air Loop HVAC Zone Mixer 1,             !- Name
+  Node 5,                                 !- Outlet Node Name
+  Node 10;                                !- Inlet Node Name 1
+
+Site:Location,
+  NEW_ORLEANS_LA_USA,                     !- Name
+  29.98,                                  !- Latitude {deg}
+  -90.25,                                 !- Longitude {deg}
+  -6,                                     !- Time Zone {hr}
+  3;                                      !- Elevation {m}
+
+SizingPeriod:DesignDay,
+  Sizing Period Design Day 1,             !- Name
+  1,                                      !- Month
+  1,                                      !- Day of Month
+  SummerDesignDay,                        !- Day Type
+  23,                                     !- Maximum Dry-Bulb Temperature {C}
+  0,                                      !- Daily Dry-Bulb Temperature Range {deltaC}
+  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
+  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+  WetBulb,                                !- Humidity Condition Type
+  23,                                     !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+  ,                                       !- Humidity Condition Day Schedule Name
+  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
+  ,                                       !- Daily Wet-Bulb Temperature Range {deltaC}
+  31000,                                  !- Barometric Pressure {Pa}
+  0,                                      !- Wind Speed {m/s}
+  0,                                      !- Wind Direction {deg}
+  No,                                     !- Rain Indicator
+  No,                                     !- Snow Indicator
+  No,                                     !- Daylight Saving Time Indicator
+  AshraeClearSky,                         !- Solar Model Indicator
+  ,                                       !- Beam Solar Day Schedule Name
+  ,                                       !- Diffuse Solar Day Schedule Name
+  ,                                       !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+  ,                                       !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+  0;                                      !- Sky Clearness
+
+SizingPeriod:DesignDay,
+  Sizing Period Design Day 2,             !- Name
+  1,                                      !- Month
+  1,                                      !- Day of Month
+  WinterDesignDay,                        !- Day Type
+  23,                                     !- Maximum Dry-Bulb Temperature {C}
+  0,                                      !- Daily Dry-Bulb Temperature Range {deltaC}
+  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
+  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+  WetBulb,                                !- Humidity Condition Type
+  23,                                     !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+  ,                                       !- Humidity Condition Day Schedule Name
+  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
+  ,                                       !- Daily Wet-Bulb Temperature Range {deltaC}
+  31000,                                  !- Barometric Pressure {Pa}
+  0,                                      !- Wind Speed {m/s}
+  0,                                      !- Wind Direction {deg}
+  No,                                     !- Rain Indicator
+  No,                                     !- Snow Indicator
+  No,                                     !- Daylight Saving Time Indicator
+  AshraeClearSky,                         !- Solar Model Indicator
+  ,                                       !- Beam Solar Day Schedule Name
+  ,                                       !- Diffuse Solar Day Schedule Name
+  ,                                       !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+  ,                                       !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+  0;                                      !- Sky Clearness
+
+Output:Variable,
+  ,                                       !- Key Value
+  Site Outdoor Air Drybulb Temperature,   !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Total Internal Latent Gain Energy, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Fan Electric Power,                     !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Fan Rise in Air Temperature,            !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Fan Electric Energy,                    !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Cooling Coil Electric Power,            !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Cooling Coil Electric Energy,           !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Cooling Coil Latent Cooling Rate,       !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Cooling Coil Latent Cooling Energy,     !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Unitary System Part Load Ratio,         !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Unitary System Total Cooling Rate,      !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Site Outdoor Air Humidity Ratio,        !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Unitary System Sensible Cooling Rate,   !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Unitary System Latent Heating Rate,     !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Unitary System Ancillary Electric Power, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Unitary System Dehumidification Induced Heating Demand Rate, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Unitary System Fan Part Load Ratio,     !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Unitary System Compressor Part Load Ratio, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Unitary System Frost Control Status,    !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  System Node Temperature,                !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  System Node Wetbulb Temperature,        !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  System Node Temperature,                !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Inside face Temperature,        !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  System Node Mass Flow Rate,             !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Air System Electric Energy,             !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Air System DX Cooling Coil Electric Energy, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Air System Fan Electric Energy,         !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Cooling Coil Total Cooling Rate,        !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Cooling Coil Sensible Cooling Rate,     !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Cooling Coil Latent Cooling Rate,       !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Unitary System Total Cooling Rate,      !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Unitary System Sensible Cooling Rate,   !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Unitary System Latent Cooling Rate,     !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Outside face Temperature,       !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Mean Air Temperature,              !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Mean Air Humidity Ratio,           !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Air Relative Humidity,             !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Site Outdoor Air Drybulb Temperature,   !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Site Outdoor Air Humidity Ratio,        !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Inside Face Convection Heat Transfer Coefficient, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Outside Face Convection Heat Transfer Coefficient, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Air Humidity Ratio,                !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Air System Sensible Heating Energy, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Air System Sensible Cooling Energy, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+OutputControl:Table:Style,
+  HTML;                                   !- Column Separator
+
+Output:Table:SummaryReports,
+  AllSummary;                             !- Report Name 1
+
+Output:VariableDictionary,
+  IDF,                                    !- Key Field
+  Unsorted;                               !- Sort Option
+
+Output:SQLite,
+  SimpleAndTabular;                       !- Option Type
+
+LifeCycleCost:NonrecurringCost,
+  Default Cost,                           !- Name
+  Construction,                           !- Category
+  0,                                      !- Cost
+  ServicePeriod;                          !- Start of Costs
+
