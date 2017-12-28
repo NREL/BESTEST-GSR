@@ -1,11 +1,9 @@
 <measure>
   <schema_version>3.0</schema_version>
-  <error>Expected argument 1 of type std::vector&lt; openstudio::IdfObject >::value_type const &amp;, but got OpenStudio::Measure::OSOutput #&lt;OpenStudio::Measure::OSOutpu...
-	in SWIG method 'push'</error>
   <name>bestest_building_thermal_envelope_and_fabric_load_reporting</name>
   <uid>a0b598a6-96b9-4704-bc23-ac403d9f6b1b</uid>
-  <version_id>79c57db4-5910-47c0-a067-4f19dde3c7cc</version_id>
-  <version_modified>20171227T210204Z</version_modified>
+  <version_id>cb7804c2-f468-4659-87ce-6454aa348407</version_id>
+  <version_modified>20171228T040303Z</version_modified>
   <xml_checksum>69BA4D91</xml_checksum>
   <class_name>BestestBuildingThermalEnvelopeAndFabricLoadReporting</class_name>
   <display_name>Bestest Building Thermal Envelope and Fabric Load Reporting</display_name>
@@ -145,7 +143,7 @@
       <filename>os_lib_reporting_bestest.rb</filename>
       <filetype>rb</filetype>
       <usage_type>resource</usage_type>
-      <checksum>58C45AB1</checksum>
+      <checksum>306E047B</checksum>
     </file>
   </files>
 </measure>

@@ -311,7 +311,7 @@ module OsLib_Reporting_Bestest
       # create temp model from workspace and check orientation
       workspace = runner.lastEnergyPlusWorkspace.get
       rt = OpenStudio::EnergyPlus::ReverseTranslator.new
-      model2 = rt.translateWorkspace(workspace.get)
+      model2 = rt.translateWorkspace(workspace)
 
       # loop through surfaces
       model2.getSurfaces.each do |surface|
