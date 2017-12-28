@@ -1,0 +1,31 @@
+{
+   "seed_file" : "seed_empty.osm",
+   "weather_file": "DRYCOLDTMY.epw",
+   "measure_paths": [
+    "../../../measures/"
+   ],
+   "file_paths": [
+     "../../weather",
+     "../../seeds",
+     "../workflow_resources"
+   ],
+   "run_directory": "./run",
+   "steps" : [
+      {
+         "measure_dir_name" : "bestest_building_thermal_envelope_and_fabric_load",
+         "name" : "Bestest Building Thermal Envelope and Fabric Load",
+         "description" : "Creates test cases described in ASHRAE Standard 140-2014 sections 5.2.1, 5.2.2, and 5.2.3.",
+         "modeler_description" : "This is intended to run on an empty model. It will create the proper model associate it with the proper weather file, and add in necessary output requests. Internally to the measure the test case argument will be mapped to the proper inputs needed to assemble the model. The measure will make some objects on the fly, other objects will be pulled from existing data resources. This measure creates cases described all of section 5.2 except for section 5.2.4 - Ground-Coupled Slab-on-Grade Analytical Verification Tests.",
+         "arguments" : {
+            "case_num" : "600 - Base Case"
+         }
+      },
+      {
+         "measure_dir_name" : "bestest_building_thermal_envelope_and_fabric_load_reporting",
+         "name" : "Bestest Building Thermal Envelope and Fabric Load Reporting",
+         "description" : "Simple example of modular code to create tables and charts in OpenStudio reporting measures. This is not meant to use as is, it is an example to help with reporting measure development.",
+         "modeler_description" : "This measure uses the same framework and technologies (bootstrap and dimple) that the standard OpenStudio results report uses to create an html report with tables and charts. Download this measure and copy it to your Measures directory using PAT or the OpenStudio application. Then alter the data in os_lib_reporting_custom.rb to suit your needs. Make new sections and tables as needed.",
+         "arguments" : {}
+      }
+   ]
+}
