@@ -1,10 +1,7 @@
 # see the URL below for information on how to write OpenStudio measures
 # http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/
 
-require 'erb'
-
 require "#{File.dirname(__FILE__)}/resources/os_lib_reporting_bestest"
-require "#{File.dirname(__FILE__)}/resources/os_lib_helper_methods"
 
 #start the measure
 class BestestHeReporting < OpenStudio::Ruleset::ReportingUserScript
@@ -36,15 +33,60 @@ class BestestHeReporting < OpenStudio::Ruleset::ReportingUserScript
   # return a vector of IdfObject's to request EnergyPlus objects needed by the run method
   def energyPlusOutputRequests(runner, user_arguments)
     super(runner, user_arguments)
-    
+
     result = OpenStudio::IdfObjectVector.new
-    
-    # use the built-in error checking 
-    if !runner.validateUserArguments(arguments(), user_arguments)
-      return result
+
+    # Add output requests (consider adding to case hash instead of adding logic here)
+    # this gather any non standard output requests. Analysis of output such as binning temps for FF will occur in reporting measure
+    # Table 6-1 describes the specific day of results that will be used for testing
+    hourly_variables = []
+
+    # variables for all HE cases
+    hourly_variables << 'Site Outdoor Air Drybulb Temperature'
+    hourly_variables << 'Site Outdoor Air Wetbulb Temperature'
+    hourly_variables << 'Site Outdoor Air Dewpoint Temperature'
+    hourly_variables << 'Site Outdoor Air Enthalpy'
+    hourly_variables << 'Site Outdoor Air Humidity Ratio'
+    hourly_variables << 'Site Outdoor Air Relative Humidity'
+    hourly_variables << 'Site Outdoor Air Density'
+    hourly_variables << 'Site Outdoor Air Barometric Pressure'
+    hourly_variables << 'Site Wind Speed'
+    hourly_variables << 'Site Direct Solar Radiation Rate per Area'
+    hourly_variables << 'Site Diffuse Solar Radiation Rate per Area'
+    hourly_variables << 'Zone Mean Air Temperature'
+    hourly_variables << 'Zone Air System Sensible Heating Energy'
+    hourly_variables << 'Zone Air System Sensible Cooling Energy'
+    hourly_variables << 'Zone Air Temperature,Hourly'
+    hourly_variables << 'Zone Air Humidity Ratio'
+    hourly_variables << 'Surface Inside face Temperature'
+    hourly_variables << 'Surface Outside face Temperature'
+    hourly_variables << 'Surface Inside Face Convection Heat Transfer Coefficient'
+    hourly_variables << 'Surface Outside Face Convection Heat Transfer Coefficient'
+    hourly_variables << 'Zone Air System Sensible Heating Energy'
+    hourly_variables << 'Zone Air System Sensible Cooling Energy'
+    hourly_variables << 'Zone Air Temperature'
+    hourly_variables << 'Zone Total Internal Latent Gain Energy'
+    hourly_variables << 'Zone Air Humidity Ratio'
+    hourly_variables << 'Fan Electric Power'
+    hourly_variables << 'Fan Rise in Air Temperature'
+    hourly_variables << 'Fan Electric Energy'
+    hourly_variables << 'Heating Coil Air Heating Energy'
+    hourly_variables << 'Heating Coil Air Heating Rate'
+    hourly_variables << 'Heating Coil Gas Energy'
+    hourly_variables << 'Heating Coil Gas Rate'
+    hourly_variables << 'Fan Runtime Fraction'
+    hourly_variables << 'System Node Temperature'
+    hourly_variables << 'System Node Mass Flow Rate'
+
+    # parasitic heating coil output that represents draft fan
+    hourly_variables << 'Heating Coil Electric Power'
+
+    hourly_variables.each do |variable|
+      result << OpenStudio::IdfObject.load("Output:Variable,,#{variable},hourly;").get
     end
-    
-    return result
+
+    result
+
   end
 
 def outputs 
@@ -69,43 +111,12 @@ def outputs
       return false
     end
 
-    # get the last model and sql file
-    model = runner.lastOpenStudioModel
-    if model.empty?
-      runner.registerError("Cannot find last model.")
-      return false
-    end
-    model = model.get
-
     sqlFile = runner.lastEnergyPlusSqlFile
     if sqlFile.empty?
       runner.registerError("Cannot find last sql file.")
       return false
     end
     sqlFile = sqlFile.get
-    model.setSqlFile(sqlFile)
-
-    # put data into the local variable 'output', all local variables are available for erb to use when configuring the input html file
-
-    output =  "Measure Name = " << name << "<br>"
-    output << "Building Name = " << model.getBuilding.name.get << "<br>"                       # optional variable
-    output << "Floor Area = " << model.getBuilding.floorArea.to_s << "<br>"                   # double variable
-    output << "Floor to Floor Height = " << model.getBuilding.nominalFloortoFloorHeight.to_s << " (m)<br>" # double variable
-    output << "Net Site Energy = " << sqlFile.netSiteEnergy.to_s << " (GJ)<br>" # double variable
-
-    web_asset_path = OpenStudio.getSharedResourcesPath() / OpenStudio::Path.new("web_assets")
-
-    # read in template
-    html_in_path = "#{File.dirname(__FILE__)}/resources/report.html.in"
-    if File.exist?(html_in_path)
-        html_in_path = html_in_path
-    else
-        html_in_path = "#{File.dirname(__FILE__)}/report.html.in"
-    end
-    html_in = ""
-    File.open(html_in_path, 'r') do |file|
-      html_in = file.read
-    end
 
     # get the weather file run period (as opposed to design day run period)
     ann_env_pd = nil
@@ -135,22 +146,6 @@ def outputs
       end
     else
       runner.registerWarning("No annual environment period found.")
-    end
-    
-    # configure template with variable values
-    renderer = ERB.new(html_in)
-    html_out = renderer.result(binding)
-    
-    # write html file
-    html_out_path = "./report.html"
-    File.open(html_out_path, 'w') do |file|
-      file << html_out
-      # make sure data is written to the disk one way or the other
-      begin
-        file.fsync
-      rescue
-        file.flush
-      end
     end
 
     # total furnace load

@@ -1,0 +1,31 @@
+{
+   "seed_file" : "seed_empty.osm",
+   "weather_file": "DRYCOLDTMY.epw",
+   "measure_paths": [
+    "../../../measures/"
+   ],
+   "file_paths": [
+     "../../weather",
+     "../../seeds",
+     "../workflow_resources"
+   ],
+   "run_directory": "./run",
+   "steps" : [
+      {
+         "measure_dir_name" : "replace_idf",
+         "name" : "Replace Idf",
+         "description" : "Replace OpenStudio generated IDF file with user specified IDF file.",
+         "modeler_description" : "Additional EnergyPlus measures and reporting measures can be placed after this measure in the workflow. Weather file should be desribed in the seed OSM file or in the OSW file used to run the simulation.",
+         "arguments" : {
+            "external_idf_name" : "case_en_600.idf"
+         }
+      },
+      {
+         "measure_dir_name" : "bestest_building_thermal_envelope_and_fabric_load_reporting",
+         "name" : "Bestest Building Thermal Envelope and Fabric Load Reporting",
+         "description" : "Simple example of modular code to create tables and charts in OpenStudio reporting measures. This is not meant to use as is, it is an example to help with reporting measure development.",
+         "modeler_description" : "This measure uses the same framework and technologies (bootstrap and dimple) that the standard OpenStudio results report uses to create an html report with tables and charts. Download this measure and copy it to your Measures directory using PAT or the OpenStudio application. Then alter the data in os_lib_reporting_custom.rb to suit your needs. Make new sections and tables as needed.",
+         "arguments" : {}
+      }
+   ]
+}

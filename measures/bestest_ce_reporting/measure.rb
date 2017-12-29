@@ -1,8 +1,6 @@
 # see the URL below for information on how to write OpenStudio measures
 # http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/
 
-require 'erb'
-
 #start the measure
 class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
 
@@ -30,13 +28,170 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
   # return a vector of IdfObject's to request EnergyPlus objects needed by the run method
   def energyPlusOutputRequests(runner, user_arguments)
     super(runner, user_arguments)
-    
-    result = OpenStudio::IdfObjectVector.new
-    
-    # use the built-in error checking 
-    if !runner.validateUserArguments(arguments(), user_arguments)
-      return result
+
+    # get the last idf (just used for building name)
+    workspace = runner.lastEnergyPlusWorkspace
+    if workspace.empty?
+      runner.registerError('Cannot find last idf file.')
+      return false
     end
+    workspace = workspace.get
+    bldg_name = workspace.getObjectsByType("Building".to_IddObjectType).first.getString(0).get
+
+    result = OpenStudio::IdfObjectVector.new
+
+    # Add output requests (consider adding to case hash instead of adding logic here)
+    # this gather any non standard output requests. Analysis of output such as binning temps for FF will occur in reporting measure
+    # Table 6-1 describes the specific day of results that will be used for testing
+    hourly_variables = []
+
+    # adding collection of ranges and timesteps for different variables
+    hourly_var_feb = [] # used for Case 1xx and 2xx
+
+    # variables for all CE cases
+    hourly_variables << 'Site Outdoor Air Drybulb Temperature'
+    hourly_variables << 'Site Outdoor Air Humidity Ratio'
+    hourly_variables << 'Surface Inside face Temperature'
+    hourly_variables << 'Surface Outside face Temperature'
+    hourly_variables << 'Surface Inside Face Convection Heat Transfer Coefficient'
+    hourly_variables << 'Surface Outside Face Convection Heat Transfer Coefficient'
+    #hourly_variables << 'Zone Mean Air Temperature'
+    #hourly_variables << 'Zone Air Temperature'
+    hourly_variables << 'Zone Air Humidity Ratio'
+    hourly_variables << 'Zone Air System Sensible Heating Energy'
+    hourly_variables << 'Zone Air System Sensible Cooling Energy'
+    hourly_variables << 'Zone Total Internal Latent Gain Energy'
+    hourly_variables << 'Fan Electric Power'
+    hourly_variables << 'Fan Rise in Air Temperature'
+    hourly_variables << 'Fan Electric Energy'
+    #hourly_variables << 'Cooling Coil Total Cooling Energy'
+    #hourly_variables << 'Cooling Coil Sensible Cooling Rate'
+    #hourly_variables << 'Cooling Coil Sensible Cooling Energy'
+    hourly_variables << 'Cooling Coil Electric Power'
+    hourly_variables << 'Cooling Coil Electric Energy'
+    hourly_variables << 'Cooling Coil Latent Cooling Rate'
+    hourly_variables << 'Cooling Coil Latent Cooling Energy'
+
+    # Unitary outputs in these models vs. Zone Window Air Conditioner outputs in legacy
+    hourly_variables << 'Unitary System Part Load Ratio'
+    hourly_variables << 'Unitary System Total Cooling Rate'
+    hourly_variables << 'Unitary System Sensible Cooling Rate'
+    #hourly_variables << 'Unitary System Latent Cooling Rate'
+    #hourly_variables << 'Unitary System Total Heating Rate'
+    #hourly_variables << 'Unitary System Sensible Heating Rate'
+    hourly_variables << 'Unitary System Latent Heating Rate'
+    hourly_variables << 'Unitary System Ancillary Electric Power'
+    hourly_variables << 'Unitary System Dehumidification Induced Heating Demand Rate'
+    hourly_variables << 'Unitary System Fan Part Load Ratio'
+    hourly_variables << 'Unitary System Compressor Part Load Ratio'
+    hourly_variables << 'Unitary System Frost Control Status'
+
+    # variables for EDB and EWB 'Node 6' is the terminal
+    # todo - update reporting for 3B to use this
+    hourly_variables << 'System Node Temperature'
+    hourly_variables << 'System Node Wetbulb Temperature'
+
+    # variables CE 1x through 2x
+    if bldg_name.include? "CE1" or bldg_name.include? "CE2"
+      hourly_variables << 'Site Outdoor Air Wetbulb Temperature'
+      hourly_variables << 'Site Outdoor Air Dewpoint Temperature'
+      hourly_variables << 'Site Outdoor Air Enthalpy'
+      hourly_variables << 'Site Outdoor Air Relative Humidity'
+      hourly_variables << 'Site Outdoor Air Density'
+      hourly_variables << 'Site Outdoor Air Barometric Pressure'
+      hourly_variables << 'Site Wind Speed'
+      hourly_variables << 'Site Direct Solar Radiation Rate per Area'
+      hourly_variables << 'Site Diffuse Solar Radiation Rate per Area'
+
+      # hourly for february
+
+      #6.3.1.1 (a,b,c,d)
+      hourly_var_feb << 'Air System Electric Energy' #J
+      hourly_var_feb << 'Air System DX Cooling Coil Electric Energy' #J
+      hourly_var_feb << 'Air System Fan Electric Energy' #J
+      # todo - can I get d directly or does d = a - b - c
+
+      #6.3.1.2 (a,b,c)
+      hourly_var_feb << 'Cooling Coil Total Cooling Rate' #W
+      hourly_var_feb << 'Cooling Coil Sensible Cooling Rate' #W
+      hourly_var_feb << 'Cooling Coil Latent Cooling Rate' #W
+
+      #6.3.1.3 (a,b,c)
+      hourly_var_feb << 'Unitary System Total Cooling Rate' #W
+      hourly_var_feb << 'Unitary System Sensible Cooling Rate' #W
+      hourly_var_feb << 'Unitary System Latent Cooling Rate' #W
+
+      #6.3.1.4 (a,b,c)
+      # a: calculated from other variables
+      hourly_var_feb << 'Zone Mean Air Temperature'
+      hourly_var_feb << 'Zone Mean Air Humidity Ratio'
+
+
+    elsif bldg_name.include? "CE3"
+      hourly_variables << 'System Node Temperature'
+      hourly_variables << 'System Node Mass Flow Rate'
+
+      # adding same variables to CE3-5 as CD 1-2, but annualy instead of for February
+      hourly_variables << 'Air System Electric Energy' #J
+      hourly_variables << 'Air System DX Cooling Coil Electric Energy' #J
+      hourly_variables << 'Air System Fan Electric Energy' #J
+      # todo - can I get d directly or does d = a - b - c
+      hourly_variables << 'Cooling Coil Total Cooling Rate' #W
+      hourly_variables << 'Cooling Coil Sensible Cooling Rate' #W
+      hourly_variables << 'Cooling Coil Latent Cooling Rate' #W
+      hourly_variables << 'Unitary System Total Cooling Rate' #W
+      hourly_variables << 'Unitary System Sensible Cooling Rate' #W
+      hourly_variables << 'Unitary System Latent Cooling Rate' #W
+      hourly_variables << 'Zone Mean Air Temperature'
+      hourly_variables << 'Zone Mean Air Humidity Ratio'
+
+      # extra for 3x - 5x
+      hourly_variables << 'Zone Air Relative Humidity'
+      hourly_variables << 'Site Outdoor Air Drybulb Temperature'
+      hourly_variables << 'Site Outdoor Air Humidity Ratio'
+
+    elsif bldg_name.include? "CE4" or bldg_name.include? "CE5"
+      hourly_variables << 'System Node Temperature'
+      hourly_variables << 'System Node Mass Flow Rate'
+      hourly_variables << 'System Node Setpoint Temperature'
+      hourly_variables << 'Zone Other Equipment Radiant Heating Energy'
+      hourly_variables << 'Zone Other Equipment Convective Heating Energy'
+      hourly_variables << 'Zone Other Equipment Latent Gain Energy'
+      hourly_variables << 'Zone Other Equipment Lost Heat Energy'
+      hourly_variables << 'Zone Other Equipment Total Heating Energy'
+
+      # adding same variables to CE3-5 as CD 1-2, but annualy instead of for February
+      hourly_variables << 'Air System Electric Energy' #J
+      hourly_variables << 'Air System DX Cooling Coil Electric Energy' #J
+      hourly_variables << 'Air System Fan Electric Energy' #J
+      # todo - can I get d directly or does d = a - b - c
+      hourly_variables << 'Cooling Coil Total Cooling Rate' #W
+      hourly_variables << 'Cooling Coil Sensible Cooling Rate' #W
+      hourly_variables << 'Cooling Coil Latent Cooling Rate' #W
+      hourly_variables << 'Unitary System Total Cooling Rate' #W
+      hourly_variables << 'Unitary System Sensible Cooling Rate' #W
+      hourly_variables << 'Unitary System Latent Cooling Rate' #W
+      hourly_variables << 'Zone Mean Air Temperature'
+      hourly_variables << 'Zone Mean Air Humidity Ratio'
+
+      # extra for 3x - 5x
+      hourly_variables << 'Zone Air Relative Humidity'
+      hourly_variables << 'Site Outdoor Air Drybulb Temperature'
+      hourly_variables << 'Site Outdoor Air Humidity Ratio'
+
+    else
+      runner.registerWarning("Unexpected Case Number")
+    end
+
+    hourly_variables.each do |variable|
+      result << OpenStudio::IdfObject.load("Output:Variable,,#{variable},hourly;").get
+    end
+
+    hourly_var_feb.each do |variable|
+      # note: reporting entire runperiod and will grab feb results in post processing
+      result << OpenStudio::IdfObject.load("Output:Variable,,#{variable},hourly;").get
+    end
+
     
     return result
   end
@@ -198,43 +353,22 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
       return false
     end
 
-    # get the last model and sql file
-    model = runner.lastOpenStudioModel
-    if model.empty?
-      runner.registerError("Cannot find last model.")
-      return false
-    end
-    model = model.get
-
     sqlFile = runner.lastEnergyPlusSqlFile
     if sqlFile.empty?
       runner.registerError("Cannot find last sql file.")
       return false
     end
     sqlFile = sqlFile.get
-    model.setSqlFile(sqlFile)
 
-    # put data into the local variable 'output', all local variables are available for erb to use when configuring the input html file
-
-    output =  "Measure Name = " << name << "<br>"
-    output << "Building Name = " << model.getBuilding.name.get << "<br>"                       # optional variable
-    output << "Floor Area = " << model.getBuilding.floorArea.to_s << "<br>"                   # double variable
-    output << "Floor to Floor Height = " << model.getBuilding.nominalFloortoFloorHeight.to_s << " (m)<br>" # double variable
-    output << "Net Site Energy = " << sqlFile.netSiteEnergy.to_s << " (GJ)<br>" # double variable
-
-    web_asset_path = OpenStudio.getSharedResourcesPath() / OpenStudio::Path.new("web_assets")
-
-    # read in template
-    html_in_path = "#{File.dirname(__FILE__)}/resources/report.html.in"
-    if File.exist?(html_in_path)
-        html_in_path = html_in_path
-    else
-        html_in_path = "#{File.dirname(__FILE__)}/report.html.in"
+    # get the last idf (just used for building name)
+    workspace = runner.lastEnergyPlusWorkspace
+    if workspace.empty?
+      runner.registerError('Cannot find last idf file.')
+      return false
     end
-    html_in = ""
-    File.open(html_in_path, 'r') do |file|
-      html_in = file.read
-    end
+    workspace = workspace.get
+    bldg_name = workspace.getObjectsByType("Building".to_IddObjectType).first.getString(0).get
+
 
     # get the weather file run period (as opposed to design day run period)
     ann_env_pd = nil
@@ -264,22 +398,6 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
       end
     else
       runner.registerWarning("No annual environment period found.")
-    end
-    
-    # configure template with variable values
-    renderer = ERB.new(html_in)
-    html_out = renderer.result(binding)
-    
-    # write html file
-    html_out_path = "./report.html"
-    File.open(html_out_path, 'w') do |file|
-      file << html_out
-      # make sure data is written to the disk one way or the other
-      begin
-        file.fsync
-      rescue
-        file.flush
-      end
     end
 
     # this is in CE and Envelope, move to shared resource
@@ -410,7 +528,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
     end
 
     # add runner.registerValues for bestest reporting 5-3A
-    if model.getBuilding.name.to_s.include? "CE1" or model.getBuilding.name.to_s.include? "CE2"
+    if bldg_name.include? "CE1" or bldg_name.include? "CE2"
 
       # get clg_energy_consumption_total
       key_value =  "BESTEST CE AIR LOOP"
@@ -875,7 +993,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
       runner.registerValue('mmdd_0628_hourly_odb',hourly_values(output_timeseries,'2009-06-28'))
 
       # todo - in future navigate air loop to find right node
-      if model.getBuilding.name.to_s.include? "CE300"
+      if bldg_name.include? "CE300"
         # get return air drybulb and wetbulb
         key_value =  "NODE 9"
         variable_name = "System Node Temperature"
@@ -885,7 +1003,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
         variable_name = "System Node Wetbulb Temperature"
         output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', variable_name, key_value)
         runner.registerValue('mmdd_0628_hourly_ewb',hourly_values(output_timeseries,'2009-06-28'))
-      elsif model.getBuilding.name.to_s.include? "CE500" or model.getBuilding.name.to_s.include? "CE530"
+      elsif bldg_name.include? "CE500" or bldg_name.include? "CE530"
         key_value =  "NODE 2"
         variable_name = "System Node Temperature"
         output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', variable_name, key_value)
@@ -1011,7 +1129,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
       runner.registerValue('mmdd_0625_day_odb',avg)
 
       # todo - in future navigate air loop to find right node
-      if model.getBuilding.name.to_s.include? "CE300"
+      if bldg_name.include? "CE300"
         key_value =  "NODE 9"
         variable_name = "System Node Temperature"
         output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', variable_name, key_value)
@@ -1022,7 +1140,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
         output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', variable_name, key_value)
         avg = avg_from_hourly_values(output_timeseries,'2009-06-25')
         runner.registerValue('mmdd_0625_day_edb',avg)
-      elsif model.getBuilding.name.to_s.include? "CE500" or model.getBuilding.name.to_s.include? "CE530"
+      elsif bldg_name.include? "CE500" or bldg_name.include? "CE530"
         key_value =  "NODE 2"
         variable_name = "System Node Temperature"
         output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', variable_name, key_value)

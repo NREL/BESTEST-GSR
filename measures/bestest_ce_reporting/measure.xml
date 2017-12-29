@@ -2,8 +2,8 @@
   <schema_version>3.0</schema_version>
   <name>bestest_ce_reporting</name>
   <uid>4f921756-b4bf-483e-b845-12ba3dd4bc69</uid>
-  <version_id>cf18045b-c2c1-4662-bda4-60661b0837b4</version_id>
-  <version_modified>20171003T193230Z</version_modified>
+  <version_id>cc49f241-a41d-421c-ad05-4578cd3d62b3</version_id>
+  <version_modified>20171227T184649Z</version_modified>
   <xml_checksum>F44A8258</xml_checksum>
   <class_name>BestestCeReporting</class_name>
   <display_name>Bestest Ce Reporting</display_name>
@@ -1039,12 +1039,6 @@
   </attributes>
   <files>
     <file>
-      <filename>report.html.in</filename>
-      <filetype>in</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>3501204C</checksum>
-    </file>
-    <file>
       <filename>CE100ATM2.epw</filename>
       <filetype>epw</filetype>
       <usage_type>test</usage_type>
@@ -1096,19 +1090,7 @@
       <filename>bestest_ce_reporting_test.rb</filename>
       <filetype>rb</filetype>
       <usage_type>test</usage_type>
-      <checksum>B6926A86</checksum>
-    </file>
-    <file>
-      <filename>os_lib_helper_methods.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>A6430141</checksum>
-    </file>
-    <file>
-      <filename>os_lib_reporting_bestest.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>169E41DE</checksum>
+      <checksum>B61F6B10</checksum>
     </file>
     <file>
       <version>
@@ -1119,7 +1101,37 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>A5EF1011</checksum>
+      <checksum>BBC08CFC</checksum>
+    </file>
+    <file>
+      <filename>CE100_test_output.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>test</usage_type>
+      <checksum>9596405F</checksum>
+    </file>
+    <file>
+      <filename>CE200_test_output.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>test</usage_type>
+      <checksum>6A7AAB26</checksum>
+    </file>
+    <file>
+      <filename>CE300_test_output.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>test</usage_type>
+      <checksum>F4BB4B88</checksum>
+    </file>
+    <file>
+      <filename>CE400_test_output.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>test</usage_type>
+      <checksum>3187825C</checksum>
+    </file>
+    <file>
+      <filename>CE500_test_output.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>test</usage_type>
+      <checksum>20803291</checksum>
     </file>
   </files>
 </measure>

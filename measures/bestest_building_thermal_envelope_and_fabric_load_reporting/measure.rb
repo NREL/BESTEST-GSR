@@ -35,27 +35,65 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
   end
 
   # define the arguments that the user will input
-  def arguments
+  def arguments()
     args = OpenStudio::Ruleset::OSArgumentVector.new
 
-    # populate arguments
-    possible_sections.each do |method_name|
-      # get display name
-      arg = OpenStudio::Ruleset::OSArgument.makeBoolArgument(method_name, true)
-      display_name = eval("OsLib_Reporting_Bestest.#{method_name}(nil,nil,nil,true)[:title]")
-      arg.setDisplayName(display_name)
-      arg.setDefaultValue(true)
-      args << arg
-    end
+    # this measure does not require any user arguments, return an empty list
 
-    args
-  end # end the arguments method
+    return args
+  end
 
   # add any outout variable requests here
   def energyPlusOutputRequests(runner, user_arguments)
     super(runner, user_arguments)
 
+    # get the last idf (just used for building name)
+    workspace = runner.lastEnergyPlusWorkspace
+    if workspace.empty?
+      runner.registerError('Cannot find last idf file.')
+      return false
+    end
+    workspace = workspace.get
+    bldg_name = workspace.getObjectsByType("Building".to_IddObjectType).first.getString(0).get
+
     result = OpenStudio::IdfObjectVector.new
+
+    # Add output requests (consider adding to case hash instead of adding logic here)
+    # this gather any non standard output requests. Analysis of output such as binning temps for FF will occur in reporting measure
+    # Table 6-1 describes the specific day of results that will be used for testing
+    hourly_variables = []
+    hourly_variables << 'Zone Mean Air Temperature'
+
+    if !bldg_name.include? 'FF' # based on case 600FF
+      hourly_variables << 'Zone Air System Sensible Heating Energy'
+      hourly_variables << 'Zone Air System Sensible Cooling Energy' # not sure why 630,640,650 dont' have anything below here
+
+      # get surface variables for subset of cases
+      if bldg_name.include? "600"
+        hourly_variables << 'Surface Outside Face Sunlit Area'
+        hourly_variables << 'Surface Outside Face Sunlit Fraction'
+        hourly_variables << 'Surface Outside Face Incident Solar Radiation Rate per Area'
+      end
+
+      # get windows variables for subset of cases
+      if bldg_name.include? "600" or bldg_name.include? "610" or bldg_name.include? "620" or bldg_name.include? "630"
+        hourly_variables << 'Surface Window Transmitted Solar Radiation Rate'
+        hourly_variables << 'Surface Window Transmitted Beam Solar Radiation Rate'
+        hourly_variables << 'Surface Window Transmitted Diffuse Solar Radiation Rate'
+        hourly_variables << 'Surface Window Transmitted Solar Radiation Energy'
+        hourly_variables << 'Surface Window Transmitted Beam Solar Radiation Energy'
+        hourly_variables << 'Surface Window Transmitted Diffuse Solar Radiation Energy'
+      end
+
+      # get windows variables for subset of cases
+      if bldg_name.include? "900" or bldg_name.include? "910" or bldg_name.include? "920" or bldg_name.include? "930" or bldg_name.include? "600" or bldg_name.include? "620"
+        hourly_variables << 'Zone Windows Total Transmitted Solar Radiation Rate'
+      end
+
+    end
+    hourly_variables.each do |variable|
+      result << OpenStudio::IdfObject.load("Output:Variable,,#{variable},hourly;").get
+    end
 
     result
   end
@@ -101,19 +139,13 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
     unless setup
       return false
     end
-    model = setup[:model]
+    model = setup[:model] # no data from model used, just needed to call specific methods
     # workspace = setup[:workspace]
     sql_file = setup[:sqlFile]
     web_asset_path = setup[:web_asset_path]
 
-    # assign the user inputs to variables
-    args = OsLib_HelperMethods.createRunVariables(runner, model, user_arguments, arguments)
-    unless args
-      return false
-    end
-
     # reporting final condition
-    runner.registerInitialCondition('Gathering data from EnergyPlus SQL file and OSM model.')
+    runner.registerInitialCondition('Gathering data from EnergyPlus SQL file.')
 
     # pass measure display name to erb
     @name = name
@@ -126,7 +158,6 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
     possible_sections.each do |method_name|
 
       begin
-        next unless args[method_name]
         section = false
         eval("section = OsLib_Reporting_Bestest.#{method_name}(model,sql_file,runner,false)")
         display_name = eval("OsLib_Reporting_Bestest.#{method_name}(nil,nil,nil,true)[:title]")

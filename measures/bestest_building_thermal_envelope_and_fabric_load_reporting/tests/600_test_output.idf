@@ -1,0 +1,1001 @@
+
+Version,
+  8.8;                                    !- Version Identifier
+
+LifeCycleCost:Parameters,
+  {c5282ee1-1371-49e8-bcaa-b17dac77072b}, !- Name
+  EndOfYear,                              !- Discounting Convention
+  ConstantDollar,                         !- Inflation Approach
+  0.03,                                   !- Real Discount Rate
+  ,                                       !- Nominal Discount Rate
+  ,                                       !- Inflation
+  ,                                       !- Base Date Month
+  2011,                                   !- Base Date Year
+  ,                                       !- Service Date Month
+  2011,                                   !- Service Date Year
+  25,                                     !- Length of Study Period in Years
+  ,                                       !- Tax rate
+  None;                                   !- Depreciation Method
+
+LifeCycleCost:UsePriceEscalation,
+  U.S. Avg  Commercial-Electricity,       !- LCC Price Escalation Name
+  Electricity,                            !- Resource
+  2011,                                   !- Escalation Start Year
+  January,                                !- Escalation Start Month
+  0.9838,                                 !- Year Escalation 1
+  0.9730,                                 !- Year Escalation 2
+  0.9632,                                 !- Year Escalation 3
+  0.9611,                                 !- Year Escalation 4
+  0.9571,                                 !- Year Escalation 5
+  0.9553,                                 !- Year Escalation 6
+  0.9539,                                 !- Year Escalation 7
+  0.9521,                                 !- Year Escalation 8
+  0.9546,                                 !- Year Escalation 9
+  0.9550,                                 !- Year Escalation 10
+  0.9553,                                 !- Year Escalation 11
+  0.9564,                                 !- Year Escalation 12
+  0.9575,                                 !- Year Escalation 13
+  0.9596,                                 !- Year Escalation 14
+  0.9618,                                 !- Year Escalation 15
+  0.9614,                                 !- Year Escalation 16
+  0.9618,                                 !- Year Escalation 17
+  0.9618,                                 !- Year Escalation 18
+  0.9593,                                 !- Year Escalation 19
+  0.9589,                                 !- Year Escalation 20
+  0.9607,                                 !- Year Escalation 21
+  0.9625,                                 !- Year Escalation 22
+  0.9650,                                 !- Year Escalation 23
+  0.9708,                                 !- Year Escalation 24
+  0.9751,                                 !- Year Escalation 25
+  0.9762,                                 !- Year Escalation 26
+  0.9766,                                 !- Year Escalation 27
+  0.9766,                                 !- Year Escalation 28
+  0.9769,                                 !- Year Escalation 29
+  0.9773;                                 !- Year Escalation 30
+
+LifeCycleCost:UsePriceEscalation,
+  U.S. Avg  Commercial-Distillate Oil,    !- LCC Price Escalation Name
+  FuelOil#1,                              !- Resource
+  2011,                                   !- Escalation Start Year
+  January,                                !- Escalation Start Month
+  0.9714,                                 !- Year Escalation 1
+  0.9730,                                 !- Year Escalation 2
+  0.9942,                                 !- Year Escalation 3
+  1.0164,                                 !- Year Escalation 4
+  1.0541,                                 !- Year Escalation 5
+  1.0928,                                 !- Year Escalation 6
+  1.1267,                                 !- Year Escalation 7
+  1.1580,                                 !- Year Escalation 8
+  1.1792,                                 !- Year Escalation 9
+  1.1967,                                 !- Year Escalation 10
+  1.2200,                                 !- Year Escalation 11
+  1.2333,                                 !- Year Escalation 12
+  1.2566,                                 !- Year Escalation 13
+  1.2709,                                 !- Year Escalation 14
+  1.2826,                                 !- Year Escalation 15
+  1.2985,                                 !- Year Escalation 16
+  1.3102,                                 !- Year Escalation 17
+  1.3250,                                 !- Year Escalation 18
+  1.3261,                                 !- Year Escalation 19
+  1.3282,                                 !- Year Escalation 20
+  1.3324,                                 !- Year Escalation 21
+  1.3356,                                 !- Year Escalation 22
+  1.3431,                                 !- Year Escalation 23
+  1.3510,                                 !- Year Escalation 24
+  1.3568,                                 !- Year Escalation 25
+  1.3606,                                 !- Year Escalation 26
+  1.3637,                                 !- Year Escalation 27
+  1.3674,                                 !- Year Escalation 28
+  1.3706,                                 !- Year Escalation 29
+  1.3743;                                 !- Year Escalation 30
+
+LifeCycleCost:UsePriceEscalation,
+  U.S. Avg  Commercial-Residual Oil,      !- LCC Price Escalation Name
+  FuelOil#2,                              !- Resource
+  2011,                                   !- Escalation Start Year
+  January,                                !- Escalation Start Month
+  0.8469,                                 !- Year Escalation 1
+  0.8257,                                 !- Year Escalation 2
+  0.8681,                                 !- Year Escalation 3
+  0.8988,                                 !- Year Escalation 4
+  0.9289,                                 !- Year Escalation 5
+  0.9604,                                 !- Year Escalation 6
+  0.9897,                                 !- Year Escalation 7
+  1.0075,                                 !- Year Escalation 8
+  1.0314,                                 !- Year Escalation 9
+  1.0554,                                 !- Year Escalation 10
+  1.0861,                                 !- Year Escalation 11
+  1.1278,                                 !- Year Escalation 12
+  1.1497,                                 !- Year Escalation 13
+  1.1620,                                 !- Year Escalation 14
+  1.1743,                                 !- Year Escalation 15
+  1.1852,                                 !- Year Escalation 16
+  1.1948,                                 !- Year Escalation 17
+  1.2037,                                 !- Year Escalation 18
+  1.2071,                                 !- Year Escalation 19
+  1.2119,                                 !- Year Escalation 20
+  1.2139,                                 !- Year Escalation 21
+  1.2194,                                 !- Year Escalation 22
+  1.2276,                                 !- Year Escalation 23
+  1.2365,                                 !- Year Escalation 24
+  1.2420,                                 !- Year Escalation 25
+  1.2461,                                 !- Year Escalation 26
+  1.2509,                                 !- Year Escalation 27
+  1.2550,                                 !- Year Escalation 28
+  1.2591,                                 !- Year Escalation 29
+  1.2638;                                 !- Year Escalation 30
+
+LifeCycleCost:UsePriceEscalation,
+  U.S. Avg  Commercial-Natural gas,       !- LCC Price Escalation Name
+  NaturalGas,                             !- Resource
+  2011,                                   !- Escalation Start Year
+  January,                                !- Escalation Start Month
+  0.9823,                                 !- Year Escalation 1
+  0.9557,                                 !- Year Escalation 2
+  0.9279,                                 !- Year Escalation 3
+  0.9257,                                 !- Year Escalation 4
+  0.9346,                                 !- Year Escalation 5
+  0.9412,                                 !- Year Escalation 6
+  0.9512,                                 !- Year Escalation 7
+  0.9645,                                 !- Year Escalation 8
+  0.9856,                                 !- Year Escalation 9
+  1.0067,                                 !- Year Escalation 10
+  1.0222,                                 !- Year Escalation 11
+  1.0410,                                 !- Year Escalation 12
+  1.0610,                                 !- Year Escalation 13
+  1.0787,                                 !- Year Escalation 14
+  1.0942,                                 !- Year Escalation 15
+  1.1098,                                 !- Year Escalation 16
+  1.1220,                                 !- Year Escalation 17
+  1.1308,                                 !- Year Escalation 18
+  1.1386,                                 !- Year Escalation 19
+  1.1486,                                 !- Year Escalation 20
+  1.1619,                                 !- Year Escalation 21
+  1.1763,                                 !- Year Escalation 22
+  1.1918,                                 !- Year Escalation 23
+  1.2118,                                 !- Year Escalation 24
+  1.2284,                                 !- Year Escalation 25
+  1.2439,                                 !- Year Escalation 26
+  1.2605,                                 !- Year Escalation 27
+  1.2772,                                 !- Year Escalation 28
+  1.2938,                                 !- Year Escalation 29
+  1.3115;                                 !- Year Escalation 30
+
+LifeCycleCost:UsePriceEscalation,
+  U.S. Avg  Commercial-Coal,              !- LCC Price Escalation Name
+  Coal,                                   !- Resource
+  2011,                                   !- Escalation Start Year
+  January,                                !- Escalation Start Month
+  0.9970,                                 !- Year Escalation 1
+  1.0089,                                 !- Year Escalation 2
+  1.0089,                                 !- Year Escalation 3
+  0.9941,                                 !- Year Escalation 4
+  0.9941,                                 !- Year Escalation 5
+  1.0000,                                 !- Year Escalation 6
+  1.0030,                                 !- Year Escalation 7
+  1.0059,                                 !- Year Escalation 8
+  1.0089,                                 !- Year Escalation 9
+  1.0119,                                 !- Year Escalation 10
+  1.0148,                                 !- Year Escalation 11
+  1.0178,                                 !- Year Escalation 12
+  1.0208,                                 !- Year Escalation 13
+  1.0267,                                 !- Year Escalation 14
+  1.0297,                                 !- Year Escalation 15
+  1.0356,                                 !- Year Escalation 16
+  1.0415,                                 !- Year Escalation 17
+  1.0534,                                 !- Year Escalation 18
+  1.0564,                                 !- Year Escalation 19
+  1.0593,                                 !- Year Escalation 20
+  1.0653,                                 !- Year Escalation 21
+  1.0712,                                 !- Year Escalation 22
+  1.0742,                                 !- Year Escalation 23
+  1.0801,                                 !- Year Escalation 24
+  1.0831,                                 !- Year Escalation 25
+  1.0831,                                 !- Year Escalation 26
+  1.0861,                                 !- Year Escalation 27
+  1.0890,                                 !- Year Escalation 28
+  1.0920,                                 !- Year Escalation 29
+  1.0950;                                 !- Year Escalation 30
+
+Building,
+  BESTEST Case 600 - Base Case,           !- Name
+  0,                                      !- North Axis {deg}
+  Country,                                !- Terrain
+  ,                                       !- Loads Convergence Tolerance Value
+  ,                                       !- Temperature Convergence Tolerance Value {deltaC}
+  FullInteriorAndExterior,                !- Solar Distribution
+  ,                                       !- Maximum Number of Warmup Days
+  6;                                      !- Minimum Number of Warmup Days
+
+Zone,
+  ZONE ONE,                               !- Name
+  0,                                      !- Direction of Relative North {deg}
+  0,                                      !- X Origin {m}
+  0,                                      !- Y Origin {m}
+  0,                                      !- Z Origin {m}
+  ,                                       !- Type
+  1,                                      !- Multiplier
+  2.7,                                    !- Ceiling Height {m}
+  129.6,                                  !- Volume {m3}
+  ,                                       !- Floor Area {m2}
+  ,                                       !- Zone Inside Convection Algorithm
+  ;                                       !- Zone Outside Convection Algorithm
+
+BuildingSurface:Detailed,
+  ZONE SURFACE EAST,                      !- Name
+  Wall,                                   !- Surface Type
+  LTWALL,                                 !- Construction Name
+  ZONE ONE,                               !- Zone Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  0.5,                                    !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  8, 0, 2.7,                              !- X,Y,Z Vertex 1 {m}
+  8, 0, 0,                                !- X,Y,Z Vertex 2 {m}
+  8, 6, 0,                                !- X,Y,Z Vertex 3 {m}
+  8, 6, 2.7;                              !- X,Y,Z Vertex 4 {m}
+
+BuildingSurface:Detailed,
+  ZONE SURFACE FLOOR,                     !- Name
+  Floor,                                  !- Surface Type
+  LTFLOOR,                                !- Construction Name
+  ZONE ONE,                               !- Zone Name
+  Ground,                                 !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  NoSun,                                  !- Sun Exposure
+  NoWind,                                 !- Wind Exposure
+  0,                                      !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  8, 6, 0,                                !- X,Y,Z Vertex 1 {m}
+  8, 0, 0,                                !- X,Y,Z Vertex 2 {m}
+  0, 0, 0,                                !- X,Y,Z Vertex 3 {m}
+  0, 6, 0;                                !- X,Y,Z Vertex 4 {m}
+
+BuildingSurface:Detailed,
+  ZONE SURFACE NORTH,                     !- Name
+  Wall,                                   !- Surface Type
+  LTWALL,                                 !- Construction Name
+  ZONE ONE,                               !- Zone Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  0.5,                                    !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  8, 6, 2.7,                              !- X,Y,Z Vertex 1 {m}
+  8, 6, 0,                                !- X,Y,Z Vertex 2 {m}
+  0, 6, 0,                                !- X,Y,Z Vertex 3 {m}
+  0, 6, 2.7;                              !- X,Y,Z Vertex 4 {m}
+
+BuildingSurface:Detailed,
+  ZONE SURFACE ROOF,                      !- Name
+  Roof,                                   !- Surface Type
+  LTROOF,                                 !- Construction Name
+  ZONE ONE,                               !- Zone Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  0,                                      !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  8, 0, 2.7,                              !- X,Y,Z Vertex 1 {m}
+  8, 6, 2.7,                              !- X,Y,Z Vertex 2 {m}
+  0, 6, 2.7,                              !- X,Y,Z Vertex 3 {m}
+  0, 0, 2.7;                              !- X,Y,Z Vertex 4 {m}
+
+BuildingSurface:Detailed,
+  ZONE SURFACE SOUTH,                     !- Name
+  Wall,                                   !- Surface Type
+  LTWALL,                                 !- Construction Name
+  ZONE ONE,                               !- Zone Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  0.5,                                    !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  0, 0, 2.7,                              !- X,Y,Z Vertex 1 {m}
+  0, 0, 0,                                !- X,Y,Z Vertex 2 {m}
+  8, 0, 0,                                !- X,Y,Z Vertex 3 {m}
+  8, 0, 2.7;                              !- X,Y,Z Vertex 4 {m}
+
+FenestrationSurface:Detailed,
+  ZONE SUBSURFACE 1,                      !- Name
+  Window,                                 !- Surface Type
+  Double Pane Window,                     !- Construction Name
+  ZONE SURFACE SOUTH,                     !- Building Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  0.5,                                    !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  1,                                      !- Multiplier
+  ,                                       !- Number of Vertices
+  0.5, 0, 2.2,                            !- X,Y,Z Vertex 1 {m}
+  0.5, 0, 0.2,                            !- X,Y,Z Vertex 2 {m}
+  3.5, 0, 0.2,                            !- X,Y,Z Vertex 3 {m}
+  3.5, 0, 2.2;                            !- X,Y,Z Vertex 4 {m}
+
+FenestrationSurface:Detailed,
+  ZONE SUBSURFACE 2,                      !- Name
+  Window,                                 !- Surface Type
+  Double Pane Window,                     !- Construction Name
+  ZONE SURFACE SOUTH,                     !- Building Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  0.5,                                    !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  1,                                      !- Multiplier
+  ,                                       !- Number of Vertices
+  4.5, 0, 2.2,                            !- X,Y,Z Vertex 1 {m}
+  4.5, 0, 0.2,                            !- X,Y,Z Vertex 2 {m}
+  7.5, 0, 0.2,                            !- X,Y,Z Vertex 3 {m}
+  7.5, 0, 2.2;                            !- X,Y,Z Vertex 4 {m}
+
+BuildingSurface:Detailed,
+  ZONE SURFACE WEST,                      !- Name
+  Wall,                                   !- Surface Type
+  LTWALL,                                 !- Construction Name
+  ZONE ONE,                               !- Zone Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  0.5,                                    !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  0, 6, 2.7,                              !- X,Y,Z Vertex 1 {m}
+  0, 6, 0,                                !- X,Y,Z Vertex 2 {m}
+  0, 0, 0,                                !- X,Y,Z Vertex 3 {m}
+  0, 0, 2.7;                              !- X,Y,Z Vertex 4 {m}
+
+OtherEquipment,
+  Other Equipment 1,                      !- Name
+  None,                                   !- Fuel Type
+  ZONE ONE,                               !- Zone or ZoneList Name
+  Always On Ruleset Fractional,           !- Schedule Name
+  EquipmentLevel,                         !- Design Level Calculation Method
+  200,                                    !- Design Level {W}
+  ,                                       !- Power per Zone Floor Area {W/m2}
+  ,                                       !- Power per Person {W/Person}
+  0,                                      !- Fraction Latent
+  0.6,                                    !- Fraction Radiant
+  0;                                      !- Fraction Lost
+
+ZoneInfiltration:DesignFlowRate,
+  Space Infiltration Design Flow Rate 1,  !- Name
+  ZONE ONE,                               !- Zone or ZoneList Name
+  Always On Ruleset Fractional 1,         !- Schedule Name
+  AirChanges/Hour,                        !- Design Flow Rate Calculation Method
+  ,                                       !- Design Flow Rate {m3/s}
+  ,                                       !- Flow per Zone Floor Area {m3/s-m2}
+  ,                                       !- Flow per Exterior Surface Area {m3/s-m2}
+  0.5,                                    !- Air Changes per Hour {1/hr}
+  ,                                       !- Constant Term Coefficient
+  ,                                       !- Temperature Term Coefficient
+  ,                                       !- Velocity Term Coefficient
+  ;                                       !- Velocity Squared Term Coefficient
+
+ZoneControl:Thermostat,
+  ZONE ONE Thermostat,                    !- Name
+  ZONE ONE,                               !- Zone or ZoneList Name
+  ZONE ONE Thermostat Schedule,           !- Control Type Schedule Name
+  ThermostatSetpoint:DualSetpoint,        !- Control Object Type 1
+  Thermostat Setpoint Dual Setpoint 1;    !- Control Name 1
+
+Schedule:Compact,
+  ZONE ONE Thermostat Schedule,           !- Name
+  ZONE ONE Thermostat Schedule Type Limits, !- Schedule Type Limits Name
+  Through: 12/31,                         !- Field 1
+  For: AllDays,                           !- Field 2
+  Until: 24:00,                           !- Field 3
+  4;                                      !- Field 4
+
+ScheduleTypeLimits,
+  ZONE ONE Thermostat Schedule Type Limits, !- Name
+  0,                                      !- Lower Limit Value {BasedOnField A3}
+  4,                                      !- Upper Limit Value {BasedOnField A3}
+  DISCRETE;                               !- Numeric Type
+
+ThermostatSetpoint:DualSetpoint,
+  Thermostat Setpoint Dual Setpoint 1,    !- Name
+  20.0 C,                                 !- Heating Setpoint Temperature Schedule Name
+  27.0 C;                                 !- Cooling Setpoint Temperature Schedule Name
+
+Schedule:Constant,
+  20.0 C,                                 !- Name
+  Temperature,                            !- Schedule Type Limits Name
+  20;                                     !- Hourly Value
+
+Schedule:Constant,
+  27.0 C,                                 !- Name
+  Temperature,                            !- Schedule Type Limits Name
+  27;                                     !- Hourly Value
+
+HVACTemplate:Zone:IdealLoadsAirSystem,
+  ZONE ONE,                               !- Zone Name
+  ,                                       !- Template Thermostat Name
+  ,                                       !- System Availability Schedule Name
+  ,                                       !- Maximum Heating Supply Air Temperature {C}
+  ,                                       !- Minimum Cooling Supply Air Temperature {C}
+  ,                                       !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+  ,                                       !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+  ,                                       !- Heating Limit
+  ,                                       !- Maximum Heating Air Flow Rate {m3/s}
+  ,                                       !- Maximum Sensible Heating Capacity {W}
+  ,                                       !- Cooling Limit
+  ,                                       !- Maximum Cooling Air Flow Rate {m3/s}
+  ,                                       !- Maximum Total Cooling Capacity {W}
+  ,                                       !- Heating Availability Schedule Name
+  ,                                       !- Cooling Availability Schedule Name
+  ,                                       !- Dehumidification Control Type
+  ,                                       !- Cooling Sensible Heat Ratio {dimensionless}
+  ,                                       !- Dehumidification Setpoint {percent}
+  ,                                       !- Humidification Control Type
+  ,                                       !- Humidification Setpoint {percent}
+  ,                                       !- Outdoor Air Method
+  ,                                       !- Outdoor Air Flow Rate per Person {m3/s}
+  ,                                       !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
+  ,                                       !- Outdoor Air Flow Rate per Zone {m3/s}
+  ,                                       !- Design Specification Outdoor Air Object Name
+  ;                                       !- Demand Controlled Ventilation Type
+
+SimulationControl,
+  No,                                     !- Do Zone Sizing Calculation
+  No,                                     !- Do System Sizing Calculation
+  No,                                     !- Do Plant Sizing Calculation
+  No,                                     !- Run Simulation for Sizing Periods
+  Yes;                                    !- Run Simulation for Weather File Run Periods
+
+HeatBalanceAlgorithm,
+  ConductionTransferFunction,             !- Algorithm
+  200;                                    !- Surface Temperature Upper Limit {C}
+
+RunPeriod,
+  Run Period 1,                           !- Name
+  1,                                      !- Begin Month
+  1,                                      !- Begin Day of Month
+  12,                                     !- End Month
+  31,                                     !- End Day of Month
+  Thursday,                               !- Day of Week for Start Day
+  No,                                     !- Use Weather File Holidays and Special Days
+  No,                                     !- Use Weather File Daylight Saving Period
+  No,                                     !- Apply Weekend Holiday Rule
+  Yes,                                    !- Use Weather File Rain Indicators
+  Yes,                                    !- Use Weather File Snow Indicators
+  1;                                      !- Number of Times Runperiod to be Repeated
+
+ShadowCalculation,
+  AverageOverDaysInFrequency,             !- Calculation Method
+  20,                                     !- Calculation Frequency
+  15000;                                  !- Maximum Figures in Shadow Overlap Calculations
+
+SurfaceConvectionAlgorithm:Inside,
+  TARP;                                   !- Algorithm
+
+SurfaceConvectionAlgorithm:Outside,
+  DOE-2;                                  !- Algorithm
+
+Timestep,
+  6;                                      !- Number of Timesteps per Hour
+
+Sizing:Parameters,
+  1.25,                                   !- Heating Sizing Factor
+  1.15;                                   !- Cooling Sizing Factor
+
+GlobalGeometryRules,
+  UpperLeftCorner,                        !- Starting Vertex Position
+  Counterclockwise,                       !- Vertex Entry Direction
+  Relative,                               !- Coordinate System
+  Relative,                               !- Daylighting Reference Point Coordinate System
+  Relative;                               !- Rectangular Surface Coordinate System
+
+Material,
+  FIBERGLASS QUILT-1,                     !- Name
+  Rough,                                  !- Roughness
+  0.066,                                  !- Thickness {m}
+  0.04,                                   !- Conductivity {W/m-K}
+  12,                                     !- Density {kg/m3}
+  840,                                    !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.6,                                    !- Solar Absorptance
+  0.6;                                    !- Visible Absorptance
+
+Material,
+  FIBERGLASS QUILT-2,                     !- Name
+  Rough,                                  !- Roughness
+  0.1118,                                 !- Thickness {m}
+  0.04,                                   !- Conductivity {W/m-K}
+  12,                                     !- Density {kg/m3}
+  840,                                    !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.6,                                    !- Solar Absorptance
+  0.6;                                    !- Visible Absorptance
+
+Material,
+  HIGH CONDUCTANCE WALL-INSIDE,           !- Name
+  VerySmooth,                             !- Roughness
+  0.003175,                               !- Thickness {m}
+  1.06,                                   !- Conductivity {W/m-K}
+  2500,                                   !- Density {kg/m3}
+  750,                                    !- Specific Heat {J/kg-K}
+  0.1,                                    !- Thermal Absorptance
+  0.1,                                    !- Solar Absorptance
+  0.1;                                    !- Visible Absorptance
+
+Material,
+  HIGH CONDUCTANCE WALL-OUTSIDE,          !- Name
+  VerySmooth,                             !- Roughness
+  0.003175,                               !- Thickness {m}
+  1.06,                                   !- Conductivity {W/m-K}
+  2500,                                   !- Density {kg/m3}
+  750,                                    !- Specific Heat {J/kg-K}
+  0.1,                                    !- Thermal Absorptance
+  0.1,                                    !- Solar Absorptance
+  0.1;                                    !- Visible Absorptance
+
+Material,
+  PLASTERBOARD-1,                         !- Name
+  Rough,                                  !- Roughness
+  0.012,                                  !- Thickness {m}
+  0.16,                                   !- Conductivity {W/m-K}
+  950,                                    !- Density {kg/m3}
+  840,                                    !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.6,                                    !- Solar Absorptance
+  0.6;                                    !- Visible Absorptance
+
+Material,
+  PLASTERBOARD-2,                         !- Name
+  Rough,                                  !- Roughness
+  0.01,                                   !- Thickness {m}
+  0.16,                                   !- Conductivity {W/m-K}
+  950,                                    !- Density {kg/m3}
+  840,                                    !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.6,                                    !- Solar Absorptance
+  0.6;                                    !- Visible Absorptance
+
+Material,
+  ROOF DECK,                              !- Name
+  Rough,                                  !- Roughness
+  0.019,                                  !- Thickness {m}
+  0.14,                                   !- Conductivity {W/m-K}
+  530,                                    !- Density {kg/m3}
+  900,                                    !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.6,                                    !- Solar Absorptance
+  0.6;                                    !- Visible Absorptance
+
+Material,
+  TIMBER FLOORING,                        !- Name
+  Rough,                                  !- Roughness
+  0.025,                                  !- Thickness {m}
+  0.14,                                   !- Conductivity {W/m-K}
+  650,                                    !- Density {kg/m3}
+  1200,                                   !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.6,                                    !- Solar Absorptance
+  0.6;                                    !- Visible Absorptance
+
+Material,
+  WOOD SIDING-1,                          !- Name
+  Rough,                                  !- Roughness
+  0.009,                                  !- Thickness {m}
+  0.14,                                   !- Conductivity {W/m-K}
+  530,                                    !- Density {kg/m3}
+  900,                                    !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.6,                                    !- Solar Absorptance
+  0.6;                                    !- Visible Absorptance
+
+Material,
+  ZONE COMMON WALL,                       !- Name
+  Rough,                                  !- Roughness
+  0.2,                                    !- Thickness {m}
+  0.51,                                   !- Conductivity {W/m-K}
+  1400,                                   !- Density {kg/m3}
+  1000,                                   !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.6,                                    !- Solar Absorptance
+  0.6;                                    !- Visible Absorptance
+
+Material:AirGap,
+  Air Space Resistance 1,                 !- Name
+  0.1588;                                 !- Thermal Resistance {m2-K/W}
+
+Material:NoMass,
+  R-25 INSULATION,                        !- Name
+  Rough,                                  !- Roughness
+  25.075,                                 !- Thermal Resistance {m2-K/W}
+  0.9,                                    !- Thermal Absorptance
+  0.6,                                    !- Solar Absorptance
+  0.6;                                    !- Visible Absorptance
+
+WindowMaterial:Gas,
+  Air Space Resistance,                   !- Name
+  AIR,                                    !- Gas Type
+  0.013;                                  !- Thickness {m}
+
+WindowMaterial:Glazing,
+  Glass Type 1,                           !- Name
+  SpectralAverage,                        !- Optical Data Type
+  ,                                       !- Window Glass Spectral Data Set Name
+  0.003175,                               !- Thickness {m}
+  0.86156,                                !- Solar Transmittance at Normal Incidence
+  0.07846,                                !- Front Side Solar Reflectance at Normal Incidence
+  0.07846,                                !- Back Side Solar Reflectance at Normal Incidence
+  0.91325,                                !- Visible Transmittance at Normal Incidence
+  0.082,                                  !- Front Side Visible Reflectance at Normal Incidence
+  0.082,                                  !- Back Side Visible Reflectance at Normal Incidence
+  0,                                      !- Infrared Transmittance at Normal Incidence
+  0.84,                                   !- Front Side Infrared Hemispherical Emissivity
+  0.84,                                   !- Back Side Infrared Hemispherical Emissivity
+  1.06;                                   !- Conductivity {W/m-K}
+
+Construction,
+  COMMON WALL,                            !- Name
+  ZONE COMMON WALL;                       !- Layer 1
+
+Construction,
+  Double Pane Window,                     !- Name
+  Glass Type 1,                           !- Layer 1
+  Air Space Resistance,                   !- Layer 2
+  Glass Type 1;                           !- Layer 3
+
+Construction,
+  HIGH CONDUCTANCE WALL,                  !- Name
+  HIGH CONDUCTANCE WALL-OUTSIDE,          !- Layer 1
+  Air Space Resistance 1,                 !- Layer 2
+  HIGH CONDUCTANCE WALL-INSIDE;           !- Layer 3
+
+Construction,
+  LTFLOOR,                                !- Name
+  R-25 INSULATION,                        !- Layer 1
+  TIMBER FLOORING;                        !- Layer 2
+
+Construction,
+  LTROOF,                                 !- Name
+  ROOF DECK,                              !- Layer 1
+  FIBERGLASS QUILT-2,                     !- Layer 2
+  PLASTERBOARD-2;                         !- Layer 3
+
+Construction,
+  LTWALL,                                 !- Name
+  WOOD SIDING-1,                          !- Layer 1
+  FIBERGLASS QUILT-1,                     !- Layer 2
+  PLASTERBOARD-1;                         !- Layer 3
+
+ScheduleTypeLimits,
+  Fractional,                             !- Name
+  0,                                      !- Lower Limit Value {BasedOnField A3}
+  1,                                      !- Upper Limit Value {BasedOnField A3}
+  Continuous;                             !- Numeric Type
+
+ScheduleTypeLimits,
+  Temperature,                            !- Name
+  -60,                                    !- Lower Limit Value {BasedOnField A3}
+  200,                                    !- Upper Limit Value {BasedOnField A3}
+  Continuous,                             !- Numeric Type
+  temperature;                            !- Unit Type
+
+Schedule:Day:Interval,
+  Schedule Day 6,                         !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  24:00,                                  !- Time 1 {hh:mm}
+  1;                                      !- Value Until Time 1
+
+Schedule:Day:Interval,
+  Schedule Day 7,                         !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  24:00,                                  !- Time 1 {hh:mm}
+  1;                                      !- Value Until Time 1
+
+Schedule:Day:Interval,
+  Zone Cooling Setpoint All Days,         !- Name
+  Temperature,                            !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  01:00,                                  !- Time 1 {hh:mm}
+  27,                                     !- Value Until Time 1
+  02:00,                                  !- Time 2 {hh:mm}
+  27,                                     !- Value Until Time 2
+  03:00,                                  !- Time 3 {hh:mm}
+  27,                                     !- Value Until Time 3
+  04:00,                                  !- Time 4 {hh:mm}
+  27,                                     !- Value Until Time 4
+  05:00,                                  !- Time 5 {hh:mm}
+  27,                                     !- Value Until Time 5
+  06:00,                                  !- Time 6 {hh:mm}
+  27,                                     !- Value Until Time 6
+  07:00,                                  !- Time 7 {hh:mm}
+  27,                                     !- Value Until Time 7
+  08:00,                                  !- Time 8 {hh:mm}
+  27,                                     !- Value Until Time 8
+  09:00,                                  !- Time 9 {hh:mm}
+  27,                                     !- Value Until Time 9
+  10:00,                                  !- Time 10 {hh:mm}
+  27,                                     !- Value Until Time 10
+  11:00,                                  !- Time 11 {hh:mm}
+  27,                                     !- Value Until Time 11
+  12:00,                                  !- Time 12 {hh:mm}
+  27,                                     !- Value Until Time 12
+  13:00,                                  !- Time 13 {hh:mm}
+  27,                                     !- Value Until Time 13
+  14:00,                                  !- Time 14 {hh:mm}
+  27,                                     !- Value Until Time 14
+  15:00,                                  !- Time 15 {hh:mm}
+  27,                                     !- Value Until Time 15
+  16:00,                                  !- Time 16 {hh:mm}
+  27,                                     !- Value Until Time 16
+  17:00,                                  !- Time 17 {hh:mm}
+  27,                                     !- Value Until Time 17
+  18:00,                                  !- Time 18 {hh:mm}
+  27,                                     !- Value Until Time 18
+  19:00,                                  !- Time 19 {hh:mm}
+  27,                                     !- Value Until Time 19
+  20:00,                                  !- Time 20 {hh:mm}
+  27,                                     !- Value Until Time 20
+  21:00,                                  !- Time 21 {hh:mm}
+  27,                                     !- Value Until Time 21
+  22:00,                                  !- Time 22 {hh:mm}
+  27,                                     !- Value Until Time 22
+  23:00,                                  !- Time 23 {hh:mm}
+  27,                                     !- Value Until Time 23
+  24:00,                                  !- Time 24 {hh:mm}
+  27;                                     !- Value Until Time 24
+
+Schedule:Day:Interval,
+  Zone Heating Setpoint All Days,         !- Name
+  Temperature,                            !- Schedule Type Limits Name
+  No,                                     !- Interpolate to Timestep
+  01:00,                                  !- Time 1 {hh:mm}
+  20,                                     !- Value Until Time 1
+  02:00,                                  !- Time 2 {hh:mm}
+  20,                                     !- Value Until Time 2
+  03:00,                                  !- Time 3 {hh:mm}
+  20,                                     !- Value Until Time 3
+  04:00,                                  !- Time 4 {hh:mm}
+  20,                                     !- Value Until Time 4
+  05:00,                                  !- Time 5 {hh:mm}
+  20,                                     !- Value Until Time 5
+  06:00,                                  !- Time 6 {hh:mm}
+  20,                                     !- Value Until Time 6
+  07:00,                                  !- Time 7 {hh:mm}
+  20,                                     !- Value Until Time 7
+  08:00,                                  !- Time 8 {hh:mm}
+  20,                                     !- Value Until Time 8
+  09:00,                                  !- Time 9 {hh:mm}
+  20,                                     !- Value Until Time 9
+  10:00,                                  !- Time 10 {hh:mm}
+  20,                                     !- Value Until Time 10
+  11:00,                                  !- Time 11 {hh:mm}
+  20,                                     !- Value Until Time 11
+  12:00,                                  !- Time 12 {hh:mm}
+  20,                                     !- Value Until Time 12
+  13:00,                                  !- Time 13 {hh:mm}
+  20,                                     !- Value Until Time 13
+  14:00,                                  !- Time 14 {hh:mm}
+  20,                                     !- Value Until Time 14
+  15:00,                                  !- Time 15 {hh:mm}
+  20,                                     !- Value Until Time 15
+  16:00,                                  !- Time 16 {hh:mm}
+  20,                                     !- Value Until Time 16
+  17:00,                                  !- Time 17 {hh:mm}
+  20,                                     !- Value Until Time 17
+  18:00,                                  !- Time 18 {hh:mm}
+  20,                                     !- Value Until Time 18
+  19:00,                                  !- Time 19 {hh:mm}
+  20,                                     !- Value Until Time 19
+  20:00,                                  !- Time 20 {hh:mm}
+  20,                                     !- Value Until Time 20
+  21:00,                                  !- Time 21 {hh:mm}
+  20,                                     !- Value Until Time 21
+  22:00,                                  !- Time 22 {hh:mm}
+  20,                                     !- Value Until Time 22
+  23:00,                                  !- Time 23 {hh:mm}
+  20,                                     !- Value Until Time 23
+  24:00,                                  !- Time 24 {hh:mm}
+  20;                                     !- Value Until Time 24
+
+Schedule:Week:Daily,
+  Zone Cooling Setpoint All Weeks,        !- Name
+  Zone Cooling Setpoint All Days,         !- Sunday Schedule:Day Name
+  Zone Cooling Setpoint All Days,         !- Monday Schedule:Day Name
+  Zone Cooling Setpoint All Days,         !- Tuesday Schedule:Day Name
+  Zone Cooling Setpoint All Days,         !- Wednesday Schedule:Day Name
+  Zone Cooling Setpoint All Days,         !- Thursday Schedule:Day Name
+  Zone Cooling Setpoint All Days,         !- Friday Schedule:Day Name
+  Zone Cooling Setpoint All Days,         !- Saturday Schedule:Day Name
+  Zone Cooling Setpoint All Days,         !- Holiday Schedule:Day Name
+  Zone Cooling Setpoint All Days,         !- SummerDesignDay Schedule:Day Name
+  Zone Cooling Setpoint All Days,         !- WinterDesignDay Schedule:Day Name
+  Zone Cooling Setpoint All Days,         !- CustomDay1 Schedule:Day Name
+  Zone Cooling Setpoint All Days;         !- CustomDay2 Schedule:Day Name
+
+Schedule:Week:Daily,
+  Zone Heating Setpoint All Weeks,        !- Name
+  Zone Heating Setpoint All Days,         !- Sunday Schedule:Day Name
+  Zone Heating Setpoint All Days,         !- Monday Schedule:Day Name
+  Zone Heating Setpoint All Days,         !- Tuesday Schedule:Day Name
+  Zone Heating Setpoint All Days,         !- Wednesday Schedule:Day Name
+  Zone Heating Setpoint All Days,         !- Thursday Schedule:Day Name
+  Zone Heating Setpoint All Days,         !- Friday Schedule:Day Name
+  Zone Heating Setpoint All Days,         !- Saturday Schedule:Day Name
+  Zone Heating Setpoint All Days,         !- Holiday Schedule:Day Name
+  Zone Heating Setpoint All Days,         !- SummerDesignDay Schedule:Day Name
+  Zone Heating Setpoint All Days,         !- WinterDesignDay Schedule:Day Name
+  Zone Heating Setpoint All Days,         !- CustomDay1 Schedule:Day Name
+  Zone Heating Setpoint All Days;         !- CustomDay2 Schedule:Day Name
+
+Schedule:Year,
+  Cooling Setpoints,                      !- Name
+  Temperature,                            !- Schedule Type Limits Name
+  Zone Cooling Setpoint All Weeks,        !- Schedule:Week Name 1
+  1,                                      !- Start Month 1
+  1,                                      !- Start Day 1
+  12,                                     !- End Month 1
+  31;                                     !- End Day 1
+
+Schedule:Year,
+  Heating Setpoints,                      !- Name
+  Temperature,                            !- Schedule Type Limits Name
+  Zone Heating Setpoint All Weeks,        !- Schedule:Week Name 1
+  1,                                      !- Start Month 1
+  1,                                      !- Start Day 1
+  12,                                     !- End Month 1
+  31;                                     !- End Day 1
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {ed0a88d8-3d65-41a5-bd3d-080568b70d89}, !- Name
+  Schedule Day 6,                         !- Sunday Schedule:Day Name
+  Schedule Day 6,                         !- Monday Schedule:Day Name
+  Schedule Day 6,                         !- Tuesday Schedule:Day Name
+  Schedule Day 6,                         !- Wednesday Schedule:Day Name
+  Schedule Day 6,                         !- Thursday Schedule:Day Name
+  Schedule Day 6,                         !- Friday Schedule:Day Name
+  Schedule Day 6,                         !- Saturday Schedule:Day Name
+  Schedule Day 6,                         !- Holiday Schedule:Day Name
+  Schedule Day 6,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 6,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 6,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 6;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Year,
+  Always On Ruleset Fractional,           !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  Schedule:Week:Daily {ed0a88d8-3d65-41a5-bd3d-080568b70d89}, !- Schedule:Week Name 1
+  1,                                      !- Start Month 1
+  1,                                      !- Start Day 1
+  12,                                     !- End Month 1
+  31;                                     !- End Day 1
+
+Schedule:Week:Daily,
+  Schedule:Week:Daily {644e01f6-4d89-4b7d-a20c-26d8ea34441a}, !- Name
+  Schedule Day 7,                         !- Sunday Schedule:Day Name
+  Schedule Day 7,                         !- Monday Schedule:Day Name
+  Schedule Day 7,                         !- Tuesday Schedule:Day Name
+  Schedule Day 7,                         !- Wednesday Schedule:Day Name
+  Schedule Day 7,                         !- Thursday Schedule:Day Name
+  Schedule Day 7,                         !- Friday Schedule:Day Name
+  Schedule Day 7,                         !- Saturday Schedule:Day Name
+  Schedule Day 7,                         !- Holiday Schedule:Day Name
+  Schedule Day 7,                         !- SummerDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- WinterDesignDay Schedule:Day Name
+  Schedule Day 7,                         !- CustomDay1 Schedule:Day Name
+  Schedule Day 7;                         !- CustomDay2 Schedule:Day Name
+
+Schedule:Year,
+  Always On Ruleset Fractional 1,         !- Name
+  Fractional,                             !- Schedule Type Limits Name
+  Schedule:Week:Daily {644e01f6-4d89-4b7d-a20c-26d8ea34441a}, !- Schedule:Week Name 1
+  1,                                      !- Start Month 1
+  1,                                      !- Start Day 1
+  12,                                     !- End Month 1
+  31;                                     !- End Day 1
+
+Schedule:Constant,
+  Always On Discrete,                     !- Name
+  ,                                       !- Schedule Type Limits Name
+  1;                                      !- Hourly Value
+
+Schedule:Constant,
+  Always Off Discrete,                    !- Name
+  ,                                       !- Schedule Type Limits Name
+  0;                                      !- Hourly Value
+
+Schedule:Constant,
+  Always On Continuous,                   !- Name
+  ,                                       !- Schedule Type Limits Name
+  1;                                      !- Hourly Value
+
+OutdoorAir:Node,
+  Model Outdoor Air Node;                 !- Name
+
+Site:Location,
+  Denver-Stapleton_CO_USA,                !- Name
+  39.76,                                  !- Latitude {deg}
+  -104.86,                                !- Longitude {deg}
+  -7,                                     !- Time Zone {hr}
+  1611;                                   !- Elevation {m}
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Mean Air Temperature,              !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Window Transmitted Solar Radiation Energy, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Window Transmitted Beam Solar Radiation Energy, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Window Transmitted Diffuse Solar Radiation Energy, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Air System Sensible Heating Energy, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Air System Sensible Cooling Energy, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Outside Face Sunlit Area,       !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Outside Face Sunlit Fraction,   !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Outside Face Incident Solar Radiation Rate per Area, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Window Transmitted Solar Radiation Rate, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Window Transmitted Beam Solar Radiation Rate, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Window Transmitted Diffuse Solar Radiation Rate, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OutputControl:Table:Style,
+  HTML;                                   !- Column Separator
+
+Output:Table:SummaryReports,
+  AllSummary;                             !- Report Name 1
+
+Output:VariableDictionary,
+  IDF,                                    !- Key Field
+  Unsorted;                               !- Sort Option
+
+Output:SQLite,
+  SimpleAndTabular;                       !- Option Type
+
+LifeCycleCost:NonrecurringCost,
+  Default Cost,                           !- Name
+  Construction,                           !- Category
+  0,                                      !- Cost
+  ServicePeriod;                          !- Start of Costs
+

@@ -155,9 +155,26 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReports_Test < MiniTest::Unit::
       argument_map[arg.name] = temp_arg_var
     end
 
+    # only need to run this when osm models are added or updated
+=begin
+    # need to set last workspace early so proper variables can be grabbed
+    # load the test model
+    translator = OpenStudio::OSVersion::VersionTranslator.new
+    model = translator.loadModel(model_in_path)
+    assert((not model.empty?))
+    model = model.get
+    # forward translate OSM file to IDF file
+    ft = OpenStudio::EnergyPlus::ForwardTranslator.new
+    workspace = ft.translateModel(model)
+    workspace_in_path = model_in_path.gsub(".osm",".idf")
+    workspace.save(workspace_in_path,true)
+=end
+
     # get the energyplus output requests, this will be done automatically by OS App and PAT
+    # need to set last workspace early so propar variables can be grabbed
+    runner.setLastEnergyPlusWorkspacePath(OpenStudio::Path.new(model_in_path.gsub(".osm",".idf")))
     idf_output_requests = measure.energyPlusOutputRequests(runner, argument_map)
-    assert_equal(0, idf_output_requests.size)
+    assert_operator idf_output_requests.size, :>, 0
 
     # mimic the process of running this measure in OS App or PAT
     setup_test(test_name,idf_output_requests,model_in_path,epw_path)
@@ -168,7 +185,6 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReports_Test < MiniTest::Unit::
 
     # set up runner, this will happen automatically when measure is run in PAT or OpenStudio
     runner.setLastOpenStudioModelPath(OpenStudio::Path.new(model_out_path(test_name)))
-    runner.setLastEnergyPlusWorkspacePath(OpenStudio::Path.new(workspace_path(test_name)))
     runner.setLastEpwFilePath(epw_path)
     runner.setLastEnergyPlusSqlFilePath(OpenStudio::Path.new(sql_path(test_name)))
 
