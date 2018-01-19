@@ -3,6 +3,7 @@ require 'fileutils'
 path_datapoints = "workflow"
 
 # loop through resoruce files
+jobs = []
 results_directories = Dir.glob("#{path_datapoints}/*")
 results_directories.each do |directory|
 	puts "runing #{directory}"
@@ -12,5 +13,17 @@ results_directories.each do |directory|
 	  puts "data_point.osw not found for #{directory}"
 	  next
 	end
-	system(string)
+
+	# system(string)
+	jobs << string
+
+end
+
+# run the jobs
+# if gem parallel isn't isntalled then comment out this coudl and use system(string) to run one job at a time
+require 'parallel'
+num_parallel = 6
+Parallel.each(jobs, in_threads: num_parallel) do |job|
+  puts job
+  system(job)
 end
