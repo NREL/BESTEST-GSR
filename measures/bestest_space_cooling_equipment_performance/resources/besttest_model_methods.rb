@@ -537,7 +537,7 @@ module BestestModelMethods
         sch_stpt_manager = OpenStudio::Model::SetpointManagerScheduled.new(model,neutral_sch)
 
         # get inlet node for unitary system
-        unitary_node = unitary_system.to_WaterToAirComponent.get.airInletModelObject.get.to_Node.get
+        unitary_node = unitary_system.airInletModelObject.get.to_Node.get
         sch_stpt_manager.addToNode(unitary_node)
 
       end

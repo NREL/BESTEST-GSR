@@ -2,8 +2,8 @@
   <schema_version>3.0</schema_version>
   <name>bestest_space_cooling_equipment_performance</name>
   <uid>eb12d939-e78f-4b84-8af7-1e69e10a0cf4</uid>
-  <version_id>2cd43f56-5882-4e62-9825-0d9360969971</version_id>
-  <version_modified>20171227T184649Z</version_modified>
+  <version_id>b5f3a13d-7e73-440d-bbfb-8222326efb5e</version_id>
+  <version_modified>20180119T170327Z</version_modified>
   <xml_checksum>05C5DFDC</xml_checksum>
   <class_name>BestestSpaceCoolingEquipmentPerformance</class_name>
   <display_name>Bestest Space Cooling Equipment Performance</display_name>
@@ -372,12 +372,6 @@
       <checksum>7218C3D4</checksum>
     </file>
     <file>
-      <filename>besttest_model_methods.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>FEB85365</checksum>
-    </file>
-    <file>
       <version>
         <software_program>OpenStudio</software_program>
         <identifier>1.11.5</identifier>
@@ -387,6 +381,12 @@
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
       <checksum>F6A12A08</checksum>
+    </file>
+    <file>
+      <filename>besttest_model_methods.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>0E20BE86</checksum>
     </file>
   </files>
 </measure>

@@ -2,9 +2,9 @@
   <schema_version>3.0</schema_version>
   <name>replace_idf</name>
   <uid>05229e67-7ca0-439e-a5fe-2328b6a05066</uid>
-  <version_id>8c9a847c-5cd6-4485-9771-bb1fd062dbfa</version_id>
-  <version_modified>20171227T164423Z</version_modified>
-  <xml_checksum>78D2A6C3</xml_checksum>
+  <version_id>a41318de-e589-4a89-96bb-adcc1c78b098</version_id>
+  <version_modified>20180119T170329Z</version_modified>
+  <xml_checksum>08362F07</xml_checksum>
   <class_name>ReplaceIdf</class_name>
   <display_name>Replace Idf</display_name>
   <description>Replace this text with an explanation of what the measure does in terms that can be understood by a general building professional audience (building owners, architects, engineers, contractors, etc.).  This description will be used to create reports aimed at convincing the owner and/or design team to implement the measure in the actual building design.  For this reason, the description may include details about how the measure would be implemented, along with explanations of qualitative benefits associated with the measure.  It is good practice to include citations in the measure if the description is taken from a known source or if specific benefits are listed.</description>
