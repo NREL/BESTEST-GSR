@@ -14,12 +14,11 @@ require 'rubyXL' # install gem first
 # https://github.com/weshatheleopard/rubyXL
 require "#{File.dirname(__FILE__)}/resources/common_info"
 
-
 # Load in CSV file
-csv_file = 'PAT_BESTEST_HE.csv'
+csv_file = 'workflow_results.csv' # bestest.case_num will be first column trip for header
 csv_hash = {}
 CSV.foreach(csv_file, :headers => true, :header_converters => :symbol, :converters => :all) do |row|
-  short_name = row.fields[6].split(" ").first
+  short_name = row.fields[0].split(" ").first
   csv_hash[short_name] = Hash[row.headers[1..-1].zip(row.fields[1..-1])]
 end
 puts "CSV has #{csv_hash.size} entries."
