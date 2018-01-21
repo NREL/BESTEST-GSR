@@ -32,7 +32,7 @@ Dir.chdir("../")
 puts "cleaning up workflow directories"
 workflow_directories = Dir.glob("integration_testing/workflow/*")
 workflow_directories.each do |directory|
-	next if directory.incldue?("workflow_resources")
+	next if directory.include?("workflow_resources")
 	content =  Dir.glob("#{directory}/*")
 	content.each do |file|
 	  next if file.include?("data_point.osw")
