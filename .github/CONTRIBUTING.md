@@ -57,7 +57,7 @@ contribution is larger (e.g. a new feature or new functionality/capability), weâ
 your proposed contribution first. To do that, we need a written description of why you wish to 
 contribute to BESTEST-GSR, a detailed description of the project that you are proposing, the 
 precise functionalities that you plan to implement as part of the project, and a timeframe for 
-implementation (see [here][https://github.com/NREL/OS_EP_Bestest/blob/master/.github/BESTEST-GSR_Contribution_Proposal_v1.0_2018-04-04.doc] for the template contribution proposal document). After 
+implementation (see [here](https://github.com/NREL/OS_EP_Bestest/blob/master/.github/BESTEST-GSR_Contribution_Proposal_v1.0_2018-04-04.doc) for the template contribution proposal document). After 
 we review your materials, we will schedule a meeting or conference call to discuss your 
 information in more detail. We may ask you to revise your materials and make changes to it, 
 which we will re-review. Before you do any work we must reach prior agreement and written 
@@ -114,4 +114,4 @@ BESTEST-GSR is developed in collaboration with NREL and private firms.
 
 **Documents**
  
-[BESTEST-GSR_Contribution_Proposal_v1.0_2018-04-04.doc][https://github.com/NREL/OS_EP_Bestest/blob/master/.github/BESTEST-GSR_Contribution_Proposal_v1.0_2018-04-04.doc]
+[BESTEST-GSR_Contribution_Proposal_v1.0_2018-04-04.doc](https://github.com/NREL/OS_EP_Bestest/blob/master/.github/BESTEST-GSR_Contribution_Proposal_v1.0_2018-04-04.doc)

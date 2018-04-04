@@ -2,7 +2,7 @@ BESTEST-GSR
 =============
 
 
-## The purpose of this repository is to generate BESTEST test cases and populating ASHRAE Standard 140 reporting spreadsheets for EnergyPlus based whole building simulation tools.
+## The purpose of this repository is to generate BESTEST test cases and populate data for ASHRAE Standard 140 reporting spreadsheets for EnergyPlus based whole building simulation tools.
 
 ### Supported tools
 The default IDF generation is based on the OpenStudio CLI, but the workflow supports a 'bring your own IDF' use case. The scripts on this repository should work on Mac, Windows, and Linux.
