@@ -5,7 +5,7 @@ BESTEST-GSR
 ## The purpose of this repository is to generate BESTEST test cases and populating ASHRAE Standard 140 reporting spreadsheets for EnergyPlus based whole building simulation tools.
 
 ### Supported tools
-The default IDF generation is based on the OpenStudio CLI, but the workflow supports a 'bring your own IDF' use case.
+The default IDF generation is based on the OpenStudio CLI, but the workflow supports a 'bring your own IDF' use case. The scripts on this repository should work on Mac, Windows, and Linux.
 
 ### Dependencies
 
@@ -14,13 +14,13 @@ The default IDF generation is based on the OpenStudio CLI, but the workflow supp
 * install RubyXL gem (not needed for measures, only for writing to Excel in with reporting script)
 
 ### Steps to Run BESTEST test cases
-* Install Ruby on your machine if it isn't already setup.
+* Install [Ruby](https://www.ruby-lang.org/en/) on your system if it isn't already setup.
     * 2.2.4 was used for development but other versions may work
     * Since OpenStudio has it's own embedded Ruby, which is used for running measures, you don't necessariy have to use a version of Ruby supported by OpenStudio.
-* Install OpenStudio 2.5.0
+* Install [OpenStudio 2.5.0](https://www.openstudio.net/downloads)
     * make sure command line can recognize the 'openstudio' command
     * optionally can use other 2.x versions of OpenStudio
-* Install RubyXL
+* Install [RubyXL](https://rubygems.org/gems/rubyXL) ruby gem
     * This is used to modify Microsoft Excel spreadsheets
 * Run 'run_all_generate_reports.rb' from the command line script while in the top level of the repository.
     * This should generate IDF files, run simulations, and populate Excel files.

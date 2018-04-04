@@ -23,7 +23,7 @@ The contribution process for BESTEST-GSR is composed of three steps:
 1.	**Send consent email**
 
     In order for us to distribute your code as part of BESTEST-GSR under the BESTEST-GSR 
-[license](https://github.com/BESTEST-GSR/schema/blob/develop/LICENSE.md), we’ll need 
+[license](https://github.com/NREL/OS_EP_Bestest/blob/master/LICENSE.md), we’ll need 
 your consent. An email acknowledging understanding of these terms and agreeing to them is
 all that will be asked of any contributor. Send an email to the BESTEST-GSR project manager (see 
 below for the address) including the following text and a list of co-contributors (if any):
@@ -52,12 +52,12 @@ change of employer).
 
     If your contribution is small (e.g. a bug fix), simply submit your contribution via GitHub. 
 If you find a bug, first make sure it is not an already known issue, then report it in the GitHub 
-[issue tracker](https://github.com/BESTEST-GSR/schema/issues) for this repository. If your 
+[issue tracker](https://github.com/NREL/OS_EP_Bestest/issues) for this repository. If your 
 contribution is larger (e.g. a new feature or new functionality/capability), we’ll need to evaluate 
 your proposed contribution first. To do that, we need a written description of why you wish to 
 contribute to BESTEST-GSR, a detailed description of the project that you are proposing, the 
 precise functionalities that you plan to implement as part of the project, and a timeframe for 
-implementation (see [here][BESTEST-GSR-proposal] for the template contribution proposal document). After 
+implementation (see [here][https://github.com/NREL/OS_EP_Bestest/blob/master/.github/BESTEST-GSR_Contribution_Proposal_v1.0_2018-04-04.doc] for the template contribution proposal document). After 
 we review your materials, we will schedule a meeting or conference call to discuss your 
 information in more detail. We may ask you to revise your materials and make changes to it, 
 which we will re-review. Before you do any work we must reach prior agreement and written 
@@ -114,7 +114,4 @@ BESTEST-GSR is developed in collaboration with NREL and private firms.
 
 **Documents**
  
-[BESTEST-GSR_Contribution_Proposal_v1.0_2018-04-04.doc][BESTEST-GSR-proposal]
-
-
-[BESTEST-GSR-proposal]: https://github.com/NREL/BESTEST-GSR/raw/develop/.github/BESTEST-GSR_Contribution_Proposal_v1.0_2018-04-04.doc
+[BESTEST-GSR_Contribution_Proposal_v1.0_2018-04-04.doc][https://github.com/NREL/OS_EP_Bestest/blob/master/.github/BESTEST-GSR_Contribution_Proposal_v1.0_2018-04-04.doc]
