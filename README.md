@@ -1,74 +1,74 @@
-OS_EP_Bestest
+BESTEST-GSR
 =============
 
-BESTEST
 
-This document gives overview of task
-https://docs.google.com/document/d/1OOjD81k1JyTmbGo-u2SEfPAduMdXrWaHakjF9Uu4do8/edit?usp=sharing
+## The purpose of this repository is to generate BESTEST test cases and populating ASHRAE Standard 140 reporting spreadsheets for EnergyPlus based whole building simulation tools.
 
+### Supported tools
+The default IDF generation is based on the OpenStudio CLI, but the workflow supports a 'bring your own IDF' use case.
 
-This folder contains design documents for specific measures.
-https://drive.google.com/folderview?id=0BziGk7eItbVVYk5JX3VNcFk0bjQ&usp=sharing
-
-
-## Workflow to generate BESTEST test cases and populating ASHRAE Standard 140 reporting spreadsheets
-
-### Dependancies
+### Dependencies
 
 * checkout this repository
 * Make sure OpenStudio is accessible from ruby on your system.
 * install RubyXL gem (not needed for measures, only for writing to Excel in with reporting script)
 
-
+### Steps to Run BESTEST test cases
+* Install Ruby on your machine if it isn't already setup.
+    * 2.2.4 was used for development but other versions may work
+    * Since OpenStudio has it's own embedded Ruby, which is used for running measures, you don't necessariy have to use a version of Ruby supported by OpenStudio.
+* Install OpenStudio 2.5.0
+    * make sure command line can recognize the 'openstudio' command
+    * optionally can use other 2.x versions of OpenStudio
+* Install RubyXL
+    * This is used to modify Microsoft Excel spreadsheets
+* Run 'run_all_generate_reports.rb' from the command line script while in the top level of the repository.
+    * This should generate IDF files, run simulations, and populate Excel files.
+* View resulting files
+    * The Summary Excel files are saved to the 'results' directory.
+        * 'RESULTS5-#.xlsx' and 'RESULTS5-#_OS.xlsx' have the same content
+    * zip file for each datapoint are saved to 'results/bestest_zips'
+    
+ 
 ### Overview
 
-* Currently not all ASHRAE Standard 140-2014 test cases are made. Only test cases required for 179D are created. The following sections are modeled
-    * Section 5.2 (Building Thermal Envelope and Fabric Load Tests) except for Section 5.2.4 (Ground Coupling)
-        * model measure - bestest_building_thermal_envelope_and_fabric_load_tests
-        * reporting measure - bestest_building_thermal_envelope_and_fabric_load_reports
-            * Summary of post-processing of SQL data in the measure:
-            * Unit conversion (typical)
-            * Processing data for specific dates and times (typcial)
-            * creating annual bins by temperature from hourly data for ff_temp_bins_section method
-            * compiling min, max, and average values as needed for ff_temp_bins_section method
-        * integration testing project - bestest_01.xlsx
-        * results csv - bestest_os_server_output.csv
-        * Std. 140 XLSX - RESULTS5-2A.xlsx
-    * Section 5.3 (Space Cooling Equipment Performance Tests)
-        * model measure - bestest_space_cooling_equipment_performance_tests
-        * reporting measure - bestest_ce_reporting
-            * Summary of post-processing of SQL data in the measure:
-            * Unit Conversion (typical)
-            * Processing data for specific dates and times (typcial)
-            * Calculating COP (mean_cop) using Unitary System Total Cooling Rate and Air System Electric Energy
-            * Calculating COP2 (mean_cop_2 and cop_2_24) using Cooling Coil Total Cooling Rate and Air System DX Cooling Coil Electric Energy
-            * compiling min, max, and average values as needed
-        * integration testing project - bestest_CE01.xlsx
-        * results csv - bestest_os_server_output_ce.csv
-        * Std. 140 XLSX - RESULTS5-3A.xlsx and RESULTS5-3B.xlsx
-    * Section 5.4 (Space Heating Equipment Performance Test)
-        * model measure - bestest_space_heating_equipment_performance_tests
-        * reporting measure - bestest_he_reporting
-            * Summary of post-processing of SQL data in the measure:
-            * Unit Conversion (typical)
-            * Calculating average average_fuel_consumption in m^3/sec using formula from section 6.4.1.3
-        * integration testing project - bestest_HE01.xlsx
-        * results csv - bestest_os_server_output_he.csv
-        * Std. 140 XLSX - RESULTS5-4.xlsx
-* Each Section listed above has it's own set of measures and scripts. Below is a list of what is used for each section.
-    * First an OpenStudio Model measure is used to create the test case and assign a weather file
-    * Then an OpenStudio Reporting measure is used to generate 'runner.RegisterValue' objects that will be used downstream.
-    * Next there is an OpenStudio Analysis Spreadsheet project that runs the measures and gathers the results from the individual datapoints. 
-    * A a CSV file is downloaded with the the 'runner.RegisterValue' log from each datapoint.
-    * A local script then runs and using data from the CSV, edits a copy of the raw ASHRAE Standard 140-2014 Excel Spreadsheet.
- 
+Currently not all ASHRAE Standard 140-2014 test cases are made. Only test cases required for 179D are created. The following sections are modeled. Under each section the files used and generated are summarized.
+    
+* Section 5.2 (Building Thermal Envelope and Fabric Load Tests) except for Section 5.2.4 (Ground Coupling)
+    * model measure - bestest_building_thermal_envelope_and_fabric_load_tests
+    * reporting measure - bestest_building_thermal_envelope_and_fabric_load_reports
+        * Summary of post-processing of SQL data in the measure:
+        * Unit conversion (typical)
+        * Processing data for specific dates and times (typcial)
+        * creating annual bins by temperature from hourly data for ff_temp_bins_section method
+        * compiling min, max, and average values as needed for ff_temp_bins_section method
+    * Std. 140 XLSX - RESULTS5-2A.xlsx
+* Section 5.3 (Space Cooling Equipment Performance Tests)
+    * model measure - bestest_space_cooling_equipment_performance_tests
+    * reporting measure - bestest_ce_reporting
+        * Summary of post-processing of SQL data in the measure:
+        * Unit Conversion (typical)
+        * Processing data for specific dates and times (typcial)
+        * Calculating COP (mean_cop) using Unitary System Total Cooling Rate and Air System Electric Energy
+        * Calculating COP2 (mean_cop_2 and cop_2_24) using Cooling Coil Total Cooling Rate and Air System DX Cooling Coil Electric Energy
+        * compiling min, max, and average values as needed
+    * Std. 140 XLSX - RESULTS5-3A.xlsx and RESULTS5-3B.xlsx
+* Section 5.4 (Space Heating Equipment Performance Test)
+    * model measure - bestest_space_heating_equipment_performance_tests
+    * reporting measure - bestest_he_reporting
+        * Summary of post-processing of SQL data in the measure:
+        * Unit Conversion (typical)
+        * Calculating average average_fuel_consumption in m^3/sec using formula from section 6.4.1.3
+    * Std. 140 XLSX - RESULTS5-4.xlsx
+
+
 ### Measures
  
-The measures are contained in the "measures" directory at the top level of the repository.
+The measures are contained in the "measures" directory at the top level of the repository. 
 
 ##### Running the measures
 * Each measure has one or more unit tests
-* Measrues can also be run directly in the OpenStudio applciation, howeer there is a bug in OpenStudio that prevents weather files from being assigned, so you have to add the weather file manually before running a simulation.
+* Measures run run using the OpenStudio CLI and the 'workflow.osw' files described in the 'Workflow' section.
 
 ##### Files used by the Model measures
 * measure.rb is the main file that drives the measures. It contains logic to building the model beyond what is included in the tables described below.
@@ -86,7 +86,7 @@ The measures are contained in the "measures" directory at the top level of the r
 * the 'report.html' file generated by the measures can be ignored, the relevent data is saved into the 'out.osw'.
     * The envelope reporting measure has some content in the HTML that was used for measure development, but it not used at all in this workflow.
 
-##### Model articulation
+##### Model articulation steps
 * besttest_case_var_lib.rb is loaded
 * Case number is mapped ot set of variables
 * Adjust simulation settings
@@ -110,6 +110,8 @@ The measures are contained in the "measures" directory at the top level of the r
 The Parametric Analysis Tool projects are in the 'integration_testing/pat' folder. Some of the files are described below. See link for PAT documentation. http://nrel.github.io/OpenStudio-user-documentation/reference/parametric_analysis_tool_2/
 * There are three separate algorithmic projects for envelope, heating, and cooling. 
 * Additionally there is a single manual analysis project with all test cases combined
+* The PAT projects are no longer used for production but are provided for reference, and for use with manual runs. The current production workflow uses the OpenStudio CLI to directly run 'workflow.osw' files in the 'Workflow' directory.
+    * The manual PAT project was used to pre-generate the 'osw' files. If new tests or added or for any reason 'osw' files need to be regenerated, this PAT project can be used.
 
 ##### Contents of each PAT project
 * pat.json is the PAT project. This is the input file generated by the PAT GUI. It in turn generates the analysis json and analysis zip files.
@@ -119,47 +121,46 @@ The Parametric Analysis Tool projects are in the 'integration_testing/pat' folde
 * project_name.json is the analysis json
 * project_name.zip contains all the files needed for the analysis json to run the analysis.
 
-##### OpenStudio Cloud Management Console
-
-Once the analysis has finished, go to the main page for the analysis and under the 'Downloads' section click 'CSV (Results)' to download the CSV file. Then copy it into the 'results' directory and rename it to match the name of the previous section specific CSV file.
-
 #### Workflow
 
-This directory contains example workflows that can be run with the OpenStudio CLI to generate test cases and run simulations. See link for documentation on the OpenStudio CLI. http://nrel.github.io/OpenStudio-user-documentation/reference/command_line_interface/
+There is a subdirectory for each BESTEST test case. Each directory has a unique 'workflow.osw' file that used to generate the OSM, IDF file, and the simulation results. See link for documentation on the OpenStudio CLI. http://nrel.github.io/OpenStudio-user-documentation/reference/command_line_interface/
 
-There are two sample workflows in the 'workflow' directory, both generate test case 600EN. One articulations the model with OpenStudio and runs an OpenStudio reporting measure. The other imports an externally generated IDF file and run the same OpenStudio reporting measure as the osm generated test case. The only change the reporting measure makes to the IDF is to inject output variable requests needed by the reporting measure. Below is a list of files that are generated when the CLI is used to run an OSW.
-* workflow.osw is the only file currently committed ot the repository. The can identifies the seed model, weather file, location of measures and other resoruces, and the workflow steps that are defined. It can be viewed and edited with a text editor.
+There are two sample workflows in the 'workflow' directory, both generate test case 600EN. One articulates the model with OpenStudio and runs an OpenStudio reporting measure. The other imports an externally generated IDF file and run the same OpenStudio reporting measure as the osm generated test case. The only change the reporting measure makes to the IDF is to inject output variable requests needed by the reporting measure. Below is a list of files that are generated when the CLI is used to run an OSW.
+* workflow.osw is the only file currently committed ot the repository. The file identifies the seed model, weather file, location of measures and other resources, and the workflow steps that are defined. It can be viewed and edited with a text editor.
 * The run directory contains the final OSM, IDF, and simulation results from EnergyPlus.
 * The reports directory contains html files generated by reporting measures or EnergyPlus.
-* out.osw is geneated after running a simulation with the CLI. It is a copy of 'workflow.osw' overloaded with logging from the measure and simulation runs. The data in 'step_values' can be used to populate the results.csv file. 
+* out.osw is generated after running a simulation with the CLI. It is a copy of 'workflow.osw' overloaded with logging from the measure and simulation runs. The data in 'step_values' can be used to populate the results.csv file.
+* Only the two .osw files are saved to the repository, however the 'results' directory contains the OSM file, IDF file, and simulation results.
+* If you run the BESTEST test cases using 'run_all_generate_reports.rb' it will clean out these directories after using what it needs. You can commment out the script lines that do this, or you can manually run an OSW with the CLI if you want to inspect files not found in the zip file.
 
-Note: the current reporting measures are setup for a specific system confirguration, and in some cases, are expecting objects of specific names. If externally generated IDF files don't match the expected structurea and names then the reporting measures, or a copy of it, will need to be altered. The reporting measures could be made more robust so they don't rely on specific names, and support mutliple possible system configurations.
+Note: the current reporting measures are setup for a specific system confirguration, and in some cases, are expecting objects of specific names. If externally generated IDF files don't match the expected structure and names then the reporting measures, or a copy of it, will need to be altered. The reporting measures could be made more robust so they don't rely on specific names, and support multiple possible system configurations.
  
 ### Results
 The 'results' folder at the top of the repository is used to populate the 'YourData' tab of the ASHRAE Standard 140-2014 XLSX files. The spreadsheet is setup to display this data on all of the charts.
 
 ##### Files in 'results' folder.
-* The three CSV files with 'runner.RegisterValue' data are copied here from the server.
+* The is a file nameed 'workflow_results.csv' files with 'runner.RegisterValue' data are copied here from the out.osw files from individual test cases.
 * There are three scrips, one for each of the three sections (Enelope, Cooling, Heating).
 * The 'resources' folder contains raw Excel files from ASHRAE Standard 140-2014.
 * Copies of these Excel files are created at the top of the 'results' folder. There are four files here because the Coooling script generates two Excel files.
-* There is an extra copy of each resulting Excel file with "_OS" at the end of the name. These contain the same results but have program infomraiton for OpenStudio instead of EnergyPlus.
+* There is an extra copy of each resulting Excel file with "_OS" at the end of the name. These contain the same results but have program information for OpenStudio instead of EnergyPlus.
 
 ##### How the reporting script works.
 * Raw Excel File opened and copied.
 * CSV results loaded and converted to a hash.
 * Data from results hash is used to edit the copied Excel file.
 * Excel file is saved when changes are done.
-* This should be re-run anytime a new Analysis Spreadsheet is run.
+* This should be re-run anytime simulations are re-ran. 'run_all_generate_reports.rb' will do this for you.
 * The script is setup to run from the 'results' directory.
-* Sometimes Excel Charts won't update unless you copy and paste data in "YourData" worksheet after running the script and opening the file; maybe Excel does not always recognize when file changed via RubyXL?
 
 ### Next Steps
 
 * Add to EnergyPlus integration testing
     * Branches can be checked for unexpected changes in BESTEST results
-* Extend tests to additional ASHRAE Standard 140-2014 sections beyond 179D requireemnts.
-* Setup post processing script to work from either results.csv or collection of individual out.osw files.
-    * Most direct way to do this is to add in code to create results.csv from individual osw files, then call the existing code as is. This will allow manual local runs using PAT or CLI.
-* Better support for multiple organization support.
-    * Add arguments to scripts to point to location of results and general information. Also good time to combine scripts under a single parent script.
+* Extend tests to additional ASHRAE Standard 140-2014 sections beyond 179D requirements.
+* Better multiple organization support. Specifically make it easier to maintain running tests across multiple modeling tools from different organizations.
+    * Each organization would be responsible for running their own tests, but  as much as the code base as possible can be shared and maintained together.
+* Publish high level results to something more dynamic than Excel. Specific interests outlined below.
+    * Create reporting with most current version of all tools shown at the same time.
+        * This repository is specifically setup for EnergyPlus tools, but this task could fall outside of this repository to support all 179d submissions, with a goal thathigh level data for different tools is easily accessible by the modeling community.
+    * Create reporting of the most current version of a tool against some number of prior releases of the same tool.
