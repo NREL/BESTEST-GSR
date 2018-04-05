@@ -52,7 +52,7 @@ change of employer).
 
     If your contribution is small (e.g. a bug fix), simply submit your contribution via GitHub. 
 If you find a bug, first make sure it is not an already known issue, then report it in the GitHub 
-[issue tracker](../issues) for this repository. If your 
+[issue tracker](../../../issues) for this repository. If your 
 contribution is larger (e.g. a new feature or new functionality/capability), we’ll need to evaluate 
 your proposed contribution first. To do that, we need a written description of why you wish to 
 contribute to BESTEST-GSR, a detailed description of the project that you are proposing, the 

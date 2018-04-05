@@ -1,27 +1,23 @@
-BESTEST-GSR
+Building Energy Simulation Test - Generation Simulation and Reporting (BESTEST-GSR)
 =============
 
-
-## The purpose of this repository is to generate BESTEST test cases and populate data for ASHRAE Standard 140 reporting spreadsheets for EnergyPlus based whole building simulation tools.
+## The purpose of this repository is to generate BESTEST test case models, run simulations, and populate data for ASHRAE Standard 140 reporting spreadsheets for EnergyPlus based whole building simulation tools.
 
 ### Supported tools
 The default IDF generation is based on the OpenStudio CLI, but the workflow supports a 'bring your own IDF' use case. The scripts on this repository should work on Mac, Windows, and Linux.
 
 ### Dependencies
 
-* checkout this repository
-* Make sure OpenStudio is accessible from ruby on your system.
-* install RubyXL gem (not needed for measures, only for writing to Excel in with reporting script)
-
-### Steps to Run BESTEST test cases
-* Install [Ruby](https://www.ruby-lang.org/en/) on your system if it isn't already setup.
-    * 2.2.4 was used for development but other versions may work
-    * Since OpenStudio has it's own embedded Ruby, which is used for running measures, you don't necessariy have to use a version of Ruby supported by OpenStudio.
 * Install [OpenStudio 2.5.0](https://www.openstudio.net/downloads)
     * make sure command line can recognize the 'openstudio' command
     * optionally can use other 2.x versions of OpenStudio
+* Install [Ruby](https://www.ruby-lang.org/en/) on your system if it isn't already setup.
+    * 2.2.4 was used for development but other versions may work
+    * Since OpenStudio has it's own embedded Ruby, which is used for running measures, you don't necessarily have to use a version of Ruby supported by OpenStudio.
 * Install [RubyXL](https://rubygems.org/gems/rubyXL) ruby gem
     * This is used to modify Microsoft Excel spreadsheets
+
+### Steps to Run BESTEST test cases
 * Run 'run_all_generate_reports.rb' from the command line script while in the top level of the repository.
     * This should generate IDF files, run simulations, and populate Excel files.
 * View resulting files
@@ -32,14 +28,14 @@ The default IDF generation is based on the OpenStudio CLI, but the workflow supp
  
 ### Overview
 
-Currently not all ASHRAE Standard 140-2014 test cases are made. Only test cases required for 179D are created. The following sections are modeled. Under each section the files used and generated are summarized.
+Currently not all ASHRAE Standard 140-2014 test cases are made. Only test cases required for 179D are created. The following sections are modeled. Under each section is a list of measures, and the Excel file that high level results are created for..
     
 * Section 5.2 (Building Thermal Envelope and Fabric Load Tests) except for Section 5.2.4 (Ground Coupling)
     * model measure - bestest_building_thermal_envelope_and_fabric_load_tests
     * reporting measure - bestest_building_thermal_envelope_and_fabric_load_reports
         * Summary of post-processing of SQL data in the measure:
         * Unit conversion (typical)
-        * Processing data for specific dates and times (typcial)
+        * Processing data for specific dates and times (typical)
         * creating annual bins by temperature from hourly data for ff_temp_bins_section method
         * compiling min, max, and average values as needed for ff_temp_bins_section method
     * Std. 140 XLSX - RESULTS5-2A.xlsx
@@ -48,7 +44,7 @@ Currently not all ASHRAE Standard 140-2014 test cases are made. Only test cases 
     * reporting measure - bestest_ce_reporting
         * Summary of post-processing of SQL data in the measure:
         * Unit Conversion (typical)
-        * Processing data for specific dates and times (typcial)
+        * Processing data for specific dates and times (typical)
         * Calculating COP (mean_cop) using Unitary System Total Cooling Rate and Air System Electric Energy
         * Calculating COP2 (mean_cop_2 and cop_2_24) using Cooling Coil Total Cooling Rate and Air System DX Cooling Coil Electric Energy
         * compiling min, max, and average values as needed
@@ -68,7 +64,8 @@ The measures are contained in the "measures" directory at the top level of the r
 
 ##### Running the measures
 * Each measure has one or more unit tests
-* Measures run run using the OpenStudio CLI and the 'workflow.osw' files described in the 'Workflow' section.
+* Measures are run using the OpenStudio CLI and the 'workflow.osw' files described in the 'Workflow' section.
+* Measures can also be run as part of the included PAT projects.
 
 ##### Files used by the Model measures
 * measure.rb is the main file that drives the measures. It contains logic to building the model beyond what is included in the tables described below.
@@ -105,22 +102,6 @@ The measures are contained in the "measures" directory at the top level of the r
  
 ### Integration Testing Files
 
-#### Parametric Analysis Tool (PAT)
-
-The Parametric Analysis Tool projects are in the 'integration_testing/pat' folder. Some of the files are described below. See link for PAT documentation. http://nrel.github.io/OpenStudio-user-documentation/reference/parametric_analysis_tool_2/
-* There are three separate algorithmic projects for envelope, heating, and cooling. 
-* Additionally there is a single manual analysis project with all test cases combined
-* The PAT projects are no longer used for production but are provided for reference, and for use with manual runs. The current production workflow uses the OpenStudio CLI to directly run 'workflow.osw' files in the 'Workflow' directory.
-    * The manual PAT project was used to pre-generate the 'osw' files. If new tests or added or for any reason 'osw' files need to be regenerated, this PAT project can be used.
-
-##### Contents of each PAT project
-* pat.json is the PAT project. This is the input file generated by the PAT GUI. It in turn generates the analysis json and analysis zip files.
-* measures contains measures used by the analysis. These should be updated from the top level measure directory. The PAT application can manage this.
-* seeds contains seed models used by the analysis
-* weather contains weather files used by the analysis. Note that some measures may contain their own weather files beyond what is included here.
-* project_name.json is the analysis json
-* project_name.zip contains all the files needed for the analysis json to run the analysis.
-
 #### Workflow
 
 There is a subdirectory for each BESTEST test case. Each directory has a unique 'workflow.osw' file that used to generate the OSM, IDF file, and the simulation results. See link for documentation on the OpenStudio CLI. http://nrel.github.io/OpenStudio-user-documentation/reference/command_line_interface/
@@ -134,6 +115,23 @@ There are two sample workflows in the 'workflow' directory, both generate test c
 * If you run the BESTEST test cases using 'run_all_generate_reports.rb' it will clean out these directories after using what it needs. You can commment out the script lines that do this, or you can manually run an OSW with the CLI if you want to inspect files not found in the zip file.
 
 Note: the current reporting measures are setup for a specific system confirguration, and in some cases, are expecting objects of specific names. If externally generated IDF files don't match the expected structure and names then the reporting measures, or a copy of it, will need to be altered. The reporting measures could be made more robust so they don't rely on specific names, and support multiple possible system configurations.
+
+#### Parametric Analysis Tool (PAT)
+
+_The PAT projects are no longer used for production but are provided for reference, and for use with manual runs. The current production workflow uses the OpenStudio CLI to directly run 'workflow.osw' files in the 'Workflow' directory._
+
+The Parametric Analysis Tool projects are in the 'integration_testing/pat' folder. Some of the files are described below. See link for PAT documentation. http://nrel.github.io/OpenStudio-user-documentation/reference/parametric_analysis_tool_2/
+* There are three separate algorithmic projects for envelope, heating, and cooling. 
+* Additionally there is a single manual analysis project with all test cases combined
+* The manual PAT project was used to pre-generate the 'osw' files in the 'workflow' directory. If new tests or added or for any reason 'osw' files need to be regenerated, this PAT project can be used.
+
+##### Contents of each PAT project
+* pat.json is the PAT project. This is the input file generated by the PAT GUI. It in turn generates the analysis json and analysis zip files.
+* measures contains measures used by the analysis. These should be updated from the top level measure directory. The PAT application can manage this.
+* seeds contains seed models used by the analysis
+* weather contains weather files used by the analysis. Note that some measures may contain their own weather files beyond what is included here.
+* project_name.json is the analysis json
+* project_name.zip contains all the files needed for the analysis json to run the analysis. 
  
 ### Results
 The 'results' folder at the top of the repository is used to populate the 'YourData' tab of the ASHRAE Standard 140-2014 XLSX files. The spreadsheet is setup to display this data on all of the charts.
