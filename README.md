@@ -17,7 +17,7 @@ The default IDF generation is based on the OpenStudio CLI, but the workflow supp
 * Install [RubyXL](https://rubygems.org/gems/rubyXL) ruby gem
     * This is used to modify Microsoft Excel spreadsheets
 * Install [Parallel](https://rubygems.org/gems/parallel/versions/1.11.2) ruby gem
-    # This allows the CLI to run simulations in parallel
+    * This allows the CLI to run simulations in parallel
 
 ### Steps to Run BESTEST test cases
 * Run 'run_all_generate_reports.rb' from the command line script while in the top level of the repository.
