@@ -14,6 +14,9 @@ require 'rubyXL' # install gem first
 # https://github.com/weshatheleopard/rubyXL
 require "#{File.dirname(__FILE__)}/resources/common_info"
 
+# array for historical rows
+historical_gen_info = []
+historical_rows = []
 
 # Load in CSV file
 csv_file = 'workflow_results.csv' # bestest.case_num will be first column trip for header
@@ -74,6 +77,7 @@ puts "Populating main table for 5-3A"
     next if column == :bestest_ce_reportingclg_energy_consumption_condenser_fan
 
     worksheet.sheet_data[i][j+1].change_contents(csv_hash[target_case][column])
+    historical_rows << ["#{worksheet.sheet_data[i][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[i][j+1].value.to_s]
   end
 
 end
@@ -94,6 +98,14 @@ worksheet.sheet_data[gen_info_row+3][gen_info_col+4].change_contents(common_info
 # row skiped in Excel
 worksheet.sheet_data[gen_info_row+5][gen_info_col].change_contents(common_info[:organization])
 worksheet.sheet_data[gen_info_row+6][gen_info_col+4].change_contents(common_info[:organization_short])
+
+# add general info to historical file
+historical_gen_info << ["program_name_and_version",common_info[:program_name_and_version]]
+historical_gen_info << ["program_version_release_date",common_info[:program_version_release_date]]
+historical_gen_info << ["program_name_short",common_info[:program_name_short]]
+historical_gen_info << ["results_submission_date",common_info[:results_submission_date]]
+historical_gen_info << ["organization",common_info[:organization]]
+historical_gen_info << ["organization_short",common_info[:organization_short]]
 
 # Save Updated Excel File
 # todo - Sheet A that refers to YourData isn't updating cells that refer to YourData. Not sure why. Workaround for now is to copy and paste YourData when I first open it, but shouldn't have to do that.
@@ -172,12 +184,14 @@ puts "Populating Annual Sums and Means Table"
     next if column == :bestest_ce_reportingann_sum_clg_energy_consumption_condenser_fan
 
     worksheet.sheet_data[i][j+1].change_contents(csv_hash[target_case][column])
+    historical_rows << ["#{worksheet.sheet_data[i][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[i][j+1].value.to_s]
   end
   # extra columns just for CE300
   if target_case.include? 'CE300'
     columns_extra_300.each_with_index do |column,j|
 
       worksheet.sheet_data[i][j+12].change_contents(csv_hash[target_case][column])
+      historical_rows << ["#{worksheet.sheet_data[i][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[i][j+12].value.to_s]
     end
   end
 end
@@ -192,6 +206,7 @@ end
     next if column == :bestest_ce_reportingann_sum_clg_energy_consumption_condenser_fan
 
     worksheet.sheet_data[i][j+1].change_contents(csv_hash[target_case][column])
+    historical_rows << ["#{worksheet.sheet_data[i][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[i][j+1].value.to_s]
   end
 end
 
@@ -217,6 +232,7 @@ columns.each_with_index do |column,j|
   next if column == :bestest_ce_reportingmay_sept_sum_clg_consumption_cond_fan
 
   worksheet.sheet_data[74][j+1].change_contents(csv_hash["CE500"][column])
+  historical_rows << ["#{worksheet.sheet_data[74][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[74][j+1].value.to_s]
 end
 # CE510 May-Sep
 columns.each_with_index do |column,j|
@@ -226,6 +242,7 @@ columns.each_with_index do |column,j|
   next if column == :bestest_ce_reportingmay_sept_sum_clg_consumption_cond_fan
 
   worksheet.sheet_data[75][j+1].change_contents(csv_hash["CE510"][column])
+  historical_rows << ["#{worksheet.sheet_data[75][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[75][j+1].value.to_s]
 end
 
 # make array for columns on table
@@ -259,11 +276,13 @@ puts "Populating Annual Hourly Integrated Maxima Consumptions and Loads Table"
   # loop through columns for each case
   columns.each_with_index do |column,j|
     worksheet.sheet_data[i][j+16].change_contents(csv_hash[target_case][column])
+    historical_rows << ["#{worksheet.sheet_data[i][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[i][j+16].value.to_s]
   end
   # extra columns just for CE300
   if target_case.include? 'CE300'
     columns_extra_300.each_with_index do |column,j|
       worksheet.sheet_data[i][j+28].change_contents(csv_hash[target_case][column])
+      historical_rows << ["CE300 #{worksheet.sheet_data[i][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[i][j+28].value.to_s]
     end
   end
 end
@@ -296,13 +315,15 @@ columns << :bestest_ce_reportingrh_min_date
 columns << :bestest_ce_reportingrh_min_hr
 
 # populate table on YourData
-puts "Populating Annual Hourly Integrated Maxima - cop_2 and Zone Table"
+category = "Annual Hourly Integrated Maxima - cop_2 and Zone Table"
+puts "Populating #{category}"
 (88..99).each do |i|
   target_case = worksheet.sheet_data[i][15].value
   puts "Adding row for #{target_case}"
   # loop through columns for each case
   columns.each_with_index do |column,j|
     worksheet.sheet_data[i][j+16].change_contents(csv_hash[target_case][column])
+    historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[i][j+16].value.to_s]
   end
 end
 
@@ -334,7 +355,8 @@ columns << :bestest_ce_reportingapr_dec_rh_min_date
 columns << :bestest_ce_reportingapr_dec_rh_min_hr
 
 # populate table on YourData
-puts "Populating Annual Hourly Integrated Maxima - cop_2 and Zone Table"
+category =  "Annual Hourly Integrated Maxima - cop_2 and Zone Table"
+puts "Populating #{category}"
 (100..107).each do |i|
   target_case = worksheet.sheet_data[i][15].value
   if target_case.include? "CE500" then target_case = "CE500" end # raw spreadsheet has extra space in cell
@@ -342,6 +364,7 @@ puts "Populating Annual Hourly Integrated Maxima - cop_2 and Zone Table"
   # loop through columns for each case
   columns.each_with_index do |column,j|
     worksheet.sheet_data[i][j+16].change_contents(csv_hash[target_case][column])
+    historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[i][j+16].value.to_s]
   end
 end
 
@@ -360,24 +383,24 @@ columns << :bestest_ce_reportingmmdd_0628_hourly_edb
 columns << :bestest_ce_reportingmmdd_0628_hourly_ewb
 columns << :bestest_ce_reportingmmdd_0628_hourly_outdoor_humidity_ratio
 
-puts "Populating Case 300 June 28th Hourly Table"
+category =  "Case 300 June 28th Hourly Table"
+puts "Populating #{category}"
 # todo - convert string to number for each cell
 columns.each_with_index do |column,j|
   array = csv_hash['CE300'][column].split(',')
   array.each_with_index do |hourly_value,i|
 
     # skip specifc columns that can't be calculated
+    next if column == :bestest_ce_reportingmmdd_0628_hourly_energy_consumpton_compressor
     next if column == :bestest_ce_reportingmmdd_0628_hourly_energy_consumpton_cond_fan
 
     if not hourly_value == "tbd"
       hourly_value = hourly_value.to_f
     end
     worksheet.sheet_data[i+88][j+1].change_contents(hourly_value)
+    historical_rows << ["#{category} #{worksheet.sheet_data[i+88][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[i+88][j+1].value.to_s]
   end
 end
-
-# pouplate table
-puts "Populating Case 500 and 530 Average Daily Outputs"
 
 # make array for columns on table
 columns = []
@@ -393,6 +416,9 @@ columns << :bestest_ce_reportingmmdd_0430_day_cop_2
 columns << :bestest_ce_reportingmmdd_0430_day_odb
 columns << :bestest_ce_reportingmmdd_0430_day_edb
 
+# pouplate table
+category =  "Case 500 and 530 Average Daily Outputs"
+puts "Populating #{category}"
 columns.each_with_index do |column,j|
 
   # skip specifc columns that can't be calculated
@@ -401,6 +427,9 @@ columns.each_with_index do |column,j|
 
   worksheet.sheet_data[119][j+1].change_contents(csv_hash['CE500'][column])
   worksheet.sheet_data[128][j+1].change_contents(csv_hash['CE530'][column])
+  historical_rows << ["#{category} #{worksheet.sheet_data[119][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[119][j+1].value.to_s]
+  historical_rows << ["#{category} #{worksheet.sheet_data[128][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[128][j+1].value.to_s]
+
 end
 
 # make array for columns on table
@@ -425,6 +454,8 @@ columns.each_with_index do |column,j|
 
   worksheet.sheet_data[120][j+1].change_contents(csv_hash['CE500'][column])
   worksheet.sheet_data[129][j+1].change_contents(csv_hash['CE530'][column])
+  historical_rows << ["#{category} #{worksheet.sheet_data[120][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[120][j+1].value.to_s]
+  historical_rows << ["#{category} #{worksheet.sheet_data[129][0].value.to_s} #{column.to_s.gsub("bestest_ce_reporting","")}",worksheet.sheet_data[129][j+1].value.to_s]
 end
 
 puts "Adding General Information"
@@ -474,3 +505,12 @@ worksheet.sheet_data[gen_info_row+6][gen_info_col+4].change_contents(common_info
 # Save Updated Excel File
 puts "Saving #{os_copy_results_5_3b}"
 workbook.write(os_copy_results_5_3b)
+
+# load CSV file with historical version results
+historical_file = "historical/#{common_info[:program_name_and_version].gsub(".","_").gsub(" ","_")}_CE.csv"
+puts "Saving #{historical_file}"
+CSV.open(historical_file, "w") do |csv|
+  [*historical_gen_info,*historical_rows].each do |row|
+    csv << row
+  end
+end
