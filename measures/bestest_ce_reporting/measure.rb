@@ -513,7 +513,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
       raw_date = (index/24.0).floor
       counter = 0
       month_hash.each do |k,v|
-        if raw_date - counter <= v
+        if 1+ raw_date - counter <= v
           # found month
           mmm = k
           dd = 1 + raw_date - counter
