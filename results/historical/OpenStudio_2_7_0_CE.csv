@@ -1159,6 +1159,30 @@ Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_max_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_min_relative_humidity,19.2151
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_min_date,18-Apr
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_min_hr,17
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_energy_consumpton_compressor,2153.1934394742543
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_energy_consumpton_compressor,2166.871554272306
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_energy_consumpton_compressor,2147.7632808041935
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_energy_consumpton_compressor,2109.644327945434
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_energy_consumpton_compressor,2031.4567963456213
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_energy_consumpton_compressor,2181.5419654385873
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_energy_consumpton_compressor,2926.8282746927234
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_energy_consumpton_compressor,3571.694434591386
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_energy_consumpton_compressor,4771.603626001965
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_energy_consumpton_compressor,5029.184351434986
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_energy_consumpton_compressor,5485.394688599002
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_energy_consumpton_compressor,5708.537013388244
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_energy_consumpton_compressor,7233.003385231896
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_energy_consumpton_compressor,7085.933709132638
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_energy_consumpton_compressor,8689.949474910047
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_energy_consumpton_compressor,8842.873761519208
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_energy_consumpton_compressor,5791.163995431289
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_energy_consumpton_compressor,5952.795712308505
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_energy_consumpton_compressor,5617.872346058893
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_energy_consumpton_compressor,5316.098083236437
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_energy_consumpton_compressor,4369.684412276355
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_energy_consumpton_compressor,4323.944013742796
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_energy_consumpton_compressor,4216.128140915059
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_energy_consumpton_compressor,4194.401263337331
 Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_evaporator_coil_load_total,7602.333570049943
 Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_evaporator_coil_load_total,7627.681623581977
 Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_evaporator_coil_load_total,7579.085054305422
