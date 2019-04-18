@@ -391,7 +391,6 @@ columns.each_with_index do |column,j|
   array.each_with_index do |hourly_value,i|
 
     # skip specifc columns that can't be calculated
-    next if column == :bestest_ce_reportingmmdd_0628_hourly_energy_consumpton_compressor
     next if column == :bestest_ce_reportingmmdd_0628_hourly_energy_consumpton_cond_fan
 
     if not hourly_value == "tbd"
