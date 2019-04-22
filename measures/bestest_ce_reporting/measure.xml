@@ -2,8 +2,8 @@
   <schema_version>3.0</schema_version>
   <name>bestest_ce_reporting</name>
   <uid>4f921756-b4bf-483e-b845-12ba3dd4bc69</uid>
-  <version_id>cc49f241-a41d-421c-ad05-4578cd3d62b3</version_id>
-  <version_modified>20171227T184649Z</version_modified>
+  <version_id>bb142cfa-dede-4402-8790-7cb796c7ee95</version_id>
+  <version_modified>20190417T180826Z</version_modified>
   <xml_checksum>F44A8258</xml_checksum>
   <class_name>BestestCeReporting</class_name>
   <display_name>Bestest Ce Reporting</display_name>
@@ -1093,17 +1093,6 @@
       <checksum>B61F6B10</checksum>
     </file>
     <file>
-      <version>
-        <software_program>OpenStudio</software_program>
-        <identifier>1.12.1</identifier>
-        <min_compatible>1.12.1</min_compatible>
-      </version>
-      <filename>measure.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>script</usage_type>
-      <checksum>BBC08CFC</checksum>
-    </file>
-    <file>
       <filename>CE100_test_output.idf</filename>
       <filetype>idf</filetype>
       <usage_type>test</usage_type>
@@ -1132,6 +1121,17 @@
       <filetype>idf</filetype>
       <usage_type>test</usage_type>
       <checksum>20803291</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.12.1</identifier>
+        <min_compatible>1.12.1</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>BBF029FF</checksum>
     </file>
   </files>
 </measure>

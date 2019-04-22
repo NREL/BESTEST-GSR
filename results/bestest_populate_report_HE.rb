@@ -14,6 +14,10 @@ require 'rubyXL' # install gem first
 # https://github.com/weshatheleopard/rubyXL
 require "#{File.dirname(__FILE__)}/resources/common_info"
 
+# array for historical rows
+historical_gen_info = []
+historical_rows = []
+
 # Load in CSV file
 csv_file = 'workflow_results.csv' # bestest.case_num will be first column trip for header
 csv_hash = {}
@@ -35,47 +39,61 @@ workbook = RubyXL::Parser.parse(copy_results_5_4)
 worksheet = workbook['YourData']
 puts "Loading #{worksheet.sheet_name} Worksheet"
 
-puts "Populating Total Furnace Load"
+category =  "Total Furnace Load"
+puts "Populating #{category}"
 (19..29).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
   worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingtotal_furnace_load])
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
 end
 
-puts "Populating Total Furnace Input"
+category =  "Total Furnace Input"
+puts "Populating #{category}"
 (35..45).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
   worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingtotal_furnace_input])
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
 end
 
 # todo - change units here or in reporting measure
-puts "Populating Fuel Consumption"
+category =  "Fuel Consumption"
+puts "Populating #{category}"
 (51..61).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
   worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingaverage_fuel_consumption])
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
 end
 
-puts "Populating Fan Energy"
+category = "Fan Energy"
+puts "Populating #{category}"
 (67..72).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
   worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingfan_energy])
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
 end
 
-puts "Populating Mean Zone Temperature"
+category = "Mean Zone Temperature"
+puts "Populating #{category}"
 (78..80).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
   worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingmean_zone_temperature])
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
 end
 
-puts "Populating Maximum Zone Temperature"
+category =  "Maximum Zone Temperature"
+puts "Populating #{category}"
 (86..88).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
   worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingmaximum_zone_temperature])
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
 end
 
-puts "Populating Minimum Zone Temperature"
+category = "Minimum Zone Temperature"
+puts "Populating #{category}"
 (94..96).each do |i|
   target_case = worksheet.sheet_data[i][0].value.to_s.split(':').first
   worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_he_reportingminimum_zone_temperature])
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
 end
 
 puts "Adding General Information"
@@ -94,6 +112,14 @@ worksheet.sheet_data[gen_info_row+3][gen_info_col+4].change_contents(common_info
 # row skiped in Excel
 worksheet.sheet_data[gen_info_row+5][gen_info_col].change_contents(common_info[:organization])
 worksheet.sheet_data[gen_info_row+6][gen_info_col+4].change_contents(common_info[:organization_short])
+
+# add general info to historical file
+historical_gen_info << ["program_name_and_version",common_info[:program_name_and_version]]
+historical_gen_info << ["program_version_release_date",common_info[:program_version_release_date]]
+historical_gen_info << ["program_name_short",common_info[:program_name_short]]
+historical_gen_info << ["results_submission_date",common_info[:results_submission_date]]
+historical_gen_info << ["organization",common_info[:organization]]
+historical_gen_info << ["organization_short",common_info[:organization_short]]
 
 # Save Updated Excel File
 puts "Saving #{copy_results_5_4}"
@@ -125,3 +151,12 @@ worksheet.sheet_data[gen_info_row+6][gen_info_col+4].change_contents(common_info
 # Save Updated Excel File
 puts "Saving #{os_copy_results_5_4}"
 workbook.write(os_copy_results_5_4)
+
+# load CSV file with historical version results
+historical_file = "historical/#{common_info[:program_name_and_version].gsub(".","_").gsub(" ","_")}_HE.csv"
+puts "Saving #{historical_file}"
+CSV.open(historical_file, "w") do |csv|
+  [*historical_gen_info,*historical_rows].each do |row|
+    csv << row
+  end
+end
