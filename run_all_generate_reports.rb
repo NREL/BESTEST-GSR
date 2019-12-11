@@ -37,6 +37,6 @@ workflow_directories.each do |directory|
 	content.each do |file|
 	  next if file.include?("data_point.osw")
 	  next if file.include?("workflow.osw")
-	  FileUtils.rm_r(file)
+	  FileUtils.rm_rf(file)
 	end
 end

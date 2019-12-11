@@ -6,7 +6,7 @@ path_datapoints = "workflow"
 jobs = []
 results_directories = Dir.glob("#{path_datapoints}/*")
 results_directories.each do |directory|
-	puts "runing #{directory}"
+	puts "queueing up #{directory}"
 	test_dir = "#{directory}/data_point.osw"
 	string = "openstudio run -w '#{test_dir}'"
 	if not File.file?(test_dir)
@@ -22,7 +22,7 @@ end
 # run the jobs
 # if gem parallel isn't isntalled then comment out this coudl and use system(string) to run one job at a time
 require 'parallel'
-num_parallel = 6
+num_parallel = 12 #6
 Parallel.each(jobs, in_threads: num_parallel) do |job|
   puts job
   system(job)
