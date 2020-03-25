@@ -46,7 +46,6 @@ category = "Annual Heating Loads"
 puts "Populating #{category}"
 (64..98).each do |i|
   target_case = worksheet.sheet_data[i][0].value
-  puts "hello, for #{i} trying to set value to #{csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingannual_heating]}"
   worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingannual_heating])
   historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
 end
