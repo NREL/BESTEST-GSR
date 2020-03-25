@@ -2,3 +2,4 @@
 .idea
 integration_testing/analysis/
 */*/tests/output
+.DS_Store
