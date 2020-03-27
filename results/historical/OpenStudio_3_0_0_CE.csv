@@ -435,16 +435,16 @@ CE510 May-Sep may_sept_mean_zone_humidity_ratio,0.0110082
 CE510 May-Sep may_sept_mean_zone_relative_humidity,55.7803
 CE300 energy_consumption_comp_both_fans_wh,11995.9
 CE300 energy_consumption_comp_both_fans_date,20-Jul
-CE300 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE300 energy_consumption_comp_both_fans_hr,15
 CE300 evap_coil_load_sensible_wh,23463.7
 CE300 evap_coil_load_sensible_date,20-Jul
-CE300 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE300 evap_coil_load_sensible_hr,15
 CE300 evap_coil_load_latent_wh,10595.9
 CE300 evap_coil_load_latent_date,10-Jul
-CE300 evap_coil_load_latent_hr,1900-01-13T00:00:00+00:00
+CE300 evap_coil_load_latent_hr,13
 CE300 evap_coil_load_sensible_and_latent_wh,33058.7
 CE300 evap_coil_load_sensible_and_latent_date,20-Jul
-CE300 evap_coil_load_sensible_and_latent_hr,1900-01-15T00:00:00+00:00
+CE300 evap_coil_load_sensible_and_latent_hr,15
 CE300 CE300 weather_odb_c,34.775
 CE300 CE300 weather_odb_date,20-Jul
 CE300 CE300 weather_odb_hr,15
@@ -453,709 +453,709 @@ CE300 CE300 weather_outdoor_humidity_ratio_date,02-Oct
 CE300 CE300 weather_outdoor_humidity_ratio_hr,9
 CE310 energy_consumption_comp_both_fans_wh,12572.2
 CE310 energy_consumption_comp_both_fans_date,20-Jul
-CE310 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE310 energy_consumption_comp_both_fans_hr,15
 CE310 evap_coil_load_sensible_wh,23145.6
 CE310 evap_coil_load_sensible_date,11-Jul
-CE310 evap_coil_load_sensible_hr,1900-01-16T00:00:00+00:00
+CE310 evap_coil_load_sensible_hr,16
 CE310 evap_coil_load_latent_wh,16645
 CE310 evap_coil_load_latent_date,04-Aug
-CE310 evap_coil_load_latent_hr,1900-01-15T00:00:00+00:00
+CE310 evap_coil_load_latent_hr,15
 CE310 evap_coil_load_sensible_and_latent_wh,37373.2
 CE310 evap_coil_load_sensible_and_latent_date,17-Sep
-CE310 evap_coil_load_sensible_and_latent_hr,1900-01-15T00:00:00+00:00
+CE310 evap_coil_load_sensible_and_latent_hr,15
 CE320 energy_consumption_comp_both_fans_wh,12988.8
 CE320 energy_consumption_comp_both_fans_date,20-Jul
-CE320 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE320 energy_consumption_comp_both_fans_hr,15
 CE320 evap_coil_load_sensible_wh,31529.1
 CE320 evap_coil_load_sensible_date,24-Apr
-CE320 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE320 evap_coil_load_sensible_hr,15
 CE320 evap_coil_load_latent_wh,22755.7
 CE320 evap_coil_load_latent_date,02-Oct
-CE320 evap_coil_load_latent_hr,1900-01-10T00:00:00+00:00
+CE320 evap_coil_load_latent_hr,10
 CE320 evap_coil_load_sensible_and_latent_wh,40096.6
 CE320 evap_coil_load_sensible_and_latent_date,02-Oct
-CE320 evap_coil_load_sensible_and_latent_hr,1900-01-10T00:00:00+00:00
+CE320 evap_coil_load_sensible_and_latent_hr,10
 CE330 energy_consumption_comp_both_fans_wh,13356.2
 CE330 energy_consumption_comp_both_fans_date,20-Jul
-CE330 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE330 energy_consumption_comp_both_fans_hr,15
 CE330 evap_coil_load_sensible_wh,34692.3
 CE330 evap_coil_load_sensible_date,14-Jun
-CE330 evap_coil_load_sensible_hr,1900-01-14T00:00:00+00:00
+CE330 evap_coil_load_sensible_hr,14
 CE330 evap_coil_load_latent_wh,27596.6
 CE330 evap_coil_load_latent_date,18-Sep
-CE330 evap_coil_load_latent_hr,1900-01-16T00:00:00+00:00
+CE330 evap_coil_load_latent_hr,16
 CE330 evap_coil_load_sensible_and_latent_wh,43597.9
 CE330 evap_coil_load_sensible_and_latent_date,02-Oct
-CE330 evap_coil_load_sensible_and_latent_hr,1900-01-09T00:00:00+00:00
+CE330 evap_coil_load_sensible_and_latent_hr,9
 CE340 energy_consumption_comp_both_fans_wh,13174.9
 CE340 energy_consumption_comp_both_fans_date,20-Jul
-CE340 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE340 energy_consumption_comp_both_fans_hr,15
 CE340 evap_coil_load_sensible_wh,32737.3
 CE340 evap_coil_load_sensible_date,24-Apr
-CE340 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE340 evap_coil_load_sensible_hr,15
 CE340 evap_coil_load_latent_wh,24435.5
 CE340 evap_coil_load_latent_date,02-Oct
-CE340 evap_coil_load_latent_hr,1900-01-10T00:00:00+00:00
+CE340 evap_coil_load_latent_hr,10
 CE340 evap_coil_load_sensible_and_latent_wh,41608.5
 CE340 evap_coil_load_sensible_and_latent_date,02-Oct
-CE340 evap_coil_load_sensible_and_latent_hr,1900-01-10T00:00:00+00:00
+CE340 evap_coil_load_sensible_and_latent_hr,10
 CE350 energy_consumption_comp_both_fans_wh,11995.9
 CE350 energy_consumption_comp_both_fans_date,20-Jul
-CE350 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE350 energy_consumption_comp_both_fans_hr,15
 CE350 evap_coil_load_sensible_wh,23463.7
 CE350 evap_coil_load_sensible_date,20-Jul
-CE350 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE350 evap_coil_load_sensible_hr,15
 CE350 evap_coil_load_latent_wh,10596.5
 CE350 evap_coil_load_latent_date,10-Jul
-CE350 evap_coil_load_latent_hr,1900-01-13T00:00:00+00:00
+CE350 evap_coil_load_latent_hr,13
 CE350 evap_coil_load_sensible_and_latent_wh,33058.7
 CE350 evap_coil_load_sensible_and_latent_date,20-Jul
-CE350 evap_coil_load_sensible_and_latent_hr,1900-01-15T00:00:00+00:00
+CE350 evap_coil_load_sensible_and_latent_hr,15
 CE360 energy_consumption_comp_both_fans_wh,12776.5
 CE360 energy_consumption_comp_both_fans_date,20-Jul
-CE360 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE360 energy_consumption_comp_both_fans_hr,15
 CE360 evap_coil_load_sensible_wh,32410
 CE360 evap_coil_load_sensible_date,24-Apr
-CE360 evap_coil_load_sensible_hr,1900-01-16T00:00:00+00:00
+CE360 evap_coil_load_sensible_hr,16
 CE360 evap_coil_load_latent_wh,8908.15
 CE360 evap_coil_load_latent_date,02-Oct
-CE360 evap_coil_load_latent_hr,1900-01-10T00:00:00+00:00
+CE360 evap_coil_load_latent_hr,10
 CE360 evap_coil_load_sensible_and_latent_wh,38692
 CE360 evap_coil_load_sensible_and_latent_date,02-Oct
-CE360 evap_coil_load_sensible_and_latent_hr,1900-01-11T00:00:00+00:00
+CE360 evap_coil_load_sensible_and_latent_hr,11
 CE400 energy_consumption_comp_both_fans_wh,11995.9
 CE400 energy_consumption_comp_both_fans_date,20-Jul
-CE400 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE400 energy_consumption_comp_both_fans_hr,15
 CE400 evap_coil_load_sensible_wh,23463.7
 CE400 evap_coil_load_sensible_date,20-Jul
-CE400 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE400 evap_coil_load_sensible_hr,15
 CE400 evap_coil_load_latent_wh,22715.9
 CE400 evap_coil_load_latent_date,17-Jun
-CE400 evap_coil_load_latent_hr,1900-01-16T00:00:00+00:00
+CE400 evap_coil_load_latent_hr,16
 CE400 evap_coil_load_sensible_and_latent_wh,39122.3
 CE400 evap_coil_load_sensible_and_latent_date,25-Oct
-CE400 evap_coil_load_sensible_and_latent_hr,1900-01-15T00:00:00+00:00
+CE400 evap_coil_load_sensible_and_latent_hr,15
 CE410 energy_consumption_comp_both_fans_wh,11995.9
 CE410 energy_consumption_comp_both_fans_date,20-Jul
-CE410 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE410 energy_consumption_comp_both_fans_hr,15
 CE410 evap_coil_load_sensible_wh,23463.7
 CE410 evap_coil_load_sensible_date,20-Jul
-CE410 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE410 evap_coil_load_sensible_hr,15
 CE410 evap_coil_load_latent_wh,22715.9
 CE410 evap_coil_load_latent_date,17-Jun
-CE410 evap_coil_load_latent_hr,1900-01-16T00:00:00+00:00
+CE410 evap_coil_load_latent_hr,16
 CE410 evap_coil_load_sensible_and_latent_wh,39122.3
 CE410 evap_coil_load_sensible_and_latent_date,25-Oct
-CE410 evap_coil_load_sensible_and_latent_hr,1900-01-15T00:00:00+00:00
+CE410 evap_coil_load_sensible_and_latent_hr,15
 CE420 energy_consumption_comp_both_fans_wh,11995.9
 CE420 energy_consumption_comp_both_fans_date,20-Jul
-CE420 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE420 energy_consumption_comp_both_fans_hr,15
 CE420 evap_coil_load_sensible_wh,23463.7
 CE420 evap_coil_load_sensible_date,20-Jul
-CE420 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE420 evap_coil_load_sensible_hr,15
 CE420 evap_coil_load_latent_wh,10595.9
 CE420 evap_coil_load_latent_date,10-Jul
-CE420 evap_coil_load_latent_hr,1900-01-13T00:00:00+00:00
+CE420 evap_coil_load_latent_hr,13
 CE420 evap_coil_load_sensible_and_latent_wh,33058.7
 CE420 evap_coil_load_sensible_and_latent_date,20-Jul
-CE420 evap_coil_load_sensible_and_latent_hr,1900-01-15T00:00:00+00:00
+CE420 evap_coil_load_sensible_and_latent_hr,15
 CE430 energy_consumption_comp_both_fans_wh,11995.9
 CE430 energy_consumption_comp_both_fans_date,20-Jul
-CE430 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE430 energy_consumption_comp_both_fans_hr,15
 CE430 evap_coil_load_sensible_wh,23463.7
 CE430 evap_coil_load_sensible_date,20-Jul
-CE430 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE430 evap_coil_load_sensible_hr,15
 CE430 evap_coil_load_latent_wh,11373.4
 CE430 evap_coil_load_latent_date,24-Oct
-CE430 evap_coil_load_latent_hr,1900-01-13T00:00:00+00:00
+CE430 evap_coil_load_latent_hr,13
 CE430 evap_coil_load_sensible_and_latent_wh,33058.7
 CE430 evap_coil_load_sensible_and_latent_date,20-Jul
-CE430 evap_coil_load_sensible_and_latent_hr,1900-01-15T00:00:00+00:00
+CE430 evap_coil_load_sensible_and_latent_hr,15
 CE440 energy_consumption_comp_both_fans_wh,11995.9
 CE440 energy_consumption_comp_both_fans_date,20-Jul
-CE440 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE440 energy_consumption_comp_both_fans_hr,15
 CE440 evap_coil_load_sensible_wh,23463.7
 CE440 evap_coil_load_sensible_date,20-Jul
-CE440 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE440 evap_coil_load_sensible_hr,15
 CE440 evap_coil_load_latent_wh,10595.9
 CE440 evap_coil_load_latent_date,10-Jul
-CE440 evap_coil_load_latent_hr,1900-01-13T00:00:00+00:00
+CE440 evap_coil_load_latent_hr,13
 CE440 evap_coil_load_sensible_and_latent_wh,33058.7
 CE440 evap_coil_load_sensible_and_latent_date,20-Jul
-CE440 evap_coil_load_sensible_and_latent_hr,1900-01-15T00:00:00+00:00
+CE440 evap_coil_load_sensible_and_latent_hr,15
 CE500 energy_consumption_comp_both_fans_wh,10438.4
 CE500 energy_consumption_comp_both_fans_date,20-Jul
-CE500 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE500 energy_consumption_comp_both_fans_hr,15
 CE500 evap_coil_load_sensible_wh,19795.8
 CE500 evap_coil_load_sensible_date,20-Jul
-CE500 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE500 evap_coil_load_sensible_hr,15
 CE500 evap_coil_load_latent_wh,7908.98
 CE500 evap_coil_load_latent_date,29-Jun
-CE500 evap_coil_load_latent_hr,1900-01-16T00:00:00+00:00
+CE500 evap_coil_load_latent_hr,16
 CE500 evap_coil_load_sensible_and_latent_wh,27656.4
 CE500 evap_coil_load_sensible_and_latent_date,29-Jun
-CE500 evap_coil_load_sensible_and_latent_hr,1900-01-16T00:00:00+00:00
+CE500 evap_coil_load_sensible_and_latent_hr,16
 CE500 May-Sep energy_consumption_comp_both_fans_wh,11450.7
 CE500 May-Sep energy_consumption_comp_both_fans_date,20-Jul
-CE500 May-Sep energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE500 May-Sep energy_consumption_comp_both_fans_hr,15
 CE500 May-Sep evap_coil_load_sensible_wh,22227.9
 CE500 May-Sep evap_coil_load_sensible_date,20-Jul
-CE500 May-Sep evap_coil_load_sensible_hr,1900-01-16T00:00:00+00:00
+CE500 May-Sep evap_coil_load_sensible_hr,16
 CE500 May-Sep evap_coil_load_latent_wh,9041.06
 CE500 May-Sep evap_coil_load_latent_date,17-Jun
-CE500 May-Sep evap_coil_load_latent_hr,1900-01-14T00:00:00+00:00
+CE500 May-Sep evap_coil_load_latent_hr,14
 CE500 May-Sep evap_coil_load_sensible_and_latent_wh,31194.5
 CE500 May-Sep evap_coil_load_sensible_and_latent_date,17-Jun
-CE500 May-Sep evap_coil_load_sensible_and_latent_hr,1900-01-14T00:00:00+00:00
+CE500 May-Sep evap_coil_load_sensible_and_latent_hr,14
 CE510 May-Sep energy_consumption_comp_both_fans_wh,11261.8
 CE510 May-Sep energy_consumption_comp_both_fans_date,20-Jul
-CE510 May-Sep energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE510 May-Sep energy_consumption_comp_both_fans_hr,15
 CE510 May-Sep evap_coil_load_sensible_wh,20012.4
 CE510 May-Sep evap_coil_load_sensible_date,30-Jul
-CE510 May-Sep evap_coil_load_sensible_hr,1900-01-16T00:00:00+00:00
+CE510 May-Sep evap_coil_load_sensible_hr,16
 CE510 May-Sep evap_coil_load_latent_wh,7785.24
 CE510 May-Sep evap_coil_load_latent_date,29-Jun
-CE510 May-Sep evap_coil_load_latent_hr,1900-01-16T00:00:00+00:00
+CE510 May-Sep evap_coil_load_latent_hr,16
 CE510 May-Sep evap_coil_load_sensible_and_latent_wh,27731.1
 CE510 May-Sep evap_coil_load_sensible_and_latent_date,29-Jun
-CE510 May-Sep evap_coil_load_sensible_and_latent_hr,1900-01-16T00:00:00+00:00
+CE510 May-Sep evap_coil_load_sensible_and_latent_hr,16
 CE520 energy_consumption_comp_both_fans_wh,10902.6
 CE520 energy_consumption_comp_both_fans_date,20-Jul
-CE520 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE520 energy_consumption_comp_both_fans_hr,15
 CE520 evap_coil_load_sensible_wh,19901.8
 CE520 evap_coil_load_sensible_date,20-Jul
-CE520 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE520 evap_coil_load_sensible_hr,15
 CE520 evap_coil_load_latent_wh,7850.19
 CE520 evap_coil_load_latent_date,29-Jun
-CE520 evap_coil_load_latent_hr,1900-01-16T00:00:00+00:00
+CE520 evap_coil_load_latent_hr,16
 CE520 evap_coil_load_sensible_and_latent_wh,27698.3
 CE520 evap_coil_load_sensible_and_latent_date,29-Jun
-CE520 evap_coil_load_sensible_and_latent_hr,1900-01-16T00:00:00+00:00
+CE520 evap_coil_load_sensible_and_latent_hr,16
 CE522 energy_consumption_comp_both_fans_wh,9588.19
 CE522 energy_consumption_comp_both_fans_date,20-Jul
-CE522 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE522 energy_consumption_comp_both_fans_hr,15
 CE522 evap_coil_load_sensible_wh,19599
 CE522 evap_coil_load_sensible_date,20-Jul
-CE522 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE522 evap_coil_load_sensible_hr,15
 CE522 evap_coil_load_latent_wh,8006.41
 CE522 evap_coil_load_latent_date,29-Jun
-CE522 evap_coil_load_latent_hr,1900-01-16T00:00:00+00:00
+CE522 evap_coil_load_latent_hr,16
 CE522 evap_coil_load_sensible_and_latent_wh,27564.3
 CE522 evap_coil_load_sensible_and_latent_date,29-Jun
-CE522 evap_coil_load_sensible_and_latent_hr,1900-01-16T00:00:00+00:00
+CE522 evap_coil_load_sensible_and_latent_hr,16
 CE525 energy_consumption_comp_both_fans_wh,8293.04
 CE525 energy_consumption_comp_both_fans_date,20-Jul
-CE525 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE525 energy_consumption_comp_both_fans_hr,15
 CE525 evap_coil_load_sensible_wh,19656.2
 CE525 evap_coil_load_sensible_date,20-Jul
-CE525 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE525 evap_coil_load_sensible_hr,15
 CE525 evap_coil_load_latent_wh,105.521
 CE525 evap_coil_load_latent_date,16-Mar
-CE525 evap_coil_load_latent_hr,1900-01-10T00:00:00+00:00
+CE525 evap_coil_load_latent_hr,10
 CE525 evap_coil_load_sensible_and_latent_wh,19656.2
 CE525 evap_coil_load_sensible_and_latent_date,20-Jul
-CE525 evap_coil_load_sensible_and_latent_hr,1900-01-15T00:00:00+00:00
+CE525 evap_coil_load_sensible_and_latent_hr,15
 CE530 energy_consumption_comp_both_fans_wh,9076.46
 CE530 energy_consumption_comp_both_fans_date,20-Jul
-CE530 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE530 energy_consumption_comp_both_fans_hr,15
 CE530 evap_coil_load_sensible_wh,19812.5
 CE530 evap_coil_load_sensible_date,20-Jul
-CE530 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE530 evap_coil_load_sensible_hr,15
 CE530 evap_coil_load_latent_wh,1627.74
 CE530 evap_coil_load_latent_date,11-Mar
-CE530 evap_coil_load_latent_hr,1900-01-10T00:00:00+00:00
+CE530 evap_coil_load_latent_hr,10
 CE530 evap_coil_load_sensible_and_latent_wh,19812.5
 CE530 evap_coil_load_sensible_and_latent_date,20-Jul
-CE530 evap_coil_load_sensible_and_latent_hr,1900-01-15T00:00:00+00:00
+CE530 evap_coil_load_sensible_and_latent_hr,15
 CE540 energy_consumption_comp_both_fans_wh,7768.5
 CE540 energy_consumption_comp_both_fans_date,20-Jul
-CE540 energy_consumption_comp_both_fans_hr,1900-01-15T00:00:00+00:00
+CE540 energy_consumption_comp_both_fans_hr,15
 CE540 evap_coil_load_sensible_wh,19538.9
 CE540 evap_coil_load_sensible_date,20-Jul
-CE540 evap_coil_load_sensible_hr,1900-01-15T00:00:00+00:00
+CE540 evap_coil_load_sensible_hr,15
 CE540 evap_coil_load_latent_wh,1.09139e-11
 CE540 evap_coil_load_latent_date,03-Nov
-CE540 evap_coil_load_latent_hr,1900-01-15T00:00:00+00:00
+CE540 evap_coil_load_latent_hr,15
 CE540 evap_coil_load_sensible_and_latent_wh,19538.9
 CE540 evap_coil_load_sensible_and_latent_date,20-Jul
-CE540 evap_coil_load_sensible_and_latent_hr,1900-01-15T00:00:00+00:00
+CE540 evap_coil_load_sensible_and_latent_hr,15
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_max_cop_2,3.92317
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_max_date,31-DEC
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_min_cop_2,2.77442
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_min_date,13-JUN
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_min_hr,1900-01-16T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_min_hr,16
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_max_idb,25.0033
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_max_date,23-Sep
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_max_hr,1900-01-08T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_max_hr,8
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_min_idb,8.72448
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_min_date,06-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_min_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_max_humidity_ratio,0.013521
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_max_date,16-Nov
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_max_hr,1900-01-17T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_max_hr,17
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_min_humidity_ratio,0.00192919
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_min_date,11-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_min_hr,1900-01-03T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_min_hr,3
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_max_relative_humidity,67.7788
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_max_date,16-Nov
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_max_hr,1900-01-17T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_max_hr,17
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_min_relative_humidity,14.3877
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_min_date,06-Nov
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_min_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_max_cop_2,4.19541
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_max_date,31-DEC
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_min_cop_2,2.86712
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_min_date,01-DEC
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_min_hr,1900-01-14T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_min_hr,14
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_max_idb,26.5568
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_max_date,20-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_max_hr,1900-01-16T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_max_hr,16
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_min_idb,8.72441
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_min_date,06-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_min_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_max_humidity_ratio,0.015502
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_max_date,01-Oct
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_max_hr,1900-01-08T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_max_hr,8
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_min_humidity_ratio,0.00194347
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_min_date,05-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_min_hr,1900-01-07T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_min_hr,7
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 rh_max_relative_humidity,77.9267
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 rh_max_date,02-Oct
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 rh_max_hr,1900-01-08T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 rh_max_hr,8
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 rh_min_relative_humidity,15.4716
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 rh_min_date,06-Nov
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 rh_min_hr,8
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_max_cop_2,3.96476
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_max_date,31-DEC
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_min_cop_2,2.82308
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_min_date,31-MAR
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_min_hr,1900-01-14T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_min_hr,14
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_max_idb,31.8433
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_max_date,20-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_max_hr,1900-01-15T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_max_hr,15
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_min_idb,7.75831
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_min_date,06-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_min_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_max_humidity_ratio,0.0177025
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_max_date,01-Oct
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_max_hr,1900-01-11T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_max_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_min_humidity_ratio,0.00193511
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_min_date,11-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_min_hr,1900-01-03T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_min_hr,3
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 rh_max_relative_humidity,82.7145
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 rh_max_date,18-Sep
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 rh_max_hr,1900-01-10T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 rh_max_hr,10
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 rh_min_relative_humidity,14.7969
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 rh_min_date,06-Nov
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 rh_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_max_cop_2,4.09616
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_max_date,31-DEC
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_min_cop_2,2.82856
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_min_date,31-MAR
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_min_hr,1900-01-14T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_min_hr,14
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_max_idb,31.4958
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_max_date,20-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_max_hr,1900-01-15T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_max_hr,15
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_min_idb,8.72542
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_min_date,06-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_min_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_max_humidity_ratio,0.0178236
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_max_date,10-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_max_hr,1900-01-12T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_max_hr,12
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_min_humidity_ratio,0.0019292
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_min_date,11-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_min_hr,1900-01-03T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_min_hr,3
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 rh_max_relative_humidity,76.6382
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 rh_max_date,22-Sep
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 rh_max_hr,1900-01-20T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 rh_max_hr,20
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 rh_min_relative_humidity,14.3876
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 rh_min_date,06-Nov
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 rh_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_max_cop_2,4.0147
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_max_date,31-DEC
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_min_cop_2,2.82856
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_min_date,31-MAR
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_min_hr,1900-01-14T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_min_hr,14
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_max_idb,31.7446
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_max_date,20-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_max_hr,1900-01-15T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_max_hr,15
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_min_idb,8.72542
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_min_date,06-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_min_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_max_humidity_ratio,0.0177075
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_max_date,10-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_max_hr,1900-01-12T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_max_hr,12
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_min_humidity_ratio,0.0019292
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_min_date,11-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_min_hr,1900-01-03T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_min_hr,3
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 rh_max_relative_humidity,80.5456
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 rh_max_date,18-Sep
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 rh_max_hr,1900-01-10T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 rh_max_hr,10
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 rh_min_relative_humidity,14.3876
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 rh_min_date,06-Nov
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 rh_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_max_cop_2,4.34508
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_max_date,31-DEC
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_min_cop_2,2.77442
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_min_date,13-JUN
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_min_hr,1900-01-16T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_min_hr,16
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_max_idb,35.0021
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_max_date,01-Oct
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_max_hr,1900-01-02T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_max_hr,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_min_idb,8.72448
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_min_date,06-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_min_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_max_humidity_ratio,0.0169457
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_max_date,02-Oct
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_max_hr,1900-01-01T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_max_hr,1
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_min_humidity_ratio,0.00192919
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_min_date,11-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_min_hr,1900-01-03T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_min_hr,3
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 rh_max_relative_humidity,67.7788
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 rh_max_date,16-Nov
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 rh_max_hr,1900-01-17T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 rh_max_hr,17
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 rh_min_relative_humidity,14.3877
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 rh_min_date,06-Nov
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 rh_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_max_cop_2,4.43074
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_max_date,31-DEC
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_min_cop_2,2.82856
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_min_date,31-MAR
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_min_hr,1900-01-14T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_min_hr,14
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_max_idb,32.8193
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_max_date,10-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_max_hr,1900-01-13T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_max_hr,13
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_min_idb,8.72466
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_min_date,06-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_min_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_max_humidity_ratio,0.013521
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_max_date,16-Nov
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_max_hr,1900-01-17T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_max_hr,17
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_min_humidity_ratio,0.00192919
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_min_date,11-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_min_hr,1900-01-03T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_min_hr,3
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 rh_max_relative_humidity,67.7786
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 rh_max_date,16-Nov
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 rh_max_hr,1900-01-17T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 rh_max_hr,17
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 rh_min_relative_humidity,14.3876
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 rh_min_date,06-Nov
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 rh_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_max_cop_2,4.08817
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_max_date,31-DEC
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_min_cop_2,2.77443
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_min_date,13-JUN
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_min_hr,1900-01-16T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_min_hr,16
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_max_idb,25.2654
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_max_date,16-Jun
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_max_hr,1900-01-15T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_max_hr,15
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_min_idb,8.72448
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_min_date,06-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_min_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_max_humidity_ratio,0.0160654
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_max_date,02-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_max_hr,1900-01-05T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_max_hr,5
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_min_humidity_ratio,0.00192919
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_min_date,11-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_min_hr,1900-01-03T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_min_hr,3
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 rh_max_relative_humidity,89.751
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 rh_max_date,02-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 rh_max_hr,1900-01-02T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 rh_max_hr,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 rh_min_relative_humidity,16.3281
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 rh_min_date,06-Nov
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 rh_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_max_cop_2,4.08817
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_max_date,31-DEC
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_min_cop_2,2.77443
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_min_date,13-JUN
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_min_hr,1900-01-16T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_min_hr,16
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_max_idb,25.2654
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_max_date,16-Jun
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_max_hr,1900-01-15T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_max_hr,15
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_min_idb,8.72448
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_min_date,06-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_min_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_max_humidity_ratio,0.0160654
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_max_date,02-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_max_hr,1900-01-05T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_max_hr,5
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_min_humidity_ratio,0.00192919
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_min_date,11-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_min_hr,1900-01-03T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_min_hr,3
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 rh_max_relative_humidity,89.751
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 rh_max_date,02-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 rh_max_hr,1900-01-02T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 rh_max_hr,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 rh_min_relative_humidity,16.3281
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 rh_min_date,06-Nov
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 rh_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_max_cop_2,3.8487
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_max_date,31-DEC
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_min_cop_2,2.77442
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_min_date,13-JUN
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_min_hr,1900-01-16T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_min_hr,16
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_max_idb,25.0033
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_max_date,23-Sep
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_max_hr,1900-01-08T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_max_hr,8
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_min_idb,8.72448
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_min_date,06-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_min_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_max_humidity_ratio,0.0147133
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_max_date,02-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_max_hr,1900-01-01T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_max_hr,1
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_min_humidity_ratio,0.00192919
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_min_date,11-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_min_hr,1900-01-03T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_min_hr,3
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 rh_max_relative_humidity,89.6919
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 rh_max_date,02-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 rh_max_hr,1900-01-01T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 rh_max_hr,1
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 rh_min_relative_humidity,16.3281
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 rh_min_date,06-Nov
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 rh_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_max_cop_2,3.80442
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_max_date,31-DEC
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_min_cop_2,2.77442
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_min_date,13-JUN
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_min_hr,1900-01-16T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_min_hr,16
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_max_idb,25.0035
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_max_date,18-May
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_max_hr,1900-01-19T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_max_hr,19
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_min_idb,8.72448
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_min_date,06-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_min_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_max_humidity_ratio,0.0160654
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_max_date,02-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_max_hr,1900-01-05T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_max_hr,5
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_min_humidity_ratio,0.00192919
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_min_date,11-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_min_hr,1900-01-03T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_min_hr,3
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 rh_max_relative_humidity,89.7509
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 rh_max_date,02-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 rh_max_hr,1900-01-02T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 rh_max_hr,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 rh_min_relative_humidity,16.3281
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 rh_min_date,06-Nov
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 rh_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_max_cop_2,3.80442
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_max_date,31-DEC
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_min_cop_2,2.77442
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_min_date,13-JUN
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_min_hr,1900-01-16T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_min_hr,16
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_max_idb,25.0033
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_max_date,23-Sep
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_max_hr,1900-01-08T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_max_hr,8
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_min_idb,8.72448
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_min_date,06-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_min_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_max_humidity_ratio,0.013521
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_max_date,16-Nov
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_max_hr,1900-01-17T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_max_hr,17
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_min_humidity_ratio,0.00192919
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_min_date,11-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_min_hr,1900-01-03T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_min_hr,3
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 rh_max_relative_humidity,71.2182
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 rh_max_date,22-Oct
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 rh_max_hr,1900-01-02T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 rh_max_hr,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 rh_min_relative_humidity,16.3281
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 rh_min_date,06-Nov
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 rh_min_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_max_cop_2,4.17514
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_max_date,02-OCT
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_min_cop_2,2.69476
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_min_date,01-MAY
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_min_hr,1900-01-11T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_min_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_max_idb,25.0014
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_max_date,05-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_max_hr,1900-01-19T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_max_hr,19
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_min_idb,8.93423
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_min_date,21-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_min_hr,1900-01-02T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_min_hr,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_max_humidity_ratio,0.0113802
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_max_date,20-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_max_hr,1900-01-15T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_max_hr,15
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_min_humidity_ratio,0.00700795
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_min_date,20-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_min_hr,1900-01-12T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_min_hr,12
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_rh_max_relative_humidity,100
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_rh_max_date,22-Nov
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_rh_max_hr,1900-01-02T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_rh_max_hr,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_rh_min_relative_humidity,53.4279
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_rh_min_date,30-Apr
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_rh_min_hr,4
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_max_cop_2,4.70692
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_max_date,02-OCT
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_min_cop_2,2.98544
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_min_date,05-JAN
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_min_hr,1900-01-12T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_min_hr,12
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_max_idb,25.0014
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_max_date,05-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_max_hr,1900-01-19T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_max_hr,19
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_min_idb,8.93423
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_min_date,21-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_min_hr,1900-01-02T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_min_hr,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_max_humidity_ratio,0.0113902
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_max_date,20-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_max_hr,1900-01-15T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_max_hr,15
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_min_humidity_ratio,0.00700795
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_min_date,20-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_min_hr,1900-01-12T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_min_hr,12
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_rh_max_relative_humidity,100
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_rh_max_date,22-Nov
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_rh_max_hr,1900-01-02T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_rh_max_hr,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_rh_min_relative_humidity,53.5345
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_rh_min_date,04-May
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_rh_min_hr,4
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_max_cop_2,3.83804
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_max_date,02-OCT
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_min_cop_2,2.46184
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_min_date,01-MAY
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_min_hr,1900-01-11T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_min_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_max_idb,15.2667
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_max_date,20-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_max_hr,1900-01-16T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_max_hr,16
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_min_idb,8.83195
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_min_date,21-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_min_hr,1900-01-01T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_min_hr,1
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_max_humidity_ratio,0.00710414
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_max_date,20-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_max_hr,1900-01-16T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_max_hr,16
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_min_humidity_ratio,0.00645728
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_min_date,10-Nov
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_min_hr,1900-01-07T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_min_hr,7
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_rh_max_relative_humidity,92.8517
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_rh_max_date,20-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_rh_max_hr,1900-01-11T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_rh_max_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_rh_min_relative_humidity,61.0857
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_rh_min_date,28-Nov
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_rh_min_hr,0
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_max_cop_2,4.0074
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_max_date,02-OCT
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_min_cop_2,2.57771
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_min_date,01-MAY
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_min_hr,1900-01-11T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_min_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_max_idb,20.0026
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_max_date,02-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_max_hr,1900-01-03T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_max_hr,3
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_min_idb,8.89364
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_min_date,21-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_min_hr,1900-01-01T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_min_hr,1
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_max_humidity_ratio,0.00897485
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_max_date,20-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_max_hr,1900-01-15T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_max_hr,15
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_min_humidity_ratio,0.006988
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_min_date,20-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_min_hr,1900-01-12T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_min_hr,12
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_rh_max_relative_humidity,100
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_rh_max_date,16-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_rh_max_hr,1900-01-04T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_rh_max_hr,4
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_rh_min_relative_humidity,57.8329
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_rh_min_date,30-Apr
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_rh_min_hr,4
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_max_cop_2,4.55173
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_max_date,02-OCT
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_min_cop_2,2.93331
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_min_date,01-MAY
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_min_hr,1900-01-11T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_min_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_max_idb,34.9869
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_max_date,06-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_max_hr,1900-01-10T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_max_hr,10
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_min_idb,9.01176
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_min_date,21-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_min_hr,1900-01-02T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_min_hr,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_max_humidity_ratio,0.0178494
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_max_date,20-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_max_hr,1900-01-15T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_max_hr,15
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_min_humidity_ratio,0.00704606
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_min_date,20-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_min_hr,1900-01-12T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_min_hr,12
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_rh_max_relative_humidity,100
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_rh_max_date,13-Nov
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_rh_max_hr,1900-01-01T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_rh_max_hr,1
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_rh_min_relative_humidity,46.1088
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_rh_min_date,05-Oct
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_rh_min_hr,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_max_cop_2,3.82536
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_max_date,02-OCT
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_min_cop_2,2.4945
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_min_date,01-MAY
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_min_hr,1900-01-11T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_min_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_max_idb,25.0026
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_max_date,05-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_max_hr,1900-01-20T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_max_hr,20
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_min_idb,8.93325
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_min_date,21-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_min_hr,1900-01-02T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_min_hr,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_max_humidity_ratio,0.00646901
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_max_date,13-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_max_hr,1900-01-08T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_max_hr,8
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_min_humidity_ratio,0.00644359
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_min_date,17-Oct
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_min_hr,1900-01-10T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_min_hr,10
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_rh_max_relative_humidity,92.0066
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_rh_max_date,20-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_rh_max_hr,1900-01-11T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_rh_max_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_rh_min_relative_humidity,32.5623
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_rh_min_date,18-Apr
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_rh_min_hr,18
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_max_cop_2,3.46945
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_max_date,02-OCT
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_min_cop_2,2.27937
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_min_date,01-MAY
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_min_hr,1900-01-11T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_min_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_max_idb,15.003
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_max_date,26-Oct
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_max_hr,1900-01-07T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_max_hr,7
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_min_idb,8.83063
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_min_date,21-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_min_hr,1900-01-01T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_min_hr,1
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_max_humidity_ratio,0.00381432
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_max_date,12-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_max_hr,1900-01-06T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_max_hr,6
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_min_humidity_ratio,0.00381008
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_min_date,17-Oct
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_min_hr,1900-01-10T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_min_hr,10
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_rh_max_relative_humidity,55.0233
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_rh_max_date,20-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_rh_max_hr,1900-01-11T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_rh_max_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_rh_min_relative_humidity,35.8437
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_rh_min_date,28-Sep
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_rh_min_hr,18
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_max_cop_2,4.11959
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_max_date,02-OCT
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_max_hr,1900-01-23T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_max_hr,23
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_min_cop_2,2.65837
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_min_date,01-MAY
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_min_hr,1900-01-11T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_min_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_max_idb,35.0003
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_max_date,14-Jul
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_max_hr,1900-01-18T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_max_hr,18
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_min_idb,9.01045
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_min_date,21-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_min_hr,1900-01-02T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_min_hr,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_max_humidity_ratio,0.00677833
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_max_date,01-Jan
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_max_hr,1899-12-31T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_max_hr,0
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_min_humidity_ratio,0.00677833
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_min_date,01-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_min_hr,1900-01-05T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_min_hr,5
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_max_relative_humidity,96.2195
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_max_date,20-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_max_hr,1900-01-11T00:00:00+00:00
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_max_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_min_relative_humidity,19.2129
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_min_date,18-Apr
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_min_hr,17
