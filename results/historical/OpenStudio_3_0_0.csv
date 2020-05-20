@@ -1,7 +1,7 @@
 program_name_and_version,EnergyPlus 9.3.0
-program_version_release_date,03/31/2020
+program_version_release_date,03/27/2020
 program_name_short,E+
-results_submission_date,03/31/2020
+results_submission_date,05/19/2020
 organization,National Renewable Energy Laboratory
 organization_short,NREL
 Annual Heating Loads 600,4.38056
@@ -47,7 +47,7 @@ Annual Cooling Loads 640,6.46667
 Annual Cooling Loads 650,5.78889
 Annual Cooling Loads 900,2.51667
 Annual Cooling Loads 910,1.23889
-Annual Cooling Loads 920,2.55278
+Annual Cooling Loads 920,2.55556
 Annual Cooling Loads 930,1.64167
 Annual Cooling Loads 940,2.44167
 Annual Cooling Loads 950,0.547222
@@ -206,7 +206,7 @@ Annual Houlry Integrated Peak Cooling Loads 910_TIME,14
 Annual Houlry Integrated Peak Cooling Loads 920_kW,2.78129
 Annual Houlry Integrated Peak Cooling Loads 920_DATE,26-JUL
 Annual Houlry Integrated Peak Cooling Loads 920_TIME,17
-Annual Houlry Integrated Peak Cooling Loads 930_kW,2.27808
+Annual Houlry Integrated Peak Cooling Loads 930_kW,2.27809
 Annual Houlry Integrated Peak Cooling Loads 930_DATE,26-JUL
 Annual Houlry Integrated Peak Cooling Loads 930_TIME,17
 Annual Houlry Integrated Peak Cooling Loads 940_kW,3.25427
@@ -260,7 +260,7 @@ Annual Houlry Integrated Peak Cooling Loads 310_TIME,17
 Annual Houlry Integrated Peak Cooling Loads 320_kW,6.18033
 Annual Houlry Integrated Peak Cooling Loads 320_DATE,25-NOV
 Annual Houlry Integrated Peak Cooling Loads 320_TIME,12
-Annual Houlry Integrated Peak Cooling Loads 395_kW,0.0734556
+Annual Houlry Integrated Peak Cooling Loads 395_kW,0.0734557
 Annual Houlry Integrated Peak Cooling Loads 395_DATE,27-JUL
 Annual Houlry Integrated Peak Cooling Loads 395_TIME,17
 Annual Houlry Integrated Peak Cooling Loads 400_kW,0.255004
@@ -278,7 +278,7 @@ Annual Houlry Integrated Peak Cooling Loads 430_TIME,14
 Annual Houlry Integrated Peak Cooling Loads 440_kW,4.72058
 Annual Houlry Integrated Peak Cooling Loads 440_DATE,17-OCT
 Annual Houlry Integrated Peak Cooling Loads 440_TIME,13
-Annual Houlry Integrated Peak Cooling Loads 800_kW,0.851819
+Annual Houlry Integrated Peak Cooling Loads 800_kW,0.85182
 Annual Houlry Integrated Peak Cooling Loads 800_DATE,28-JUL
 Annual Houlry Integrated Peak Cooling Loads 800_TIME,14
 Annual Houlry Integrated Peak Cooling Loads 810_kW,2.11409
@@ -287,7 +287,7 @@ Annual Houlry Integrated Peak Cooling Loads 810_TIME,14
 FF Max Hourly Zone Temperature 600FF_TEMP (C),65.2904
 FF Max Hourly Zone Temperature 600FF_DATE,17-OCT
 FF Max Hourly Zone Temperature 600FF_TIME,15
-FF Max Hourly Zone Temperature 900FF_TEMP (C),43.1698
+FF Max Hourly Zone Temperature 900FF_TEMP (C),43.1699
 FF Max Hourly Zone Temperature 900FF_DATE,02-SEP
 FF Max Hourly Zone Temperature 900FF_TIME,14
 FF Max Hourly Zone Temperature 650FF_TEMP (C),68.6641
@@ -311,14 +311,14 @@ FF Min Hourly Zone Temperature 650FF_TIME,6
 FF Min Hourly Zone Temperature 950FF_TEMP (C),-20.2032
 FF Min Hourly Zone Temperature 950FF_DATE,04-JAN
 FF Min Hourly Zone Temperature 950FF_TIME,6
-FF Min Hourly Zone Temperature 960_TEMP (C),2.15019
+FF Min Hourly Zone Temperature 960_TEMP (C),2.15005
 FF Min Hourly Zone Temperature 960_DATE,06-FEB
 FF Min Hourly Zone Temperature 960_TIME,6
-FF Average Hourly Zone Temperature 600FF,25.8222
-FF Average Hourly Zone Temperature 900FF,26.0172
+FF Average Hourly Zone Temperature 600FF,25.8223
+FF Average Hourly Zone Temperature 900FF,26.0173
 FF Average Hourly Zone Temperature 650FF,19.7818
-FF Average Hourly Zone Temperature 950FF,14.8757
-FF Average Hourly Zone Temperature 960,28.7938
+FF Average Hourly Zone Temperature 950FF,14.8758
+FF Average Hourly Zone Temperature 960,28.7939
 Annual Incident Total Case 600 600NORTH,432.571
 Annual Incident Total Case 600 600EAST,1185.89
 Annual Incident Total Case 600 600WEST,1040.74
@@ -622,8 +622,8 @@ Hourly Annual Zone Temperature Bin Data - Case 900FF 31,358.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 32,337.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 33,318.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 34,251.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 35,199.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 36,188.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 35,198.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 36,189.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 37,133.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 38,106.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 39,72.0
