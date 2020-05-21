@@ -1,0 +1,1437 @@
+program_name_and_version,EnergyPlus 9.3.0
+program_version_release_date,03/27/2020
+program_name_short,E+
+results_submission_date,05/19/2020
+organization,National Renewable Energy Laboratory
+organization_short,NREL
+CE100 clg_energy_consumption_total,1519.51
+CE100 clg_energy_consumption_supply_fan,143.499
+CE100 evaporator_coil_load_total,3796.54
+CE100 evaporator_coil_load_sensible,3796.54
+CE100 evaporator_coil_load_latent,2.51021e-13
+CE100 zone_load_total,3653.04
+CE100 zone_load_sensible,3653.04
+CE100 zone_load_latent,2.11685e-13
+CE100 feb_mean_cop,2.40409
+CE100 feb_mean_idb,22.21
+CE100 feb_mean_humidity_ratio,0.00745328
+CE100 feb_max_cop,2.40609
+CE100 feb_max_idb,22.2121
+CE100 feb_max_humidity_ratio,0.00745328
+CE100 feb_min_cop,2.39843
+CE100 feb_min_idb,22.2096
+CE100 feb_min_humidity_ratio,0.00745328
+CE110 clg_energy_consumption_total,1068.97
+CE110 clg_energy_consumption_supply_fan,127.528
+CE110 evaporator_coil_load_total,3762.57
+CE110 evaporator_coil_load_sensible,3762.57
+CE110 evaporator_coil_load_latent,1.68939e-13
+CE110 zone_load_total,3635.05
+CE110 zone_load_sensible,3635.05
+CE110 zone_load_latent,1.87356e-13
+CE110 feb_mean_cop,3.40052
+CE110 feb_mean_idb,22.2
+CE110 feb_mean_humidity_ratio,0.00655775
+CE110 feb_max_cop,3.40331
+CE110 feb_max_idb,22.2
+CE110 feb_max_humidity_ratio,0.00655775
+CE110 feb_min_cop,3.39465
+CE110 feb_min_idb,22.2
+CE110 feb_min_humidity_ratio,0.00655775
+CE120 clg_energy_consumption_total,1006.31
+CE120 clg_energy_consumption_supply_fan,116.38
+CE120 evaporator_coil_load_total,3746.28
+CE120 evaporator_coil_load_sensible,3746.28
+CE120 evaporator_coil_load_latent,1.95541e-13
+CE120 zone_load_total,3629.9
+CE120 zone_load_sensible,3629.9
+CE120 zone_load_latent,1.76215e-13
+CE120 feb_mean_cop,3.60713
+CE120 feb_mean_idb,26.7001
+CE120 feb_mean_humidity_ratio,0.0080067
+CE120 feb_max_cop,3.61013
+CE120 feb_max_idb,26.7001
+CE120 feb_max_humidity_ratio,0.0080067
+CE120 feb_min_cop,3.60094
+CE120 feb_min_idb,26.7001
+CE120 feb_min_humidity_ratio,0.0080067
+CE130 clg_energy_consumption_total,108.048
+CE130 clg_energy_consumption_supply_fan,10.2037
+CE130 evaporator_coil_load_total,215.897
+CE130 evaporator_coil_load_sensible,215.897
+CE130 evaporator_coil_load_latent,1.50067e-14
+CE130 zone_load_total,205.693
+CE130 zone_load_sensible,205.693
+CE130 zone_load_latent,1.35003e-14
+CE130 feb_mean_cop,1.90372
+CE130 feb_mean_idb,22.2001
+CE130 feb_mean_humidity_ratio,0.00745532
+CE130 feb_max_cop,1.90607
+CE130 feb_max_idb,22.2001
+CE130 feb_max_humidity_ratio,0.00745532
+CE130 feb_min_cop,1.89777
+CE130 feb_min_idb,22.2001
+CE130 feb_min_humidity_ratio,0.00745532
+CE140 clg_energy_consumption_total,67.7231
+CE140 clg_energy_consumption_supply_fan,8.07866
+CE140 evaporator_coil_load_total,195.764
+CE140 evaporator_coil_load_sensible,195.764
+CE140 evaporator_coil_load_latent,9.73444e-15
+CE140 zone_load_total,187.686
+CE140 zone_load_sensible,187.686
+CE140 zone_load_latent,9.86233e-15
+CE140 feb_mean_cop,2.77137
+CE140 feb_mean_idb,22.2001
+CE140 feb_mean_humidity_ratio,0.00656348
+CE140 feb_max_cop,2.77471
+CE140 feb_max_idb,22.2001
+CE140 feb_max_humidity_ratio,0.00656348
+CE140 feb_min_cop,2.76491
+CE140 feb_min_idb,22.2001
+CE140 feb_min_humidity_ratio,0.00656348
+CE150 clg_energy_consumption_total,1197.33
+CE150 clg_energy_consumption_supply_fan,140.297
+CE150 evaporator_coil_load_total,4508.22
+CE150 evaporator_coil_load_sensible,3769.02
+CE150 evaporator_coil_load_latent,739.201
+CE150 zone_load_total,4367.92
+CE150 zone_load_sensible,3635.07
+CE150 zone_load_latent,732.85
+CE150 feb_mean_cop,3.64806
+CE150 feb_mean_idb,22.1773
+CE150 feb_mean_humidity_ratio,0.00839355
+CE150 feb_max_cop,3.65252
+CE150 feb_max_idb,22.1781
+CE150 feb_max_humidity_ratio,0.00841383
+CE150 feb_min_cop,3.64278
+CE150 feb_min_idb,22.1761
+CE150 feb_min_humidity_ratio,0.0083219
+CE160 clg_energy_consumption_total,1131.97
+CE160 clg_energy_consumption_supply_fan,128.332
+CE160 evaporator_coil_load_total,4490.42
+CE160 evaporator_coil_load_sensible,3751.22
+CE160 evaporator_coil_load_latent,739.201
+CE160 zone_load_total,4362.09
+CE160 zone_load_sensible,3629.93
+CE160 zone_load_latent,732.16
+CE160 feb_mean_cop,3.85353
+CE160 feb_mean_idb,26.6724
+CE160 feb_mean_humidity_ratio,0.0102376
+CE160 feb_max_cop,3.85825
+CE160 feb_max_idb,26.675
+CE160 feb_max_humidity_ratio,0.0102658
+CE160 feb_min_cop,3.84819
+CE160 feb_min_idb,26.6697
+CE160 feb_min_humidity_ratio,0.0101498
+CE165 clg_energy_consumption_total,1491.11
+CE165 clg_energy_consumption_supply_fan,148.551
+CE165 evaporator_coil_load_total,4527.74
+CE165 evaporator_coil_load_sensible,3788.54
+CE165 evaporator_coil_load_latent,739.201
+CE165 zone_load_total,4379.19
+CE165 zone_load_sensible,3645.9
+CE165 zone_load_latent,733.294
+CE165 feb_mean_cop,2.93687
+CE165 feb_mean_idb,23.286
+CE165 feb_mean_humidity_ratio,0.00936754
+CE165 feb_max_cop,2.94122
+CE165 feb_max_idb,23.2867
+CE165 feb_max_humidity_ratio,0.00939114
+CE165 feb_min_cop,2.93133
+CE165 feb_min_idb,23.2824
+CE165 feb_min_humidity_ratio,0.00928605
+CE170 clg_energy_consumption_total,635.366
+CE170 clg_energy_consumption_supply_fan,73.0167
+CE170 evaporator_coil_load_total,2224.35
+CE170 evaporator_coil_load_sensible,1485.15
+CE170 evaporator_coil_load_latent,739.201
+CE170 zone_load_total,2151.33
+CE170 zone_load_sensible,1417.47
+CE170 zone_load_latent,733.866
+CE170 feb_mean_cop,3.38598
+CE170 feb_mean_idb,22.1811
+CE170 feb_mean_humidity_ratio,0.0105496
+CE170 feb_max_cop,3.3898
+CE170 feb_max_idb,22.1817
+CE170 feb_max_humidity_ratio,0.0105814
+CE170 feb_min_cop,3.37968
+CE170 feb_min_idb,22.1802
+CE170 feb_min_humidity_ratio,0.0104641
+CE180 clg_energy_consumption_total,1082.3
+CE180 clg_energy_consumption_supply_fan,118.46
+CE180 evaporator_coil_load_total,4480.72
+CE180 evaporator_coil_load_sensible,1523.92
+CE180 evaporator_coil_load_latent,2956.81
+CE180 zone_load_total,4362.26
+CE180 zone_load_sensible,1417.49
+CE180 zone_load_latent,2944.77
+CE180 feb_mean_cop,4.03054
+CE180 feb_mean_idb,22.1571
+CE180 feb_mean_humidity_ratio,0.0161617
+CE180 feb_max_cop,4.03618
+CE180 feb_max_idb,22.1582
+CE180 feb_max_humidity_ratio,0.0162004
+CE180 feb_min_cop,4.02408
+CE180 feb_min_idb,22.1549
+CE180 feb_min_humidity_ratio,0.0160426
+CE185 clg_energy_consumption_total,1540.49
+CE185 clg_energy_consumption_supply_fan,139.134
+CE185 evaporator_coil_load_total,4521.44
+CE185 evaporator_coil_load_sensible,1564.63
+CE185 evaporator_coil_load_latent,2956.81
+CE185 zone_load_total,4382.31
+CE185 zone_load_sensible,1435.49
+CE185 zone_load_latent,2946.82
+CE185 feb_mean_cop,2.84474
+CE185 feb_mean_idb,22.1672
+CE185 feb_mean_humidity_ratio,0.0160493
+CE185 feb_max_cop,2.85022
+CE185 feb_max_idb,22.1678
+CE185 feb_max_humidity_ratio,0.0161166
+CE185 feb_min_cop,2.83683
+CE185 feb_min_idb,22.1628
+CE185 feb_min_humidity_ratio,0.0159241
+CE190 clg_energy_consumption_total,164.144
+CE190 clg_energy_consumption_supply_fan,18.0097
+CE190 evaporator_coil_load_total,573.758
+CE190 evaporator_coil_load_sensible,204.153
+CE190 evaporator_coil_load_latent,369.605
+CE190 zone_load_total,555.749
+CE190 zone_load_sensible,187.691
+CE190 zone_load_latent,368.057
+CE190 feb_mean_cop,3.38575
+CE190 feb_mean_idb,22.1947
+CE190 feb_mean_humidity_ratio,0.0158685
+CE190 feb_max_cop,3.3961
+CE190 feb_max_idb,22.1948
+CE190 feb_max_humidity_ratio,0.0161048
+CE190 feb_min_cop,3.37553
+CE190 feb_min_idb,22.1946
+CE190 feb_min_humidity_ratio,0.0157091
+CE195 clg_energy_consumption_total,249.67
+CE195 clg_energy_consumption_supply_fan,22.6072
+CE195 evaporator_coil_load_total,596.586
+CE195 evaporator_coil_load_sensible,226.963
+CE195 evaporator_coil_load_latent,369.623
+CE195 zone_load_total,573.978
+CE195 zone_load_sensible,205.698
+CE195 zone_load_latent,368.28
+CE195 feb_mean_cop,2.29895
+CE195 feb_mean_idb,22.1959
+CE195 feb_mean_humidity_ratio,0.0154658
+CE195 feb_max_cop,2.31631
+CE195 feb_max_idb,22.196
+CE195 feb_max_humidity_ratio,0.0159063
+CE195 feb_min_cop,2.28844
+CE195 feb_min_idb,22.1956
+CE195 feb_min_humidity_ratio,0.0152991
+CE200 clg_energy_consumption_total,1465.06
+CE200 clg_energy_consumption_supply_fan,153.44
+CE200 evaporator_coil_load_total,5483.79
+CE200 evaporator_coil_load_sensible,4262.76
+CE200 evaporator_coil_load_latent,1221.03
+CE200 zone_load_total,5330.35
+CE200 zone_load_sensible,4119.83
+CE200 zone_load_latent,1210.51
+CE200 feb_mean_cop,3.63832
+CE200 feb_mean_idb,26.6638
+CE200 feb_mean_humidity_ratio,0.0114174
+CE200 feb_max_cop,3.64361
+CE200 feb_max_idb,26.6651
+CE200 feb_max_humidity_ratio,0.011446
+CE200 feb_min_cop,3.63266
+CE200 feb_min_idb,26.6626
+CE200 feb_min_humidity_ratio,0.0113209
+CE300 ann_sum_clg_energy_consumption_total,35021.6
+CE300 ann_sum_clg_energy_consumption_supply_fan,10862.1
+CE300 ann_sum_evap_coil_load_total,78335.1
+CE300 ann_sum_evap_coil_load_sensible,55165.4
+CE300 ann_sum_evap_coil_load_latent,23169.7
+CE300 ann_mean_cop_2,3.24241
+CE300 ann_mean_idb,24.0888
+CE300 ann_mean_zone_humidity_ratio,0.00916508
+CE300 ann_mean_zone_relative_humidity,47.944
+CE300 ann_mean_odb,19.9141
+CE300 ann_mean_outdoor_humidity_ratio,0.0116079
+CE310 ann_sum_clg_energy_consumption_total,39432.1
+CE310 ann_sum_clg_energy_consumption_supply_fan,10862.1
+CE310 ann_sum_evap_coil_load_total,97349.9
+CE310 ann_sum_evap_coil_load_sensible,55065.2
+CE310 ann_sum_evap_coil_load_latent,42284.7
+CE310 ann_mean_cop_2,3.40741
+CE310 ann_mean_idb,24.0911
+CE310 ann_mean_zone_humidity_ratio,0.0111532
+CE310 ann_mean_zone_relative_humidity,57.9607
+CE320 ann_sum_clg_energy_consumption_total,39374.5
+CE320 ann_sum_clg_energy_consumption_supply_fan,10862.1
+CE320 ann_sum_evap_coil_load_total,97445.7
+CE320 ann_sum_evap_coil_load_sensible,61755.5
+CE320 ann_sum_evap_coil_load_latent,35690.2
+CE320 ann_mean_cop_2,3.41766
+CE320 ann_mean_idb,24.2324
+CE320 ann_mean_zone_humidity_ratio,0.0100364
+CE320 ann_mean_zone_relative_humidity,51.4506
+CE330 ann_sum_clg_energy_consumption_total,40468.7
+CE330 ann_sum_clg_energy_consumption_supply_fan,10862.1
+CE330 ann_sum_evap_coil_load_total,103824
+CE330 ann_sum_evap_coil_load_sensible,63078.1
+CE330 ann_sum_evap_coil_load_latent,40746.1
+CE330 ann_mean_cop_2,3.5068
+CE330 ann_mean_idb,24.2952
+CE330 ann_mean_zone_humidity_ratio,0.0098802
+CE330 ann_mean_zone_relative_humidity,50.6052
+CE340 ann_sum_clg_energy_consumption_total,40071.1
+CE340 ann_sum_clg_energy_consumption_supply_fan,10862.1
+CE340 ann_sum_evap_coil_load_total,101146
+CE340 ann_sum_evap_coil_load_sensible,62395.2
+CE340 ann_sum_evap_coil_load_latent,38750.5
+CE340 ann_mean_cop_2,3.46282
+CE340 ann_mean_idb,24.3104
+CE340 ann_mean_zone_humidity_ratio,0.00990174
+CE340 ann_mean_zone_relative_humidity,50.646
+CE350 ann_sum_clg_energy_consumption_total,31373.8
+CE350 ann_sum_clg_energy_consumption_supply_fan,10862.1
+CE350 ann_sum_evap_coil_load_total,66597.5
+CE350 ann_sum_evap_coil_load_sensible,48333.4
+CE350 ann_sum_evap_coil_load_latent,18264.1
+CE350 ann_mean_cop_2,3.2468
+CE350 ann_mean_idb,26.2365
+CE350 ann_mean_zone_humidity_ratio,0.00979599
+CE350 ann_mean_zone_relative_humidity,44.5934
+CE360 ann_sum_clg_energy_consumption_total,54946.5
+CE360 ann_sum_clg_energy_consumption_supply_fan,10862.1
+CE360 ann_sum_evap_coil_load_total,162241
+CE360 ann_sum_evap_coil_load_sensible,134722
+CE360 ann_sum_evap_coil_load_latent,27519.8
+CE360 ann_mean_cop_2,3.68025
+CE360 ann_mean_idb,25.4269
+CE360 ann_mean_zone_humidity_ratio,0.0086038
+CE360 ann_mean_zone_relative_humidity,41.3634
+CE400 ann_sum_clg_energy_consumption_total,30755.6
+CE400 ann_sum_clg_energy_consumption_supply_fan,10862.1
+CE400 ann_sum_evap_coil_load_total,64044.6
+CE400 ann_sum_evap_coil_load_sensible,41885.9
+CE400 ann_sum_evap_coil_load_latent,22158.7
+CE400 ann_mean_cop_2,3.21937
+CE400 ann_mean_idb,23.1733
+CE400 ann_mean_zone_humidity_ratio,0.00976683
+CE400 ann_mean_zone_relative_humidity,53.6893
+CE410 ann_sum_clg_energy_consumption_total,30755.6
+CE410 ann_sum_clg_energy_consumption_supply_fan,10862.1
+CE410 ann_sum_evap_coil_load_total,64044.6
+CE410 ann_sum_evap_coil_load_sensible,41885.9
+CE410 ann_sum_evap_coil_load_latent,22158.7
+CE410 ann_mean_cop_2,3.21937
+CE410 ann_mean_idb,23.1733
+CE410 ann_mean_zone_humidity_ratio,0.00976683
+CE410 ann_mean_zone_relative_humidity,53.6893
+CE420 ann_sum_clg_energy_consumption_total,32938.1
+CE420 ann_sum_clg_energy_consumption_supply_fan,10862.1
+CE420 ann_sum_evap_coil_load_total,71126.8
+CE420 ann_sum_evap_coil_load_sensible,49343.2
+CE420 ann_sum_evap_coil_load_latent,21783.6
+CE420 ann_mean_cop_2,3.2219
+CE420 ann_mean_idb,23.246
+CE420 ann_mean_zone_humidity_ratio,0.00934481
+CE420 ann_mean_zone_relative_humidity,51.3225
+CE430 ann_sum_clg_energy_consumption_total,32101.9
+CE430 ann_sum_clg_energy_consumption_supply_fan,10862.1
+CE430 ann_sum_evap_coil_load_total,68354.2
+CE430 ann_sum_evap_coil_load_sensible,46954.8
+CE430 ann_sum_evap_coil_load_latent,21399.4
+CE430 ann_mean_cop_2,3.21821
+CE430 ann_mean_idb,23.2034
+CE430 ann_mean_zone_humidity_ratio,0.00937541
+CE430 ann_mean_zone_relative_humidity,51.6237
+CE440 ann_sum_clg_energy_consumption_total,33265.5
+CE440 ann_sum_clg_energy_consumption_supply_fan,10862.1
+CE440 ann_sum_evap_coil_load_total,72310
+CE440 ann_sum_evap_coil_load_sensible,49953.4
+CE440 ann_sum_evap_coil_load_latent,22356.6
+CE440 ann_mean_cop_2,3.22764
+CE440 ann_mean_idb,23.3633
+CE440 ann_mean_zone_humidity_ratio,0.00922494
+CE440 ann_mean_zone_relative_humidity,50.2176
+CE500 ann_sum_clg_energy_consumption_total,23072.3
+CE500 ann_sum_clg_energy_consumption_supply_fan,2629.84
+CE500 ann_sum_evap_coil_load_total,65589.7
+CE500 ann_sum_evap_coil_load_sensible,47357.3
+CE500 ann_sum_evap_coil_load_latent,18232.3
+CE500 ann_mean_cop_2,3.20851
+CE500 ann_mean_idb,20.432
+CE500 ann_mean_zone_humidity_ratio,0.00915088
+CE500 ann_mean_zone_relative_humidity,57.8808
+CE520 ann_sum_clg_energy_consumption_total,25809.6
+CE520 ann_sum_clg_energy_consumption_supply_fan,3140.1
+CE520 ann_sum_evap_coil_load_total,66213.1
+CE520 ann_sum_evap_coil_load_sensible,47983.6
+CE520 ann_sum_evap_coil_load_latent,18229.5
+CE520 ann_mean_cop_2,2.9208
+CE520 ann_mean_idb,13.6518
+CE520 ann_mean_zone_humidity_ratio,0.00601444
+CE520 ann_mean_zone_relative_humidity,60.8222
+CE522 ann_sum_clg_energy_consumption_total,24382
+CE522 ann_sum_clg_energy_consumption_supply_fan,2878.19
+CE522 ann_sum_evap_coil_load_total,65893.8
+CE522 ann_sum_evap_coil_load_sensible,47663
+CE522 ann_sum_evap_coil_load_latent,18230.8
+CE522 ann_mean_cop_2,3.06428
+CE522 ann_mean_idb,17.0603
+CE522 ann_mean_zone_humidity_ratio,0.00748222
+CE522 ann_mean_zone_relative_humidity,59.6214
+CE525 ann_sum_clg_energy_consumption_total,20777.9
+CE525 ann_sum_clg_energy_consumption_supply_fan,2191.56
+CE525 ann_sum_evap_coil_load_total,65028.4
+CE525 ann_sum_evap_coil_load_sensible,46796.1
+CE525 ann_sum_evap_coil_load_latent,18232.3
+CE525 ann_mean_cop_2,3.49873
+CE525 ann_mean_idb,27.1572
+CE525 ann_mean_zone_humidity_ratio,0.0133861
+CE525 ann_mean_zone_relative_humidity,53.6681
+CE530 ann_sum_clg_energy_consumption_total,17988.6
+CE530 ann_sum_clg_energy_consumption_supply_fan,2120.72
+CE530 ann_sum_evap_coil_load_total,46987.1
+CE530 ann_sum_evap_coil_load_sensible,46986.9
+CE530 ann_sum_evap_coil_load_latent,0.228875
+CE530 ann_mean_cop_2,2.96115
+CE530 ann_mean_idb,20.5839
+CE530 ann_mean_zone_humidity_ratio,0.00647992
+CE530 ann_mean_zone_relative_humidity,47.5468
+CE540 ann_sum_clg_energy_consumption_total,20117.2
+CE540 ann_sum_clg_energy_consumption_supply_fan,2492.89
+CE540 ann_sum_evap_coil_load_total,47480.9
+CE540 ann_sum_evap_coil_load_sensible,47472.1
+CE540 ann_sum_evap_coil_load_latent,8.85795
+CE540 ann_mean_cop_2,2.69405
+CE540 ann_mean_idb,13.7912
+CE540 ann_mean_zone_humidity_ratio,0.00433698
+CE540 ann_mean_zone_relative_humidity,46.1865
+CE545 ann_sum_clg_energy_consumption_total,16603.4
+CE545 ann_sum_clg_energy_consumption_supply_fan,1864.21
+CE545 ann_sum_evap_coil_load_total,46634.3
+CE545 ann_sum_evap_coil_load_sensible,46634.3
+CE545 ann_sum_evap_coil_load_latent,3.44919e-12
+CE545 ann_mean_cop_2,3.16397
+CE545 ann_mean_idb,27.3105
+CE545 ann_mean_zone_humidity_ratio,0.00673573
+CE545 ann_mean_zone_relative_humidity,38.6216
+CE500 May-Sep may_sept_sum_clg_consumption_total,18027.8
+CE500 May-Sep may_sept_sum_clg_consumption_indoor_fan,2030.2
+CE500 May-Sep may_sept_sum_evap_coil_load_total,50355.2
+CE500 May-Sep may_sept_sum_evap_coil_load_sensible,36364.7
+CE500 May-Sep may_sept_sum_evap_coil_load_latent,13990.6
+CE500 May-Sep may_sept_mean_cop_2,3.14768
+CE500 May-Sep may_sept_mean_idb,24.9827
+CE500 May-Sep may_sept_mean_zone_humidity_ratio,0.0109982
+CE500 May-Sep may_sept_mean_zone_relative_humidity,55.6544
+CE510 May-Sep may_sept_sum_clg_consumption_total,35786.2
+CE510 May-Sep may_sept_sum_clg_consumption_indoor_fan,4064.84
+CE510 May-Sep may_sept_sum_evap_coil_load_total,112794
+CE510 May-Sep may_sept_sum_evap_coil_load_sensible,81314.5
+CE510 May-Sep may_sept_sum_evap_coil_load_latent,31479.4
+CE510 May-Sep may_sept_mean_cop_2,3.55577
+CE510 May-Sep may_sept_mean_idb,24.9597
+CE510 May-Sep may_sept_mean_zone_humidity_ratio,0.0110066
+CE510 May-Sep may_sept_mean_zone_relative_humidity,55.7723
+CE300 energy_consumption_comp_both_fans_wh,11995.4
+CE300 energy_consumption_comp_both_fans_date,20-Jul
+CE300 energy_consumption_comp_both_fans_hr,15
+CE300 evap_coil_load_sensible_wh,23463.7
+CE300 evap_coil_load_sensible_date,20-Jul
+CE300 evap_coil_load_sensible_hr,15
+CE300 evap_coil_load_latent_wh,10597.2
+CE300 evap_coil_load_latent_date,10-Jul
+CE300 evap_coil_load_latent_hr,13
+CE300 evap_coil_load_sensible_and_latent_wh,33060.4
+CE300 evap_coil_load_sensible_and_latent_date,20-Jul
+CE300 evap_coil_load_sensible_and_latent_hr,15
+CE300 CE300 weather_odb_c,34.775
+CE300 CE300 weather_odb_date,20-Jul
+CE300 CE300 weather_odb_hr,15
+CE300 CE300 weather_outdoor_humidity_ratio_c,0.0218679
+CE300 CE300 weather_outdoor_humidity_ratio_date,02-Oct
+CE300 CE300 weather_outdoor_humidity_ratio_hr,9
+CE310 energy_consumption_comp_both_fans_wh,12573.3
+CE310 energy_consumption_comp_both_fans_date,20-Jul
+CE310 energy_consumption_comp_both_fans_hr,15
+CE310 evap_coil_load_sensible_wh,23148.2
+CE310 evap_coil_load_sensible_date,11-Jul
+CE310 evap_coil_load_sensible_hr,16
+CE310 evap_coil_load_latent_wh,16647
+CE310 evap_coil_load_latent_date,04-Aug
+CE310 evap_coil_load_latent_hr,15
+CE310 evap_coil_load_sensible_and_latent_wh,37377.5
+CE310 evap_coil_load_sensible_and_latent_date,17-Sep
+CE310 evap_coil_load_sensible_and_latent_hr,15
+CE320 energy_consumption_comp_both_fans_wh,12990.4
+CE320 energy_consumption_comp_both_fans_date,20-Jul
+CE320 energy_consumption_comp_both_fans_hr,15
+CE320 evap_coil_load_sensible_wh,31540.3
+CE320 evap_coil_load_sensible_date,24-Apr
+CE320 evap_coil_load_sensible_hr,15
+CE320 evap_coil_load_latent_wh,22758.8
+CE320 evap_coil_load_latent_date,02-Oct
+CE320 evap_coil_load_latent_hr,10
+CE320 evap_coil_load_sensible_and_latent_wh,40101.1
+CE320 evap_coil_load_sensible_and_latent_date,02-Oct
+CE320 evap_coil_load_sensible_and_latent_hr,10
+CE330 energy_consumption_comp_both_fans_wh,13358.2
+CE330 energy_consumption_comp_both_fans_date,20-Jul
+CE330 energy_consumption_comp_both_fans_hr,15
+CE330 evap_coil_load_sensible_wh,34692.7
+CE330 evap_coil_load_sensible_date,14-Jun
+CE330 evap_coil_load_sensible_hr,14
+CE330 evap_coil_load_latent_wh,27598.1
+CE330 evap_coil_load_latent_date,18-Sep
+CE330 evap_coil_load_latent_hr,16
+CE330 evap_coil_load_sensible_and_latent_wh,43602.8
+CE330 evap_coil_load_sensible_and_latent_date,02-Oct
+CE330 evap_coil_load_sensible_and_latent_hr,9
+CE340 energy_consumption_comp_both_fans_wh,13176.7
+CE340 energy_consumption_comp_both_fans_date,20-Jul
+CE340 energy_consumption_comp_both_fans_hr,15
+CE340 evap_coil_load_sensible_wh,32754.2
+CE340 evap_coil_load_sensible_date,24-Apr
+CE340 evap_coil_load_sensible_hr,15
+CE340 evap_coil_load_latent_wh,24438.8
+CE340 evap_coil_load_latent_date,02-Oct
+CE340 evap_coil_load_latent_hr,10
+CE340 evap_coil_load_sensible_and_latent_wh,41613.3
+CE340 evap_coil_load_sensible_and_latent_date,02-Oct
+CE340 evap_coil_load_sensible_and_latent_hr,10
+CE350 energy_consumption_comp_both_fans_wh,11995.4
+CE350 energy_consumption_comp_both_fans_date,20-Jul
+CE350 energy_consumption_comp_both_fans_hr,15
+CE350 evap_coil_load_sensible_wh,23463.6
+CE350 evap_coil_load_sensible_date,20-Jul
+CE350 evap_coil_load_sensible_hr,15
+CE350 evap_coil_load_latent_wh,10597.7
+CE350 evap_coil_load_latent_date,10-Jul
+CE350 evap_coil_load_latent_hr,13
+CE350 evap_coil_load_sensible_and_latent_wh,33060.3
+CE350 evap_coil_load_sensible_and_latent_date,20-Jul
+CE350 evap_coil_load_sensible_and_latent_hr,15
+CE360 energy_consumption_comp_both_fans_wh,12778
+CE360 energy_consumption_comp_both_fans_date,20-Jul
+CE360 energy_consumption_comp_both_fans_hr,15
+CE360 evap_coil_load_sensible_wh,32414.3
+CE360 evap_coil_load_sensible_date,24-Apr
+CE360 evap_coil_load_sensible_hr,16
+CE360 evap_coil_load_latent_wh,8914.23
+CE360 evap_coil_load_latent_date,02-Oct
+CE360 evap_coil_load_latent_hr,10
+CE360 evap_coil_load_sensible_and_latent_wh,38701.1
+CE360 evap_coil_load_sensible_and_latent_date,02-Oct
+CE360 evap_coil_load_sensible_and_latent_hr,11
+CE400 energy_consumption_comp_both_fans_wh,11995.4
+CE400 energy_consumption_comp_both_fans_date,20-Jul
+CE400 energy_consumption_comp_both_fans_hr,15
+CE400 evap_coil_load_sensible_wh,23463.7
+CE400 evap_coil_load_sensible_date,20-Jul
+CE400 evap_coil_load_sensible_hr,15
+CE400 evap_coil_load_latent_wh,22716
+CE400 evap_coil_load_latent_date,17-Jun
+CE400 evap_coil_load_latent_hr,16
+CE400 evap_coil_load_sensible_and_latent_wh,39126.4
+CE400 evap_coil_load_sensible_and_latent_date,25-Oct
+CE400 evap_coil_load_sensible_and_latent_hr,15
+CE410 energy_consumption_comp_both_fans_wh,11995.4
+CE410 energy_consumption_comp_both_fans_date,20-Jul
+CE410 energy_consumption_comp_both_fans_hr,15
+CE410 evap_coil_load_sensible_wh,23463.7
+CE410 evap_coil_load_sensible_date,20-Jul
+CE410 evap_coil_load_sensible_hr,15
+CE410 evap_coil_load_latent_wh,22716
+CE410 evap_coil_load_latent_date,17-Jun
+CE410 evap_coil_load_latent_hr,16
+CE410 evap_coil_load_sensible_and_latent_wh,39126.4
+CE410 evap_coil_load_sensible_and_latent_date,25-Oct
+CE410 evap_coil_load_sensible_and_latent_hr,15
+CE420 energy_consumption_comp_both_fans_wh,11995.4
+CE420 energy_consumption_comp_both_fans_date,20-Jul
+CE420 energy_consumption_comp_both_fans_hr,15
+CE420 evap_coil_load_sensible_wh,23463.7
+CE420 evap_coil_load_sensible_date,20-Jul
+CE420 evap_coil_load_sensible_hr,15
+CE420 evap_coil_load_latent_wh,10597.2
+CE420 evap_coil_load_latent_date,10-Jul
+CE420 evap_coil_load_latent_hr,13
+CE420 evap_coil_load_sensible_and_latent_wh,33060.4
+CE420 evap_coil_load_sensible_and_latent_date,20-Jul
+CE420 evap_coil_load_sensible_and_latent_hr,15
+CE430 energy_consumption_comp_both_fans_wh,11995.4
+CE430 energy_consumption_comp_both_fans_date,20-Jul
+CE430 energy_consumption_comp_both_fans_hr,15
+CE430 evap_coil_load_sensible_wh,23463.7
+CE430 evap_coil_load_sensible_date,20-Jul
+CE430 evap_coil_load_sensible_hr,15
+CE430 evap_coil_load_latent_wh,11374.2
+CE430 evap_coil_load_latent_date,24-Oct
+CE430 evap_coil_load_latent_hr,13
+CE430 evap_coil_load_sensible_and_latent_wh,33060.4
+CE430 evap_coil_load_sensible_and_latent_date,20-Jul
+CE430 evap_coil_load_sensible_and_latent_hr,15
+CE440 energy_consumption_comp_both_fans_wh,11995.4
+CE440 energy_consumption_comp_both_fans_date,20-Jul
+CE440 energy_consumption_comp_both_fans_hr,15
+CE440 evap_coil_load_sensible_wh,23463.7
+CE440 evap_coil_load_sensible_date,20-Jul
+CE440 evap_coil_load_sensible_hr,15
+CE440 evap_coil_load_latent_wh,10597.2
+CE440 evap_coil_load_latent_date,10-Jul
+CE440 evap_coil_load_latent_hr,13
+CE440 evap_coil_load_sensible_and_latent_wh,33060.4
+CE440 evap_coil_load_sensible_and_latent_date,20-Jul
+CE440 evap_coil_load_sensible_and_latent_hr,15
+CE500 energy_consumption_comp_both_fans_wh,10437.2
+CE500 energy_consumption_comp_both_fans_date,20-Jul
+CE500 energy_consumption_comp_both_fans_hr,15
+CE500 evap_coil_load_sensible_wh,19795.5
+CE500 evap_coil_load_sensible_date,20-Jul
+CE500 evap_coil_load_sensible_hr,15
+CE500 evap_coil_load_latent_wh,7908.93
+CE500 evap_coil_load_latent_date,29-Jun
+CE500 evap_coil_load_latent_hr,16
+CE500 evap_coil_load_sensible_and_latent_wh,27656.1
+CE500 evap_coil_load_sensible_and_latent_date,29-Jun
+CE500 evap_coil_load_sensible_and_latent_hr,16
+CE500 May-Sep energy_consumption_comp_both_fans_wh,11449.4
+CE500 May-Sep energy_consumption_comp_both_fans_date,20-Jul
+CE500 May-Sep energy_consumption_comp_both_fans_hr,15
+CE500 May-Sep evap_coil_load_sensible_wh,22227.7
+CE500 May-Sep evap_coil_load_sensible_date,20-Jul
+CE500 May-Sep evap_coil_load_sensible_hr,16
+CE500 May-Sep evap_coil_load_latent_wh,9040.99
+CE500 May-Sep evap_coil_load_latent_date,17-Jun
+CE500 May-Sep evap_coil_load_latent_hr,14
+CE500 May-Sep evap_coil_load_sensible_and_latent_wh,31194.1
+CE500 May-Sep evap_coil_load_sensible_and_latent_date,17-Jun
+CE500 May-Sep evap_coil_load_sensible_and_latent_hr,14
+CE510 May-Sep energy_consumption_comp_both_fans_wh,11262.5
+CE510 May-Sep energy_consumption_comp_both_fans_date,20-Jul
+CE510 May-Sep energy_consumption_comp_both_fans_hr,15
+CE510 May-Sep evap_coil_load_sensible_wh,20011.4
+CE510 May-Sep evap_coil_load_sensible_date,20-Jul
+CE510 May-Sep evap_coil_load_sensible_hr,16
+CE510 May-Sep evap_coil_load_latent_wh,7785.22
+CE510 May-Sep evap_coil_load_latent_date,29-Jun
+CE510 May-Sep evap_coil_load_latent_hr,16
+CE510 May-Sep evap_coil_load_sensible_and_latent_wh,27730.9
+CE510 May-Sep evap_coil_load_sensible_and_latent_date,29-Jun
+CE510 May-Sep evap_coil_load_sensible_and_latent_hr,16
+CE520 energy_consumption_comp_both_fans_wh,10901.4
+CE520 energy_consumption_comp_both_fans_date,20-Jul
+CE520 energy_consumption_comp_both_fans_hr,15
+CE520 evap_coil_load_sensible_wh,19901.5
+CE520 evap_coil_load_sensible_date,20-Jul
+CE520 evap_coil_load_sensible_hr,15
+CE520 evap_coil_load_latent_wh,7850.15
+CE520 evap_coil_load_latent_date,29-Jun
+CE520 evap_coil_load_latent_hr,16
+CE520 evap_coil_load_sensible_and_latent_wh,27698.1
+CE520 evap_coil_load_sensible_and_latent_date,29-Jun
+CE520 evap_coil_load_sensible_and_latent_hr,16
+CE522 energy_consumption_comp_both_fans_wh,9586.93
+CE522 energy_consumption_comp_both_fans_date,20-Jul
+CE522 energy_consumption_comp_both_fans_hr,15
+CE522 evap_coil_load_sensible_wh,19598.8
+CE522 evap_coil_load_sensible_date,20-Jul
+CE522 evap_coil_load_sensible_hr,15
+CE522 evap_coil_load_latent_wh,8006.34
+CE522 evap_coil_load_latent_date,29-Jun
+CE522 evap_coil_load_latent_hr,16
+CE522 evap_coil_load_sensible_and_latent_wh,27564
+CE522 evap_coil_load_sensible_and_latent_date,29-Jun
+CE522 evap_coil_load_sensible_and_latent_hr,16
+CE525 energy_consumption_comp_both_fans_wh,8291.14
+CE525 energy_consumption_comp_both_fans_date,20-Jul
+CE525 energy_consumption_comp_both_fans_hr,15
+CE525 evap_coil_load_sensible_wh,19655.9
+CE525 evap_coil_load_sensible_date,20-Jul
+CE525 evap_coil_load_sensible_hr,15
+CE525 evap_coil_load_latent_wh,106.174
+CE525 evap_coil_load_latent_date,16-Mar
+CE525 evap_coil_load_latent_hr,10
+CE525 evap_coil_load_sensible_and_latent_wh,19655.9
+CE525 evap_coil_load_sensible_and_latent_date,20-Jul
+CE525 evap_coil_load_sensible_and_latent_hr,15
+CE530 energy_consumption_comp_both_fans_wh,9074.54
+CE530 energy_consumption_comp_both_fans_date,20-Jul
+CE530 energy_consumption_comp_both_fans_hr,15
+CE530 evap_coil_load_sensible_wh,19812.2
+CE530 evap_coil_load_sensible_date,20-Jul
+CE530 evap_coil_load_sensible_hr,15
+CE530 evap_coil_load_latent_wh,1627.83
+CE530 evap_coil_load_latent_date,11-Mar
+CE530 evap_coil_load_latent_hr,10
+CE530 evap_coil_load_sensible_and_latent_wh,19812.2
+CE530 evap_coil_load_sensible_and_latent_date,20-Jul
+CE530 evap_coil_load_sensible_and_latent_hr,15
+CE540 energy_consumption_comp_both_fans_wh,7766.05
+CE540 energy_consumption_comp_both_fans_date,20-Jul
+CE540 energy_consumption_comp_both_fans_hr,15
+CE540 evap_coil_load_sensible_wh,19538.4
+CE540 evap_coil_load_sensible_date,20-Jul
+CE540 evap_coil_load_sensible_hr,15
+CE540 evap_coil_load_latent_wh,1.36424e-11
+CE540 evap_coil_load_latent_date,07-Aug
+CE540 evap_coil_load_latent_hr,16
+CE540 evap_coil_load_sensible_and_latent_wh,19538.4
+CE540 evap_coil_load_sensible_and_latent_date,20-Jul
+CE540 evap_coil_load_sensible_and_latent_hr,15
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_max_cop_2,3.92392
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_max_date,31-DEC
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_min_cop_2,2.77489
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_min_date,13-JUN
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 cop_2_min_hr,16
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_max_idb,25.0033
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_max_date,23-Sep
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_max_hr,8
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_min_idb,8.72448
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_min_date,06-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 idb_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_max_humidity_ratio,0.0135207
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_max_date,16-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_max_hr,17
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_min_humidity_ratio,0.00192919
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_min_date,11-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 hr_min_hr,3
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_max_relative_humidity,67.7771
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_max_date,16-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_max_hr,17
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_min_relative_humidity,14.3875
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_min_date,06-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 1 rh_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_max_cop_2,4.19589
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_max_date,31-DEC
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_min_cop_2,2.86797
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_min_date,01-DEC
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 cop_2_min_hr,14
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_max_idb,26.5526
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_max_date,20-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_max_hr,16
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_min_idb,8.72441
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_min_date,06-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 idb_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_max_humidity_ratio,0.0155018
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_max_date,01-Oct
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_max_hr,8
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_min_humidity_ratio,0.00194347
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_min_date,05-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 hr_min_hr,7
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 rh_max_relative_humidity,77.9254
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 rh_max_date,02-Oct
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 rh_max_hr,8
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 rh_min_relative_humidity,15.4714
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 rh_min_date,06-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 2 rh_min_hr,8
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_max_cop_2,3.96509
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_max_date,31-DEC
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_min_cop_2,2.82371
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_min_date,31-MAR
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 cop_2_min_hr,14
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_max_idb,31.8418
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_max_date,20-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_max_hr,15
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_min_idb,7.75831
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_min_date,06-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 idb_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_max_humidity_ratio,0.0177018
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_max_date,01-Oct
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_max_hr,11
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_min_humidity_ratio,0.00193511
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_min_date,11-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 hr_min_hr,3
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 rh_max_relative_humidity,82.7141
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 rh_max_date,18-Sep
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 rh_max_hr,10
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 rh_min_relative_humidity,14.7967
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 rh_min_date,06-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 3 rh_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_max_cop_2,4.09622
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_max_date,31-DEC
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_min_cop_2,2.82922
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_min_date,31-MAR
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 cop_2_min_hr,14
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_max_idb,31.4942
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_max_date,20-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_max_hr,15
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_min_idb,8.72542
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_min_date,06-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 idb_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_max_humidity_ratio,0.0178224
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_max_date,10-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_max_hr,12
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_min_humidity_ratio,0.0019292
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_min_date,11-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 hr_min_hr,3
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 rh_max_relative_humidity,76.6382
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 rh_max_date,22-Sep
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 rh_max_hr,20
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 rh_min_relative_humidity,14.3875
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 rh_min_date,06-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 4 rh_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_max_cop_2,4.01496
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_max_date,31-DEC
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_min_cop_2,2.82922
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_min_date,31-MAR
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 cop_2_min_hr,14
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_max_idb,31.7431
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_max_date,20-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_max_hr,15
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_min_idb,8.72542
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_min_date,06-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 idb_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_max_humidity_ratio,0.0177065
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_max_date,10-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_max_hr,12
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_min_humidity_ratio,0.0019292
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_min_date,11-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 hr_min_hr,3
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 rh_max_relative_humidity,80.5453
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 rh_max_date,18-Sep
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 rh_max_hr,10
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 rh_min_relative_humidity,14.3875
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 rh_min_date,06-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 5 rh_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_max_cop_2,4.34673
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_max_date,31-DEC
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_min_cop_2,2.77489
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_min_date,13-JUN
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 cop_2_min_hr,16
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_max_idb,35.0021
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_max_date,01-Oct
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_max_hr,2
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_min_idb,8.72448
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_min_date,06-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 idb_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_max_humidity_ratio,0.0169445
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_max_date,02-Oct
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_max_hr,1
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_min_humidity_ratio,0.00192919
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_min_date,11-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 hr_min_hr,3
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 rh_max_relative_humidity,67.7771
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 rh_max_date,16-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 rh_max_hr,17
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 rh_min_relative_humidity,14.3875
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 rh_min_date,06-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 6 rh_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_max_cop_2,4.43173
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_max_date,31-DEC
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_min_cop_2,2.82923
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_min_date,31-MAR
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 cop_2_min_hr,14
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_max_idb,32.8106
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_max_date,10-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_max_hr,13
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_min_idb,8.72466
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_min_date,06-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 idb_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_max_humidity_ratio,0.0135206
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_max_date,16-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_max_hr,17
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_min_humidity_ratio,0.00192919
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_min_date,11-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 hr_min_hr,3
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 rh_max_relative_humidity,67.7769
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 rh_max_date,16-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 rh_max_hr,17
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 rh_min_relative_humidity,14.3875
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 rh_min_date,06-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 7 rh_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_max_cop_2,4.08826
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_max_date,31-DEC
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_min_cop_2,2.77489
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_min_date,13-JUN
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 cop_2_min_hr,16
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_max_idb,25.2647
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_max_date,16-Jun
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_max_hr,15
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_min_idb,8.72448
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_min_date,06-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 idb_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_max_humidity_ratio,0.0160654
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_max_date,02-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_max_hr,5
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_min_humidity_ratio,0.00192919
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_min_date,11-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 hr_min_hr,3
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 rh_max_relative_humidity,89.751
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 rh_max_date,02-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 rh_max_hr,2
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 rh_min_relative_humidity,16.3281
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 rh_min_date,06-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 8 rh_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_max_cop_2,4.08826
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_max_date,31-DEC
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_min_cop_2,2.77489
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_min_date,13-JUN
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 cop_2_min_hr,16
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_max_idb,25.2647
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_max_date,16-Jun
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_max_hr,15
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_min_idb,8.72448
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_min_date,06-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 idb_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_max_humidity_ratio,0.0160654
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_max_date,02-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_max_hr,5
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_min_humidity_ratio,0.00192919
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_min_date,11-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 hr_min_hr,3
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 rh_max_relative_humidity,89.751
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 rh_max_date,02-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 rh_max_hr,2
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 rh_min_relative_humidity,16.3281
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 rh_min_date,06-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 9 rh_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_max_cop_2,3.84908
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_max_date,31-DEC
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_min_cop_2,2.77489
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_min_date,13-JUN
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 cop_2_min_hr,16
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_max_idb,25.0033
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_max_date,23-Sep
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_max_hr,8
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_min_idb,8.72448
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_min_date,06-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 idb_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_max_humidity_ratio,0.0147133
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_max_date,02-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_max_hr,1
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_min_humidity_ratio,0.00192919
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_min_date,11-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 hr_min_hr,3
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 rh_max_relative_humidity,89.6915
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 rh_max_date,02-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 rh_max_hr,1
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 rh_min_relative_humidity,16.3281
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 rh_min_date,06-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 10 rh_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_max_cop_2,3.80503
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_max_date,31-DEC
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_min_cop_2,2.77489
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_min_date,13-JUN
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 cop_2_min_hr,16
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_max_idb,25.0035
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_max_date,18-May
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_max_hr,19
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_min_idb,8.72448
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_min_date,06-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 idb_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_max_humidity_ratio,0.0160654
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_max_date,02-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_max_hr,5
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_min_humidity_ratio,0.00192919
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_min_date,11-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 hr_min_hr,3
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 rh_max_relative_humidity,89.7509
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 rh_max_date,02-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 rh_max_hr,2
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 rh_min_relative_humidity,16.3281
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 rh_min_date,06-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 11 rh_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_max_cop_2,3.80503
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_max_date,31-DEC
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_min_cop_2,2.77489
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_min_date,13-JUN
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 cop_2_min_hr,16
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_max_idb,25.0033
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_max_date,23-Sep
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_max_hr,8
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_min_idb,8.72448
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_min_date,06-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 idb_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_max_humidity_ratio,0.0135207
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_max_date,16-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_max_hr,17
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_min_humidity_ratio,0.00192919
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_min_date,11-Jan
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 hr_min_hr,3
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 rh_max_relative_humidity,71.2182
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 rh_max_date,22-Oct
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 rh_max_hr,2
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 rh_min_relative_humidity,16.3281
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 rh_min_date,06-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 12 rh_min_hr,6
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_max_cop_2,4.17569
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_max_date,02-OCT
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_min_cop_2,2.69509
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_min_date,01-MAY
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_cop_2_min_hr,11
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_max_idb,25.0014
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_max_date,05-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_max_hr,19
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_min_idb,8.93476
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_min_date,21-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_idb_min_hr,2
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_max_humidity_ratio,0.0113786
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_max_date,20-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_max_hr,15
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_min_humidity_ratio,0.0070082
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_min_date,20-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_hr_min_hr,12
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_rh_max_relative_humidity,100
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_rh_max_date,22-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_rh_max_hr,2
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_rh_min_relative_humidity,53.4194
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_rh_min_date,30-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 13 apr_dec_rh_min_hr,4
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_max_cop_2,4.70752
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_max_date,02-OCT
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_min_cop_2,2.98587
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_min_date,05-JAN
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_cop_2_min_hr,12
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_max_idb,25.0014
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_max_date,05-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_max_hr,19
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_min_idb,8.93476
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_min_date,21-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_idb_min_hr,2
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_max_humidity_ratio,0.0113887
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_max_date,20-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_max_hr,15
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_min_humidity_ratio,0.0070082
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_min_date,20-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_hr_min_hr,12
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_rh_max_relative_humidity,100
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_rh_max_date,22-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_rh_max_hr,2
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_rh_min_relative_humidity,53.526
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_rh_min_date,04-May
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 14 apr_dec_rh_min_hr,4
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_max_cop_2,3.83846
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_max_date,02-OCT
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_min_cop_2,2.46209
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_min_date,01-MAY
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_cop_2_min_hr,11
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_max_idb,15.2618
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_max_date,20-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_max_hr,16
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_min_idb,8.83221
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_min_date,21-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_idb_min_hr,1
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_max_humidity_ratio,0.00710213
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_max_date,20-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_max_hr,16
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_min_humidity_ratio,0.00645879
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_min_date,10-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_hr_min_hr,5
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_rh_max_relative_humidity,92.8718
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_rh_max_date,20-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_rh_max_hr,11
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_rh_min_relative_humidity,61.0966
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_rh_min_date,28-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 15 apr_dec_rh_min_hr,0
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_max_cop_2,4.00789
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_max_date,02-OCT
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_min_cop_2,2.578
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_min_date,01-MAY
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_cop_2_min_hr,11
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_max_idb,20.0056
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_max_date,01-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_min_idb,8.89373
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_min_date,21-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_idb_min_hr,1
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_max_humidity_ratio,0.00897395
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_max_date,20-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_max_hr,15
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_min_humidity_ratio,0.00698804
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_min_date,20-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_hr_min_hr,12
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_rh_max_relative_humidity,100
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_rh_max_date,16-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_rh_max_hr,4
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_rh_min_relative_humidity,57.8263
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_rh_min_date,30-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 16 apr_dec_rh_min_hr,4
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_max_cop_2,4.55239
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_max_date,02-OCT
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_min_cop_2,2.9337
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_min_date,01-MAY
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_cop_2_min_hr,11
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_max_idb,34.9869
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_max_date,06-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_max_hr,10
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_min_idb,9.01185
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_min_date,21-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_idb_min_hr,2
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_max_humidity_ratio,0.0178457
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_max_date,20-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_max_hr,15
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_min_humidity_ratio,0.0070461
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_min_date,20-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_hr_min_hr,12
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_rh_max_relative_humidity,100
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_rh_max_date,13-Nov
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_rh_max_hr,1
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_rh_min_relative_humidity,46.0978
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_rh_min_date,05-Oct
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 17 apr_dec_rh_min_hr,2
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_max_cop_2,3.82646
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_max_date,02-OCT
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_min_cop_2,2.49507
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_min_date,01-MAY
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_cop_2_min_hr,11
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_max_idb,25.0075
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_max_date,05-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_max_hr,19
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_min_idb,8.93334
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_min_date,21-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_min_hr,1
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_max_humidity_ratio,0.00646536
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_max_date,13-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_max_hr,4
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_min_humidity_ratio,0.00643999
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_min_date,17-Oct
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_min_hr,10
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_rh_max_relative_humidity,91.9553
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_rh_max_date,20-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_rh_max_hr,11
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_rh_min_relative_humidity,32.5376
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_rh_min_date,18-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_rh_min_hr,19
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_max_cop_2,3.47026
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_max_date,02-OCT
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_min_cop_2,2.27987
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_min_date,01-MAY
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_cop_2_min_hr,11
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_max_idb,15.0072
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_max_date,19-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_min_idb,8.83094
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_min_date,21-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_min_hr,1
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_max_humidity_ratio,0.00381306
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_max_date,12-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_max_hr,8
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_min_humidity_ratio,0.00380907
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_min_date,17-Oct
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_min_hr,10
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_rh_max_relative_humidity,55.0076
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_rh_max_date,20-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_rh_max_hr,11
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_rh_min_relative_humidity,35.8327
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_rh_min_date,28-Sep
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_rh_min_hr,18
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_max_cop_2,4.12109
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_max_date,02-OCT
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_max_hr,23
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_min_cop_2,2.65919
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_min_date,01-MAY
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_cop_2_min_hr,11
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_max_idb,35.0003
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_max_date,14-Jul
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_max_hr,18
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_min_idb,9.01055
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_min_date,21-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_min_hr,2
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_max_humidity_ratio,0.00677776
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_max_date,31-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_max_hr,18
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_min_humidity_ratio,0.00677776
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_min_date,01-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_min_hr,3
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_max_relative_humidity,96.2109
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_max_date,20-Dec
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_max_hr,11
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_min_relative_humidity,19.2113
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_min_date,18-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_min_hr,17
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_energy_consumpton_compressor,2152.97308109702
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_energy_consumpton_compressor,2166.6497092132595
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_energy_consumpton_compressor,2147.5417875538055
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_energy_consumpton_compressor,2109.4253667521357
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_energy_consumpton_compressor,2031.2431461667718
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_energy_consumpton_compressor,2181.3210717626866
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_energy_consumpton_compressor,2926.5697595359625
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_energy_consumpton_compressor,3571.4001858952715
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_energy_consumpton_compressor,4771.224151766396
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_energy_consumpton_compressor,5028.743242451
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_energy_consumpton_compressor,5484.931328214528
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_energy_consumpton_compressor,5708.066321877781
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_energy_consumpton_compressor,7232.487341079873
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_energy_consumpton_compressor,7085.37778233405
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_energy_consumpton_compressor,8689.288647496225
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_energy_consumpton_compressor,8842.135749757927
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_energy_consumpton_compressor,5790.575539574751
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_energy_consumpton_compressor,5952.258297582977
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_energy_consumpton_compressor,5617.377939171712
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_energy_consumpton_compressor,5315.632828757157
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_energy_consumpton_compressor,4369.3051919437985
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_energy_consumpton_compressor,4323.592878744377
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_energy_consumpton_compressor,4215.790699028332
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_energy_consumpton_compressor,4194.070203444286
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_evaporator_coil_load_total,7603.078534151519
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_evaporator_coil_load_total,7628.440869259015
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_evaporator_coil_load_total,7579.831969266117
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_evaporator_coil_load_total,7464.161309042417
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_evaporator_coil_load_total,7219.178323641071
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_evaporator_coil_load_total,7563.731820372686
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_evaporator_coil_load_total,9394.124374208635
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_evaporator_coil_load_total,10821.91533592408
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_evaporator_coil_load_total,14282.37071084129
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_evaporator_coil_load_total,15006.304275879953
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_evaporator_coil_load_total,16129.458414450157
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_evaporator_coil_load_total,16743.675055542335
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_evaporator_coil_load_total,21875.822443009827
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_evaporator_coil_load_total,20935.383208594594
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_evaporator_coil_load_total,26435.212132464
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_evaporator_coil_load_total,26945.518655298456
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_evaporator_coil_load_total,16527.22694196662
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_evaporator_coil_load_total,17407.114816743466
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_evaporator_coil_load_total,17083.667669887014
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_evaporator_coil_load_total,16744.254857408592
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_evaporator_coil_load_total,13612.589653976725
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_evaporator_coil_load_total,13562.544929602898
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_evaporator_coil_load_total,13366.215034632129
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_evaporator_coil_load_total,13371.788897025608
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_evaporator_coil_load_sensible,5807.430986843082
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_evaporator_coil_load_sensible,5849.811845703649
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_evaporator_coil_load_sensible,5806.070054288699
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_evaporator_coil_load_sensible,5740.333265530956
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_evaporator_coil_load_sensible,5611.143486439658
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_evaporator_coil_load_sensible,6012.067782802706
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_evaporator_coil_load_sensible,7528.015827248245
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_evaporator_coil_load_sensible,8751.494527521969
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_evaporator_coil_load_sensible,11758.478706255373
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_evaporator_coil_load_sensible,11985.566377112353
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_evaporator_coil_load_sensible,12474.154800488059
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_evaporator_coil_load_sensible,12655.560047919782
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_evaporator_coil_load_sensible,17378.661790472986
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_evaporator_coil_load_sensible,17574.865757180472
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_evaporator_coil_load_sensible,22454.792408557572
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_evaporator_coil_load_sensible,22528.064815896425
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_evaporator_coil_load_sensible,13047.39263468275
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_evaporator_coil_load_sensible,12851.89621532807
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_evaporator_coil_load_sensible,12152.099020225958
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_evaporator_coil_load_sensible,11537.72685613691
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_evaporator_coil_load_sensible,9050.093645672814
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_evaporator_coil_load_sensible,8939.95395316983
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_evaporator_coil_load_sensible,8741.160639217356
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_evaporator_coil_load_sensible,8661.484920504448
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_evaporator_coil_load_latent,1795.6475473084374
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_evaporator_coil_load_latent,1778.629023555366
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_evaporator_coil_load_latent,1773.7619149774177
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_evaporator_coil_load_latent,1723.8280435114614
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_evaporator_coil_load_latent,1608.0348372014137
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_evaporator_coil_load_latent,1551.6640375699808
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_evaporator_coil_load_latent,1866.1085469603906
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_evaporator_coil_load_latent,2070.420808402111
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_evaporator_coil_load_latent,2523.892004585916
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_evaporator_coil_load_latent,3020.7378987675993
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_evaporator_coil_load_latent,3655.303613962097
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_evaporator_coil_load_latent,4088.1150076225576
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_evaporator_coil_load_latent,4497.160652536839
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_evaporator_coil_load_latent,3360.5174514141218
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_evaporator_coil_load_latent,3980.4197239064288
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_evaporator_coil_load_latent,4417.453839402027
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_evaporator_coil_load_latent,3479.8343072838693
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_evaporator_coil_load_latent,4555.218601415394
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_evaporator_coil_load_latent,4931.568649661056
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_evaporator_coil_load_latent,5206.528001271685
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_evaporator_coil_load_latent,4562.496008303911
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_evaporator_coil_load_latent,4622.59097643307
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_evaporator_coil_load_latent,4625.054395414772
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_evaporator_coil_load_latent,4710.303976521159
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_zone_humidity_ratio,0.00925638189077805
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_zone_humidity_ratio,0.009219669553408217
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_zone_humidity_ratio,0.009226247784896007
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_zone_humidity_ratio,0.009169487668845398
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_zone_humidity_ratio,0.009047583131730649
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_zone_humidity_ratio,0.008901276386967298
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_zone_humidity_ratio,0.009170062486425327
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_zone_humidity_ratio,0.009481144162915359
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_zone_humidity_ratio,0.00962003996651928
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_zone_humidity_ratio,0.009976582001544984
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_zone_humidity_ratio,0.010391036945926177
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_zone_humidity_ratio,0.0106998890110294
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_zone_humidity_ratio,0.010127591105635738
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_zone_humidity_ratio,0.009692770734004165
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_zone_humidity_ratio,0.009519603830897536
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_zone_humidity_ratio,0.009622372841829034
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_zone_humidity_ratio,0.010360225660654497
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_zone_humidity_ratio,0.010923561368022494
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_zone_humidity_ratio,0.011074057930281723
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_zone_humidity_ratio,0.011125739187886894
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_zone_humidity_ratio,0.01135416630047272
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_zone_humidity_ratio,0.011403073149472167
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_zone_humidity_ratio,0.011419919555141695
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_zone_humidity_ratio,0.011476058216037357
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_cop_2,3.531432232435283
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_cop_2,3.5208464186991297
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_cop_2,3.529538755983908
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_cop_2,3.5384808709942286
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_cop_2,3.554069012990704
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_cop_2,3.4675004602878428
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_cop_2,3.2099437724314384
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_cop_2,3.0301603776198673
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_cop_2,2.993439473086522
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_cop_2,2.9841062771313633
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_cop_2,2.940685570935064
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_cop_2,2.933335758795839
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_cop_2,3.0246610068374595
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_cop_2,2.9547306935125914
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_cop_2,3.042275749474748
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_cop_2,3.047399340825111
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_cop_2,2.8541596304225654
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_cop_2,2.924455550561699
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_cop_2,3.041217424727171
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_cop_2,3.1500021534263025
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_cop_2,3.115504423695524
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_cop_2,3.136869106311791
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_cop_2,3.1705120080351272
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_cop_2,3.1882606271216747
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_odb,17.9875
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_odb,18.1125
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_odb,17.9875
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_odb,17.8
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_odb,17.425
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_odb,18.574999999999996
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_odb,22.9
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_odb,26.375000000000004
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_odb,28.262499999999996
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_odb,28.9
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_odb,30.275
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_odb,30.7875
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_odb,30.9125
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_odb,31.475
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_odb,32.0125
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_odb,32.2
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_odb,31.887500000000003
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_odb,31.325000000000003
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_odb,29.35
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_odb,27.6125
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_odb,27.2
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_odb,26.8875
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_odb,26.325000000000003
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_odb,26.1
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_edb,23.944849489998518
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_edb,23.963397444739506
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_edb,23.94487159614421
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_edb,23.916680208484824
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_edb,23.861022248628082
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_edb,24.033295763139428
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_edb,24.684029901169755
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_edb,25.20800526726287
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_edb,25.49070086427931
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_edb,25.58663003800338
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_edb,25.79542321756908
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_edb,25.871969623993376
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_edb,25.885115509070346
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_edb,25.96906288551504
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_edb,26.05145829060963
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_edb,26.08293827477
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_edb,26.03978011968635
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_edb,25.95579315277585
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_edb,25.655879083905674
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_edb,25.39346938521837
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_edb,25.333104052446856
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_edb,25.286503112258927
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_edb,25.201373841469813
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_edb,25.16741517454321
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_ewb,17.27839184759715
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_ewb,17.25519183040651
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_ewb,17.254298854519558
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_ewb,17.19457519850282
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_ewb,17.042827359577792
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_ewb,16.996032223773767
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_ewb,17.528558143124727
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_ewb,17.94544554185634
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_ewb,18.055315366578565
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_ewb,18.43058794315167
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_ewb,18.92317561481908
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_ewb,19.205776624234236
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_ewb,18.76753217567324
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_ewb,18.337617212044492
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_ewb,18.30550113665681
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_ewb,18.479174893508276
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_ewb,18.957791351275628
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_ewb,19.473290977769384
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_ewb,19.509496257186967
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_ewb,19.53787394499086
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_ewb,19.78547961122177
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_ewb,19.819496708365413
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_ewb,19.810098173057284
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_ewb,19.85748523728114
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_outdoor_humidity_ratio,0.011201933285177858
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_outdoor_humidity_ratio,0.011296221752077644
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_outdoor_humidity_ratio,0.011199180694051271
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_outdoor_humidity_ratio,0.011060818557718021
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_outdoor_humidity_ratio,0.010484282348367383
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_outdoor_humidity_ratio,0.01064785862320741
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_outdoor_humidity_ratio,0.012287852269615058
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_outdoor_humidity_ratio,0.011848777233207977
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_outdoor_humidity_ratio,0.011579938656585562
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_outdoor_humidity_ratio,0.012406033064600289
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_outdoor_humidity_ratio,0.01394889861200563
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_outdoor_humidity_ratio,0.013760970538394923
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_outdoor_humidity_ratio,0.011999212912461601
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_outdoor_humidity_ratio,0.011528114554116958
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_outdoor_humidity_ratio,0.012085903992729696
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_outdoor_humidity_ratio,0.013492450429886123
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_outdoor_humidity_ratio,0.014504382229875695
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_outdoor_humidity_ratio,0.015287875616144336
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_outdoor_humidity_ratio,0.01492999549486943
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_outdoor_humidity_ratio,0.015970058198740745
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_outdoor_humidity_ratio,0.016809735798284518
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_outdoor_humidity_ratio,0.016771127794541558
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_outdoor_humidity_ratio,0.016784233128061054
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_outdoor_humidity_ratio,0.01707669006088456
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_energy_consumption_total,4018.65
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_energy_consumption_total,3130.9
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_energy_consumption_supply_fan,517.737
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_energy_consumption_supply_fan,415.681
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_evaporator_coil_load_total,13653.6
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_evaporator_coil_load_total,9778.52
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_evaporator_coil_load_sensible,9849.71
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_evaporator_coil_load_sensible,9778.52
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_evaporator_coil_load_latent,3803.93
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_evaporator_coil_load_latent,2.179e-13
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_zone_humidity_ratio,0.0106446
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_zone_humidity_ratio,0.00646261
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_cop_2,3.90002
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_cop_2,3.60138
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_odb,16.8146
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_odb,16.8146
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_edb,24.982
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_edb,25.0003
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_energy_consumption_total,5243.59
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_energy_consumption_total,4089.76
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_energy_consumption_supply_fan,566.444
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_energy_consumption_supply_fan,457.987
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_evaporator_coil_load_total,13734
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_evaporator_coil_load_total,9843.08
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_evaporator_coil_load_sensible,9923.72
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_evaporator_coil_load_sensible,9843.08
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_evaporator_coil_load_latent,3810.25
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_evaporator_coil_load_latent,6.44225e-13
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_zone_humidity_ratio,0.0111425
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_zone_humidity_ratio,0.00646261
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_cop_2,2.91777
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_cop_2,2.69821
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_odb,29.5167
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_odb,29.5167
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_edb,18.8948
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_edb,14.9561

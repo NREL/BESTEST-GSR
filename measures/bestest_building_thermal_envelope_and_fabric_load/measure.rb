@@ -385,7 +385,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
 
     # set shadow calcs
     shadow_calc_freq = model.getShadowCalculation
-    shadow_calc_freq.setCalculationFrequency(1)
+    shadow_calc_freq.setShadingCalculationUpdateFrequency(1)
 
     # set ground temps
     ground_temps = model.getSiteGroundTemperatureBuildingSurface

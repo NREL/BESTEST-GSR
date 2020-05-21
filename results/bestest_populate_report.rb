@@ -10,6 +10,7 @@
 require 'csv'
 require 'fileutils'
 require 'rubyXL' # install gem first
+require 'rubyXL/convenience_methods'
 # gem documentation # http://www.rubydoc.info/gems/rubyXL/1.1.12/RubyXL/Cell
 # https://github.com/weshatheleopard/rubyXL
 require "#{File.dirname(__FILE__)}/resources/common_info"

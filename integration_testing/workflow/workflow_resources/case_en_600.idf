@@ -1,9 +1,12 @@
 
 Version,
-  8.8;                                    !- Version Identifier
+  9.3;                                    !- Version Identifier
+
+Timestep,
+  4;                                      !- Number of Timesteps per Hour
 
 LifeCycleCost:Parameters,
-  {ee5e33bd-b1ae-4364-96e0-d407fca8fbe5}, !- Name
+  Life Cycle Cost Parameters,             !- Name
   EndOfYear,                              !- Discounting Convention
   ConstantDollar,                         !- Inflation Approach
   0.03,                                   !- Real Discount Rate
@@ -18,7 +21,7 @@ LifeCycleCost:Parameters,
   None;                                   !- Depreciation Method
 
 LifeCycleCost:UsePriceEscalation,
-  U.S. Avg  Commercial-Electricity,       !- LCC Price Escalation Name
+  U.S. Avg  Commercial-Electricity,       !- Name
   Electricity,                            !- Resource
   2011,                                   !- Escalation Start Year
   January,                                !- Escalation Start Month
@@ -54,8 +57,8 @@ LifeCycleCost:UsePriceEscalation,
   0.9773;                                 !- Year Escalation 30
 
 LifeCycleCost:UsePriceEscalation,
-  U.S. Avg  Commercial-Distillate Oil,    !- LCC Price Escalation Name
-  FuelOil#1,                              !- Resource
+  U.S. Avg  Commercial-Distillate Oil,    !- Name
+  FuelOilNo1,                             !- Resource
   2011,                                   !- Escalation Start Year
   January,                                !- Escalation Start Month
   0.9714,                                 !- Year Escalation 1
@@ -90,8 +93,8 @@ LifeCycleCost:UsePriceEscalation,
   1.3743;                                 !- Year Escalation 30
 
 LifeCycleCost:UsePriceEscalation,
-  U.S. Avg  Commercial-Residual Oil,      !- LCC Price Escalation Name
-  FuelOil#2,                              !- Resource
+  U.S. Avg  Commercial-Residual Oil,      !- Name
+  FuelOilNo2,                             !- Resource
   2011,                                   !- Escalation Start Year
   January,                                !- Escalation Start Month
   0.8469,                                 !- Year Escalation 1
@@ -126,7 +129,7 @@ LifeCycleCost:UsePriceEscalation,
   1.2638;                                 !- Year Escalation 30
 
 LifeCycleCost:UsePriceEscalation,
-  U.S. Avg  Commercial-Natural gas,       !- LCC Price Escalation Name
+  U.S. Avg  Commercial-Natural gas,       !- Name
   NaturalGas,                             !- Resource
   2011,                                   !- Escalation Start Year
   January,                                !- Escalation Start Month
@@ -162,7 +165,7 @@ LifeCycleCost:UsePriceEscalation,
   1.3115;                                 !- Year Escalation 30
 
 LifeCycleCost:UsePriceEscalation,
-  U.S. Avg  Commercial-Coal,              !- LCC Price Escalation Name
+  U.S. Avg  Commercial-Coal,              !- Name
   Coal,                                   !- Resource
   2011,                                   !- Escalation Start Year
   January,                                !- Escalation Start Month
@@ -201,7 +204,7 @@ Building,
   BESTEST Case 600 - Base Case,           !- Name
   0,                                      !- North Axis {deg}
   Country,                                !- Terrain
-  ,                                       !- Loads Convergence Tolerance Value
+  ,                                       !- Loads Convergence Tolerance Value {W}
   ,                                       !- Temperature Convergence Tolerance Value {deltaC}
   FullInteriorAndExterior,                !- Solar Distribution
   ,                                       !- Maximum Number of Warmup Days
@@ -308,7 +311,6 @@ FenestrationSurface:Detailed,
   ZONE SURFACE SOUTH,                     !- Building Surface Name
   ,                                       !- Outside Boundary Condition Object
   0.5,                                    !- View Factor to Ground
-  ,                                       !- Shading Control Name
   ,                                       !- Frame and Divider Name
   1,                                      !- Multiplier
   ,                                       !- Number of Vertices
@@ -324,7 +326,6 @@ FenestrationSurface:Detailed,
   ZONE SURFACE SOUTH,                     !- Building Surface Name
   ,                                       !- Outside Boundary Condition Object
   0.5,                                    !- View Factor to Ground
-  ,                                       !- Shading Control Name
   ,                                       !- Frame and Divider Name
   1,                                      !- Multiplier
   ,                                       !- Number of Vertices
@@ -357,10 +358,12 @@ OtherEquipment,
   EquipmentLevel,                         !- Design Level Calculation Method
   200,                                    !- Design Level {W}
   ,                                       !- Power per Zone Floor Area {W/m2}
-  ,                                       !- Power per Person {W/Person}
+  ,                                       !- Power per Person {W/person}
   0,                                      !- Fraction Latent
   0.6,                                    !- Fraction Radiant
-  0;                                      !- Fraction Lost
+  0,                                      !- Fraction Lost
+  ,                                       !- Carbon Dioxide Generation Rate {m3/s-W}
+  General;                                !- End-Use Subcategory
 
 ZoneInfiltration:DesignFlowRate,
   Space Infiltration Design Flow Rate 1,  !- Name
@@ -380,8 +383,8 @@ ZoneControl:Thermostat,
   ZONE ONE Thermostat,                    !- Name
   ZONE ONE,                               !- Zone or ZoneList Name
   ZONE ONE Thermostat Schedule,           !- Control Type Schedule Name
-  ThermostatSetpoint:DualSetpoint,        !- Control Object Type 1
-  Thermostat Setpoint Dual Setpoint 1;    !- Control Name 1
+  ThermostatSetpoint:DualSetpoint,        !- Control 1 Object Type
+  Thermostat Setpoint Dual Setpoint 1;    !- Control 1 Name
 
 Schedule:Compact,
   ZONE ONE Thermostat Schedule,           !- Name
@@ -404,12 +407,12 @@ ThermostatSetpoint:DualSetpoint,
 
 Schedule:Constant,
   20.0 C,                                 !- Name
-  Temperature,                            !- Schedule Type Limits Name
+  Temperature 1,                          !- Schedule Type Limits Name
   20;                                     !- Hourly Value
 
 Schedule:Constant,
   27.0 C,                                 !- Name
-  Temperature,                            !- Schedule Type Limits Name
+  Temperature 1,                          !- Schedule Type Limits Name
   27;                                     !- Hourly Value
 
 ZoneHVAC:EquipmentConnections,
@@ -417,8 +420,7 @@ ZoneHVAC:EquipmentConnections,
   ZONE ONE Equipment List,                !- Zone Conditioning Equipment List Name
   ZONE ONE Inlet Node List,               !- Zone Air Inlet Node or NodeList Name
   ZONE ONE Exhaust Node List,             !- Zone Air Exhaust Node or NodeList Name
-  Node 1,                                 !- Zone Air Node Name
-  ZONE ONE Return Air Node;               !- Zone Return Air Node or NodeList Name
+  Node 1;                                 !- Zone Air Node Name
 
 NodeList,
   ZONE ONE Inlet Node List,               !- Name
@@ -454,14 +456,18 @@ ZoneHVAC:IdealLoadsAirSystem,
   ,                                       !- Demand Controlled Ventilation Type
   ,                                       !- Outdoor Air Economizer Type
   ,                                       !- Heat Recovery Type
-  ;                                       !- Sensible Heat Recovery Effectiveness {dimensionless}
+  ,                                       !- Sensible Heat Recovery Effectiveness {dimensionless}
+  ;                                       !- Latent Heat Recovery Effectiveness {dimensionless}
 
 ZoneHVAC:EquipmentList,
   ZONE ONE Equipment List,                !- Name
+  SequentialLoad,                         !- Load Distribution Scheme
   ZoneHVAC:IdealLoadsAirSystem,           !- Zone Equipment Object Type 1
   Zone HVAC Ideal Loads Air System 1,     !- Zone Equipment Name 1
   1,                                      !- Zone Equipment Cooling Sequence 1
-  1;                                      !- Zone Equipment Heating or No-Load Sequence 1
+  1,                                      !- Zone Equipment Heating or No-Load Sequence 1
+  ,                                       !- Zone Equipment Sequential Cooling Fraction Schedule Name 1
+  ;                                       !- Zone Equipment Sequential Heating Fraction Schedule Name 1
 
 SimulationControl,
   No,                                     !- Do Zone Sizing Calculation
@@ -478,20 +484,28 @@ RunPeriod,
   Run Period 1,                           !- Name
   1,                                      !- Begin Month
   1,                                      !- Begin Day of Month
+  2009,                                   !- Begin Year
   12,                                     !- End Month
   31,                                     !- End Day of Month
-  Tuesday,                                !- Day of Week for Start Day
+  2009,                                   !- End Year
+  Thursday,                               !- Day of Week for Start Day
   No,                                     !- Use Weather File Holidays and Special Days
   No,                                     !- Use Weather File Daylight Saving Period
   No,                                     !- Apply Weekend Holiday Rule
   Yes,                                    !- Use Weather File Rain Indicators
-  Yes,                                    !- Use Weather File Snow Indicators
-  1;                                      !- Number of Times Runperiod to be Repeated
+  Yes;                                    !- Use Weather File Snow Indicators
 
 ShadowCalculation,
-  AverageOverDaysInFrequency,             !- Calculation Method
-  1,                                      !- Calculation Frequency
-  15000;                                  !- Maximum Figures in Shadow Overlap Calculations
+  PolygonClipping,                        !- Shading Calculation Method
+  Periodic,                               !- Shading Calculation Update Frequency Method
+  1,                                      !- Shading Calculation Update Frequency
+  15000,                                  !- Maximum Figures in Shadow Overlap Calculations
+  SutherlandHodgman,                      !- Polygon Clipping Algorithm
+  512,                                    !- Pixel Counting Resolution
+  SimpleSkyDiffuseModeling,               !- Sky Diffuse Modeling Algorithm
+  No,                                     !- Output External Shading Calculation Results
+  No,                                     !- Disable Self-Shading Within Shading Zone Groups
+  No;                                     !- Disable Self-Shading From Shading Zone Groups to Other Zones
 
 SurfaceConvectionAlgorithm:Inside,
   TARP;                                   !- Algorithm
@@ -499,12 +513,12 @@ SurfaceConvectionAlgorithm:Inside,
 SurfaceConvectionAlgorithm:Outside,
   DOE-2;                                  !- Algorithm
 
-Timestep,
-  4;                                      !- Number of Timesteps per Hour
-
 Sizing:Parameters,
   1.25,                                   !- Heating Sizing Factor
   1.15;                                   !- Cooling Sizing Factor
+
+Output:Table:SummaryReports,
+  AllSummary;                             !- Report Name 1
 
 GlobalGeometryRules,
   UpperLeftCorner,                        !- Starting Vertex Position
@@ -690,6 +704,13 @@ Construction,
   PLASTERBOARD-1;                         !- Layer 3
 
 ScheduleTypeLimits,
+  Always On Discrete Limits,              !- Name
+  0,                                      !- Lower Limit Value {BasedOnField A3}
+  1,                                      !- Upper Limit Value {BasedOnField A3}
+  Discrete,                               !- Numeric Type
+  availability;                           !- Unit Type
+
+ScheduleTypeLimits,
   Fractional,                             !- Name
   0,                                      !- Lower Limit Value {BasedOnField A3}
   1,                                      !- Upper Limit Value {BasedOnField A3}
@@ -701,6 +722,18 @@ ScheduleTypeLimits,
   200,                                    !- Upper Limit Value {BasedOnField A3}
   Continuous,                             !- Numeric Type
   temperature;                            !- Unit Type
+
+ScheduleTypeLimits,
+  Temperature 1,                          !- Name
+  ,                                       !- Lower Limit Value {BasedOnField A3}
+  ,                                       !- Upper Limit Value {BasedOnField A3}
+  Continuous,                             !- Numeric Type
+  temperature;                            !- Unit Type
+
+Schedule:Constant,
+  Always On Discrete,                     !- Name
+  Always On Discrete Limits,              !- Schedule Type Limits Name
+  1;                                      !- Hourly Value
 
 Schedule:Day:Interval,
   Schedule Day 6,                         !- Name
@@ -871,7 +904,7 @@ Schedule:Year,
   31;                                     !- End Day 1
 
 Schedule:Week:Daily,
-  Schedule:Week:Daily {a2d4efa9-53b2-4a90-902b-84ac51965dd6}, !- Name
+  Always On Ruleset Fractional Week Rule - Jan1-Dec31, !- Name
   Schedule Day 6,                         !- Sunday Schedule:Day Name
   Schedule Day 6,                         !- Monday Schedule:Day Name
   Schedule Day 6,                         !- Tuesday Schedule:Day Name
@@ -888,14 +921,14 @@ Schedule:Week:Daily,
 Schedule:Year,
   Always On Ruleset Fractional,           !- Name
   Fractional,                             !- Schedule Type Limits Name
-  Schedule:Week:Daily {a2d4efa9-53b2-4a90-902b-84ac51965dd6}, !- Schedule:Week Name 1
+  Always On Ruleset Fractional Week Rule - Jan1-Dec31, !- Schedule:Week Name 1
   1,                                      !- Start Month 1
   1,                                      !- Start Day 1
   12,                                     !- End Month 1
   31;                                     !- End Day 1
 
 Schedule:Week:Daily,
-  Schedule:Week:Daily {a545750e-6ffb-451f-bc1b-772ff7803a25}, !- Name
+  Always On Ruleset Fractional 1 Week Rule - Jan1-Dec31, !- Name
   Schedule Day 7,                         !- Sunday Schedule:Day Name
   Schedule Day 7,                         !- Monday Schedule:Day Name
   Schedule Day 7,                         !- Tuesday Schedule:Day Name
@@ -912,16 +945,11 @@ Schedule:Week:Daily,
 Schedule:Year,
   Always On Ruleset Fractional 1,         !- Name
   Fractional,                             !- Schedule Type Limits Name
-  Schedule:Week:Daily {a545750e-6ffb-451f-bc1b-772ff7803a25}, !- Schedule:Week Name 1
+  Always On Ruleset Fractional 1 Week Rule - Jan1-Dec31, !- Schedule:Week Name 1
   1,                                      !- Start Month 1
   1,                                      !- Start Day 1
   12,                                     !- End Month 1
   31;                                     !- End Day 1
-
-Schedule:Constant,
-  Always On Discrete,                     !- Name
-  ,                                       !- Schedule Type Limits Name
-  1;                                      !- Hourly Value
 
 Schedule:Constant,
   Always Off Discrete,                    !- Name
@@ -932,6 +960,9 @@ Schedule:Constant,
   Always On Continuous,                   !- Name
   ,                                       !- Schedule Type Limits Name
   1;                                      !- Hourly Value
+
+OutdoorAir:Node,
+  Model Outdoor Air Node;                 !- Name
 
 Site:Location,
   Denver-Stapleton_CO_USA,                !- Name
@@ -954,76 +985,8 @@ Site:GroundTemperature:BuildingSurface,
   10,                                     !- November Ground Temperature {C}
   10;                                     !- December Ground Temperature {C}
 
-Output:Variable,
-  ,                                       !- Key Value
-  Zone Mean Air Temperature,              !- Variable Name
-  Hourly;                                 !- Reporting Frequency
-
-Output:Variable,
-  ,                                       !- Key Value
-  Surface Window Transmitted Solar Radiation Energy, !- Variable Name
-  Hourly;                                 !- Reporting Frequency
-
-Output:Variable,
-  ,                                       !- Key Value
-  Surface Window Transmitted Beam Solar Radiation Energy, !- Variable Name
-  Hourly;                                 !- Reporting Frequency
-
-Output:Variable,
-  ,                                       !- Key Value
-  Surface Window Transmitted Diffuse Solar Radiation Energy, !- Variable Name
-  Hourly;                                 !- Reporting Frequency
-
-Output:Variable,
-  ,                                       !- Key Value
-  Zone Windows Total Transmitted Solar Radiation Rate, !- Variable Name
-  Hourly;                                 !- Reporting Frequency
-
-Output:Variable,
-  ,                                       !- Key Value
-  Zone Air System Sensible Heating Energy, !- Variable Name
-  Hourly;                                 !- Reporting Frequency
-
-Output:Variable,
-  ,                                       !- Key Value
-  Zone Air System Sensible Cooling Energy, !- Variable Name
-  Hourly;                                 !- Reporting Frequency
-
-Output:Variable,
-  ,                                       !- Key Value
-  Surface Outside Face Sunlit Area,       !- Variable Name
-  Hourly;                                 !- Reporting Frequency
-
-Output:Variable,
-  ,                                       !- Key Value
-  Surface Outside Face Sunlit Fraction,   !- Variable Name
-  Hourly;                                 !- Reporting Frequency
-
-Output:Variable,
-  ,                                       !- Key Value
-  Surface Outside Face Incident Solar Radiation Rate per Area, !- Variable Name
-  Hourly;                                 !- Reporting Frequency
-
-Output:Variable,
-  ,                                       !- Key Value
-  Surface Window Transmitted Solar Radiation Rate, !- Variable Name
-  Hourly;                                 !- Reporting Frequency
-
-Output:Variable,
-  ,                                       !- Key Value
-  Surface Window Transmitted Beam Solar Radiation Rate, !- Variable Name
-  Hourly;                                 !- Reporting Frequency
-
-Output:Variable,
-  ,                                       !- Key Value
-  Surface Window Transmitted Diffuse Solar Radiation Rate, !- Variable Name
-  Hourly;                                 !- Reporting Frequency
-
 OutputControl:Table:Style,
   HTML;                                   !- Column Separator
-
-Output:Table:SummaryReports,
-  AllSummary;                             !- Report Name 1
 
 Output:VariableDictionary,
   IDF,                                    !- Key Field
@@ -1037,6 +1000,71 @@ LifeCycleCost:NonrecurringCost,
   Construction,                           !- Category
   0,                                      !- Cost
   ServicePeriod;                          !- Start of Costs
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Mean Air Temperature,              !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Air System Sensible Heating Energy, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Air System Sensible Cooling Energy, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Outside Face Sunlit Area,       !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Outside Face Sunlit Fraction,   !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Outside Face Incident Solar Radiation Rate per Area, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Window Transmitted Solar Radiation Rate, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Window Transmitted Beam Solar Radiation Rate, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Window Transmitted Diffuse Solar Radiation Rate, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Window Transmitted Solar Radiation Energy, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Window Transmitted Beam Solar Radiation Energy, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Surface Window Transmitted Diffuse Solar Radiation Energy, !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+Output:Variable,
+  ,                                       !- Key Value
+  Zone Windows Total Transmitted Solar Radiation Rate, !- Variable Name
+  hourly;                                 !- Reporting Frequency
 
 Output:Table:Monthly,
   Building Energy Performance - Electricity, !- Name
