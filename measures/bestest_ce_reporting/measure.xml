@@ -1,1012 +1,1297 @@
+<?xml version="1.0"?>
 <measure>
   <schema_version>3.0</schema_version>
   <name>bestest_ce_reporting</name>
   <uid>4f921756-b4bf-483e-b845-12ba3dd4bc69</uid>
-  <version_id>bb142cfa-dede-4402-8790-7cb796c7ee95</version_id>
-  <version_modified>20190417T180826Z</version_modified>
+  <version_id>c0fa3ed9-63d2-4dc7-8f52-f6aecf474e49</version_id>
+  <version_modified>20201001T090450Z</version_modified>
   <xml_checksum>F44A8258</xml_checksum>
   <class_name>BestestCeReporting</class_name>
   <display_name>Bestest Ce Reporting</display_name>
   <description>This doesn't generate a user HTML file with any meaningful content. It is here to create runner.RegisterValue objects that will be post processed downstream.</description>
   <modeler_description>The CSV project for the analysis will be downloaded from the server and then a script will run to pull data into Local Excel File.</modeler_description>
-  <arguments/>
+  <arguments />
   <outputs>
     <output>
       <name>clg_energy_consumption_total</name>
       <display_name>clg_energy_consumption_total</display_name>
       <short_name>clg_energy_consumption_total</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>clg_energy_consumption_compressor</name>
       <display_name>clg_energy_consumption_compressor</display_name>
       <short_name>clg_energy_consumption_compressor</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>clg_energy_consumption_supply_fan</name>
       <display_name>clg_energy_consumption_supply_fan</display_name>
       <short_name>clg_energy_consumption_supply_fan</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>clg_energy_consumption_condenser_fan</name>
       <display_name>clg_energy_consumption_condenser_fan</display_name>
       <short_name>clg_energy_consumption_condenser_fan</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>evaporator_coil_load_total</name>
       <display_name>evaporator_coil_load_total</display_name>
       <short_name>evaporator_coil_load_total</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>evaporator_coil_load_sensible</name>
       <display_name>evaporator_coil_load_sensible</display_name>
       <short_name>evaporator_coil_load_sensible</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>evaporator_coil_load_latent</name>
       <display_name>evaporator_coil_load_latent</display_name>
       <short_name>evaporator_coil_load_latent</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>zone_load_total</name>
       <display_name>zone_load_total</display_name>
       <short_name>zone_load_total</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>zone_load_sensible</name>
       <display_name>zone_load_sensible</display_name>
       <short_name>zone_load_sensible</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>zone_load_latent</name>
       <display_name>zone_load_latent</display_name>
       <short_name>zone_load_latent</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>feb_mean_cop</name>
       <display_name>feb_mean_cop</display_name>
       <short_name>feb_mean_cop</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>feb_mean_idb</name>
       <display_name>feb_mean_idb</display_name>
       <short_name>feb_mean_idb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>feb_mean_humidity_ratio</name>
       <display_name>feb_mean_humidity_ratio</display_name>
       <short_name>feb_mean_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>feb_max_cop</name>
       <display_name>feb_max_cop</display_name>
       <short_name>feb_max_cop</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>feb_max_idb</name>
       <display_name>feb_max_idb</display_name>
       <short_name>feb_max_idb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>feb_max_humidity_ratio</name>
       <display_name>feb_max_humidity_ratio</display_name>
       <short_name>feb_max_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>feb_min_cop</name>
       <display_name>feb_min_cop</display_name>
       <short_name>feb_min_cop</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>feb_min_idb</name>
       <display_name>feb_min_idb</display_name>
       <short_name>feb_min_idb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>feb_min_humidity_ratio</name>
       <display_name>feb_min_humidity_ratio</display_name>
       <short_name>feb_min_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>ann_sum_clg_energy_consumption_total</name>
       <display_name>ann_sum_clg_energy_consumption_total</display_name>
       <short_name>ann_sum_clg_energy_consumption_total</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>ann_sum_clg_energy_consumption_compressor</name>
       <display_name>ann_sum_clg_energy_consumption_compressor</display_name>
       <short_name>ann_sum_clg_energy_consumption_compressor</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>ann_sum_clg_energy_consumption_supply_fan</name>
       <display_name>ann_sum_clg_energy_consumption_supply_fan</display_name>
       <short_name>ann_sum_clg_energy_consumption_supply_fan</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>ann_sum_clg_energy_consumption_condenser_fan</name>
       <display_name>ann_sum_clg_energy_consumption_condenser_fan</display_name>
       <short_name>ann_sum_clg_energy_consumption_condenser_fan</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>ann_sum_evap_coil_load_total</name>
       <display_name>ann_sum_evap_coil_load_total</display_name>
       <short_name>ann_sum_evap_coil_load_total</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>ann_sum_evap_coil_load_sensible</name>
       <display_name>ann_sum_evap_coil_load_sensible</display_name>
       <short_name>ann_sum_evap_coil_load_sensible</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>ann_sum_evap_coil_load_latent</name>
       <display_name>ann_sum_evap_coil_load_latent</display_name>
       <short_name>ann_sum_evap_coil_load_latent</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>ann_mean_cop_2</name>
       <display_name>ann_mean_cop_2</display_name>
       <short_name>ann_mean_cop_2</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>ann_mean_idb</name>
       <display_name>ann_mean_idb</display_name>
       <short_name>ann_mean_idb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>ann_mean_zone_humidity_ratio</name>
       <display_name>ann_mean_zone_humidity_ratio</display_name>
       <short_name>ann_mean_zone_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>ann_mean_zone_relative_humidity</name>
       <display_name>ann_mean_zone_relative_humidity</display_name>
       <short_name>ann_mean_zone_relative_humidity</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>ann_mean_odb</name>
       <display_name>ann_mean_odb</display_name>
       <short_name>ann_mean_odb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>ann_mean_outdoor_humidity_ratio</name>
       <display_name>ann_mean_outdoor_humidity_ratio</display_name>
       <short_name>ann_mean_outdoor_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>may_sept_sum_clg_consumption_total</name>
       <display_name>may_sept_sum_clg_consumption_total</display_name>
       <short_name>may_sept_sum_clg_consumption_total</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>may_sept_sum_clg_consumption_compressor</name>
       <display_name>may_sept_sum_clg_consumption_compressor</display_name>
       <short_name>may_sept_sum_clg_consumption_compressor</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>may_sept_sum_clg_consumption_cond_fan</name>
       <display_name>may_sept_sum_clg_consumption_cond_fan</display_name>
       <short_name>may_sept_sum_clg_consumption_cond_fan</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>may_sept_sum_clg_consumption_indoor_fan</name>
       <display_name>may_sept_sum_clg_consumption_indoor_fan</display_name>
       <short_name>may_sept_sum_clg_consumption_indoor_fan</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>may_sept_sum_evap_coil_load_total</name>
       <display_name>may_sept_sum_evap_coil_load_total</display_name>
       <short_name>may_sept_sum_evap_coil_load_total</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>may_sept_sum_evap_coil_load_sensible</name>
       <display_name>may_sept_sum_evap_coil_load_sensible</display_name>
       <short_name>may_sept_sum_evap_coil_load_sensible</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>may_sept_sum_evap_coil_load_latent</name>
       <display_name>may_sept_sum_evap_coil_load_latent</display_name>
       <short_name>may_sept_sum_evap_coil_load_latent</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>may_sept_mean_cop_2</name>
       <display_name>may_sept_mean_cop_2</display_name>
       <short_name>may_sept_mean_cop_2</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>may_sept_mean_idb</name>
       <display_name>may_sept_mean_idb</display_name>
       <short_name>may_sept_mean_idb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>may_sept_mean_zone_humidity_ratio</name>
       <display_name>may_sept_mean_zone_humidity_ratio</display_name>
       <short_name>may_sept_mean_zone_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>may_sept_mean_zone_relative_humidity</name>
       <display_name>may_sept_mean_zone_relative_humidity</display_name>
       <short_name>may_sept_mean_zone_relative_humidity</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>energy_consumption_comp_both_fans_wh</name>
       <display_name>energy_consumption_comp_both_fans_wh</display_name>
       <short_name>energy_consumption_comp_both_fans_wh</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>energy_consumption_comp_both_fans_date</name>
       <display_name>energy_consumption_comp_both_fans_date</display_name>
       <short_name>energy_consumption_comp_both_fans_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>energy_consumption_comp_both_fans_hr</name>
       <display_name>energy_consumption_comp_both_fans_hr</display_name>
       <short_name>energy_consumption_comp_both_fans_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>evap_coil_load_sensible_wh</name>
       <display_name>evap_coil_load_sensible_wh</display_name>
       <short_name>evap_coil_load_sensible_wh</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>evap_coil_load_sensible_date</name>
       <display_name>evap_coil_load_sensible_date</display_name>
       <short_name>evap_coil_load_sensible_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>evap_coil_load_sensible_hr</name>
       <display_name>evap_coil_load_sensible_hr</display_name>
       <short_name>evap_coil_load_sensible_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>evap_coil_load_latent_wh</name>
       <display_name>evap_coil_load_latent_wh</display_name>
       <short_name>evap_coil_load_latent_wh</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>evap_coil_load_latent_date</name>
       <display_name>evap_coil_load_latent_date</display_name>
       <short_name>evap_coil_load_latent_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>evap_coil_load_latent_hr</name>
       <display_name>evap_coil_load_latent_hr</display_name>
       <short_name>evap_coil_load_latent_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>evap_coil_load_sensible_and_latent_wh</name>
       <display_name>evap_coil_load_sensible_and_latent_wh</display_name>
       <short_name>evap_coil_load_sensible_and_latent_wh</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>evap_coil_load_sensible_and_latent_date</name>
       <display_name>evap_coil_load_sensible_and_latent_date</display_name>
       <short_name>evap_coil_load_sensible_and_latent_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>evap_coil_load_sensible_and_latent_hr</name>
       <display_name>evap_coil_load_sensible_and_latent_hr</display_name>
       <short_name>evap_coil_load_sensible_and_latent_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>weather_odb_c</name>
       <display_name>weather_odb_c</display_name>
       <short_name>weather_odb_c</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>weather_odb_date</name>
       <display_name>weather_odb_date</display_name>
       <short_name>weather_odb_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>weather_odb_hr</name>
       <display_name>weather_odb_hr</display_name>
       <short_name>weather_odb_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>weather_outdoor_humidity_ratio_c</name>
       <display_name>weather_outdoor_humidity_ratio_c</display_name>
       <short_name>weather_outdoor_humidity_ratio_c</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>weather_outdoor_humidity_ratio_date</name>
       <display_name>weather_outdoor_humidity_ratio_date</display_name>
       <short_name>weather_outdoor_humidity_ratio_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>weather_outdoor_humidity_ratio_hr</name>
       <display_name>weather_outdoor_humidity_ratio_hr</display_name>
       <short_name>weather_outdoor_humidity_ratio_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>cop_2_max_cop_2</name>
       <display_name>cop_2_max_cop_2</display_name>
       <short_name>cop_2_max_cop_2</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>cop_2_max_date</name>
       <display_name>cop_2_max_date</display_name>
       <short_name>cop_2_max_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>cop_2_max_hr</name>
       <display_name>cop_2_max_hr</display_name>
       <short_name>cop_2_max_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>cop_2_min_cop_2</name>
       <display_name>cop_2_min_cop_2</display_name>
       <short_name>cop_2_min_cop_2</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>cop_2_min_date</name>
       <display_name>cop_2_min_date</display_name>
       <short_name>cop_2_min_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>cop_2_min_hr</name>
       <display_name>cop_2_min_hr</display_name>
       <short_name>cop_2_min_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>idb_max_idb</name>
       <display_name>idb_max_idb</display_name>
       <short_name>idb_max_idb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>idb_max_date</name>
       <display_name>idb_max_date</display_name>
       <short_name>idb_max_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>idb_max_hr</name>
       <display_name>idb_max_hr</display_name>
       <short_name>idb_max_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>idb_min_idb</name>
       <display_name>idb_min_idb</display_name>
       <short_name>idb_min_idb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>idb_min_date</name>
       <display_name>idb_min_date</display_name>
       <short_name>idb_min_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>idb_min_hr</name>
       <display_name>idb_min_hr</display_name>
       <short_name>idb_min_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>hr_max_humidity_ratio</name>
       <display_name>hr_max_humidity_ratio</display_name>
       <short_name>hr_max_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>hr_max_date</name>
       <display_name>hr_max_date</display_name>
       <short_name>hr_max_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>hr_max_hr</name>
       <display_name>hr_max_hr</display_name>
       <short_name>hr_max_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>hr_min_humidity_ratio</name>
       <display_name>hr_min_humidity_ratio</display_name>
       <short_name>hr_min_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>hr_min_date</name>
       <display_name>hr_min_date</display_name>
       <short_name>hr_min_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>hr_min_hr</name>
       <display_name>hr_min_hr</display_name>
       <short_name>hr_min_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>rh_max_relative_humidity</name>
       <display_name>rh_max_relative_humidity</display_name>
       <short_name>rh_max_relative_humidity</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>rh_max_date</name>
       <display_name>rh_max_date</display_name>
       <short_name>rh_max_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>rh_max_hr</name>
       <display_name>rh_max_hr</display_name>
       <short_name>rh_max_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>rh_min_relative_humidity</name>
       <display_name>rh_min_relative_humidity</display_name>
       <short_name>rh_min_relative_humidity</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>rh_min_date</name>
       <display_name>rh_min_date</display_name>
       <short_name>rh_min_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>rh_min_hr</name>
       <display_name>rh_min_hr</display_name>
       <short_name>rh_min_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_cop_2_max_cop_2</name>
       <display_name>apr_dec_cop_2_max_cop_2</display_name>
       <short_name>apr_dec_cop_2_max_cop_2</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_cop_2_max_date</name>
       <display_name>apr_dec_cop_2_max_date</display_name>
       <short_name>apr_dec_cop_2_max_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_cop_2_max_hr</name>
       <display_name>apr_dec_cop_2_max_hr</display_name>
       <short_name>apr_dec_cop_2_max_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_cop_2_min_cop_2</name>
       <display_name>apr_dec_cop_2_min_cop_2</display_name>
       <short_name>apr_dec_cop_2_min_cop_2</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_cop_2_min_date</name>
       <display_name>apr_dec_cop_2_min_date</display_name>
       <short_name>apr_dec_cop_2_min_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_cop_2_min_hr</name>
       <display_name>apr_dec_cop_2_min_hr</display_name>
       <short_name>apr_dec_cop_2_min_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_idb_max_idb</name>
       <display_name>apr_dec_idb_max_idb</display_name>
       <short_name>apr_dec_idb_max_idb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_idb_max_date</name>
       <display_name>apr_dec_idb_max_date</display_name>
       <short_name>apr_dec_idb_max_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_idb_max_hr</name>
       <display_name>apr_dec_idb_max_hr</display_name>
       <short_name>apr_dec_idb_max_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_idb_min_idb</name>
       <display_name>apr_dec_idb_min_idb</display_name>
       <short_name>apr_dec_idb_min_idb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_idb_min_date</name>
       <display_name>apr_dec_idb_min_date</display_name>
       <short_name>apr_dec_idb_min_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_idb_min_hr</name>
       <display_name>apr_dec_idb_min_hr</display_name>
       <short_name>apr_dec_idb_min_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_hr_max_humidity_ratio</name>
       <display_name>apr_dec_hr_max_humidity_ratio</display_name>
       <short_name>apr_dec_hr_max_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_hr_max_date</name>
       <display_name>apr_dec_hr_max_date</display_name>
       <short_name>apr_dec_hr_max_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_hr_max_hr</name>
       <display_name>apr_dec_hr_max_hr</display_name>
       <short_name>apr_dec_hr_max_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_hr_min_humidity_ratio</name>
       <display_name>apr_dec_hr_min_humidity_ratio</display_name>
       <short_name>apr_dec_hr_min_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_hr_min_date</name>
       <display_name>apr_dec_hr_min_date</display_name>
       <short_name>apr_dec_hr_min_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_hr_min_hr</name>
       <display_name>apr_dec_hr_min_hr</display_name>
       <short_name>apr_dec_hr_min_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_rh_max_relative_humidity</name>
       <display_name>apr_dec_rh_max_relative_humidity</display_name>
       <short_name>apr_dec_rh_max_relative_humidity</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_rh_max_date</name>
       <display_name>apr_dec_rh_max_date</display_name>
       <short_name>apr_dec_rh_max_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_rh_max_hr</name>
       <display_name>apr_dec_rh_max_hr</display_name>
       <short_name>apr_dec_rh_max_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_rh_min_relative_humidity</name>
       <display_name>apr_dec_rh_min_relative_humidity</display_name>
       <short_name>apr_dec_rh_min_relative_humidity</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_rh_min_date</name>
       <display_name>apr_dec_rh_min_date</display_name>
       <short_name>apr_dec_rh_min_date</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>apr_dec_rh_min_hr</name>
       <display_name>apr_dec_rh_min_hr</display_name>
       <short_name>apr_dec_rh_min_hr</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0628_hourly_energy_consumpton_compressor</name>
       <display_name>mmdd_0628_hourly_energy_consumpton_compressor</display_name>
       <short_name>mmdd_0628_hourly_energy_consumpton_compressor</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0628_hourly_energy_consumpton_cond_fan</name>
       <display_name>mmdd_0628_hourly_energy_consumpton_cond_fan</display_name>
       <short_name>mmdd_0628_hourly_energy_consumpton_cond_fan</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0628_hourly_evaporator_coil_load_total</name>
       <display_name>mmdd_0628_hourly_evaporator_coil_load_total</display_name>
       <short_name>mmdd_0628_hourly_evaporator_coil_load_total</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0628_hourly_evaporator_coil_load_sensible</name>
       <display_name>mmdd_0628_hourly_evaporator_coil_load_sensible</display_name>
       <short_name>mmdd_0628_hourly_evaporator_coil_load_sensible</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0628_hourly_evaporator_coil_load_latent</name>
       <display_name>mmdd_0628_hourly_evaporator_coil_load_latent</display_name>
       <short_name>mmdd_0628_hourly_evaporator_coil_load_latent</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0628_hourly_zone_humidity_ratio</name>
       <display_name>mmdd_0628_hourly_zone_humidity_ratio</display_name>
       <short_name>mmdd_0628_hourly_zone_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0628_hourly_cop_2</name>
       <display_name>mmdd_0628_hourly_cop_2</display_name>
       <short_name>mmdd_0628_hourly_cop_2</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0628_hourly_odb</name>
       <display_name>mmdd_0628_hourly_odb</display_name>
       <short_name>mmdd_0628_hourly_odb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0628_hourly_edb</name>
       <display_name>mmdd_0628_hourly_edb</display_name>
       <short_name>mmdd_0628_hourly_edb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0628_hourly_ewb</name>
       <display_name>mmdd_0628_hourly_ewb</display_name>
       <short_name>mmdd_0628_hourly_ewb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0628_hourly_outdoor_humidity_ratio</name>
       <display_name>mmdd_0628_hourly_outdoor_humidity_ratio</display_name>
       <short_name>mmdd_0628_hourly_outdoor_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0430_day_energy_consumption_total</name>
       <display_name>mmdd_0430_day_energy_consumption_total</display_name>
       <short_name>mmdd_0430_day_energy_consumption_total</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0430_day_energy_consumption_compressor</name>
       <display_name>mmdd_0430_day_energy_consumption_compressor</display_name>
       <short_name>mmdd_0430_day_energy_consumption_compressor</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0430_day_energy_consumption_supply_fan</name>
       <display_name>mmdd_0430_day_energy_consumption_supply_fan</display_name>
       <short_name>mmdd_0430_day_energy_consumption_supply_fan</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0430_day_energy_consumption_condenser_fan</name>
       <display_name>mmdd_0430_day_energy_consumption_condenser_fan</display_name>
       <short_name>mmdd_0430_day_energy_consumption_condenser_fan</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0430_day_evaporator_coil_load_total</name>
       <display_name>mmdd_0430_day_evaporator_coil_load_total</display_name>
       <short_name>mmdd_0430_day_evaporator_coil_load_total</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0430_day_evaporator_coil_load_sensible</name>
       <display_name>mmdd_0430_day_evaporator_coil_load_sensible</display_name>
       <short_name>mmdd_0430_day_evaporator_coil_load_sensible</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0430_day_evaporator_coil_load_latent</name>
       <display_name>mmdd_0430_day_evaporator_coil_load_latent</display_name>
       <short_name>mmdd_0430_day_evaporator_coil_load_latent</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0430_day_zone_humidity_ratio</name>
       <display_name>mmdd_0430_day_zone_humidity_ratio</display_name>
       <short_name>mmdd_0430_day_zone_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0430_day_cop_2</name>
       <display_name>mmdd_0430_day_cop_2</display_name>
       <short_name>mmdd_0430_day_cop_2</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0430_day_odb</name>
       <display_name>mmdd_0430_day_odb</display_name>
       <short_name>mmdd_0430_day_odb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0430_day_edb</name>
       <display_name>mmdd_0430_day_edb</display_name>
       <short_name>mmdd_0430_day_edb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0625_day_energy_consumption_total</name>
       <display_name>mmdd_0625_day_energy_consumption_total</display_name>
       <short_name>mmdd_0625_day_energy_consumption_total</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0625_day_energy_consumption_compressor</name>
       <display_name>mmdd_0625_day_energy_consumption_compressor</display_name>
       <short_name>mmdd_0625_day_energy_consumption_compressor</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0625_day_energy_consumption_supply_fan</name>
       <display_name>mmdd_0625_day_energy_consumption_supply_fan</display_name>
       <short_name>mmdd_0625_day_energy_consumption_supply_fan</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0625_day_energy_consumption_condenser_fan</name>
       <display_name>mmdd_0625_day_energy_consumption_condenser_fan</display_name>
       <short_name>mmdd_0625_day_energy_consumption_condenser_fan</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0625_day_evaporator_coil_load_total</name>
       <display_name>mmdd_0625_day_evaporator_coil_load_total</display_name>
       <short_name>mmdd_0625_day_evaporator_coil_load_total</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0625_day_evaporator_coil_load_sensible</name>
       <display_name>mmdd_0625_day_evaporator_coil_load_sensible</display_name>
       <short_name>mmdd_0625_day_evaporator_coil_load_sensible</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0625_day_evaporator_coil_load_latent</name>
       <display_name>mmdd_0625_day_evaporator_coil_load_latent</display_name>
       <short_name>mmdd_0625_day_evaporator_coil_load_latent</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0625_day_zone_humidity_ratio</name>
       <display_name>mmdd_0625_day_zone_humidity_ratio</display_name>
       <short_name>mmdd_0625_day_zone_humidity_ratio</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0625_day_cop_2</name>
       <display_name>mmdd_0625_day_cop_2</display_name>
       <short_name>mmdd_0625_day_cop_2</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0625_day_odb</name>
       <display_name>mmdd_0625_day_odb</display_name>
       <short_name>mmdd_0625_day_odb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>mmdd_0625_day_edb</name>
       <display_name>mmdd_0625_day_edb</display_name>
       <short_name>mmdd_0625_day_edb</short_name>
+      <description></description>
       <type>Double</type>
+      <units></units>
       <model_dependent>false</model_dependent>
     </output>
   </outputs>
-  <provenances/>
+  <provenances />
   <tags>
     <tag>Reporting.QAQC</tag>
   </tags>
@@ -1131,7 +1416,8 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>BBF029FF</checksum>
+      <checksum>FB8DB941</checksum>
     </file>
   </files>
 </measure>
+<error>wrong number of arguments (given 1, expected 0)</error>

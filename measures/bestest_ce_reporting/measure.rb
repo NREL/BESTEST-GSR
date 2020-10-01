@@ -61,14 +61,14 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
     hourly_variables << 'Zone Air System Sensible Heating Energy'
     hourly_variables << 'Zone Air System Sensible Cooling Energy'
     hourly_variables << 'Zone Total Internal Latent Gain Energy'
-    hourly_variables << 'Fan Electric Power'
+    hourly_variables << 'Fan Electricity Power'
     hourly_variables << 'Fan Rise in Air Temperature'
-    hourly_variables << 'Fan Electric Energy'
+    hourly_variables << 'Fan Electricity Energy'
     #hourly_variables << 'Cooling Coil Total Cooling Energy'
     #hourly_variables << 'Cooling Coil Sensible Cooling Rate'
     #hourly_variables << 'Cooling Coil Sensible Cooling Energy'
-    hourly_variables << 'Cooling Coil Electric Power'
-    hourly_variables << 'Cooling Coil Electric Energy'
+    hourly_variables << 'Cooling Coil Electricity Power'
+    hourly_variables << 'Cooling Coil Electricity Energy'
     hourly_variables << 'Cooling Coil Latent Cooling Rate'
     hourly_variables << 'Cooling Coil Latent Cooling Energy'
 
@@ -80,7 +80,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
     #hourly_variables << 'Unitary System Total Heating Rate'
     #hourly_variables << 'Unitary System Sensible Heating Rate'
     hourly_variables << 'Unitary System Latent Heating Rate'
-    hourly_variables << 'Unitary System Ancillary Electric Power'
+    hourly_variables << 'Unitary System Ancillary Electricity Power'
     hourly_variables << 'Unitary System Dehumidification Induced Heating Demand Rate'
     hourly_variables << 'Unitary System Fan Part Load Ratio'
     hourly_variables << 'Unitary System Compressor Part Load Ratio'
@@ -106,9 +106,9 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
       # hourly for february
 
       #6.3.1.1 (a,b,c,d)
-      hourly_var_feb << 'Air System Electric Energy' #J
-      hourly_var_feb << 'Air System DX Cooling Coil Electric Energy' #J
-      hourly_var_feb << 'Air System Fan Electric Energy' #J
+      hourly_var_feb << 'Air System Electricity Energy' #J
+      hourly_var_feb << 'Air System DX Cooling Coil Electricity Energy' #J
+      hourly_var_feb << 'Air System Fan Electricity Energy' #J
       # todo - can I get d directly or does d = a - b - c
 
       #6.3.1.2 (a,b,c)
@@ -132,9 +132,9 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
       hourly_variables << 'System Node Mass Flow Rate'
 
       # adding same variables to CE3-5 as CD 1-2, but annualy instead of for February
-      hourly_variables << 'Air System Electric Energy' #J
-      hourly_variables << 'Air System DX Cooling Coil Electric Energy' #J
-      hourly_variables << 'Air System Fan Electric Energy' #J
+      hourly_variables << 'Air System Electricity Energy' #J
+      hourly_variables << 'Air System DX Cooling Coil Electricity Energy' #J
+      hourly_variables << 'Air System Fan Electricity Energy' #J
       # todo - can I get d directly or does d = a - b - c
       hourly_variables << 'Cooling Coil Total Cooling Rate' #W
       hourly_variables << 'Cooling Coil Sensible Cooling Rate' #W
@@ -161,9 +161,9 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
       hourly_variables << 'Zone Other Equipment Total Heating Energy'
 
       # adding same variables to CE3-5 as CD 1-2, but annualy instead of for February
-      hourly_variables << 'Air System Electric Energy' #J
-      hourly_variables << 'Air System DX Cooling Coil Electric Energy' #J
-      hourly_variables << 'Air System Fan Electric Energy' #J
+      hourly_variables << 'Air System Electricity Energy' #J
+      hourly_variables << 'Air System DX Cooling Coil Electricity Energy' #J
+      hourly_variables << 'Air System Fan Electricity Energy' #J
       # todo - can I get d directly or does d = a - b - c
       hourly_variables << 'Cooling Coil Total Cooling Rate' #W
       hourly_variables << 'Cooling Coil Sensible Cooling Rate' #W
@@ -532,18 +532,18 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
 
       # get clg_energy_consumption_total
       key_value =  "BESTEST CE AIR LOOP"
-      variable_name = "Air System Electric Energy"
+      variable_name = "Air System Electricity Energy"
       timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value,31,306)
       total_cooling_energy_consumption_j = timeseries_hash
       value_kwh = OpenStudio.convert(timeseries_hash[:sum],'J','kWh').get
       runner.registerValue('clg_energy_consumption_total',value_kwh)
       # get clg_energy_consumption_compressor
-      variable_name = "Air System DX Cooling Coil Electric Energy"
+      variable_name = "Air System DX Cooling Coil Electricity Energy"
       timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value,31,306)
       value_kwh = OpenStudio.convert(timeseries_hash[:sum],'J','kWh').get
       runner.registerValue('clg_energy_consumption_compressor',value_kwh)
       # get clg_energy_consumption_supply_fan
-      variable_name = "Air System Fan Electric Energy"
+      variable_name = "Air System Fan Electricity Energy"
       timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value,31,306)
       value_kwh = OpenStudio.convert(timeseries_hash[:sum],'J','kWh').get
       runner.registerValue('clg_energy_consumption_supply_fan',value_kwh)
@@ -615,19 +615,19 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
 
       # get clg_energy_consumption_total
       key_value =  "BESTEST CE AIR LOOP"
-      variable_name = "Air System Electric Energy"
+      variable_name = "Air System Electricity Energy"
       timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value)
       value_kwh = OpenStudio.convert(timeseries_hash[:sum],'J','kWh').get
       runner.registerValue('ann_sum_clg_energy_consumption_total',value_kwh)
       # get clg_energy_consumption_compressor (this includes the compressor fan)
-      variable_name = "Air System DX Cooling Coil Electric Energy"
+      variable_name = "Air System DX Cooling Coil Electricity Energy"
       timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value)
       value_kwh = OpenStudio.convert(timeseries_hash[:sum],'J','kWh').get
       # store avg value for cop_2
       compressor_and_outdoor_fan = value_kwh
       runner.registerValue('ann_sum_clg_energy_consumption_compressor',value_kwh)
       # indoor fan
-      variable_name = "Air System Fan Electric Energy"
+      variable_name = "Air System Fan Electricity Energy"
       timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value)
       value_kwh = OpenStudio.convert(timeseries_hash[:sum],'J','kWh').get
       runner.registerValue('ann_sum_clg_energy_consumption_supply_fan',value_kwh)
@@ -680,18 +680,18 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
       # populate may_sept data
       # get clg_energy_consumption_total
       key_value =  "BESTEST CE AIR LOOP"
-      variable_name = "Air System Electric Energy"
+      variable_name = "Air System Electricity Energy"
       timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value,120,92)
       value_kwh = OpenStudio.convert(timeseries_hash[:sum],'J','kWh').get
       runner.registerValue('may_sept_sum_clg_consumption_total',value_kwh)
       # get clg_energy_consumption_compressor (this includes the compressor fan)
-      variable_name = "Air System DX Cooling Coil Electric Energy"
+      variable_name = "Air System DX Cooling Coil Electricity Energy"
       timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value,120,92)
       value_kwh = OpenStudio.convert(timeseries_hash[:sum],'J','kWh').get
       # store avg value for cop_2
       compressor_and_outdoor_fan = value_kwh
       runner.registerValue('may_sept_sum_clg_consumption_compressor',value_kwh)
-      variable_name = "Air System Fan Electric Energy"
+      variable_name = "Air System Fan Electricity Energy"
       timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value,120,92)
       value_kwh = OpenStudio.convert(timeseries_hash[:sum],'J','kWh').get
       runner.registerValue('may_sept_sum_clg_consumption_indoor_fan',value_kwh)
@@ -745,7 +745,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
 
       # get supply_fan
       key_value =  "BESTEST CE AIR LOOP"
-      variable_name = "Air System Electric Energy"
+      variable_name = "Air System Electricity Energy"
       timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value)
       value_wh = OpenStudio.convert(timeseries_hash[:max],'J','Wh').get
       runner.registerValue('energy_consumption_comp_both_fans_wh',value_wh)
@@ -789,7 +789,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
 
       # get denominator for cop_2
       key_value =  "BESTEST CE AIR LOOP"
-      variable_name = "Air System DX Cooling Coil Electric Energy"
+      variable_name = "Air System DX Cooling Coil Electricity Energy"
       timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value)
       compressor_and_outdoor_fan_array = timeseries_hash[:array]
       # get nominator for cop_2
@@ -852,7 +852,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
       # populate april_dec data
       # get denominator for cop_2
       key_value =  "BESTEST CE AIR LOOP"
-      variable_name = "Air System DX Cooling Coil Electric Energy"
+      variable_name = "Air System DX Cooling Coil Electricity Energy"
       timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value,90)
       compressor_and_outdoor_fan_array = timeseries_hash[:array]
       # get nominator for cop_2
@@ -945,7 +945,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
 
       # get clg_energy_consumption_compressor
       key_value =  "BESTEST CE AIR LOOP"
-      variable_name = "Air System DX Cooling Coil Electric Energy"
+      variable_name = "Air System DX Cooling Coil Electricity Energy"
       output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', variable_name, key_value)
       runner.registerValue('mmdd_0628_hourly_energy_consumpton_compressor',hourly_values(output_timeseries,'2009-06-28','J','Wh'))
       # get clg_energy_consumption_supply_fan (can't calculate)
@@ -971,7 +971,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
 
       # get clg_energy_consumption_total (for cop calc)
       key_value =  "BESTEST CE AIR LOOP"
-      variable_name = "Air System DX Cooling Coil Electric Energy"
+      variable_name = "Air System DX Cooling Coil Electricity Energy"
       output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', variable_name, key_value)
       compressor_and_outdoor_fan_array = hourly_values(output_timeseries,'2009-06-28').split(",")
       # get zone_load_total (for net_refrigeration_effect_w)
@@ -1024,21 +1024,21 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
 
       # get clg_energy_consumption_total
       key_value =  "BESTEST CE AIR LOOP"
-      variable_name = "Air System Electric Energy"
+      variable_name = "Air System Electricity Energy"
       output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', variable_name, key_value)
       avg = avg_from_hourly_values(output_timeseries,'2009-04-30','J', 'Wh')
       runner.registerValue('mmdd_0430_day_energy_consumption_total',avg)
       avg = avg_from_hourly_values(output_timeseries,'2009-06-25','J', 'Wh')
       runner.registerValue('mmdd_0625_day_energy_consumption_total',avg)
       # get clg_energy_consumption_compressor
-      variable_name = "Air System DX Cooling Coil Electric Energy"
+      variable_name = "Air System DX Cooling Coil Electricity Energy"
       output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', variable_name, key_value)
       avg = avg_from_hourly_values(output_timeseries,'2009-04-30','J', 'Wh')
       runner.registerValue('mmdd_0430_day_energy_consumption_compressor',avg)
       avg = avg_from_hourly_values(output_timeseries,'2009-06-25','J', 'Wh')
       runner.registerValue('mmdd_0625_day_energy_consumption_compressor',avg)
       # get clg_energy_consumption_supply_fan
-      variable_name = "Air System Fan Electric Energy"
+      variable_name = "Air System Fan Electricity Energy"
       output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', variable_name, key_value)
       avg = avg_from_hourly_values(output_timeseries,'2009-04-30','J', 'Wh')
       runner.registerValue('mmdd_0430_day_energy_consumption_supply_fan',avg)
@@ -1082,7 +1082,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
 
       # get clg_energy_consumption_total (for cop calc)
       key_value =  "BESTEST CE AIR LOOP"
-      variable_name = "Air System DX Cooling Coil Electric Energy"
+      variable_name = "Air System DX Cooling Coil Electricity Energy"
       output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', variable_name, key_value)
       compressor_and_outdoor_fan_array = hourly_values(output_timeseries,'2009-04-30').split(",")
       compressor_and_outdoor_fan = 0
@@ -1104,7 +1104,7 @@ class BestestCeReporting < OpenStudio::Ruleset::ReportingUserScript
 
       # get clg_energy_consumption_total (for cop calc)
       key_value =  "BESTEST CE AIR LOOP"
-      variable_name = "Air System DX Cooling Coil Electric Energy"
+      variable_name = "Air System DX Cooling Coil Electricity Energy"
       output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', variable_name, key_value)
       compressor_and_outdoor_fan_array = hourly_values(output_timeseries,'2009-06-25').split(",")
       # get zone_load_total (for net_refrigeration_effect_w)
