@@ -8,10 +8,10 @@ The default IDF generation is based on the OpenStudio CLI, but the workflow supp
 
 ### Dependencies
 
-* Install [OpenStudio 3.1.0](https://www.openstudio.net/downloads)
+* Install [OpenStudio 3.2.0](https://www.openstudio.net/downloads)
     * make sure command line can recognize the 'openstudio' command
 * Install [Ruby](https://www.ruby-lang.org/en/) on your system if it isn't already setup.
-    * 2.5.5 was used for development but other versions may work
+    * 2.7 was used for development but other versions may work
     * Since OpenStudio has it's own embedded Ruby, which is used for running measures, you don't necessarily have to use a version of Ruby supported by OpenStudio.
 * Install [RubyXL](https://rubygems.org/gems/rubyXL) ruby gem
     * This is used to modify Microsoft Excel spreadsheets
