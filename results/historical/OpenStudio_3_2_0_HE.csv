@@ -1,0 +1,54 @@
+program_name_and_version,EnergyPlus 9.5.0
+program_version_release_date,03/30/2021
+program_name_short,E+
+results_submission_date,05/04/2021
+organization,National Renewable Energy Laboratory
+organization_short,NREL
+Total Furnace Load HE100: 100% eff.,77.76
+Total Furnace Load HE110: 80% eff.,77.76
+"Total Furnace Load HE120: 80% eff., PLR=0.4",31.189
+Total Furnace Load HE130: No Load,0
+Total Furnace Load HE140: Periodic PLR,31.189
+Total Furnace Load HE150: Continuous Circ. Fan,31.226
+Total Furnace Load HE160: Cycling Circ. Fan,31.19
+Total Furnace Load HE170: Draft Fan,31.226
+Total Furnace Load HE210: Realistic Weather,43.034
+Total Furnace Load HE220: Setback Thermostat,40.742
+Total Furnace Load HE230: Undersized Furnace,35.815
+Total Furnace Input HE100: 100% eff.,77.76
+Total Furnace Input HE110: 80% eff.,97.2
+"Total Furnace Input HE120: 80% eff., PLR=0.4",38.38
+Total Furnace Input HE130: No Load,0
+Total Furnace Input HE140: Periodic PLR,39.03
+Total Furnace Input HE150: Continuous Circ. Fan,37.31
+Total Furnace Input HE160: Cycling Circ. Fan,38.32
+Total Furnace Input HE170: Draft Fan,37.31
+Total Furnace Input HE210: Realistic Weather,52.77
+Total Furnace Input HE220: Setback Thermostat,49.9
+Total Furnace Input HE230: Undersized Furnace,43.42
+Fuel Consumption HE100: 100% eff.,0.000263158
+Fuel Consumption HE110: 80% eff.,0.000328947
+"Fuel Consumption HE120: 80% eff., PLR=0.4",0.000129887
+Fuel Consumption HE130: No Load,0
+Fuel Consumption HE140: Periodic PLR,0.000132087
+Fuel Consumption HE150: Continuous Circ. Fan,0.000126266
+Fuel Consumption HE160: Cycling Circ. Fan,0.000129684
+Fuel Consumption HE170: Draft Fan,0.000126266
+Fuel Consumption HE210: Realistic Weather,0.000178586
+Fuel Consumption HE220: Setback Thermostat,0.000168873
+Fuel Consumption HE230: Undersized Furnace,0.000146943
+Fan Energy HE150: Continuous Circ. Fan,433.333
+Fan Energy HE160: Cycling Circ. Fan,172.222
+Fan Energy HE170: Draft Fan,475
+Fan Energy HE210: Realistic Weather,294.444
+Fan Energy HE220: Setback Thermostat,277.778
+Fan Energy HE230: Undersized Furnace,483.333
+Mean Zone Temperature HE210: Realistic Weather,20.0003
+Mean Zone Temperature HE220: Setback Thermostat,18.5368
+Mean Zone Temperature HE230: Undersized Furnace,15.3747
+Maximum Zone Temperature HE210: Realistic Weather,20.0014
+Maximum Zone Temperature HE220: Setback Thermostat,20.0014
+Maximum Zone Temperature HE230: Undersized Furnace,20.0014
+Minimum Zone Temperature HE210: Realistic Weather,20
+Minimum Zone Temperature HE220: Setback Thermostat,15
+Minimum Zone Temperature HE230: Undersized Furnace,1.85761
