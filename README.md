@@ -2,15 +2,15 @@ Building Energy Simulation Test - Generation Simulation and Reporting (BESTEST-G
 =============
 
 ### Table of Contents
-- [Purpose of Repository](#purpose_of_repository)<br/>
-- [Supported Tools](#Supported Tools)<br/>
-- [Dependencies](#Dependencies)<br/>
-- [Steps to Run BESTEST Test Cases and Generate Submission Spreadsheets](#steps_to_run_bestest_test_cases_and_generate_submission_spreadsheets)<br/>
-- [Workflow Details](#workflow_details)<br/>
+- [Purpose of Repository](#purpose-of-repository)<br/>
+- [Supported Tools](#supported-tools)<br/>
+- [Dependencies](#dependencies)<br/>
+- [Steps to Run BESTEST Test Cases and Generate Submission Spreadsheets](#steps-to-run-bestest-test-cases-and-generate-submission-spreadsheets)<br/>
+- [Workflow Details](#workflow-details)<br/>
 - [Measures](#measures)<br/>
-- [Integration Testing Files](#integration_testing_files)<br/>
+- [Integration Testing Files](#integration-testing-files)<br/>
 - [Results](#results)<br/>
-- [Next Steps](#next_steps)<br/>
+- [Next Steps](#next-steps)<br/>
 
 ### Purpose of Repository
 
