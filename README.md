@@ -42,7 +42,11 @@ The default IDF generation is based on the OpenStudio CLI, but the workflow supp
     * zip file for each datapoint are saved to 'results/bestest_zips'
     * A CSV file is saved to "historical" directory with a name unique too this release that is not overwritten in the future.
         * Currently an Excel file with aggregated historical data is saved manually to look at at changes from one release of a tool to the next.
-    
+
+![Workflow Diagram](docs/BESTEST-GSR_diagram.jpg "Workflow Diagram")
+
+*The image above gives an overview of the proess automated by the `run_all_generate_reports.rb` script.*
+
 ### Workflow Details
 
 Currently not all ASHRAE Standard 140-2014 test cases are made. Only test cases required for 179D are created. The following sections are modeled. Under each section is a list of measures, and the Excel file that high level results are created for.
