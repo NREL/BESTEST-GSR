@@ -19,7 +19,7 @@ jobs:
       run: |
           gem install parallel
           gem install rubyXL
-    - name: install dependencies
+    - name: run workflows
       shell: bash 
       run: |
           ruby run_all_generate_reports.rb 
