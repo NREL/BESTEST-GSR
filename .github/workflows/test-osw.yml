@@ -1,0 +1,25 @@
+name: Test OSW
+on: push
+
+jobs:
+  test-osw:
+    runs-on: ubuntu-latest
+    container:  nrel/openstudio:3.2.1
+    steps:
+    - name: check out repository
+      uses: actions/checkout@v2
+    - name: enviroment info
+      shell: bash 
+      run: |
+          openstudio --version
+          ruby -v
+          bundle -v
+    - name: install dependencies
+      shell: bash 
+      run: |
+          gem install parallel
+          gem install rubyXL
+    - name: install dependencies
+      shell: bash 
+      run: |
+          ruby run_all_generate_reports.rb 
