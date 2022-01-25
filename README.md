@@ -22,7 +22,7 @@ The default IDF generation is based on the OpenStudio CLI, but the workflow supp
 
 ### Dependencies
 
-* Install [OpenStudio 3.2.0](https://www.openstudio.net/downloads)
+* Install [OpenStudio 3.3.0](https://www.openstudio.net/downloads)
     * make sure command line can recognize the 'openstudio' command
 * Install [Ruby](https://www.ruby-lang.org/en/) on your system if it isn't already setup.
     * 2.7 is used for development but other versions may work
