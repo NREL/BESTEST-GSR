@@ -326,8 +326,8 @@ puts "Adding General Information"
 common_info = BestestResults.populate_common_info
 
 # starting position
-gen_info_row = 45
-gen_info_col = 0
+gen_info_row = 21
+gen_info_col = 2
 
 # populate generalinfo
 worksheet.sheet_data[gen_info_row][gen_info_col].change_contents(common_info[:program_name_and_version])
@@ -350,6 +350,10 @@ historical_gen_info << ["organization_short",common_info[:organization_short]]
 puts "Saving #{copy_results_5_2a}"
 workbook.write(copy_results_5_2a)
 
+# load Adding Results worksheet to enter common data
+worksheet_ar = workbook['Adding Results']
+puts "Loading #{worksheet.sheet_name} Worksheet"
+
 # create OpenStudio copy with updated program info
 # Copy Excel File
 os_copy_results_5_2a = 'RESULTS5-2a_OS.xlsx'
@@ -365,13 +369,13 @@ gen_info_row = 45
 gen_info_col = 0
 
 # populate generalinfo
-worksheet.sheet_data[gen_info_row][gen_info_col].change_contents(common_info[:program_name_and_version])
-worksheet.sheet_data[gen_info_row+1][gen_info_col+4].change_contents(common_info[:program_version_release_date])
-worksheet.sheet_data[gen_info_row+2][gen_info_col+4].change_contents(common_info[:program_name_short])
-worksheet.sheet_data[gen_info_row+3][gen_info_col+4].change_contents(common_info[:results_submission_date])
+worksheet_ar.sheet_data[gen_info_row][gen_info_col].change_contents(common_info[:program_name_and_version])
+worksheet_ar.sheet_data[gen_info_row+1][gen_info_col+4].change_contents(common_info[:program_version_release_date])
+worksheet_ar.sheet_data[gen_info_row+2][gen_info_col+4].change_contents(common_info[:program_name_short])
+worksheet_ar.sheet_data[gen_info_row+3][gen_info_col+4].change_contents(common_info[:results_submission_date])
 # row skiped in Excel
-worksheet.sheet_data[gen_info_row+5][gen_info_col].change_contents(common_info[:organization])
-worksheet.sheet_data[gen_info_row+6][gen_info_col+4].change_contents(common_info[:organization_short])
+worksheet_ar.sheet_data[gen_info_row+5][gen_info_col].change_contents(common_info[:organization])
+worksheet_ar.sheet_data[gen_info_row+6][gen_info_col+4].change_contents(common_info[:organization_short])
 
 # Save Updated Excel File
 puts "Saving #{os_copy_results_5_2a}"
