@@ -42,59 +42,76 @@ workbook = RubyXL::Parser.parse(copy_results_5_2a)
 worksheet = workbook['YourData']
 puts "Loading #{worksheet.sheet_name} Worksheet"
 
+# code to temporarily skip new test cases, which break script remove later
+# TODO - make new test cases, and add into report
+new_conditioned_zone_loads = ['660','670','680','685','695','980','985','995','450','460','470']
+new_ff_cases = ["680FF","980FF"]
+
 category = "Annual Heating Loads"
 puts "Populating #{category}"
-(64..98).each do |i|
-  target_case = worksheet.sheet_data[i][0].value
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingannual_heating])
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
+(69..114).each do |i|
+  target_case = worksheet.sheet_data[i][1].value
+  next if new_conditioned_zone_loads.include?(target_case.to_s)
+  worksheet.sheet_data[i][2].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingannual_heating])
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
 end
 
 category = "Annual Cooling Loads"
 puts "Populating #{category}"
-(103..137).each do |i|
-  target_case = worksheet.sheet_data[i][0].value
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingannual_cooling])
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
+(69..114).each do |i|
+  target_case = worksheet.sheet_data[i][1].value
+  next if new_conditioned_zone_loads.include?(target_case.to_s)
+  worksheet.sheet_data[i][3].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingannual_cooling])
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][3].value.to_s]
 end
 
-category = "Annual Houlry Integrated Peak Heating Loads"
+category = "Annual Hourly Integrated Peak Heating Loads"
 puts "Populating #{category}"
-(145..179).each do |i|
-  target_case = worksheet.sheet_data[i][0].value
-  puts "working on case #{target_case}"
+(69..114).each do |i|
+  target_case = worksheet.sheet_data[i][1].value
+  next if new_conditioned_zone_loads.include?(target_case.to_s)
 
   # get date and time from raw value
   raw_value = csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingpeak_heating_time]
-  date = raw_value[0,6]
+  date = raw_value[0,6] 
+  # takes month and day of month instead of date now)
+  month = raw_value[3,3] # TODO - TYP confirm if month has to CamCase Capital (is JAN ok instead of Jan)
+  day_of_month = raw_value[0,2] 
+  # TODO - TYP investigate throughout this section, looking at std 140 2020 docs may want to increase hour to next hour (if time is x:mm where mm is anything but 00 then increase x by 1)
   time = raw_value[7,2].to_i
 
   # populate value date and time columns
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingpeak_heating_value])
-  worksheet.sheet_data[i][2].change_contents(date)
-  worksheet.sheet_data[i][3].change_contents(time)
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}_#{worksheet.sheet_data[144][1].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}_#{worksheet.sheet_data[144][2].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}_#{worksheet.sheet_data[144][3].value.to_s}",worksheet.sheet_data[i][3].value.to_s]
+  worksheet.sheet_data[i][4].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingpeak_heating_value])
+  worksheet.sheet_data[i][5].change_contents(month)
+  worksheet.sheet_data[i][6].change_contents(day_of_month)
+  worksheet.sheet_data[i][7].change_contents(time)
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][4].value.to_s}",worksheet.sheet_data[i][4].value.to_s]
+  # TODO - TYP decide if I want to add month and day of month to historical CSV or re-combine to date used in the past, trying to keep old DATE instead of month and day of month as separate values
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_DATE}",date]
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][7].value.to_s}",worksheet.sheet_data[i][7].value.to_s]
 end
 
-category = "Annual Houlry Integrated Peak Cooling Loads"
+category = "Annual Hourly Integrated Peak Cooling Loads"
 puts "Populating #{category}"
-(198..232).each do |i|
-  target_case = worksheet.sheet_data[i][0].value
+(69..114).each do |i|
+  target_case = worksheet.sheet_data[i][1].value
+  next if new_conditioned_zone_loads.include?(target_case.to_s)
 
   # get date and time from raw value
   raw_value = csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingpeak_cooling_time]
   date = raw_value[0,6]
+  month = raw_value[3,3]
+  day_of_month = raw_value[0,2]  
   time = raw_value[7,2].to_i
 
   # populate value date and time columns
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingpeak_cooling_value])
-  worksheet.sheet_data[i][2].change_contents(date)
-  worksheet.sheet_data[i][3].change_contents(time)
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}_#{worksheet.sheet_data[197][1].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}_#{worksheet.sheet_data[197][2].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}_#{worksheet.sheet_data[197][3].value.to_s}",worksheet.sheet_data[i][3].value.to_s]
+  worksheet.sheet_data[i][8].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingpeak_cooling_value])
+  worksheet.sheet_data[i][9].change_contents(date)
+  worksheet.sheet_data[i][10].change_contents(time)
+  worksheet.sheet_data[i][11].change_contents(time)
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][8].value.to_s}",worksheet.sheet_data[i][8].value.to_s]
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_DATE",date]
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][11].value.to_s}",worksheet.sheet_data[i][11].value.to_s]
 end
 
 # date format should be dd-MMM. Hour is integer
@@ -130,7 +147,7 @@ def self.return_date_time_from_8760_index(index)
       dd = 1 + raw_date - counter
       date_string = "#{"%02d" % dd}-#{mmm}"
       hour = (index % 24)
-      return [date_string,hour]
+      return [date_string,hour,mmm,dd] # kept date_sring for now and just added mmm and dd so I can use either for historical string for now.
     else
       counter = counter + v
     end
@@ -142,74 +159,98 @@ end
 category = "FF Max Hourly Zone Temperature"
 puts "Populating #{category}"
 # this also includes case 960
-(253..257).each do |i|
-  target_case = worksheet.sheet_data[i][0].value
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingmax_temp])
+(129..135).each do |i|
+  target_case = worksheet.sheet_data[i][1].value
+  next if new_ff_cases.include?(target_case.to_s)
+  worksheet.sheet_data[i][7].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingmax_temp])
   index_position = csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingmax_index_position]
   date_time_array = return_date_time_from_8760_index(index_position)
-  worksheet.sheet_data[i][2].change_contents(date_time_array[0])
-  worksheet.sheet_data[i][3].change_contents(date_time_array[1])
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}_#{worksheet.sheet_data[252][1].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}_#{worksheet.sheet_data[252][2].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}_#{worksheet.sheet_data[252][3].value.to_s}",worksheet.sheet_data[i][3].value.to_s]
+  worksheet.sheet_data[i][8].change_contents(date_time_array[2])
+  worksheet.sheet_data[i][9].change_contents(date_time_array[3])
+  worksheet.sheet_data[i][10].change_contents(date_time_array[1])
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[128][7].value.to_s}",worksheet.sheet_data[i][7].value.to_s]
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_DATE",date_time_array[0]]
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[128][10].value.to_s}",worksheet.sheet_data[i][10].value.to_s]
 end
 
 # tag date and time
 category = "FF Min Hourly Zone Temperature"
 puts "Populating #{category}"
 # this also includes case 960
-(262..266).each do |i|
-  target_case = worksheet.sheet_data[i][0].value
+(129..135).each do |i|
+  target_case = worksheet.sheet_data[i][1].value
+  next if new_ff_cases.include?(target_case.to_s)
   # populate value date and time columns
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingmin_temp])
+  worksheet.sheet_data[i][3].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingmin_temp])
   index_position = csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingmin_index_position]
   date_time_array = return_date_time_from_8760_index(index_position)
-  worksheet.sheet_data[i][2].change_contents(date_time_array[0])
-  worksheet.sheet_data[i][3].change_contents(date_time_array[1])
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}_#{worksheet.sheet_data[261][1].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}_#{worksheet.sheet_data[261][2].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}_#{worksheet.sheet_data[261][3].value.to_s}",worksheet.sheet_data[i][3].value.to_s]
+  worksheet.sheet_data[i][4].change_contents(date_time_array[2])
+  worksheet.sheet_data[i][5].change_contents(date_time_array[3])
+  worksheet.sheet_data[i][6].change_contents(date_time_array[1])
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[128][3].value.to_s}",worksheet.sheet_data[i][3].value.to_s]
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_DATE",date_time_array[0]]
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[128][6].value.to_s}",worksheet.sheet_data[i][6].value.to_s]
 end
 
 category = "FF Average Hourly Zone Temperature"
 puts "Populating #{category}"
 # this also includes case 960
-(271..275).each do |i|
-  target_case = worksheet.sheet_data[i][0].value
+(129..135).each do |i|
+  target_case = worksheet.sheet_data[i][1].value
+  next if new_ff_cases.include?(target_case.to_s)
   # populate value date and time columns
-  worksheet.sheet_data[i][1].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingavg_temp])
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
+  worksheet.sheet_data[i][2].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingavg_temp])
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
 end
 
 category = "Annual Incident Total Case 600"
 puts "Populating #{category}"
 target_case = '600'
-worksheet.sheet_data[293][1].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingnorth_incident_solar_radiation])
-worksheet.sheet_data[294][1].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingeast_incident_solar_radiation])
-worksheet.sheet_data[295][1].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingwest_incident_solar_radiation])
-worksheet.sheet_data[296][1].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingsouth_incident_solar_radiation])
-worksheet.sheet_data[297][1].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportinghorizontal_incident_solar_radiation])
-historical_rows << ["#{category} #{worksheet.sheet_data[293][0].value.to_s}",worksheet.sheet_data[293][1].value.to_s]
-historical_rows << ["#{category} #{worksheet.sheet_data[294][0].value.to_s}",worksheet.sheet_data[294][1].value.to_s]
-historical_rows << ["#{category} #{worksheet.sheet_data[295][0].value.to_s}",worksheet.sheet_data[295][1].value.to_s]
-historical_rows << ["#{category} #{worksheet.sheet_data[296][0].value.to_s}",worksheet.sheet_data[296][1].value.to_s]
-historical_rows << ["#{category} #{worksheet.sheet_data[297][0].value.to_s}",worksheet.sheet_data[297][1].value.to_s]
+# order of code is based on std 140 2017 but updated in place for std 140 2020
+worksheet.sheet_data[155][2].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingnorth_incident_solar_radiation])
+worksheet.sheet_data[156][2].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingeast_incident_solar_radiation])
+worksheet.sheet_data[158][2].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingwest_incident_solar_radiation])
+worksheet.sheet_data[157][2].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingsouth_incident_solar_radiation])
+worksheet.sheet_data[154][2].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportinghorizontal_incident_solar_radiation])
+historical_rows << ["#{category} 600#{worksheet.sheet_data[155][1].value.to_s}",worksheet.sheet_data[155][2].value.to_s]
+historical_rows << ["#{category} 600#{worksheet.sheet_data[156][1].value.to_s}",worksheet.sheet_data[156][2].value.to_s]
+historical_rows << ["#{category} 600#{worksheet.sheet_data[158][1].value.to_s}",worksheet.sheet_data[158][2].value.to_s]
+historical_rows << ["#{category} 600#{worksheet.sheet_data[157][1].value.to_s}",worksheet.sheet_data[157][2].value.to_s]
+historical_rows << ["#{category} 600#{worksheet.sheet_data[154][1].value.to_s}",worksheet.sheet_data[154][2].value.to_s]
 
-# changing cases not to match what
+# changing cases not to match what is in Spreadsheet(2014)
 category = "Unshaded Annual Transmitted Cases 620 and 600"
 puts "Populating #{category}"
-worksheet.sheet_data[312][1].change_contents(csv_hash['620'][:bestest_building_thermal_envelope_and_fabric_load_reportingzone_total_transmitted_solar_radiation])
-worksheet.sheet_data[313][1].change_contents(csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingzone_total_transmitted_solar_radiation])
-historical_rows << ["#{category} #{worksheet.sheet_data[312][0].value.to_s}",worksheet.sheet_data[312][1].value.to_s]
-historical_rows << ["#{category} #{worksheet.sheet_data[313][0].value.to_s}",worksheet.sheet_data[313][1].value.to_s]
+worksheet.sheet_data[165][2].change_contents(csv_hash['620'][:bestest_building_thermal_envelope_and_fabric_load_reportingzone_total_transmitted_solar_radiation])
+worksheet.sheet_data[162][2].change_contents(csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingzone_total_transmitted_solar_radiation])
+historical_rows << ["#{category} 920WEST",worksheet.sheet_data[165][2].value.to_s]
+historical_rows << ["#{category} 900SOUTH",worksheet.sheet_data[162][2].value.to_s]
+# use lines below if decide to pull from spreadsheet and change historical description
+# historical_rows << ["#{category} #{worksheet.sheet_data[165][1].value.to_s}",worksheet.sheet_data[165][2].value.to_s]
+# historical_rows << ["#{category} #{worksheet.sheet_data[162][1].value.to_s}",worksheet.sheet_data[162][2].value.to_s]
+
+=begin
+# new Unshaded outputs for Std 140 2020
+category = "Unshaded Annual Transmitted Cases 660 and 670"
+puts "Populating #{category}"
+# TODO - add code to populate this
+worksheet.sheet_data[163][2].change_contents(csv_hash['660'][:bestest_building_thermal_envelope_and_fabric_load_reportingzone_total_transmitted_solar_radiation])
+worksheet.sheet_data[164][2].change_contents(csv_hash['670'][:bestest_building_thermal_envelope_and_fabric_load_reportingzone_total_transmitted_solar_radiation])
+historical_rows << ["#{category} #{worksheet.sheet_data[163][1].value.to_s}",worksheet.sheet_data[163][2].value.to_s]
+historical_rows << ["#{category} #{worksheet.sheet_data[164][1].value.to_s}",worksheet.sheet_data[164][2].value.to_s]
+=end
 
 category = "Shaded Annual Transmitted Cases 930 and 910"
 puts "Populating #{category}"
-worksheet.sheet_data[332][1].change_contents(csv_hash['930'][:bestest_building_thermal_envelope_and_fabric_load_reportingzone_total_transmitted_solar_radiation])
-worksheet.sheet_data[333][1].change_contents(csv_hash['910'][:bestest_building_thermal_envelope_and_fabric_load_reportingzone_total_transmitted_solar_radiation])
-historical_rows << ["#{category} #{worksheet.sheet_data[332][0].value.to_s}",worksheet.sheet_data[332][1].value.to_s]
-historical_rows << ["#{category} #{worksheet.sheet_data[333][0].value.to_s}",worksheet.sheet_data[333][1].value.to_s]
+worksheet.sheet_data[170][1].change_contents(csv_hash['930'][:bestest_building_thermal_envelope_and_fabric_load_reportingzone_total_transmitted_solar_radiation])
+worksheet.sheet_data[169][1].change_contents(csv_hash['910'][:bestest_building_thermal_envelope_and_fabric_load_reportingzone_total_transmitted_solar_radiation])
+historical_rows << ["#{category} 930WEST",worksheet.sheet_data[170][1].value.to_s]
+historical_rows << ["#{category} 910SOUTH",worksheet.sheet_data[169][1].value.to_s]
 
+
+# TODO - re-create data for extended specific date tables. Reporting measure will need to be updated to get correct data in to workflow_results_csv
+
+=begin
 category = "Hourly Incident Solar Radiation Cloudy Day March 5th Case 600 - South"
 puts "Populating #{category}"
 array = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingsurf_out_inst_slr_rad_0305_zone_surface_south].split(",")
@@ -240,7 +281,7 @@ counter = 0
   counter += 1
 end
 
-category = "Hourly Incident Solar Radiation Clear Dat July 27th Case 600 - West"
+category = "Hourly Incident Solar Radiation Clear Day July 27th Case 600 - West"
 puts "Populating #{category}"
 array = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingsurf_out_inst_slr_rad_0727_zone_surface_west].split(",")
 counter = 0
@@ -309,17 +350,23 @@ counter = 0
   historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
   counter += 1
 end
+=end
 
 category = "Hourly Annual Zone Temperature Bin Data - Case 900FF"
 puts "Populating #{category}"
 array = csv_hash['900FF'][:bestest_building_thermal_envelope_and_fabric_load_reportingtemp_bins].split(",")
-# bin array is just -20 to 70C. The spreadsheet looks for -50 to 98C. May need to extend array or make blanks 0.
+# bin array is just -19 to 70C. The spreadsheet looks for -50 to 98C. May need to extend array or make blanks 0.
+# TODO - confirms bins are not offset
 counter = 0
-(779..868).each do |i|
-  worksheet.sheet_data[i][1].change_contents(array[counter+2].to_f)
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][0].value.to_s}",worksheet.sheet_data[i][1].value.to_s]
+(360..449).each do |i|
+  worksheet.sheet_data[i][2].change_contents(array[counter+2].to_f)
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
   counter += 1
 end
+
+# TODO - add data for new table Sky Temperature Output (not in Std 140 2017)
+
+# TODO - add data for Monthly Conditioned Zone Loads (Cases 600 and 900) (not in Std 140 2017)
 
 puts "Adding General Information"
 # gather general information
@@ -329,12 +376,12 @@ common_info = BestestResults.populate_common_info
 gen_info_row = 21
 gen_info_col = 2
 
-# populate generalinfo
+# populate general info
 worksheet.sheet_data[gen_info_row][gen_info_col].change_contents(common_info[:program_name_and_version])
 worksheet.sheet_data[gen_info_row+1][gen_info_col+4].change_contents(common_info[:program_version_release_date])
 worksheet.sheet_data[gen_info_row+2][gen_info_col+4].change_contents(common_info[:program_name_short])
 worksheet.sheet_data[gen_info_row+3][gen_info_col+4].change_contents(common_info[:results_submission_date])
-# row skiped in Excel
+# row skipped in Excel
 worksheet.sheet_data[gen_info_row+5][gen_info_col].change_contents(common_info[:organization])
 worksheet.sheet_data[gen_info_row+6][gen_info_col+4].change_contents(common_info[:organization_short])
 
@@ -365,15 +412,15 @@ puts "Adding General Information"
 common_info = BestestResults.populate_common_info("OS")
 
 # starting position
-gen_info_row = 45
-gen_info_col = 0
+gen_info_row = 21
+gen_info_col = 2
 
-# populate generalinfo
+# populate general info
 worksheet_ar.sheet_data[gen_info_row][gen_info_col].change_contents(common_info[:program_name_and_version])
 worksheet_ar.sheet_data[gen_info_row+1][gen_info_col+4].change_contents(common_info[:program_version_release_date])
 worksheet_ar.sheet_data[gen_info_row+2][gen_info_col+4].change_contents(common_info[:program_name_short])
 worksheet_ar.sheet_data[gen_info_row+3][gen_info_col+4].change_contents(common_info[:results_submission_date])
-# row skiped in Excel
+# row skipped in Excel
 worksheet_ar.sheet_data[gen_info_row+5][gen_info_col].change_contents(common_info[:organization])
 worksheet_ar.sheet_data[gen_info_row+6][gen_info_col+4].change_contents(common_info[:organization_short])
 
