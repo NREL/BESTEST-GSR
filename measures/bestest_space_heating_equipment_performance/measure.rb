@@ -2,8 +2,8 @@
 # http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/
 
 # load library to map case to model variables
-require_relative "../../shared_resources/besttest_case_var_lib"
-require_relative "../../shared_resources/besttest_model_methods"
+require_relative "../../shared_resources/bestest_case_var_lib"
+require_relative "../../shared_resources/bestest_model_methods"
 require_relative "../../shared_resources/epw"
 
 # start the measure

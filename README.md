@@ -87,7 +87,7 @@ The measures are contained in the "measures" directory at the top level of the r
     * There is a library of 9 OSM files that contains geometry, schedules, constructions, and materials. Measures clone these into the seed model. They are named `Bestest_Geo_#.osm`.
     * There is a library of 11  EPW files. The measure will assign different EPW files for different test cases
       * There is also an `epw.rb` file used in support of setting up weather file and location.
-    * `besttest_case_var_lib.rb` contains data to create a set of variable values from the case number. 
+    * `bestest_case_var_lib.rb` contains data to create a set of variable values from the case number. 
         * Below is a list of tables that are used to create this data.
             * Table B1-1
             * Table B1-2
@@ -98,7 +98,7 @@ The measures are contained in the "measures" directory at the top level of the r
           * bestest_5_2_3_case_lookup
           * bestest_5_3_case_lookup
           * bestest_5_4_case_lookup
-    * `besttest_model_methods.rb` contains additional methods not contained in `measure.rb`.
+    * `bestest_model_methods.rb` contains additional methods not contained in `measure.rb`.
       * set_opaque_surface_properties
       * add_output_variable
       * config_sim_settings
@@ -110,7 +110,7 @@ The measures are contained in the "measures" directory at the top level of the r
     * The envelope reporting measure has some content in the HTML that was used for measure development, but it not used at all in this workflow.
 
 ##### Model articulation steps
-* besttest_case_var_lib.rb is loaded
+* bestest_case_var_lib.rb is loaded
 * Case number is mapped to set of variables
 * Adjust simulation settings
 * Assign EPW file
@@ -150,7 +150,7 @@ The 'results' folder at the top of the repository is used to populate the `YourD
 
 ##### Files in 'results' folder.
 * The is a file named `workflow_results.csv` files with `runner.RegisterValue` data are copied here from the `out.osw` files from individual test cases.
-* Zip file with detailed results for each testcase are saved in `bestest_zips` folder. This is not committed ot the repository to keep the check size smaller. Zip files from current and prior releases of are available on [Amazon S3](http://besttest-gsr.s3-website-us-west-2.amazonaws.com/?prefix=). 
+* Zip file with detailed results for each testcase are saved in `bestest_zips` folder. This is not committed ot the repository to keep the check size smaller. Zip files from current and prior releases of are available on [Amazon S3](http://bestest-gsr.s3-website-us-west-2.amazonaws.com/?prefix=). 
 * There are three `bestest_populate_report.rb` scrips to generate the populated Excel file for each of the three sections (Envelope, Cooling, Heating).
 * The `resources` folder contains raw Excel files from ASHRAE Standard 140-2014.
   * The `common_info.rb` file under `resoucres` contains organization and release specicific information that gets injected into the final Excel files. This should be updated before the script is run to generate new Excel files. 

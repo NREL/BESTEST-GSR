@@ -92,7 +92,7 @@ module BestestModelMethods
 
     end
 
-    runner.registerInfo("Output Reqeust > #{key_value},#{output_variable.variableName}, #{reporting_frequency}")
+    runner.registerInfo("Output Request > #{key_value},#{output_variable.variableName}, #{reporting_frequency}")
 
   end
 
