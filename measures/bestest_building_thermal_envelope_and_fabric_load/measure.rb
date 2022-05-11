@@ -241,7 +241,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
     end
 
     # set opaque surface properties (no special logic needed for sun space. Internal wall from const set is correct)
-    altered_materials =  BestestModelMethods.set_opqaue_surface_properties(model,variable_hash)
+    altered_materials =  BestestModelMethods.set_opaque_surface_properties(model,variable_hash)
     runner.registerInfo("Surface Properties > altered #{altered_materials.uniq.size} materials.")
 
     # lookup schedules that might be needed

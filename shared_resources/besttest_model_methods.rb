@@ -1,7 +1,7 @@
 module BestestModelMethods
 
   # set short wave and IR int and ext surface properties for walls and roofs
-  def self.set_opqaue_surface_properties(model,variable_hash)
+  def self.set_opaque_surface_properties(model,variable_hash)
 
     # arrays
     interior_materials = []

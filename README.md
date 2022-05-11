@@ -99,7 +99,7 @@ The measures are contained in the "measures" directory at the top level of the r
           * bestest_5_3_case_lookup
           * bestest_5_4_case_lookup
     * `besttest_model_methods.rb` contains additional methods not contained in `measure.rb`.
-      * set_opqaue_surface_properties
+      * set_opaque_surface_properties
       * add_output_variable
       * config_sim_settings
       * create_he_system
