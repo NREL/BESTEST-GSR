@@ -150,7 +150,7 @@ The 'results' folder at the top of the repository is used to populate the `YourD
 
 ##### Files in 'results' folder.
 * The is a file named `workflow_results.csv` files with `runner.RegisterValue` data are copied here from the `out.osw` files from individual test cases.
-* Zip file with detailed results for each testcase are saved in `bestest_zips` folder. This is not committed ot the repository to keep the check size smaller. Zip files from current and prior releases of are available on [Amazon S3](http://bestest-gsr.s3-website-us-west-2.amazonaws.com/?prefix=). 
+* Zip file with detailed results for each testcase are saved in `bestest_zips` folder. This is not committed ot the repository to keep the check size smaller. Zip files from current and prior releases of are available on [Amazon S3](http://besttest-gsr.s3-website-us-west-2.amazonaws.com/?prefix=). 
 * There are three `bestest_populate_report.rb` scrips to generate the populated Excel file for each of the three sections (Envelope, Cooling, Heating).
 * The `resources` folder contains raw Excel files from ASHRAE Standard 140-2014.
   * The `common_info.rb` file under `resoucres` contains organization and release specicific information that gets injected into the final Excel files. This should be updated before the script is run to generate new Excel files. 
