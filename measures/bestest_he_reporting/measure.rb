@@ -1,7 +1,7 @@
 # see the URL below for information on how to write OpenStudio measures
 # http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/
 
-require "#{File.dirname(__FILE__)}/resources/os_lib_reporting_bestest"
+require File.expand_path("../../shared_resources/os_lib_reporting_bestest", File.dirname(__FILE__))
 
 #start the measure
 class BestestHeReporting < OpenStudio::Ruleset::ReportingUserScript

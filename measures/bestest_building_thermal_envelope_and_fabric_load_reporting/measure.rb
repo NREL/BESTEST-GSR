@@ -1,8 +1,11 @@
 require 'erb'
 require 'json'
 
-require "#{File.dirname(__FILE__)}/resources/os_lib_reporting_bestest"
-require "#{File.dirname(__FILE__)}/resources/os_lib_helper_methods"
+require File.expand_path("../../shared_resources/os_lib_reporting_bestest", File.dirname(__FILE__))
+
+# load OpenStudio measure libraries from openstudio-extension gem
+require 'openstudio-extension'
+require 'openstudio/extension/core/os_lib_helper_methods'
 
 # start the measure
 class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset::ReportingUserScript
