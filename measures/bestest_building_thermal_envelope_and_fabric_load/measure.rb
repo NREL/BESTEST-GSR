@@ -84,7 +84,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
     # Add weather file and design day objects (won't work in apply measures now)
     top_dir = File.dirname(__FILE__)
     weather_dir = File.expand_path("../../shared_resources/", top_dir)
-    weather_file_name = "DRYCOLDTMY.epw"
+    weather_file_name = "725650TYCST.epw"
     weather_file = File.join(weather_dir, weather_file_name)
     epw_file = OpenStudio::EpwFile.new(weather_file)
     weather_object = OpenStudio::Model::WeatherFile.setWeatherFile(model, epw_file).get

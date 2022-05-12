@@ -112,7 +112,7 @@ OS:WeatherFile,
   -104.86,                                !- Longitude {deg}
   -7,                                     !- Time Zone {hr}
   1611,                                   !- Elevation {m}
-  file:///Users/dgoldwas/Documents/GitHub/OSEP_BESTTEST/measures/bestest_building_thermal_envelope_and_fabric_load_tests/resources/DRYCOLDTMY.epw, !- Url
+  file:///Users/dgoldwas/Documents/GitHub/OSEP_BESTTEST/measures/bestest_building_thermal_envelope_and_fabric_load_tests/resources/725650TYCST.epw, !- Url
   08DEB5B3;                               !- Checksum
 
 OS:Building,

@@ -24,7 +24,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReports_Test < MiniTest::Unit::
   def epw_path_default
     # make sure we have a weather data location
     epw = nil
-    epw = OpenStudio::Path.new("#{File.dirname(__FILE__)}/DRYCOLDTMY.epw")
+    epw = OpenStudio::Path.new("#{File.dirname(__FILE__)}/725650TYCST.epw")
     assert(File.exist?(epw.to_s))
     return epw.to_s
   end
@@ -216,7 +216,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReports_Test < MiniTest::Unit::
   def test_case_600
     args = {}
     model_in_path = "#{File.dirname(__FILE__)}/600_test_output.osm"
-    epw_path = "#{File.dirname(__FILE__)}/DRYCOLDTMY.epw"
+    epw_path = "#{File.dirname(__FILE__)}/725650TYCST.epw"
 
     apply_measure_to_model(__method__.to_s.gsub('test_',''), args, model_in_path, epw_path)
   end
@@ -224,7 +224,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReports_Test < MiniTest::Unit::
   def test_case_910
     args = {}
     model_in_path = "#{File.dirname(__FILE__)}/910_test_output.osm"
-    epw_path = "#{File.dirname(__FILE__)}/DRYCOLDTMY.epw"
+    epw_path = "#{File.dirname(__FILE__)}/725650TYCST.epw"
 
     apply_measure_to_model(__method__.to_s.gsub('test_',''), args, model_in_path, epw_path)
   end
@@ -232,7 +232,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReports_Test < MiniTest::Unit::
   def test_case_950FF
     args = {}
     model_in_path = "#{File.dirname(__FILE__)}/950FF_test_output.osm"
-    epw_path = "#{File.dirname(__FILE__)}/DRYCOLDTMY.epw"
+    epw_path = "#{File.dirname(__FILE__)}/725650TYCST.epw"
 
     apply_measure_to_model(__method__.to_s.gsub('test_',''), args, model_in_path, epw_path)
   end
