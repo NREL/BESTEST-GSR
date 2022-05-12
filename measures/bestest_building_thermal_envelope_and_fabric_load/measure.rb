@@ -244,6 +244,11 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
     altered_materials =  BestestModelMethods.set_opaque_surface_properties(model,variable_hash)
     runner.registerInfo("Surface Properties > altered #{altered_materials.uniq.size} materials.")
 
+    if variable_hash[:wall_roof_increased_insulation] # run code if variable exists and if value is set to true
+      altered_constructions =  BestestModelMethods.set_wall_roof_insulation(model,variable_hash)
+      runner.registerInfo("Exterior Wall/Roof Insulation Properties > altered #{altered_constructions.uniq.size} insulation materials.")
+    end
+
     # lookup schedules that might be needed
     bestest_htg_setback = resource_model.getModelObjectByName("BESTEST htg SETBACK").get.to_ScheduleRuleset.get
     bestest_clg_night_vent = resource_model.getModelObjectByName("BESTEST clg Night Vent").get.to_ScheduleRuleset.get

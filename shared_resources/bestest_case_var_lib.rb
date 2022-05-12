@@ -620,7 +620,7 @@ module BestestCaseVarLib
         :b1_1_note_01 => false,
         :b1_1_note_02 => false,
         :b1_1_note_03 => false,
-        :opaque_increased_insulation => true
+        :wall_roof_increased_insulation => true
     ]
     variable_hash_lookup['685 - Thermostat Deadband'] = [
         :htg_set => 20.0,
@@ -659,7 +659,7 @@ module BestestCaseVarLib
         :b1_1_note_01 => false,
         :b1_1_note_02 => false,
         :b1_1_note_03 => false,
-        :opaque_increased_insulation => true
+        :wall_roof_increased_insulation => true
     ]
     variable_hash_lookup['800 - High-Mass without Solar Gains'] = [
         :htg_set => 20.0,
@@ -841,7 +841,7 @@ module BestestCaseVarLib
         :b1_1_note_01 => false,
         :b1_1_note_02 => false,
         :b1_1_note_03 => false,
-        :opaque_increased_insulation => true
+        :wall_roof_increased_insulation => true
     ]
     variable_hash_lookup['985 - Thermostat Deadband'] = [
         :htg_set => 20.0,
@@ -880,7 +880,7 @@ module BestestCaseVarLib
         :b1_1_note_01 => false,
         :b1_1_note_02 => false,
         :b1_1_note_03 => false,
-        :opaque_increased_insulation => true
+        :wall_roof_increased_insulation => true
     ]
     variable_hash_lookup['600FF'] = [
         :htg_set => "NONE",
@@ -978,7 +978,7 @@ module BestestCaseVarLib
         :b1_1_note_01 => false,
         :b1_1_note_02 => false,
         :b1_1_note_03 => false,
-        :opaque_increased_insulation => true
+        :wall_roof_increased_insulation => true
     ]    
     variable_hash_lookup['980FF - Increased Opaque Surface Insulation'] = [
         :htg_set => "NONE",
@@ -998,7 +998,7 @@ module BestestCaseVarLib
         :b1_1_note_01 => false,
         :b1_1_note_02 => false,
         :b1_1_note_03 => false,
-        :opaque_increased_insulation => true
+        :wall_roof_increased_insulation => true
     ]
     return variable_hash_lookup
 

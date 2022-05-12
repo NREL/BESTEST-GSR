@@ -21,7 +21,8 @@
     {
       "measure_dir_name": "bestest_building_thermal_envelope_and_fabric_load_reporting",
       "arguments": {
-      }
+      },
+      "name" : "Envelope Reporting"
     }
   ],
   "name": "EF670"

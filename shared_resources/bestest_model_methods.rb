@@ -52,6 +52,47 @@ module BestestModelMethods
 
   end
 
+  # increase insulation for exterior walls and roofs
+  def self.set_wall_roof_insulation(model,variable_hash)
+
+    # arrays
+    exterior_wall_insulation_materials = []
+    exterior_roof_insulation_materials = []
+    altered_insulation_materials = []
+
+    model.getDefaultConstructionSets.each do |const_set|
+      next if !const_set.name.to_s.include?("BESTEST")
+      ext_constructions = const_set.defaultExteriorSurfaceConstructions.get
+      ext_wall = ext_constructions.wallConstruction.get.to_LayeredConstruction.get
+      # get teh second layer material
+      exterior_wall_insulation_materials << ext_wall.layers[1].to_OpaqueMaterial.get.to_StandardOpaqueMaterial.get
+      ext_roof = ext_constructions.roofCeilingConstruction.get.to_LayeredConstruction.get
+      # get teh second layer material
+      exterior_roof_insulation_materials << ext_roof.layers[1].to_OpaqueMaterial.get.to_StandardOpaqueMaterial.get
+    end
+
+    # alter constructions
+    exterior_wall_insulation_materials.uniq.each do |ext_mat|
+      # alter material in place (could add to resrouce but will just modify in place for this)
+      ext_mat.setName('Foam insulation')
+      ext_mat.setThickness(0.25)
+      ext_mat.setThermalConductivity(0.16)
+      ext_mat.setDensity(10)
+      ext_mat.setSpecificHeat(1400)
+      altered_insulation_materials << ext_mat
+    end
+    exterior_roof_insulation_materials.uniq.each do |ext_mat|
+      ext_mat.setName('Fiberglass quilt')
+      ext_mat.setThickness(0.4)
+      ext_mat.setThermalConductivity(0.1)
+      # other fields not changed
+      altered_insulation_materials << ext_mat
+    end
+
+    return altered_insulation_materials
+
+  end
+
   # add_output_variable
   def self.add_output_variable(runner,model,key_value,variable_name,reporting_frequency,range_start = nil,range_end = nil)
 
