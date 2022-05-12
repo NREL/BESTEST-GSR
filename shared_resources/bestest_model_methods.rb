@@ -122,11 +122,8 @@ module BestestModelMethods
         glazing_mat.setName('Outer Low E Glazing')
         glazing_mat.setThickness(0.003180)
         glazing_mat.setThermalConductance(1.0)
-        # TODO - set density
-        # TODO - set specific heat
-        # TODO - confirm from vs. back for outside and inside glazing layer
         glazing_mat.setFrontSideInfraredHemisphericalEmissivity(0.84)
-        glazing_mat.setBackSideInfraredHemisphericalEmissivity(0.47)
+        glazing_mat.setBackSideInfraredHemisphericalEmissivity(0.047)
         glazing_mat.setSolarTransmittanceatNormalIncidence(0.452)
         glazing_mat.setFrontSideSolarReflectanceatNormalIncidence(0.359)
         glazing_mat.setBackSideSolarReflectanceatNormalIncidence(0.397)
@@ -135,9 +132,6 @@ module BestestModelMethods
         new_innter_mat.setName('Inner Low E Glazing')
         new_innter_mat.setThickness(0.003048)
         glazing_mat.setThermalConductance(1.0)
-        # TODO - set density
-        # TODO - set specific heat
-        # TODO - confirm from vs. back for outside and inside glazing layer
         new_innter_mat.setFrontSideInfraredHemisphericalEmissivity(0.84)
         new_innter_mat.setBackSideInfraredHemisphericalEmissivity(0.84)
         new_innter_mat.setSolarTransmittanceatNormalIncidence(0.834)
