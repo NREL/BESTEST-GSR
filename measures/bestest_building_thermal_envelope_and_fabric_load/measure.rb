@@ -256,6 +256,12 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
       runner.registerInfo("Window Properties > altered #{altered_constructions.uniq.size} glazing materials.")
     end
 
+    # set custom ext and/or int surf coef
+    if variable_hash[:constant_ext_surf_coef] || variable_hash[:constant_int_surf_coef]
+      num_new_coef_objects =  BestestModelMethods.set_custom_surf_coef(model,variable_hash)
+      runner.registerInfo("Surface Properties > made #{num_new_coef_objects.size} new SurfacePropertyConvectionCoefficientsMultipleSurfaces objects.")
+    end
+
     # lookup schedules that might be needed
     bestest_htg_setback = resource_model.getModelObjectByName("BESTEST htg SETBACK").get.to_ScheduleRuleset.get
     bestest_clg_night_vent = resource_model.getModelObjectByName("BESTEST clg Night Vent").get.to_ScheduleRuleset.get

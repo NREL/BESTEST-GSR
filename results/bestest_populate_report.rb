@@ -30,9 +30,6 @@ CSV.foreach(csv_file, :headers => true, :header_converters => :symbol, :converte
 end
 puts "CSV has #{csv_hash.size} entries."
 puts "Hash keys are #{csv_hash.keys}" # keys made from column 6
-puts "-----"
-puts csv_hash['680'].size
-puts csv_hash['680'].inspect
 
 # Copy Excel File
 orig_results_5_2a = 'resources/RESULTS5-2A.xlsx'
@@ -45,17 +42,10 @@ workbook = RubyXL::Parser.parse(copy_results_5_2a)
 worksheet = workbook['YourData']
 puts "Loading #{worksheet.sheet_name} Worksheet"
 
-# code to temporarily skip new test cases, which break script remove later
-# TODO - make new test cases, and add into report
-new_conditioned_zone_loads = ['450','460','470']
-new_ff_cases = []
-
 category = "Annual Heating Loads"
 puts "Populating #{category}"
 (69..114).each do |i|
   target_case = worksheet.sheet_data[i][1].value.to_s # new 2020 test cases for some reason are number while others are string, I had to add this.
-  next if new_conditioned_zone_loads.include?(target_case)
-  puts "hello, working on #{target_case}: #{csv_hash[target_case]}"
   worksheet.sheet_data[i][2].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingannual_heating])
   historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
 end
@@ -64,7 +54,6 @@ category = "Annual Cooling Loads"
 puts "Populating #{category}"
 (69..114).each do |i|
   target_case = worksheet.sheet_data[i][1].value.to_s
-  next if new_conditioned_zone_loads.include?(target_case)
   worksheet.sheet_data[i][3].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingannual_cooling])
   historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][3].value.to_s]
 end
@@ -73,7 +62,6 @@ category = "Annual Hourly Integrated Peak Heating Loads"
 puts "Populating #{category}"
 (69..114).each do |i|
   target_case = worksheet.sheet_data[i][1].value.to_s
-  next if new_conditioned_zone_loads.include?(target_case)
 
   # get date and time from raw value
   raw_value = csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingpeak_heating_time]
@@ -99,7 +87,6 @@ category = "Annual Hourly Integrated Peak Cooling Loads"
 puts "Populating #{category}"
 (69..114).each do |i|
   target_case = worksheet.sheet_data[i][1].value.to_s
-  next if new_conditioned_zone_loads.include?(target_case)
 
   # get date and time from raw value
   raw_value = csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingpeak_cooling_time]
@@ -165,7 +152,6 @@ puts "Populating #{category}"
 # this also includes case 960
 (129..135).each do |i|
   target_case = worksheet.sheet_data[i][1].value.to_s
-  next if new_ff_cases.include?(target_case)
   worksheet.sheet_data[i][7].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingmax_temp])
   index_position = csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingmax_index_position]
   date_time_array = return_date_time_from_8760_index(index_position)
@@ -183,7 +169,6 @@ puts "Populating #{category}"
 # this also includes case 960
 (129..135).each do |i|
   target_case = worksheet.sheet_data[i][1].value.to_s
-  next if new_ff_cases.include?(target_case)
   # populate value date and time columns
   worksheet.sheet_data[i][3].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingmin_temp])
   index_position = csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingmin_index_position]
@@ -201,7 +186,6 @@ puts "Populating #{category}"
 # this also includes case 960
 (129..135).each do |i|
   target_case = worksheet.sheet_data[i][1].value.to_s
-  next if new_ff_cases.include?(target_case)
   # populate value date and time columns
   worksheet.sheet_data[i][2].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingavg_temp])
   historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][2].value.to_s]

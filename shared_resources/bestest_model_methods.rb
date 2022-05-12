@@ -178,6 +178,96 @@ module BestestModelMethods
 
   end
 
+  # set custom surf coef
+  def self.set_custom_surf_coef(model,variable_hash)
+
+    initial_size = model.getSurfacePropertyConvectionCoefficientsMultipleSurfaces.size
+
+    ext_walls_conv_coef = OpenStudio::Model::SurfacePropertyConvectionCoefficientsMultipleSurface.new(model)
+    ext_roof_conv_coef = OpenStudio::Model::SurfacePropertyConvectionCoefficientsMultipleSurface.new(model)
+    ext_floors_conv_coef = OpenStudio::Model::SurfacePropertyConvectionCoefficientsMultipleSurface.new(model)
+    ext_windows_conv_coef = OpenStudio::Model::SurfacePropertyConvectionCoefficientsMultipleSurface.new(model)
+    if variable_hash[:constant_ext_surf_coef] && variable_hash[:constant_int_surf_coef] 
+      ext_walls_conv_coef.setSurfaceType('AllExteriorWalls')
+      ext_walls_conv_coef.setConvectionCoefficient1Location ('Inside')
+      ext_walls_conv_coef.setConvectionCoefficient1Type ('Value')
+      ext_walls_conv_coef.setConvectionCoefficient1(1.8)
+      ext_walls_conv_coef.setConvectionCoefficient2Location ('Outside')
+      ext_walls_conv_coef.setConvectionCoefficient2Type ('Value')
+      ext_walls_conv_coef.setConvectionCoefficient2(21.6)
+
+      ext_roof_conv_coef.setSurfaceType('AllExteriorRoofs')
+      ext_roof_conv_coef.setConvectionCoefficient1Location ('Inside')
+      ext_roof_conv_coef.setConvectionCoefficient1Type ('Value')
+      ext_roof_conv_coef.setConvectionCoefficient1(1.7)
+      ext_roof_conv_coef.setConvectionCoefficient2Location ('Outside')
+      ext_roof_conv_coef.setConvectionCoefficient2Type ('Value')
+      ext_roof_conv_coef.setConvectionCoefficient2(21.8)
+
+      ext_floors_conv_coef.setSurfaceType('AllExteriorFloors')
+      ext_floors_conv_coef.setConvectionCoefficient1Location ('Inside')
+      ext_floors_conv_coef.setConvectionCoefficient1Type ('Value')
+      ext_floors_conv_coef.setConvectionCoefficient1(3.7)
+      ext_floors_conv_coef.setConvectionCoefficient2Location ('Outside')
+      ext_floors_conv_coef.setConvectionCoefficient2Type ('Value')
+      ext_floors_conv_coef.setConvectionCoefficient2(5.2)
+
+      ext_windows_conv_coef.setSurfaceType('AllExteriorWindows')
+      ext_windows_conv_coef.setConvectionCoefficient1Location ('Inside')
+      ext_windows_conv_coef.setConvectionCoefficient1Type ('Value')
+      ext_windows_conv_coef.setConvectionCoefficient1(4.5)
+      ext_windows_conv_coef.setConvectionCoefficient2Location ('Outside')
+      ext_windows_conv_coef.setConvectionCoefficient2Type ('Value')
+      ext_windows_conv_coef.setConvectionCoefficient2(17.8)
+
+    elsif variable_hash[:constant_ext_surf_coef]
+      ext_walls_conv_coef.setSurfaceType('AllExteriorWalls')
+      ext_walls_conv_coef.setConvectionCoefficient1Location ('Outside')
+      ext_walls_conv_coef.setConvectionCoefficient1Type ('Value')
+      ext_walls_conv_coef.setConvectionCoefficient1(21.6)
+
+      ext_roof_conv_coef.setSurfaceType('AllExteriorRoofs')
+      ext_roof_conv_coef.setConvectionCoefficient1Location ('Outside')
+      ext_roof_conv_coef.setConvectionCoefficient1Type ('Value')
+      ext_roof_conv_coef.setConvectionCoefficient1(21.8)
+
+      ext_floors_conv_coef.setSurfaceType('AllExteriorFloors')
+      ext_floors_conv_coef.setConvectionCoefficient1Location ('Outside')
+      ext_floors_conv_coef.setConvectionCoefficient1Type ('Value')
+      ext_floors_conv_coef.setConvectionCoefficient1(5.2)
+
+      ext_windows_conv_coef.setSurfaceType('AllExteriorWindows')
+      ext_windows_conv_coef.setConvectionCoefficient1Location ('Outside')
+      ext_windows_conv_coef.setConvectionCoefficient1Type ('Value')
+      ext_windows_conv_coef.setConvectionCoefficient1(17.8)
+
+    elsif variable_hash[:constant_int_surf_coef]
+      ext_walls_conv_coef.setSurfaceType('AllExteriorWalls')
+      ext_walls_conv_coef.setConvectionCoefficient1Location ('Inside')
+      ext_walls_conv_coef.setConvectionCoefficient1Type ('Value')
+      ext_walls_conv_coef.setConvectionCoefficient1(1.8)
+
+      ext_roof_conv_coef.setSurfaceType('AllExteriorRoofs')
+      ext_roof_conv_coef.setConvectionCoefficient1Location ('Inside')
+      ext_roof_conv_coef.setConvectionCoefficient1Type ('Value')
+      ext_roof_conv_coef.setConvectionCoefficient1(1.7)
+
+      ext_floors_conv_coef.setSurfaceType('AllExteriorFloors')
+      ext_floors_conv_coef.setConvectionCoefficient1Location ('Inside')
+      ext_floors_conv_coef.setConvectionCoefficient1Type ('Value')
+      ext_floors_conv_coef.setConvectionCoefficient1(3.7)
+
+      ext_windows_conv_coef.setSurfaceType('AllExteriorWindows')
+      ext_windows_conv_coef.setConvectionCoefficient1Location ('Inside')
+      ext_windows_conv_coef.setConvectionCoefficient1Type ('Value')
+      ext_windows_conv_coef.setConvectionCoefficient1(4.5)
+
+    end
+
+    return  model.getSurfacePropertyConvectionCoefficientsMultipleSurfaces.size - initial_size
+
+  end
+
   # add_output_variable
   def self.add_output_variable(runner,model,key_value,variable_name,reporting_frequency,range_start = nil,range_end = nil)
 
@@ -648,8 +738,6 @@ module BestestModelMethods
       oa_controller.setMinimumLimitType('FixedMinimum')
       if !oa_sch.nil?
         oa_controller.setMinimumOutdoorAirSchedule(oa_sch)
-        puts "hello case #{case_num}"
-        puts oa_controller
       end
       oa_system = OpenStudio::Model::AirLoopHVACOutdoorAirSystem.new(model,oa_controller)
       oa_system.addToNode(supply_inlet_node)
