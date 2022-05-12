@@ -109,13 +109,13 @@ module BestestModelMethods
 
     # alter constructions
     exterior_glazing_constructions.uniq.each do |ext_const|
-      if variable_hash[:glazing_special] == 'low-e'
+      if variable_hash[:glazing_special].to_s == 'low-e'
 
         # clone glazing to set unique inner properties and then hook it up to construction on place of existing material
         glazing_mat = ext_const.layers[0].to_FenestrationMaterial.get.to_Glazing.get.to_StandardGlazing.get
-        new_innter_mat = glazing_mat.clone(model)
+        new_inner_mat = glazing_mat.clone(model).to_FenestrationMaterial.get.to_StandardGlazing.get
         ext_const.eraseLayer(2)
-        ext_const.insertLayer(2,new_innter_mat)
+        ext_const.insertLayer(2,new_inner_mat)
         ext_const.setName("Low E glazing assembly")
 
         # set outer pane glass properties
@@ -129,24 +129,24 @@ module BestestModelMethods
         glazing_mat.setBackSideSolarReflectanceatNormalIncidence(0.397)
 
         # set inner pane glass properties
-        new_innter_mat.setName('Inner Low E Glazing')
-        new_innter_mat.setThickness(0.003048)
+        new_inner_mat.setName('Inner Low E Glazing')
+        new_inner_mat.setThickness(0.003048)
         glazing_mat.setThermalConductance(1.0)
-        new_innter_mat.setFrontSideInfraredHemisphericalEmissivity(0.84)
-        new_innter_mat.setBackSideInfraredHemisphericalEmissivity(0.84)
-        new_innter_mat.setSolarTransmittanceatNormalIncidence(0.834)
-        new_innter_mat.setFrontSideSolarReflectanceatNormalIncidence(0.075)
-        new_innter_mat.setBackSideSolarReflectanceatNormalIncidence(0.075)
+        new_inner_mat.setFrontSideInfraredHemisphericalEmissivity(0.84)
+        new_inner_mat.setBackSideInfraredHemisphericalEmissivity(0.84)
+        new_inner_mat.setSolarTransmittanceatNormalIncidence(0.834)
+        new_inner_mat.setFrontSideSolarReflectanceatNormalIncidence(0.075)
+        new_inner_mat.setBackSideSolarReflectanceatNormalIncidence(0.075)
 
         # modify gap material
-        glazing_gap_mat = ext_const.layers[1].to_Opaqto_FenestrationMaterialueMaterial.get.to_GasLayer.get.to_Gas.get
+        glazing_gap_mat = ext_const.layers[1].to_FenestrationMaterial.get.to_GasLayer.get.to_Gas.get
         glazing_gap_mat.setName('Argon Space Resistance')
         glazing_gap_mat.setGasType('ARGON')
         glazing_gap_mat.setThickness(0.012)
 
         altered_glazing_construction << ext_const
 
-      elsif variable_hash[:glazing_special] == 'single-pane'
+      elsif variable_hash[:glazing_special].to_s == 'single-pane'
 
         # remove extra layers
         glazing_mat = ext_const.layers[0].to_FenestrationMaterial.get.to_Glazing.get.to_StandardGlazing.get
@@ -172,6 +172,7 @@ module BestestModelMethods
       else
         puts "#{variable_hash[:glazing_special]} is an undefined value for glazing_special."
       end
+
     end
 
     return altered_glazing_construction

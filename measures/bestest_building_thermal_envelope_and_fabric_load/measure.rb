@@ -252,8 +252,8 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
 
     # increase roof and wall insulation if specified
     if variable_hash.key?(:glazing_special)
-      altered_constructions =  BestestModelMethods.set_wall_roof_insulation(model,variable_hash)
-      runner.registerInfo("Window Properties > altered #{altered_constructions.uniq.size} glazing materials.")
+      altered_glazing_constructions =  BestestModelMethods.set_custom_glazing_materials(model,variable_hash)
+      runner.registerInfo("Window Properties > altered #{altered_glazing_constructions.uniq.size} glazing materials.")
     end
 
     # set custom ext and/or int surf coef
