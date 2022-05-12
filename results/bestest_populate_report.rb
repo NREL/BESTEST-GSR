@@ -47,7 +47,7 @@ puts "Loading #{worksheet.sheet_name} Worksheet"
 
 # code to temporarily skip new test cases, which break script remove later
 # TODO - make new test cases, and add into report
-new_conditioned_zone_loads = ['660','670','450','460','470']
+new_conditioned_zone_loads = ['450','460','470']
 new_ff_cases = []
 
 category = "Annual Heating Loads"

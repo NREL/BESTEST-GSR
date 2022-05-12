@@ -244,9 +244,16 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
     altered_materials =  BestestModelMethods.set_opaque_surface_properties(model,variable_hash)
     runner.registerInfo("Surface Properties > altered #{altered_materials.uniq.size} materials.")
 
+    # increase roof and wall insulation if specified
     if variable_hash[:wall_roof_increased_insulation] # run code if variable exists and if value is set to true
       altered_constructions =  BestestModelMethods.set_wall_roof_insulation(model,variable_hash)
       runner.registerInfo("Exterior Wall/Roof Insulation Properties > altered #{altered_constructions.uniq.size} insulation materials.")
+    end
+
+    # increase roof and wall insulation if specified
+    if variable_hash.key?(:glazing_special)
+      altered_constructions =  BestestModelMethods.set_wall_roof_insulation(model,variable_hash)
+      runner.registerInfo("Window Properties > altered #{altered_constructions.uniq.size} glazing materials.")
     end
 
     # lookup schedules that might be needed
