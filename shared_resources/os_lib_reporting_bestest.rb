@@ -214,7 +214,6 @@ module OsLib_Reporting_Bestest
       runner.registerValue(display.downcase.gsub(" ","_"), peak_htg_time)
     end
 
-
     # peak cooling
     query = 'SELECT Value FROM tabulardatawithstrings WHERE '
     query << "ReportName='EnergyMeters' and "
@@ -324,32 +323,46 @@ module OsLib_Reporting_Bestest
         output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', 'Surface Outside Face Incident Solar Radiation Rate per Area', key)
         if output_timeseries.is_initialized # checks to see if time_series exists
 
-          # get March 5th values
-          row_data = ['March 5',surface.name.to_s.upcase]
+          # get May 4th values
+          row_data = ['February 1',surface.name.to_s.upcase]
           table_01[:header].each do |hour|
             next if hour == "Date"
             next if hour == "Orientation"
-            date_string = "2009-03-05 #{hour}:00:00.000"
+            date_string = "2009-02-01 #{hour}:00:00.000"
             date_time = OpenStudio::DateTime.new(date_string)
             val_at_date_time = output_timeseries.get.value(date_time)
             value = OpenStudio.convert(val_at_date_time, source_units, target_units).get
             row_data << value.round(2)
           end
-          runner.registerValue("surf_out_inst_slr_rad_0305_#{surface.name.get.downcase.gsub(" ","_")}",row_data.to_s)
+          runner.registerValue("surf_out_inst_slr_rad_0201_#{surface.name.get.downcase.gsub(" ","_")}",row_data.to_s)
           table_01[:data] << row_data
 
-          # get July 27th values
-          row_data = ['July 22',surface.name.to_s.upcase]
+          # get May 4th values
+          row_data = ['May 4',surface.name.to_s.upcase]
           table_01[:header].each do |hour|
             next if hour == "Date"
             next if hour == "Orientation"
-            date_string = "2009-07-27 #{hour}:00:00.000"
+            date_string = "2009-05-04 #{hour}:00:00.000"
             date_time = OpenStudio::DateTime.new(date_string)
             val_at_date_time = output_timeseries.get.value(date_time)
             value = OpenStudio.convert(val_at_date_time, source_units, target_units).get
             row_data << value.round(2)
           end
-          runner.registerValue("surf_out_inst_slr_rad_0727_#{surface.name.get.downcase.gsub(" ","_")}",row_data.to_s)
+          runner.registerValue("surf_out_inst_slr_rad_0504_#{surface.name.get.downcase.gsub(" ","_")}",row_data.to_s)
+          table_01[:data] << row_data
+
+          # get July 14th values
+          row_data = ['July 14',surface.name.to_s.upcase]
+          table_01[:header].each do |hour|
+            next if hour == "Date"
+            next if hour == "Orientation"
+            date_string = "2009-07-14 #{hour}:00:00.000"
+            date_time = OpenStudio::DateTime.new(date_string)
+            val_at_date_time = output_timeseries.get.value(date_time)
+            value = OpenStudio.convert(val_at_date_time, source_units, target_units).get
+            row_data << value.round(2)
+          end
+          runner.registerValue("surf_out_inst_slr_rad_0714_#{surface.name.get.downcase.gsub(" ","_")}",row_data.to_s)
           table_01[:data] << row_data
 
         else
@@ -570,28 +583,28 @@ module OsLib_Reporting_Bestest
       output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', 'Zone Mean Air Temperature', key)
       if output_timeseries.is_initialized # checks to see if time_series exists
 
-        # get January 4th values
-        row_data = ['January 4']
+        # get Febuary 1st values
+        row_data = ['Febuary 1']
         table[:header].each do |hour|
           next if hour == "Date"
-          date_string = "2009-01-04 #{hour}:00:00.000"
+          date_string = "2009-02-01 #{hour}:00:00.000"
           date_time = OpenStudio::DateTime.new(date_string)
           val_at_date_time = output_timeseries.get.value(date_time)
           row_data << val_at_date_time.round(1)
         end
-        runner.registerValue("temp_0104",row_data.to_s)
+        runner.registerValue("temp_0201",row_data.to_s)
         table[:data] << row_data
 
-        # get July 27th values
-        row_data = ['July 27']
+        # get Julyn14th values
+        row_data = ['July 14']
         table[:header].each do |hour|
           next if hour == "Date"
-          date_string = "2009-07-27 #{hour}:00:00.000"
+          date_string = "2009-07-14 #{hour}:00:00.000"
           date_time = OpenStudio::DateTime.new(date_string)
           val_at_date_time = output_timeseries.get.value(date_time)
           row_data << val_at_date_time.round(1)
         end
-        runner.registerValue("temp_0727",row_data.to_s)
+        runner.registerValue("temp_0714",row_data.to_s)
         table[:data] << row_data
 
       else
