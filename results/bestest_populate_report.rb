@@ -316,24 +316,33 @@ counter = 0
   counter += 1
 end
 
-category = "Hourly Heating and Cooling Load 0104 - Case 600"
+category = "Hourly Heating and Cooling Load February 1 Multiple Test Cases"
 puts "Populating #{category}"
-array = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingsens_htg_clg_0104].split(",")
-counter = 0
-(261..284).each do |i|
-  worksheet.sheet_data[i][2].change_contents(array[counter+2].to_f)
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
-  counter += 1
+column_target = 2
+(2..13).each do |j| # step through columns in table
+  test_case_str = worksheet.sheet_data[259][j].value.to_s
+  array = csv_hash[test_case_str][:bestest_building_thermal_envelope_and_fabric_load_reportingsens_htg_clg_0201].split(",")
+  counter = 0
+  (261..284).each do |i|
+    worksheet.sheet_data[i][column_target].change_contents(array[counter+2].to_f)
+    historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][column_target].value.to_s]
+    counter += 1
+  end
+  column_target += 1
 end
 
-category = "Hourly Heating and Cooling Load 0104 - Case 900"
+category = "Hourly Heating and Cooling Load July 14 Multiple Test Cases"
 puts "Populating #{category}"
-array = csv_hash['900'][:bestest_building_thermal_envelope_and_fabric_load_reportingsens_htg_clg_0104].split(",")
-counter = 0
-(261..284).each do |i|
-  worksheet.sheet_data[i][9].change_contents(array[counter+2].to_f)
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][9].value.to_s]
-  counter += 1
+(14..23).each do |j| # step through columns in table
+  test_case_str = worksheet.sheet_data[259][j].value.to_s
+  array = csv_hash[test_case_str][:bestest_building_thermal_envelope_and_fabric_load_reportingsens_htg_clg_0714].split(",")
+  counter = 0
+  (261..284).each do |i|
+    worksheet.sheet_data[i][column_target].change_contents(array[counter+2].to_f)
+    historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][column_target].value.to_s]
+    counter += 1
+  end
+  column_target += 1
 end
 
 category = "Hourly Annual Zone Temperature Bin Data - Case 900FF"

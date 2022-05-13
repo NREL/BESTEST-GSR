@@ -412,25 +412,41 @@ module OsLib_Reporting_Bestest
 
       source_units = 'J'
       target_units = 'kWh'
-      hourly_htg = nil
-      hourly_clg = nil
+      hourly_htg_0201 = nil
+      hourly_clg_0201 = nil
+      hourly_htg_0714 = nil
+      hourly_clg_0714 = nil
 
       # get heating values
       output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', 'Zone Air System Sensible Heating Energy', key)
       if output_timeseries.is_initialized # checks to see if time_series exists
 
         # get January 4th values
-        row_data = ['January 4','Heating']
+        row_data = ['Febuary 1','Heating']
         table[:header].each do |hour|
           next if hour == "Date"
           next if hour == "Type"
-          date_string = "2009-01-04 #{hour}:00:00.000"
+          date_string = "2009-02-01 #{hour}:00:00.000"
           date_time = OpenStudio::DateTime.new(date_string)
           val_at_date_time = output_timeseries.get.value(date_time)
           value = OpenStudio.convert(val_at_date_time, source_units, target_units).get
           row_data << value.round(2)
         end
-        hourly_htg = row_data
+        hourly_htg_0201 = row_data
+        table[:data] << row_data
+
+        # get July 14th values
+        row_data = ['July 14','Heating']
+        table[:header].each do |hour|
+          next if hour == "Date"
+          next if hour == "Type"
+          date_string = "2009-07-14 #{hour}:00:00.000"
+          date_time = OpenStudio::DateTime.new(date_string)
+          val_at_date_time = output_timeseries.get.value(date_time)
+          value = OpenStudio.convert(val_at_date_time, source_units, target_units).get
+          row_data << value.round(2)
+        end
+        hourly_htg_0714 = row_data
         table[:data] << row_data
 
       else
@@ -442,34 +458,53 @@ module OsLib_Reporting_Bestest
       if output_timeseries.is_initialized # checks to see if time_series exists
 
         # get January 4th values
-        row_data = ['January 4','Cooling']
+        row_data = ['Febuary 1','Cooling']
         table[:header].each do |hour|
           next if hour == "Date"
           next if hour == "Type"
-          date_string = "2009-01-04 #{hour}:00:00.000"
+          date_string = "2009-02-01 #{hour}:00:00.000"
           date_time = OpenStudio::DateTime.new(date_string)
           val_at_date_time = output_timeseries.get.value(date_time)
           value = OpenStudio.convert(val_at_date_time, source_units, target_units).get
           row_data << value.round(2)
         end
-        hourly_clg = row_data
+        hourly_clg_0201 = row_data
         table[:data] << row_data
+
+        # get January 4th values
+        row_data = ['July 14','Cooling']
+        table[:header].each do |hour|
+          next if hour == "Date"
+          next if hour == "Type"
+          date_string = "2009-07-014 #{hour}:00:00.000"
+          date_time = OpenStudio::DateTime.new(date_string)
+          val_at_date_time = output_timeseries.get.value(date_time)
+          value = OpenStudio.convert(val_at_date_time, source_units, target_units).get
+          row_data << value.round(2)
+        end
+        hourly_clg_0714 = row_data
+        table[:data] << row_data  
 
       else
         runner.registerWarning("Didn't find data for Zone Air System Sensible Cooling Energy")
       end # end of if output_timeseries.is_initialized
 
       # combine headting and cooling into one array
-      combined_hourly = []
+      combined_hourly_0201 = []
+      combined_hourly_0714 = []
       26.times do |i|
-        if i < 2
-          combined_hourly << hourly_htg[i] + hourly_clg[i]
+        if i < 2 # header strings
+          combined_hourly_0201 << hourly_htg_0201[i] + hourly_clg_0201[i]
+          combined_hourly_0714 << hourly_htg_0714[i] + hourly_clg_0714[i]
         else
-          combined_hourly << hourly_htg[i] - hourly_clg[i]
+          combined_hourly_0201 << hourly_htg_0201[i] - hourly_clg_0201[i]
+          combined_hourly_0714 << hourly_htg_0714[i] - hourly_clg_0714[i]
         end
       end
-      runner.registerValue("sens_htg_clg_0104",combined_hourly.to_s)
 
+      runner.registerInfo("End of method, Adding values for heatin gand coooling on Febuary 1st and July 14th.")
+      runner.registerValue("sens_htg_clg_0201",combined_hourly_0201.to_s)
+      runner.registerValue("sens_htg_clg_0714",combined_hourly_0714.to_s)
 
     end
 
