@@ -1,11 +1,10 @@
 <?xml version="1.0"?>
 <measure>
   <schema_version>3.0</schema_version>
-  <error>wrong number of arguments (given 1, expected 0)</error>
   <name>bestest_he_reporting</name>
   <uid>0c315265-09b3-40ae-a50f-e8920b468264</uid>
-  <version_id>05e13c68-e4f8-403e-975d-dd3903cdafd8</version_id>
-  <version_modified>20220511T184026Z</version_modified>
+  <version_id>e6fabfaf-6da4-4695-9281-6846eb09a684</version_id>
+  <version_modified>20220513T185925Z</version_modified>
   <xml_checksum>9BF1E6AC</xml_checksum>
   <class_name>BestestHeReporting</class_name>
   <display_name>Bestest He Reporting</display_name>
@@ -17,63 +16,49 @@
       <name>mean_zone_temperature</name>
       <display_name>mean_zone_temperature</display_name>
       <short_name>mean_zone_temperature</short_name>
-      <description></description>
       <type>Double</type>
-      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>maximum_zone_temperature</name>
       <display_name>maximum_zone_temperature</display_name>
       <short_name>maximum_zone_temperature</short_name>
-      <description></description>
       <type>Double</type>
-      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>minimum_zone_temperature</name>
       <display_name>minimum_zone_temperature</display_name>
       <short_name>minimum_zone_temperature</short_name>
-      <description></description>
       <type>Double</type>
-      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>fan_energy</name>
       <display_name>fan_energy</display_name>
       <short_name>fan_energy</short_name>
-      <description></description>
       <type>Double</type>
-      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>total_furnace_load</name>
       <display_name>total_furnace_load</display_name>
       <short_name>total_furnace_load</short_name>
-      <description></description>
       <type>Double</type>
-      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>total_furnace_input</name>
       <display_name>total_furnace_input</display_name>
       <short_name>total_furnace_input</short_name>
-      <description></description>
       <type>Double</type>
-      <units></units>
       <model_dependent>false</model_dependent>
     </output>
     <output>
       <name>average_fuel_consumption</name>
       <display_name>average_fuel_consumption</display_name>
       <short_name>average_fuel_consumption</short_name>
-      <description></description>
       <type>Double</type>
-      <units></units>
       <model_dependent>false</model_dependent>
     </output>
   </outputs>
@@ -132,7 +117,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>7E51AB3C</checksum>
+      <checksum>65ED77A4</checksum>
     </file>
   </files>
 </measure>

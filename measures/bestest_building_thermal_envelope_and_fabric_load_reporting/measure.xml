@@ -1,11 +1,10 @@
 <?xml version="1.0"?>
 <measure>
   <schema_version>3.0</schema_version>
-  <error>wrong number of arguments (given 1, expected 0)</error>
   <name>bestest_building_thermal_envelope_and_fabric_load_reporting</name>
   <uid>a0b598a6-96b9-4704-bc23-ac403d9f6b1b</uid>
-  <version_id>bc03ae82-ad6d-46fd-a92d-1d81f154907c</version_id>
-  <version_modified>20220511T184026Z</version_modified>
+  <version_id>7c2d2e0f-e119-4e7e-9e0b-6040a9809761</version_id>
+  <version_modified>20220513T185925Z</version_modified>
   <xml_checksum>69BA4D91</xml_checksum>
   <class_name>BestestBuildingThermalEnvelopeAndFabricLoadReporting</class_name>
   <display_name>Bestest Building Thermal Envelope and Fabric Load Reporting</display_name>
@@ -77,36 +76,6 @@
       <checksum>6AD259AE</checksum>
     </file>
     <file>
-      <filename>725650TYCST.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>test</usage_type>
-      <checksum>08DEB5B3</checksum>
-    </file>
-    <file>
-      <filename>600_test_output.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>test</usage_type>
-      <checksum>FB5EEFB8</checksum>
-    </file>
-    <file>
-      <filename>950FF_test_output.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>test</usage_type>
-      <checksum>D5A0A847</checksum>
-    </file>
-    <file>
-      <filename>910_test_output.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>test</usage_type>
-      <checksum>36AF3CEF</checksum>
-    </file>
-    <file>
-      <filename>measure_Test.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>test</usage_type>
-      <checksum>3F3B9B4C</checksum>
-    </file>
-    <file>
       <filename>600_test_output.idf</filename>
       <filetype>idf</filetype>
       <usage_type>test</usage_type>
@@ -125,6 +94,36 @@
       <checksum>2F7B6F25</checksum>
     </file>
     <file>
+      <filename>725650TYCST.epw</filename>
+      <filetype>epw</filetype>
+      <usage_type>test</usage_type>
+      <checksum>0A405657</checksum>
+    </file>
+    <file>
+      <filename>600_test_output.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>6B6C08B3</checksum>
+    </file>
+    <file>
+      <filename>950FF_test_output.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>547721ED</checksum>
+    </file>
+    <file>
+      <filename>910_test_output.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>786709A9</checksum>
+    </file>
+    <file>
+      <filename>measure_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>83E3C998</checksum>
+    </file>
+    <file>
       <version>
         <software_program>OpenStudio</software_program>
         <identifier>1.7.5</identifier>
@@ -133,7 +132,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>68289C47</checksum>
+      <checksum>579AF73A</checksum>
     </file>
   </files>
 </measure>

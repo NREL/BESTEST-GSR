@@ -8,7 +8,7 @@ require 'openstudio-extension'
 require 'openstudio/extension/core/os_lib_helper_methods'
 
 # start the measure
-class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset::ReportingUserScript
+class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Measure::ReportingMeasure
   # define the name that a user will see, this method may be deprecated as
   # the display name in PAT comes from the name field in measure.xml
   def name
@@ -38,8 +38,8 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
   end
 
   # define the arguments that the user will input
-  def arguments()
-    args = OpenStudio::Ruleset::OSArgumentVector.new
+  def arguments(model)
+    args = OpenStudio::Measure::OSArgumentVector.new
 
     # this measure does not require any user arguments, return an empty list
 

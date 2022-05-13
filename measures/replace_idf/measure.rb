@@ -2,7 +2,7 @@
 # http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/
 
 # start the measure
-class ReplaceIdf < OpenStudio::Ruleset::WorkspaceUserScript
+class ReplaceIdf < OpenStudio::Measure::EnergyPlusMeasure
 
   # human readable name
   def name
@@ -21,7 +21,7 @@ class ReplaceIdf < OpenStudio::Ruleset::WorkspaceUserScript
 
   # define the arguments that the user will input
   def arguments(workspace)
-    args = OpenStudio::Ruleset::OSArgumentVector.new
+    args = OpenStudio::Measure::OSArgumentVector.new
 
     # argument for external_idf_name
     external_idf_name = OpenStudio::Ruleset::OSArgument.makeStringArgument("external_idf_name", true)

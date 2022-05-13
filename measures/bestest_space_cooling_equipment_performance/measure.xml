@@ -3,8 +3,8 @@
   <schema_version>3.0</schema_version>
   <name>bestest_space_cooling_equipment_performance</name>
   <uid>eb12d939-e78f-4b84-8af7-1e69e10a0cf4</uid>
-  <version_id>44333d42-9315-4147-8899-dfac424f5029</version_id>
-  <version_modified>20220511T184026Z</version_modified>
+  <version_id>18251c27-0bdb-4573-939f-ff03df70f9df</version_id>
+  <version_modified>20220513T185925Z</version_modified>
   <xml_checksum>05C5DFDC</xml_checksum>
   <class_name>BestestSpaceCoolingEquipmentPerformance</class_name>
   <display_name>Bestest Space Cooling Equipment Performance</display_name>
@@ -243,7 +243,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>F00A8EBE</checksum>
+      <checksum>1DF6F371</checksum>
     </file>
   </files>
 </measure>

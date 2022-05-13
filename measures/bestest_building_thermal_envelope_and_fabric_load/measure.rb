@@ -7,7 +7,7 @@ require_relative "../../shared_resources/bestest_model_methods"
 require_relative "../../shared_resources/epw"
 
 # start the measure
-class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUserScript
+class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Measure::ModelMeasure
 
   # human readable name
   def name
@@ -26,7 +26,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
 
   # define the arguments that the user will input
   def arguments(model)
-    args = OpenStudio::Ruleset::OSArgumentVector.new
+    args = OpenStudio::Measure::OSArgumentVector.new
 
     #make choice argument for test case
     choices = OpenStudio::StringVector.new
