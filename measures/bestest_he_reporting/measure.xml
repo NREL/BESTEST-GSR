@@ -3,8 +3,8 @@
   <schema_version>3.0</schema_version>
   <name>bestest_he_reporting</name>
   <uid>0c315265-09b3-40ae-a50f-e8920b468264</uid>
-  <version_id>e6fabfaf-6da4-4695-9281-6846eb09a684</version_id>
-  <version_modified>20220513T185925Z</version_modified>
+  <version_id>ee5426a0-91ee-4394-8ab0-ed15980ab902</version_id>
+  <version_modified>20220513T222457Z</version_modified>
   <xml_checksum>9BF1E6AC</xml_checksum>
   <class_name>BestestHeReporting</class_name>
   <display_name>Bestest He Reporting</display_name>
@@ -117,7 +117,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>65ED77A4</checksum>
+      <checksum>F77AE8F3</checksum>
     </file>
   </files>
 </measure>
