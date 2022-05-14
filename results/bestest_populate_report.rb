@@ -233,8 +233,20 @@ worksheet.sheet_data[169][1].change_contents(csv_hash['910'][:bestest_building_t
 historical_rows << ["#{category} 930WEST",worksheet.sheet_data[170][1].value.to_s]
 historical_rows << ["#{category} 910SOUTH",worksheet.sheet_data[169][1].value.to_s]
 
+# TODO - add data for new table Sky Temperature Output (not in Std 140 2017)
+# Reporting measure will need to be updated to get correct data in to workflow_results_csv
 
-# TODO - re-create data for extended specific date tables. Reporting measure will need to be updated to get correct data in to workflow_results_csv
+# TODO - add Monthly Conditioned Zone Loads (Cases 600 and 900)  
+# Reporting measure will need to be updated to get correct data in to workflow_results_csv
+category = "Hourly Incident Solar Radiation Cloudy Day May 4th Case 600 - Horizontal"
+puts "Populating #{category}"
+array = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingsurf_out_inst_slr_rad_0504_zone_surface_south].split(",")
+counter = 0
+(229..252).each do |i|
+  #worksheet.sheet_data[i][2].change_contents(array[counter+2].to_f)
+  #historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
+  counter += 1
+end
 
 category = "Hourly Incident Solar Radiation Cloudy Day May 4th Case 600 - South"
 puts "Populating #{category}"
@@ -276,69 +288,43 @@ counter = 0
   counter += 1
 end
 
-category = "Hourly FF Temperatures February 1st - Case 600FF"
-puts "Populating #{category}"
-array = csv_hash['600FF'][:bestest_building_thermal_envelope_and_fabric_load_reportingtemp_0201].split(",")
-counter = 0
-(293..316).each do |i|
-  worksheet.sheet_data[i][2].change_contents(array[counter+1].to_f)
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
-  counter += 1
-end
-
-category = "Hourly FF Temperatures February 1st - Case 900FF"
-puts "Populating #{category}"
-array = csv_hash['900FF'][:bestest_building_thermal_envelope_and_fabric_load_reportingtemp_0201].split(",")
-counter = 0
-(293..316).each do |i|
-  worksheet.sheet_data[i][3].change_contents(array[counter+1].to_f)
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][3].value.to_s]
-  counter += 1
-end
-
-category = "Hourly FF Temperatures July 14 - Case 650FF"
-puts "Populating #{category}"
-array = csv_hash['650FF'][:bestest_building_thermal_envelope_and_fabric_load_reportingtemp_0714].split(",")
-counter = 0
-(293..316).each do |i|
-  worksheet.sheet_data[i][4].change_contents(array[counter+1].to_f)
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][4].value.to_s]
-  counter += 1
-end
-
-category = "Hourly FF Temperatures July 14 - Case 950FF"
-puts "Populating #{category}"
-array = csv_hash['950FF'][:bestest_building_thermal_envelope_and_fabric_load_reportingtemp_0714].split(",")
-counter = 0
-(293..316).each do |i|
-  worksheet.sheet_data[i][5].change_contents(array[counter+1].to_f)
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][5].value.to_s]
-  counter += 1
-end
-
-category = "Hourly Heating and Cooling Load February 1 Multiple Test Cases"
+category = "Hourly Heating and Cooling Load February 1 and July 14th Multiple Test Cases"
 puts "Populating #{category}"
 column_target = 2
-(2..13).each do |j| # step through columns in table
+(2..25).each do |j| # step through columns in table
   test_case_str = worksheet.sheet_data[259][j].value.to_s
-  array = csv_hash[test_case_str][:bestest_building_thermal_envelope_and_fabric_load_reportingsens_htg_clg_0201].split(",")
-  counter = 0
+  array_0201 = csv_hash[test_case_str][:bestest_building_thermal_envelope_and_fabric_load_reportingsens_htg_clg_0201].split(",")
+  array_0201_c = csv_hash[test_case_str][:bestest_building_thermal_envelope_and_fabric_load_reportingtemp_0201].split(",")
+  array_0714 = csv_hash[test_case_str][:bestest_building_thermal_envelope_and_fabric_load_reportingsens_htg_clg_0714].split(",")
+  counter = 2
   (261..284).each do |i|
-    worksheet.sheet_data[i][column_target].change_contents(array[counter+2].to_f)
+    if j > 23 # 0201 temp
+      worksheet.sheet_data[i][column_target].change_contents(array_0201_c[counter].to_f)
+    elsif j > 13 # 0714 kWh
+      worksheet.sheet_data[i][column_target].change_contents(array_0714[counter].to_f)
+    else # 0201 kWh
+      worksheet.sheet_data[i][column_target].change_contents(array_0201[counter].to_f)
+    end
     historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][column_target].value.to_s]
     counter += 1
   end
   column_target += 1
 end
 
-category = "Hourly Heating and Cooling Load July 14 Multiple Test Cases"
+category = "Hourly Free Float Temperatures February 1 and July 14th Multiple Test Cases"
 puts "Populating #{category}"
-(14..23).each do |j| # step through columns in table
-  test_case_str = worksheet.sheet_data[259][j].value.to_s
-  array = csv_hash[test_case_str][:bestest_building_thermal_envelope_and_fabric_load_reportingsens_htg_clg_0714].split(",")
-  counter = 0
-  (261..284).each do |i|
-    worksheet.sheet_data[i][column_target].change_contents(array[counter+2].to_f)
+column_target = 2
+(2..7).each do |j| # step through columns in table
+  test_case_str = worksheet.sheet_data[291][j].value.to_s
+  array_0201 = csv_hash[test_case_str][:bestest_building_thermal_envelope_and_fabric_load_reportingtemp_0201].split(",")
+  array_0714 = csv_hash[test_case_str][:bestest_building_thermal_envelope_and_fabric_load_reportingtemp_0714].split(",")
+  counter = 2
+  (293..316).each do |i|
+    if j > 3 && j < 6
+      worksheet.sheet_data[i][column_target].change_contents(array_0714[counter].to_f)
+    else # 0201 temp
+      worksheet.sheet_data[i][column_target].change_contents(array_0201[counter].to_f)
+    end
     historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][column_target].value.to_s]
     counter += 1
   end
@@ -356,10 +342,6 @@ counter = 0
   historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
   counter += 1
 end
-
-# TODO - add data for new table Sky Temperature Output (not in Std 140 2017)
-
-# TODO - add data for Monthly Conditioned Zone Loads (Cases 600 and 900) (not in Std 140 2017)
 
 puts "Adding General Information"
 # gather general information
