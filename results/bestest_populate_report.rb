@@ -268,6 +268,18 @@ counter = 0
   counter += 1
 end
 
+# TODO - add Monthly Conditioned Zone Loads (Cases 600 and 900)  
+# Reporting measure will need to be updated to get correct data in to workflow_results_csv
+category = "Hourly Incident Solar Radiation Cloudy Day July 14th Case 600 - Horizontal"
+puts "Populating #{category}"
+array = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingsurf_out_inst_slr_rad_0714_zone_surface_south].split(",")
+counter = 0
+(229..252).each do |i|
+  #worksheet.sheet_data[i][5].change_contents(array[counter+2].to_f)
+  #historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][5].value.to_s]
+  counter += 1
+end
+
 category = "Hourly Incident Solar Radiation Clear Day July 14th Case 600 - South"
 puts "Populating #{category}"
 array = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingsurf_out_inst_slr_rad_0714_zone_surface_south].split(",")
