@@ -294,6 +294,49 @@ module OsLib_Reporting_Bestest
     # get time series data for main zone
     ann_env_pd = OsLib_Reporting_Bestest.ann_env_pd(sqlFile)
     if ann_env_pd
+
+      # hourly sky temps
+      output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', 'Site Sky Temperature', 'Environment')
+      if output_timeseries.is_initialized # checks to see if time_series exists (only case 600)
+
+        # get Febuary 1st values
+        row_data = ['February 1','Site Variable']
+        table_01[:header].each do |hour|
+          next if hour == "Date"
+          next if hour == "Orientation"
+          date_string = "2009-02-01 #{hour}:00:00.000"
+          date_time = OpenStudio::DateTime.new(date_string)
+          val_at_date_time = output_timeseries.get.value(date_time)
+          row_data << val_at_date_time.round(2)
+        end
+        runner.registerValue("site_sky_temp_0201",row_data.to_s)
+
+        # get Febuary 1st values
+        row_data = ['May 4','Site Variable']
+        table_01[:header].each do |hour|
+          next if hour == "Date"
+          next if hour == "Orientation"
+          date_string = "2009-05-04 #{hour}:00:00.000"
+          date_time = OpenStudio::DateTime.new(date_string)
+          val_at_date_time = output_timeseries.get.value(date_time)
+          row_data << val_at_date_time.round(2)
+        end
+        runner.registerValue("site_sky_temp_0504",row_data.to_s)
+
+        # get Febuary 1st values
+        row_data = ['July 14','Site Variable']
+        table_01[:header].each do |hour|
+          next if hour == "Date"
+          next if hour == "Orientation"
+          date_string = "2009-7-14 #{hour}:00:00.000"
+          date_time = OpenStudio::DateTime.new(date_string)
+          val_at_date_time = output_timeseries.get.value(date_time)
+          row_data << val_at_date_time.round(2)
+        end
+        runner.registerValue("site_sky_temp_0714",row_data.to_s)
+
+      end
+
       # get keys
       keys = sqlFile.availableKeyValues(ann_env_pd, 'Hourly', 'Surface Outside Face Incident Solar Radiation Rate per Area')
 
@@ -310,20 +353,19 @@ module OsLib_Reporting_Bestest
       # create temp model from workspace and check orientation
       workspace = runner.lastEnergyPlusWorkspace.get
       rt = OpenStudio::EnergyPlus::ReverseTranslator.new
-      model2 = rt.translateWorkspace(workspace  )
+      model2 = rt.translateWorkspace(workspace)
 
       # loop through surfaces
       model2.getSurfaces.each do |surface|
-        next if OpenStudio::convert(surface.tilt,"rad","deg").get.round == 0
-        next if OpenStudio::convert(surface.azimuth,"rad","deg").get.round == 0
-        next if OpenStudio::convert(surface.azimuth,"rad","deg").get.round == 90
+        next if OpenStudio::convert(surface.azimuth,"rad","deg").get.round == 0 && OpenStudio::convert(surface.tilt,"rad","deg").get.round != 0
+        next if OpenStudio::convert(surface.azimuth,"rad","deg").get.round == 90 && OpenStudio::convert(surface.tilt,"rad","deg").get.round != 0
         key = surface.name.to_s.upcase
 
         # get values
         output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', 'Surface Outside Face Incident Solar Radiation Rate per Area', key)
         if output_timeseries.is_initialized # checks to see if time_series exists
 
-          # get May 4th values
+          # get Febuary 1st values
           row_data = ['February 1',surface.name.to_s.upcase]
           table_01[:header].each do |hour|
             next if hour == "Date"
@@ -364,14 +406,75 @@ module OsLib_Reporting_Bestest
           end
           runner.registerValue("surf_out_inst_slr_rad_0714_#{surface.name.get.downcase.gsub(" ","_")}",row_data.to_s)
           table_01[:data] << row_data
-
         else
           runner.registerWarning("Didn't find data for Outside Face Incident Solar Radiation Rate per Area")
         end # end of if output_timeseries.is_initialized
-
       end
     end
 
+    # loop through surfaces to find south facing windows
+    found_south = false
+    model2.getSubSurfaces.sort.each do |sub_surface|
+      
+      # TODO - there are two sub-surafces in same base surface, ideally can sum area and radiation of both vs. picking first
+      # but with no overhang they should be the same.
+      next if found_south
+      next if OpenStudio::convert(sub_surface.azimuth,"rad","deg").get.round != 180
+      next if OpenStudio::convert(sub_surface.tilt,"rad","deg").get.round != 90
+      key = sub_surface.name.to_s.upcase
+
+      # get parent surface to use in registerValue
+      parent_surf_name = sub_surface.surface.get.name.get.downcase.gsub(" ","_")
+
+      # get value
+      # Transmitted Solar Radiation (W) isn't avaiable as variable per area. Divde by area to get Wh/m^2
+      # just adding registerValues, not extending tables. Tables only go to HTML which isn't maintained and may be removed at some point.
+      output_timeseries = sqlFile.timeSeries(ann_env_pd, 'Hourly', 'Surface Window Transmitted Solar Radiation Rate', key)
+      if output_timeseries.is_initialized # checks to see if time_series exists
+
+        # get Febuary 1st values
+        row_data = ['February 1',sub_surface.name.to_s.upcase]
+        table_01[:header].each do |hour|
+          next if hour == "Date"
+          next if hour == "Orientation"
+          date_string = "2009-02-01 #{hour}:00:00.000"
+          date_time = OpenStudio::DateTime.new(date_string)
+          val_at_date_time = output_timeseries.get.value(date_time)
+          row_data << val_at_date_time.round(2)
+        end
+        runner.registerValue("surf_win_trans_rad_0201_#{parent_surf_name}",row_data.to_s)
+
+        # get May 4th values
+        row_data = ['May 4',sub_surface.name.to_s.upcase]
+        table_01[:header].each do |hour|
+          next if hour == "Date"
+          next if hour == "Orientation"
+          date_string = "2009-05-04 #{hour}:00:00.000"
+          date_time = OpenStudio::DateTime.new(date_string)
+          val_at_date_time = output_timeseries.get.value(date_time)
+          row_data << val_at_date_time.round(2)
+        end
+        runner.registerValue("surf_win_trans_rad_0504_#{parent_surf_name}",row_data.to_s)
+
+        # get July 14th values
+        row_data = ['July 14',sub_surface.name.to_s.upcase]
+        table_01[:header].each do |hour|
+          next if hour == "Date"
+          next if hour == "Orientation"
+          date_string = "2009-07-14 #{hour}:00:00.000"
+          date_time = OpenStudio::DateTime.new(date_string)
+          val_at_date_time = output_timeseries.get.value(date_time)
+          row_data << val_at_date_time.round(2)
+        end
+        runner.registerValue("surf_win_trans_rad_0714_#{parent_surf_name}",row_data.to_s)
+
+        # for now stopping after first south window instead of averaging multiple windows
+        found_south = true
+      else
+        runner.registerWarning("Didn't find data for Surface Window Transmitted Solar Radiation Rate")
+      end # end of if output_timeseries.is_initialized
+    end
+      
     # add table to array of tables
     if table_01[:data].size > 0
       table_6_1_tables << table_01

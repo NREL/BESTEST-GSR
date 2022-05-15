@@ -78,7 +78,6 @@ puts "Populating #{category}"
   worksheet.sheet_data[i][6].change_contents(day_of_month)
   worksheet.sheet_data[i][7].change_contents(time)
   historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][4].value.to_s}",worksheet.sheet_data[i][4].value.to_s]
-  # TODO - TYP decide if I want to add month and day of month to historical CSV or re-combine to date used in the past, trying to keep old DATE instead of month and day of month as separate values
   historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_DATE}",date]
   historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][7].value.to_s}",worksheet.sheet_data[i][7].value.to_s]
 end
@@ -211,11 +210,8 @@ category = "Unshaded Annual Transmitted Cases 620 and 600"
 puts "Populating #{category}"
 worksheet.sheet_data[165][2].change_contents(csv_hash['620'][:bestest_building_thermal_envelope_and_fabric_load_reportingzone_total_transmitted_solar_radiation])
 worksheet.sheet_data[162][2].change_contents(csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingzone_total_transmitted_solar_radiation])
-historical_rows << ["#{category} 920WEST",worksheet.sheet_data[165][2].value.to_s]
-historical_rows << ["#{category} 900SOUTH",worksheet.sheet_data[162][2].value.to_s]
-# use lines below if decide to pull from spreadsheet and change historical description
-# historical_rows << ["#{category} #{worksheet.sheet_data[165][1].value.to_s}",worksheet.sheet_data[165][2].value.to_s]
-# historical_rows << ["#{category} #{worksheet.sheet_data[162][1].value.to_s}",worksheet.sheet_data[162][2].value.to_s]
+historical_rows << ["#{category} #{worksheet.sheet_data[165][1].value.to_s}",worksheet.sheet_data[165][2].value.to_s]
+historical_rows << ["#{category} #{worksheet.sheet_data[162][1].value.to_s}",worksheet.sheet_data[162][2].value.to_s]
 
 # new Unshaded outputs for Std 140 2020
 category = "Unshaded Annual Transmitted Cases 660 and 670"
@@ -238,13 +234,14 @@ historical_rows << ["#{category} 910SOUTH",worksheet.sheet_data[169][1].value.to
 
 # TODO - add Monthly Conditioned Zone Loads (Cases 600 and 900)  
 # Reporting measure will need to be updated to get correct data in to workflow_results_csv
+
 category = "Hourly Incident Solar Radiation Cloudy Day May 4th Case 600 - Horizontal"
 puts "Populating #{category}"
-array = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingsurf_out_inst_slr_rad_0504_zone_surface_south].split(",")
+array = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingsurf_out_inst_slr_rad_0504_zone_surface_roof].split(",")
 counter = 0
 (229..252).each do |i|
-  #worksheet.sheet_data[i][2].change_contents(array[counter+2].to_f)
-  #historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
+  worksheet.sheet_data[i][2].change_contents(array[counter+2].to_f)
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][2].value.to_s]
   counter += 1
 end
 
@@ -268,15 +265,13 @@ counter = 0
   counter += 1
 end
 
-# TODO - add Monthly Conditioned Zone Loads (Cases 600 and 900)  
-# Reporting measure will need to be updated to get correct data in to workflow_results_csv
 category = "Hourly Incident Solar Radiation Cloudy Day July 14th Case 600 - Horizontal"
 puts "Populating #{category}"
-array = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingsurf_out_inst_slr_rad_0714_zone_surface_south].split(",")
+array = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingsurf_out_inst_slr_rad_0714_zone_surface_roof].split(",")
 counter = 0
 (229..252).each do |i|
-  #worksheet.sheet_data[i][5].change_contents(array[counter+2].to_f)
-  #historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][5].value.to_s]
+  worksheet.sheet_data[i][5].change_contents(array[counter+2].to_f)
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][5].value.to_s]
   counter += 1
 end
 
@@ -300,7 +295,64 @@ counter = 0
   counter += 1
 end
 
-category = "Hourly Heating and Cooling Load February 1 and July 14th Multiple Test Cases"
+# add hourly sky temperatures
+category = "Hourly Sky Temperatures for February 1st, May 4th, July 14th Multiple Test Caes 600"
+puts "Populating #{category}"
+column_target = 8
+tot_trans_dates = ['0201','0504','0714']
+tot_trans_dates.each do |k|
+  if k == '0201'
+    array = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingsite_sky_temp_0201].split(",")
+  elsif k == '0504'
+    array = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingsite_sky_temp_0504].split(",")
+  elsif k == '0714'
+    array = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingsite_sky_temp_0714].split(",")
+  else
+    array = nil # should not get to this
+  end
+
+  counter = 2
+  (229..252).each do |i|
+    worksheet.sheet_data[i][column_target].change_contents(array[counter].to_f)
+    historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][column_target].value.to_s]
+    counter += 1
+  end
+  column_target += 1
+
+end
+
+# add south hourly total transmitted solar for multiple dates and test cases
+category = "Hourly Transmitted Solar Radiation per Area February 1st, May 4th, July 14th Multiple Test Cases"
+puts "Populating #{category}"
+column_target = 11
+tot_trans_dates = ['0201','0504','0714']
+tot_trans_dates.each do |k|
+
+  tot_trans_test_cases = ['600','660','670']
+  tot_trans_test_cases.each do |j|
+    
+    if k == '0201'
+      array = csv_hash[j][:bestest_building_thermal_envelope_and_fabric_load_reportingsurf_win_trans_rad_0201_zone_surface_south].split(",")
+    elsif k == '0504'
+      array = csv_hash[j][:bestest_building_thermal_envelope_and_fabric_load_reportingsurf_win_trans_rad_0504_zone_surface_south].split(",")
+    elsif k == '0714'
+      array = csv_hash[j][:bestest_building_thermal_envelope_and_fabric_load_reportingsurf_win_trans_rad_0714_zone_surface_south].split(",")
+    else
+      array = nil # should not get to this
+    end
+
+    counter = 2
+    (229..252).each do |i|
+      worksheet.sheet_data[i][column_target].change_contents(array[counter].to_f)
+      historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][column_target].value.to_s]
+      counter += 1
+    end
+    column_target += 1
+
+  end  
+end
+
+category = "Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases"
 puts "Populating #{category}"
 column_target = 2
 (2..25).each do |j| # step through columns in table
@@ -323,7 +375,7 @@ column_target = 2
   column_target += 1
 end
 
-category = "Hourly Free Float Temperatures February 1 and July 14th Multiple Test Cases"
+category = "Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases"
 puts "Populating #{category}"
 column_target = 2
 (2..7).each do |j| # step through columns in table
