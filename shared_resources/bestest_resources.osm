@@ -169,23 +169,23 @@ OS:WindowMaterial:Glazing,
   Glass Type 1,                           !- Name
   SpectralAverage,                        !- Optical Data Type
   ,                                       !- Window Glass Spectral Data Set Name
-  0.003175,                               !- Thickness {m}
-  0.86156,                                !- Solar Transmittance at Normal Incidence
-  0.07846,                                !- Front Side Solar Reflectance at Normal Incidence
-  0.07846,                                !- Back Side Solar Reflectance at Normal Incidence
+  0.003048,                               !- Thickness {m}
+  0.834,                                  !- Solar Transmittance at Normal Incidence
+  0.075,                                  !- Front Side Solar Reflectance at Normal Incidence
+  0.075,                                  !- Back Side Solar Reflectance at Normal Incidence
   0.91325,                                !- Visible Transmittance at Normal Incidence
   0.082,                                  !- Front Side Visible Reflectance at Normal Incidence
   0.082,                                  !- Back Side Visible Reflectance at Normal Incidence
   0,                                      !- Infrared Transmittance at Normal Incidence
   0.84,                                   !- Front Side Infrared Hemispherical Emissivity
   0.84,                                   !- Back Side Infrared Hemispherical Emissivity
-  1.06;                                   !- Conductivity {W/m-K}
+  1.00;                                   !- Conductivity {W/m-K}
 
 OS:WindowMaterial:Gas,
   {1380648b-7eef-4188-aab6-63bdfbf668ed}, !- Handle
   Air Space Resistance,                   !- Name
   AIR,                                    !- Gas Type
-  0.013;                                  !- Thickness {m}
+  0.012;                                  !- Thickness {m}
 
 OS:Construction,
   {731d0645-89aa-4668-bdc7-906c47fd00fb}, !- Handle
