@@ -335,6 +335,21 @@ module OsLib_Reporting_Bestest
         end
         runner.registerValue("site_sky_temp_0714",row_data.to_s)
 
+        # TODO - get extreme and avg annual sky conditions for Sky Temperature Output Table
+        sky_t_array_8760 = []
+        for i in 0..(output_timeseries.get.values.size - 1)
+          # using this to get average
+          sky_t_array_8760 << output_timeseries.get.values[i]
+        end
+
+        # store min and max and avg temps as register value, along with index position
+        # will convert index to date/time downstream
+        runner.registerValue('sky_min_temp',sky_t_array_8760.min,'C')
+        runner.registerValue('sky_min_index_position',sky_t_array_8760.each_with_index.min[1])
+        runner.registerValue('sky_max_temp',sky_t_array_8760.max,'C')
+        runner.registerValue('sky_max_index_position',sky_t_array_8760.each_with_index.max[1])
+        runner.registerValue('sky_avg_temp',sky_t_array_8760.reduce(:+) / sky_t_array_8760.size.to_f,'C')
+
       end
 
       # get keys
@@ -474,7 +489,7 @@ module OsLib_Reporting_Bestest
         runner.registerWarning("Didn't find data for Surface Window Transmitted Solar Radiation Rate")
       end # end of if output_timeseries.is_initialized
     end
-      
+
     # add table to array of tables
     if table_01[:data].size > 0
       table_6_1_tables << table_01

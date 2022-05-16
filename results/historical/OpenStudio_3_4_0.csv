@@ -372,27 +372,13 @@ Annual Hourly Integrated Peak Cooling Loads 800_Hour,15
 Annual Hourly Integrated Peak Cooling Loads 810_kW,2.23981
 Annual Hourly Integrated Peak Cooling Loads 810_DATE,11-SEP
 Annual Hourly Integrated Peak Cooling Loads 810_Hour,14
-FF Max Hourly Zone Temperature 600FF_°C,64.4608
-FF Max Hourly Zone Temperature 600FF_DATE,18-OCT
-FF Max Hourly Zone Temperature 600FF_Hour,15
-FF Max Hourly Zone Temperature 900FF_°C,44.6424
-FF Max Hourly Zone Temperature 900FF_DATE,12-SEP
-FF Max Hourly Zone Temperature 900FF_Hour,14
-FF Max Hourly Zone Temperature 650FF_°C,68.1638
-FF Max Hourly Zone Temperature 650FF_DATE,18-OCT
-FF Max Hourly Zone Temperature 650FF_Hour,15
-FF Max Hourly Zone Temperature 950FF_°C,37.4435
-FF Max Hourly Zone Temperature 950FF_DATE,11-SEP
-FF Max Hourly Zone Temperature 950FF_Hour,15
-FF Max Hourly Zone Temperature 680FF_°C,63.5658
-FF Max Hourly Zone Temperature 680FF_DATE,18-OCT
-FF Max Hourly Zone Temperature 680FF_Hour,15
-FF Max Hourly Zone Temperature 980FF_°C,44.9968
-FF Max Hourly Zone Temperature 980FF_DATE,12-SEP
-FF Max Hourly Zone Temperature 980FF_Hour,14
-FF Max Hourly Zone Temperature 960_°C,49.9702
-FF Max Hourly Zone Temperature 960_DATE,12-OCT
-FF Max Hourly Zone Temperature 960_Hour,14
+FF Average Hourly Zone Temperature 600FF,25.3685
+FF Average Hourly Zone Temperature 900FF,25.5725
+FF Average Hourly Zone Temperature 650FF,19.576
+FF Average Hourly Zone Temperature 950FF,15.1976
+FF Average Hourly Zone Temperature 680FF,25.6995
+FF Average Hourly Zone Temperature 980FF,26.1607
+FF Average Hourly Zone Temperature 960,27.9308
 FF Min Hourly Zone Temperature 600FF_°C,-11.8941
 FF Min Hourly Zone Temperature 600FF_DATE,09-FEB
 FF Min Hourly Zone Temperature 600FF_Hour,6
@@ -414,13 +400,27 @@ FF Min Hourly Zone Temperature 980FF_Hour,6
 FF Min Hourly Zone Temperature 960_°C,5.45446
 FF Min Hourly Zone Temperature 960_DATE,09-FEB
 FF Min Hourly Zone Temperature 960_Hour,6
-FF Average Hourly Zone Temperature 600FF,25.3685
-FF Average Hourly Zone Temperature 900FF,25.5725
-FF Average Hourly Zone Temperature 650FF,19.576
-FF Average Hourly Zone Temperature 950FF,15.1976
-FF Average Hourly Zone Temperature 680FF,25.6995
-FF Average Hourly Zone Temperature 980FF,26.1607
-FF Average Hourly Zone Temperature 960,27.9308
+FF Max Hourly Zone Temperature 600FF_°C,64.4608
+FF Max Hourly Zone Temperature 600FF_DATE,18-OCT
+FF Max Hourly Zone Temperature 600FF_Hour,15
+FF Max Hourly Zone Temperature 900FF_°C,44.6424
+FF Max Hourly Zone Temperature 900FF_DATE,12-SEP
+FF Max Hourly Zone Temperature 900FF_Hour,14
+FF Max Hourly Zone Temperature 650FF_°C,68.1638
+FF Max Hourly Zone Temperature 650FF_DATE,18-OCT
+FF Max Hourly Zone Temperature 650FF_Hour,15
+FF Max Hourly Zone Temperature 950FF_°C,37.4435
+FF Max Hourly Zone Temperature 950FF_DATE,11-SEP
+FF Max Hourly Zone Temperature 950FF_Hour,15
+FF Max Hourly Zone Temperature 680FF_°C,63.5658
+FF Max Hourly Zone Temperature 680FF_DATE,18-OCT
+FF Max Hourly Zone Temperature 680FF_Hour,15
+FF Max Hourly Zone Temperature 980FF_°C,44.9968
+FF Max Hourly Zone Temperature 980FF_DATE,12-SEP
+FF Max Hourly Zone Temperature 980FF_Hour,14
+FF Max Hourly Zone Temperature 960_°C,49.9702
+FF Max Hourly Zone Temperature 960_DATE,12-OCT
+FF Max Hourly Zone Temperature 960_Hour,14
 Annual Incident Total Case 600 600NORTH,438.218
 Annual Incident Total Case 600 600EAST,1062.45
 Annual Incident Total Case 600 600WEST,967.128
@@ -428,10 +428,17 @@ Annual Incident Total Case 600 600SOUTH,1370.64
 Annual Incident Total Case 600 600HORZ.,1664.58
 Unshaded Annual Transmitted Cases 620 and 600 620/West,660.611
 Unshaded Annual Transmitted Cases 620 and 600 600/South,869.094
-Unshaded Annual Transmitted Cases 660 and 670 660/South,""
-Unshaded Annual Transmitted Cases 660 and 670 670/South,""
-Shaded Annual Transmitted Cases 930 and 910 930WEST,479.511
-Shaded Annual Transmitted Cases 930 and 910 910SOUTH,697.799
+Unshaded Annual Transmitted Cases 660 and 670 660/South,436.044
+Unshaded Annual Transmitted Cases 660 and 670 670/South,1032.84
+Shaded Annual Transmitted Cases 930 and 910 630/West,479.511
+Shaded Annual Transmitted Cases 930 and 910 610/South,697.799
+Sky Temperature Output 600,-2.01719
+Sky Temperature Output 600_°C,-37.9938
+Sky Temperature Output 600_DATE,31-DEC
+Sky Temperature Output 600_Hour,23
+Sky Temperature Output 600_°C,24.6403
+Sky Temperature Output 600_DATE,04-AUG
+Sky Temperature Output 600_Hour,15
 Hourly Incident Solar Radiation Cloudy Day May 4th Case 600 - Horizontal 1,0.0
 Hourly Incident Solar Radiation Cloudy Day May 4th Case 600 - Horizontal 2,0.0
 Hourly Incident Solar Radiation Cloudy Day May 4th Case 600 - Horizontal 3,0.0

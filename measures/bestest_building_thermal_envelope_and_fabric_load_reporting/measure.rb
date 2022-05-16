@@ -84,7 +84,9 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Measure
       end
 
       # get windows variables for subset of cases
-      if bldg_name.include? "600" or bldg_name.include? "610" or bldg_name.include? "620" or bldg_name.include? "630" or bldg_name.include? "660" or bldg_name.include? "670"
+      name_test = bldg_name.gsub('BESTEST Case ','')[0..2] # change logic if FF case added that has more characters
+      hourly_win_cases = ['600','610','620','630','660','670','900','910','920','930']
+      if hourly_win_cases.include?(name_test)
         hourly_variables << 'Surface Window Transmitted Solar Radiation Rate'
         hourly_variables << 'Surface Window Transmitted Beam Solar Radiation Rate'
         hourly_variables << 'Surface Window Transmitted Diffuse Solar Radiation Rate'
@@ -93,8 +95,8 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Measure
         hourly_variables << 'Surface Window Transmitted Diffuse Solar Radiation Energy'
       end
 
-      # get windows variables for subset of cases
-      if bldg_name.include? "900" or bldg_name.include? "910" or bldg_name.include? "920" or bldg_name.include? "930" or bldg_name.include? "600" or bldg_name.include? "620"
+      # get zone windows variables for subset of cases
+      if hourly_win_cases.include?(name_test)
         hourly_variables << 'Zone Windows Total Transmitted Solar Radiation Rate'
       end
 
