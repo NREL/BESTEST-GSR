@@ -396,25 +396,48 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Measure::ModelMe
     model.getBuilding.setName("BESTEST Case #{case_num}")
     runner.registerInfo("Renaming Building > #{model.getBuilding.name}")
 
-
     # set timesteps per hour
     timestep = model.getTimestep
-    timestep.setNumberOfTimestepsPerHour(4)
+    timestep.setNumberOfTimestepsPerHour(6)
 
     # set shadow calcs
     shadow_calc_freq = model.getShadowCalculation
     shadow_calc_freq.setShadingCalculationUpdateFrequency(1)
 
     # set ground temps
-    ground_temps = model.getSiteGroundTemperatureBuildingSurface
-    (1..12).each do |i|
-      ground_temps.setTemperatureByMonth(i,10.0)
-    end
+    # disabed I don't see any pmention of setting ground temps to 10C
+    #ground_temps = model.getSiteGroundTemperatureBuildingSurface
+    #(1..12).each do |i|
+    #  ground_temps.setTemperatureByMonth(i,10.0)
+    #end
 
     # set ground reflectance (default is 0.2 which is what has been used in the past)
-    # ground_reflectance = model.getSiteGroundReflectance
+    # while 0.2 is default in E+ I wanted to explicityly ad to make sure weather file ground reflectance isn't being used
+    ground_reflectance = model.getSiteGroundReflectance
+    ground_reflectance.setJanuaryGroundReflectance(0.2)
+    ground_reflectance.setFebruaryGroundReflectance(0.2)
+    ground_reflectance.setMarchGroundReflectance(0.2)
+    ground_reflectance.setAprilGroundReflectance(0.2)
+    ground_reflectance.setMayGroundReflectance(0.2)
+    ground_reflectance.setJuneGroundReflectance(0.2)
+    ground_reflectance.setJulyGroundReflectance(0.2)
+    ground_reflectance.setAugustGroundReflectance(0.2)
+    ground_reflectance.setSeptemberGroundReflectance(0.2)
+    ground_reflectance.setOctoberGroundReflectance(0.2)
+    ground_reflectance.setNovemberGroundReflectance(0.2)
+    ground_reflectance.setDecemberGroundReflectance(0.2)
 
     # note: set interior solar distribution fractions isn't needed if E+ auto calcualtes it
+
+    # SurfaceConvectionAlgorithm insde defaults to TARP and outside defaults to DOE-2 in E+
+
+    # ShadowCalculation 
+    # Shading Caluclation Method default is PolygonClipping
+    # Shading Calculation Update Frequency Method default is Periodic
+    # Shading Calculation Update Frequency default is 20 (days)
+    # Polygon Clipping Algorithm default is SutherlandHodgman
+    shadow_calculation = model.getShadowCalculation
+    shadow_calculation.setShadingCalculationUpdateFrequency(1) # changing from default of 20 days
 
     # report final condition of model
     runner.registerFinalCondition("The final model named #{model.getBuilding.name} has #{model.numObjects} objects.")
