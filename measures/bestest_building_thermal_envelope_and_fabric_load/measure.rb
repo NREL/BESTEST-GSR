@@ -405,7 +405,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Measure::ModelMe
     shadow_calc_freq.setShadingCalculationUpdateFrequency(1)
 
     # set ground temps
-    # disabed I don't see any pmention of setting ground temps to 10C
+    # disabled I don't see any mention of setting ground temps to 10C
     #ground_temps = model.getSiteGroundTemperatureBuildingSurface
     #(1..12).each do |i|
     #  ground_temps.setTemperatureByMonth(i,10.0)

@@ -309,7 +309,7 @@ module OsLib_Reporting_Bestest
           val_at_date_time = output_timeseries.get.value(date_time)
           row_data << val_at_date_time.round(2)
         end
-        runner.registerValue("site_sky_temp_0201",row_data.to_s)
+        runner.registerValue("site_sky_temp_0201",row_data.join(","))
 
         # get Febuary 1st values
         row_data = ['May 4','Site Variable']
@@ -321,7 +321,7 @@ module OsLib_Reporting_Bestest
           val_at_date_time = output_timeseries.get.value(date_time)
           row_data << val_at_date_time.round(2)
         end
-        runner.registerValue("site_sky_temp_0504",row_data.to_s)
+        runner.registerValue("site_sky_temp_0504",row_data.join(","))
 
         # get Febuary 1st values
         row_data = ['July 14','Site Variable']
@@ -333,7 +333,7 @@ module OsLib_Reporting_Bestest
           val_at_date_time = output_timeseries.get.value(date_time)
           row_data << val_at_date_time.round(2)
         end
-        runner.registerValue("site_sky_temp_0714",row_data.to_s)
+        runner.registerValue("site_sky_temp_0714",row_data.join(","))
 
         # TODO - get extreme and avg annual sky conditions for Sky Temperature Output Table
         sky_t_array_8760 = []
@@ -620,7 +620,7 @@ module OsLib_Reporting_Bestest
         end
       end
 
-      runner.registerInfo("End of method, Adding values for heatin gand coooling on Febuary 1st and July 14th.")
+      runner.registerInfo("End of method, Adding values for heating and coooling on Febuary 1st and July 14th.")
       runner.registerValue("sens_htg_clg_0201",combined_hourly_0201.to_s)
       runner.registerValue("sens_htg_clg_0714",combined_hourly_0714.to_s)
 
@@ -1085,6 +1085,168 @@ module OsLib_Reporting_Bestest
     ff_temp_bins_tables << table_01
     
     return @ff_temp_bins_section
+  end
+
+  # create case_610_only_section
+  def self.monthly_htg_clg_table_section(model, sqlFile, runner, name_only = false)
+    # array to hold tables
+    monthly_htg_clg_tables = []
+
+    # gather data for section
+    @monthly_htg_clg_section = {}
+    @monthly_htg_clg_section[:title] = 'Monthly Heating and Cooling for Casees 600 and 900'
+    @monthly_htg_clg_section[:tables] = monthly_htg_clg_tables
+
+    # stop here if only name is requested this is used to populate display name for arguments
+    if name_only == true
+      return @monthly_htg_clg_section
+    end
+
+    # array's for runnerRegisterValues
+    monthly_htg_cons = []
+    monthly_clg_cons = []
+    monthly_htg_peak_val = []
+    monthly_htg_peak_time = []
+    monthly_clg_peak_val = []
+    monthly_clg_peak_time = []
+
+    # only case 600 or 900
+    name_test = model.getBuilding.name.get.to_s.gsub('BESTEST Case ','')[0..2].to_s # change logic if FF case added that has more characters
+    if !['600','900'].include?(name_test)
+      return @monthly_htg_clg_section
+    end
+
+    months = ['January','February','March','April','May','June','July','August','September','October','November','December']
+    months.each do |month|
+
+      # keep long month for sql query use short for reg_value so matches Excel labe
+      mon = month[0..2].downcase
+
+      # gather monthly heating from BUILDING ENERGY PERFORMANCE - DISTRICT HEATING Custom Monthly Report
+      query = 'SELECT Value FROM tabulardatawithstrings WHERE '
+      query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING' and "
+      query << "ReportForString='Meter' and "
+      query << "TableName='Custom Monthly Report' and "
+      query << "RowName='#{month}' and "
+      query << "ColumnName='HEATING:DISTRICTHEATING' and "
+      query << "Units='J';"
+      query_results = sqlFile.execAndReturnFirstDouble(query)
+      if query_results.empty?
+        runner.registerWarning("Did not find value for monthly heating for #{month}.")
+        return false
+      else
+        source_units = 'J'
+        target_units = 'kWh'
+        value = OpenStudio.convert(query_results.get, source_units, target_units).get
+        monthly_htg_cons << value.round(2)
+      end
+
+      # gather monthly heating from BUILDING ENERGY PERFORMANCE - DISTRICT COOLING Custom Monthly Report
+      query = 'SELECT Value FROM tabulardatawithstrings WHERE '
+      query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT COOLING' and "
+      query << "ReportForString='Meter' and "
+      query << "TableName='Custom Monthly Report' and "
+      query << "RowName='#{month}' and "
+      query << "ColumnName='COOLING:DISTRICTCOOLING' and "
+      query << "Units='J';"
+      query_results = sqlFile.execAndReturnFirstDouble(query)
+      if query_results.empty?
+        runner.registerWarning("Did not find value for monthly cooling for #{month}.")
+        return false
+      else
+        source_units = 'J'
+        target_units = 'kWh'
+        value = OpenStudio.convert(query_results.get, source_units, target_units).get
+        monthly_clg_cons << value.round(2)
+      end
+
+      # gather monthly heating from BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND Custom Monthly Report
+      query = 'SELECT Value FROM tabulardatawithstrings WHERE '
+      query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' and "
+      query << "ReportForString='Meter' and "
+      query << "TableName='Custom Monthly Report' and "
+      query << "RowName='#{month}' and "
+      query << "ColumnName='DISTRICTHEATING:FACILITY {Maximum}' and "
+      query << "Units='W';"
+      query_results = sqlFile.execAndReturnFirstDouble(query)
+      if query_results.empty?
+        runner.registerWarning("Did not find value for monthly heating peak value for #{month}.")
+        return false
+      else
+        source_units = 'W'
+        target_units = 'kW'
+        value = OpenStudio.convert(query_results.get, source_units, target_units).get
+        monthly_htg_peak_val << value.round(2)
+      end
+
+      # time of peak
+      #query = 'SELECT Value FROM tabulardatawithstrings WHERE '
+      #query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' and "
+      #query << "ReportForString='Meter' and "
+      #query << "TableName='Custom Monthly Report' and "
+      #query << "RowName='#{month}' and "
+      #query << "ColumnName='DISTRICTHEATING:FACILITY {TIMESTEP}' and "
+      #query << "Units='';"
+      #query_results = sqlFile.execAndReturnFirstString(query)
+      # TODO - work around for possible bug in E+ SQL or OS sqlFile methods
+      query = "SELECT Value FROM tabulardatawithstrings WHERE ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' and ReportForString='Meter' and TableName='Custom Monthly Report' and RowName='#{month}';"
+      query_results = sqlFile.execAndReturnVectorOfString(query)
+      if query_results.empty?
+        runner.registerWarning("Did not find value for monthly heating peak time for #{month}.")
+        return false
+      else
+        value = query_results.get[1]
+        monthly_htg_peak_time << value
+      end
+
+      # gather monthly heating from BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND Custom Monthly Report
+      query = 'SELECT Value FROM tabulardatawithstrings WHERE '
+      query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' and "
+      query << "ReportForString='Meter' and "
+      query << "TableName='Custom Monthly Report' and "
+      query << "RowName='#{month}' and "
+      query << "ColumnName='DISTRICTCOOLING:FACILITY {Maximum}' and "
+      query << "Units='W';"
+      query_results = sqlFile.execAndReturnFirstDouble(query)
+      if query_results.empty?
+        runner.registerWarning("Did not find value for monthly cooling peak value for #{month}.")
+        return false
+      else
+        source_units = 'W'
+        target_units = 'kW'
+        value = OpenStudio.convert(query_results.get, source_units, target_units).get
+        monthly_clg_peak_val << value.round(2)
+      end
+      # time of peak
+      #query = 'SELECT Value FROM tabulardatawithstrings WHERE '
+      #query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' and "
+      #query << "ReportForString='Meter' and "
+      #query << "TableName='Custom Monthly Report' and "
+      #query << "RowName='#{month}' and "
+      #query << "ColumnName='DISTRICTHEATING:FACILITY {TIMESTAMP}' and "
+      #query << "Units='';"
+      #query_results = sqlFile.execAndReturnFirstString(query)
+      # TODO - work around for possible bug in E+ SQL or OS sqlFile methods
+      query = "SELECT Value FROM tabulardatawithstrings WHERE ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' and ReportForString='Meter' and TableName='Custom Monthly Report' and RowName='#{month}';"
+      query_results = sqlFile.execAndReturnVectorOfString(query)
+      if query_results.empty?
+        runner.registerWarning("Did not find value for monthly cooling peak time for #{month}.")
+        return false
+      else
+        value = query_results.get[1]
+        monthly_clg_peak_time << value
+      end
+    end
+
+    # populated runnerRegisterValues for each column. Each is Jan-Dec
+    runner.registerValue("monthly_htg_cons",monthly_htg_cons.join(",")) #kWh
+    runner.registerValue("monthly_clg_cons",monthly_clg_cons.join(",")) #kWh
+    runner.registerValue("monthly_htg_peak_val",monthly_htg_peak_val.join(",")) #kW
+    runner.registerValue("monthly_htg_peak_time",monthly_htg_peak_time.join(",")) #TIMESTAMP
+    runner.registerValue("monthly_clg_peak_val",monthly_clg_peak_val.join(",")) #kW
+    runner.registerValue("monthly_clg_peak_time",monthly_clg_peak_time.join(",")) #TIMESTAMP
+
+    return @monthly_htg_clg_section
   end
 
 end

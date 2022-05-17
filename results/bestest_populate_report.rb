@@ -128,7 +128,7 @@ def self.return_date_time_from_8760_index(index)
   month_hash['NOV'] = 30
   month_hash['DEC'] = 31
 
-  raw_date = (index/24.0).floor
+  raw_date = (index/24.0).ceil # updated from floor since first hour is 1 and nt 0
   counter = 0
   month_hash.each do |k,v|
     if raw_date - counter <= v
@@ -143,6 +143,19 @@ def self.return_date_time_from_8760_index(index)
     end
   end
   return nil # shouldn't hit this
+end
+
+# example string 28-NOV-12:00
+# aything in first hour of day is 1 not 0
+def self.return_date_time_from_string(string)
+
+  date = {}
+  date['dd'] = string[0..1].to_i
+  date['mmm'] = string[3..5].to_i
+  date['hh'] = string[7..8].to_i + 1
+
+  return date
+
 end
 
 category = "FF Average Hourly Zone Temperature"
@@ -254,8 +267,85 @@ historical_rows << ["#{category} #{worksheet.sheet_data[177][1].value.to_s}_#{wo
 historical_rows << ["#{category} #{worksheet.sheet_data[177][1].value.to_s}_DATE",date_time_array[0]]
 historical_rows << ["#{category} #{worksheet.sheet_data[177][1].value.to_s}_#{worksheet.sheet_data[176][10].value.to_s}",worksheet.sheet_data[177][10].value.to_s]
 
-# TODO - add Monthly Conditioned Zone Loads (Cases 600 and 900)  
+# add Monthly Conditioned Zone Loads (Cases 600 and 900)  
 # Reporting measure will need to be updated to get correct data in to workflow_results_csv
+category = "Monthly Conditioned Zone Loads Case 600 and 900"
+puts "Populating #{category}"
+
+# setup monthly column arrays
+array_02 = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingmonthly_htg_cons].split(",")
+array_03 = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingmonthly_clg_cons].split(",")
+array_04 = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingmonthly_htg_peak_val].split(",")
+array_05_06 = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingmonthly_htg_peak_time].split(",")
+array_07 = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingmonthly_clg_peak_val].split(",")
+array_08_09 = csv_hash['600'][:bestest_building_thermal_envelope_and_fabric_load_reportingmonthly_clg_peak_time].split(",")
+
+array_10 = csv_hash['900'][:bestest_building_thermal_envelope_and_fabric_load_reportingmonthly_htg_cons].split(",")
+array_11 = csv_hash['900'][:bestest_building_thermal_envelope_and_fabric_load_reportingmonthly_clg_cons].split(",")
+array_12 = csv_hash['900'][:bestest_building_thermal_envelope_and_fabric_load_reportingmonthly_htg_peak_val].split(",")
+array_13_14 = csv_hash['900'][:bestest_building_thermal_envelope_and_fabric_load_reportingmonthly_htg_peak_time].split(",")
+array_15 = csv_hash['900'][:bestest_building_thermal_envelope_and_fabric_load_reportingmonthly_clg_peak_val].split(",")
+array_16_17 = csv_hash['900'][:bestest_building_thermal_envelope_and_fabric_load_reportingmonthly_clg_peak_time].split(",")
+
+# populate months with arrays
+counter = 0
+(189..200).each do |i|
+
+  # total heating 600 aand 900
+  worksheet.sheet_data[i][2].change_contents(array_02[counter])
+  puts "hello I should be adding a value of #{array_02[counter].to_f}"
+  historical_rows << ["#{category} Total Heating 600",worksheet.sheet_data[i][2].value.to_s]
+  worksheet.sheet_data[i][10].change_contents(array_10[counter].to_f)
+  historical_rows << ["#{category} Total Heating 900",worksheet.sheet_data[i][10].value.to_s]
+
+  # total coooling 600 aand 900
+  worksheet.sheet_data[i][3].change_contents(array_03[counter].to_f)
+  historical_rows << ["#{category} Total Cooling 600",worksheet.sheet_data[i][3].value.to_s]
+  worksheet.sheet_data[i][11].change_contents(array_11[counter].to_f)
+  historical_rows << ["#{category} Total Cooling 900",worksheet.sheet_data[i][11].value.to_s]
+
+  # peak heating value 600 aand 900
+  worksheet.sheet_data[i][4].change_contents(array_04[counter].to_f)
+  historical_rows << ["#{category} Peak Heating Value 600",worksheet.sheet_data[i][4].value.to_s]
+  worksheet.sheet_data[i][12].change_contents(array_12[counter].to_f)
+  historical_rows << ["#{category} Peak Heating Value 900",worksheet.sheet_data[i][12].value.to_s]
+
+  # TODO - peak heating day time  600 aand 900
+  dd_htg_peak_600 = return_date_time_from_string(array_05_06[counter])['dd']
+  hh_htg_peak_600 = return_date_time_from_string(array_05_06[counter])['hh']
+  dd_htg_peak_900 = return_date_time_from_string(array_13_14[counter])['dd']
+  hh_htg_peak_900 = return_date_time_from_string(array_13_14[counter])['hh']
+  worksheet.sheet_data[i][5].change_contents(dd_htg_peak_600)
+  worksheet.sheet_data[i][6].change_contents(hh_htg_peak_600)
+  worksheet.sheet_data[i][13].change_contents(dd_htg_peak_900)
+  worksheet.sheet_data[i][14].change_contents(hh_htg_peak_900)
+  historical_rows << ["#{category} Peak Heating Day 600",worksheet.sheet_data[i][5].value.to_s]
+  historical_rows << ["#{category} Peak Heating Hour 600",worksheet.sheet_data[i][6].value.to_s]
+  historical_rows << ["#{category} Peak Heating Day 900",worksheet.sheet_data[i][13].value.to_s]
+  historical_rows << ["#{category} Peak Heating Hour 900",worksheet.sheet_data[i][14].value.to_s]
+
+  # peak cooling value 600 aand 900
+  worksheet.sheet_data[i][7].change_contents(array_07[counter].to_f)
+  historical_rows << ["#{category} Peak Cooling Value 600",worksheet.sheet_data[i][7].value.to_s]
+  worksheet.sheet_data[i][15].change_contents(array_15[counter].to_f)
+  historical_rows << ["#{category} Peak Cooling Value 900",worksheet.sheet_data[i][15].value.to_s]
+
+  # peak cooling day time  600 aand 900
+  dd_clg_peak_600 = return_date_time_from_string(array_08_09[counter])['dd']
+  hh_clg_peak_600 = return_date_time_from_string(array_08_09[counter])['hh']
+  dd_clg_peak_900 = return_date_time_from_string(array_16_17[counter])['dd']
+  hh_clg_peak_900 = return_date_time_from_string(array_16_17[counter])['hh']
+  worksheet.sheet_data[i][8].change_contents(dd_clg_peak_600)
+  worksheet.sheet_data[i][9].change_contents(hh_clg_peak_600)
+  worksheet.sheet_data[i][16].change_contents(dd_clg_peak_900)
+  worksheet.sheet_data[i][17].change_contents(hh_clg_peak_900)
+  historical_rows << ["#{category} Peak Cooling Day 600",worksheet.sheet_data[i][8].value.to_s]
+  historical_rows << ["#{category} Peak Cooling Hour 600",worksheet.sheet_data[i][9].value.to_s]
+  historical_rows << ["#{category} Peak Cooling Day 900",worksheet.sheet_data[i][16].value.to_s]
+  historical_rows << ["#{category} Peak Cooling Hour 900",worksheet.sheet_data[i][17].value.to_s]
+
+  counter += 1
+end
 
 category = "Hourly Incident Solar Radiation Cloudy Day May 4th Case 600 - Horizontal"
 puts "Populating #{category}"
