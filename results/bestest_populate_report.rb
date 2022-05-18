@@ -295,7 +295,7 @@ counter = 0
 (189..200).each do |i|
 
   # total heating 600 aand 900
-  worksheet.sheet_data[i][2].change_contents(array_02[counter])
+  worksheet.sheet_data[i][2].change_contents(array_02[counter].to_f)
   puts "hello I should be adding a value of #{array_02[counter].to_f}"
   historical_rows << ["#{category} Total Heating 600",worksheet.sheet_data[i][2].value.to_s]
   worksheet.sheet_data[i][10].change_contents(array_10[counter].to_f)
