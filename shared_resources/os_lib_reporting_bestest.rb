@@ -1178,24 +1178,20 @@ module OsLib_Reporting_Bestest
         value = OpenStudio.convert(query_results.get, source_units, target_units).get
         monthly_htg_peak_val << value.round(2)
       end
-
       # time of peak
-      #query = 'SELECT Value FROM tabulardatawithstrings WHERE '
-      #query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' and "
-      #query << "ReportForString='Meter' and "
-      #query << "TableName='Custom Monthly Report' and "
-      #query << "RowName='#{month}' and "
-      #query << "ColumnName='DISTRICTHEATING:FACILITY {TIMESTEP}' and "
-      #query << "Units='';"
-      #query_results = sqlFile.execAndReturnFirstString(query)
-      # TODO - work around for possible bug in E+ SQL or OS sqlFile methods
-      query = "SELECT Value FROM tabulardatawithstrings WHERE ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' and ReportForString='Meter' and TableName='Custom Monthly Report' and RowName='#{month}';"
-      query_results = sqlFile.execAndReturnVectorOfString(query)
+      query = 'SELECT Value FROM tabulardatawithstrings WHERE '
+      query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' and "
+      query << "ReportForString='Meter' and "
+      query << "TableName='Custom Monthly Report' and "
+      query << "RowName='#{month}' and "
+      query << "ColumnName LIKE '%DISTRICTHEATING:FACILITY {TIMESTAMP}%' and "
+      query << "Units='';"
+      query_results = sqlFile.execAndReturnFirstString(query)
       if query_results.empty?
         runner.registerWarning("Did not find value for monthly heating peak time for #{month}.")
         return false
       else
-        value = query_results.get[1]
+        value = query_results.get
         monthly_htg_peak_time << value
       end
 
@@ -1218,22 +1214,19 @@ module OsLib_Reporting_Bestest
         monthly_clg_peak_val << value.round(2)
       end
       # time of peak
-      #query = 'SELECT Value FROM tabulardatawithstrings WHERE '
-      #query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' and "
-      #query << "ReportForString='Meter' and "
-      #query << "TableName='Custom Monthly Report' and "
-      #query << "RowName='#{month}' and "
-      #query << "ColumnName='DISTRICTHEATING:FACILITY {TIMESTAMP}' and "
-      #query << "Units='';"
-      #query_results = sqlFile.execAndReturnFirstString(query)
-      # TODO - work around for possible bug in E+ SQL or OS sqlFile methods
-      query = "SELECT Value FROM tabulardatawithstrings WHERE ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' and ReportForString='Meter' and TableName='Custom Monthly Report' and RowName='#{month}';"
-      query_results = sqlFile.execAndReturnVectorOfString(query)
+      query = 'SELECT Value FROM tabulardatawithstrings WHERE '
+      query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' and "
+      query << "ReportForString='Meter' and "
+      query << "TableName='Custom Monthly Report' and "
+      query << "RowName='#{month}' and "
+      query << "ColumnName LIKE '%DISTRICTCOOLING:FACILITY {TIMESTAMP}%' and "
+      query << "Units='';"
+      query_results = sqlFile.execAndReturnFirstString(query)
       if query_results.empty?
         runner.registerWarning("Did not find value for monthly cooling peak time for #{month}.")
         return false
       else
-        value = query_results.get[1]
+        value = query_results.get
         monthly_clg_peak_time << value
       end
     end

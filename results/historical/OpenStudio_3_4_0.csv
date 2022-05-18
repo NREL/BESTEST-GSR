@@ -97,281 +97,373 @@ Annual Cooling Loads 470,5.44444
 Annual Cooling Loads 800,0.375
 Annual Cooling Loads 810,1.49722
 Annual Hourly Integrated Peak Heating Loads 600_kW,3.14549
-Annual Hourly Integrated Peak Heating Loads 600_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 600_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 600_Day,31
 Annual Hourly Integrated Peak Heating Loads 600_Hour,24
 Annual Hourly Integrated Peak Heating Loads 610_kW,3.13282
-Annual Hourly Integrated Peak Heating Loads 610_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 610_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 610_Day,31
 Annual Hourly Integrated Peak Heating Loads 610_Hour,24
 Annual Hourly Integrated Peak Heating Loads 620_kW,3.17119
-Annual Hourly Integrated Peak Heating Loads 620_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 620_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 620_Day,31
 Annual Hourly Integrated Peak Heating Loads 620_Hour,24
 Annual Hourly Integrated Peak Heating Loads 630_kW,3.14883
-Annual Hourly Integrated Peak Heating Loads 630_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 630_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 630_Day,31
 Annual Hourly Integrated Peak Heating Loads 630_Hour,24
 Annual Hourly Integrated Peak Heating Loads 640_kW,5.48426
-Annual Hourly Integrated Peak Heating Loads 640_DATE},26-NOV
-Annual Hourly Integrated Peak Heating Loads 640_Hour,7
+Annual Hourly Integrated Peak Heating Loads 640_Month*,NOV
+Annual Hourly Integrated Peak Heating Loads 640_Day,26
+Annual Hourly Integrated Peak Heating Loads 640_Hour,8
 Annual Hourly Integrated Peak Heating Loads 650_kW,0
-Annual Hourly Integrated Peak Heating Loads 650_DATE},01-JAN
-Annual Hourly Integrated Peak Heating Loads 650_Hour,0
+Annual Hourly Integrated Peak Heating Loads 650_Month*,JAN
+Annual Hourly Integrated Peak Heating Loads 650_Day,1
+Annual Hourly Integrated Peak Heating Loads 650_Hour,1
 Annual Hourly Integrated Peak Heating Loads 660_kW,2.49082
-Annual Hourly Integrated Peak Heating Loads 660_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 660_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 660_Day,31
 Annual Hourly Integrated Peak Heating Loads 660_Hour,24
 Annual Hourly Integrated Peak Heating Loads 670_kW,2.56903
-Annual Hourly Integrated Peak Heating Loads 670_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 670_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 670_Day,31
 Annual Hourly Integrated Peak Heating Loads 670_Hour,24
 Annual Hourly Integrated Peak Heating Loads 680_kW,3.00849
-Annual Hourly Integrated Peak Heating Loads 680_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 680_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 680_Day,31
 Annual Hourly Integrated Peak Heating Loads 680_Hour,24
 Annual Hourly Integrated Peak Heating Loads 685_kW,3.16486
-Annual Hourly Integrated Peak Heating Loads 685_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 685_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 685_Day,31
 Annual Hourly Integrated Peak Heating Loads 685_Hour,24
 Annual Hourly Integrated Peak Heating Loads 695_kW,3.03487
-Annual Hourly Integrated Peak Heating Loads 695_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 695_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 695_Day,31
 Annual Hourly Integrated Peak Heating Loads 695_Hour,24
 Annual Hourly Integrated Peak Heating Loads 900_kW,2.63225
-Annual Hourly Integrated Peak Heating Loads 900_DATE},09-FEB
+Annual Hourly Integrated Peak Heating Loads 900_Month*,FEB
+Annual Hourly Integrated Peak Heating Loads 900_Day,9
 Annual Hourly Integrated Peak Heating Loads 900_Hour,6
 Annual Hourly Integrated Peak Heating Loads 910_kW,2.644
-Annual Hourly Integrated Peak Heating Loads 910_DATE},09-FEB
+Annual Hourly Integrated Peak Heating Loads 910_Month*,FEB
+Annual Hourly Integrated Peak Heating Loads 910_Day,9
 Annual Hourly Integrated Peak Heating Loads 910_Hour,6
 Annual Hourly Integrated Peak Heating Loads 920_kW,2.7165
-Annual Hourly Integrated Peak Heating Loads 920_DATE},09-FEB
+Annual Hourly Integrated Peak Heating Loads 920_Month*,FEB
+Annual Hourly Integrated Peak Heating Loads 920_Day,9
 Annual Hourly Integrated Peak Heating Loads 920_Hour,6
 Annual Hourly Integrated Peak Heating Loads 930_kW,2.7316
-Annual Hourly Integrated Peak Heating Loads 930_DATE},09-FEB
+Annual Hourly Integrated Peak Heating Loads 930_Month*,FEB
+Annual Hourly Integrated Peak Heating Loads 930_Day,9
 Annual Hourly Integrated Peak Heating Loads 930_Hour,6
 Annual Hourly Integrated Peak Heating Loads 940_kW,4.29369
-Annual Hourly Integrated Peak Heating Loads 940_DATE},26-NOV
-Annual Hourly Integrated Peak Heating Loads 940_Hour,7
+Annual Hourly Integrated Peak Heating Loads 940_Month*,NOV
+Annual Hourly Integrated Peak Heating Loads 940_Day,26
+Annual Hourly Integrated Peak Heating Loads 940_Hour,8
 Annual Hourly Integrated Peak Heating Loads 950_kW,0
-Annual Hourly Integrated Peak Heating Loads 950_DATE},01-JAN
-Annual Hourly Integrated Peak Heating Loads 950_Hour,0
+Annual Hourly Integrated Peak Heating Loads 950_Month*,JAN
+Annual Hourly Integrated Peak Heating Loads 950_Day,1
+Annual Hourly Integrated Peak Heating Loads 950_Hour,1
 Annual Hourly Integrated Peak Heating Loads 960_kW,2.20114
-Annual Hourly Integrated Peak Heating Loads 960_DATE},09-FEB
+Annual Hourly Integrated Peak Heating Loads 960_Month*,FEB
+Annual Hourly Integrated Peak Heating Loads 960_Day,9
 Annual Hourly Integrated Peak Heating Loads 960_Hour,6
 Annual Hourly Integrated Peak Heating Loads 980_kW,2.467
-Annual Hourly Integrated Peak Heating Loads 980_DATE},09-FEB
+Annual Hourly Integrated Peak Heating Loads 980_Month*,FEB
+Annual Hourly Integrated Peak Heating Loads 980_Day,9
 Annual Hourly Integrated Peak Heating Loads 980_Hour,6
 Annual Hourly Integrated Peak Heating Loads 985_kW,2.64073
-Annual Hourly Integrated Peak Heating Loads 985_DATE},09-FEB
+Annual Hourly Integrated Peak Heating Loads 985_Month*,FEB
+Annual Hourly Integrated Peak Heating Loads 985_Day,9
 Annual Hourly Integrated Peak Heating Loads 985_Hour,6
 Annual Hourly Integrated Peak Heating Loads 995_kW,2.4781
-Annual Hourly Integrated Peak Heating Loads 995_DATE},09-FEB
+Annual Hourly Integrated Peak Heating Loads 995_Month*,FEB
+Annual Hourly Integrated Peak Heating Loads 995_Day,9
 Annual Hourly Integrated Peak Heating Loads 995_Hour,6
 Annual Hourly Integrated Peak Heating Loads 195_kW,1.73692
-Annual Hourly Integrated Peak Heating Loads 195_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 195_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 195_Day,31
 Annual Hourly Integrated Peak Heating Loads 195_Hour,24
 Annual Hourly Integrated Peak Heating Loads 200_kW,2.34105
-Annual Hourly Integrated Peak Heating Loads 200_DATE},26-NOV
-Annual Hourly Integrated Peak Heating Loads 200_Hour,7
+Annual Hourly Integrated Peak Heating Loads 200_Month*,NOV
+Annual Hourly Integrated Peak Heating Loads 200_Day,26
+Annual Hourly Integrated Peak Heating Loads 200_Hour,8
 Annual Hourly Integrated Peak Heating Loads 210_kW,2.5635
-Annual Hourly Integrated Peak Heating Loads 210_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 210_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 210_Day,31
 Annual Hourly Integrated Peak Heating Loads 210_Hour,24
 Annual Hourly Integrated Peak Heating Loads 215_kW,2.5009
-Annual Hourly Integrated Peak Heating Loads 215_DATE},26-NOV
-Annual Hourly Integrated Peak Heating Loads 215_Hour,7
+Annual Hourly Integrated Peak Heating Loads 215_Month*,NOV
+Annual Hourly Integrated Peak Heating Loads 215_Day,26
+Annual Hourly Integrated Peak Heating Loads 215_Hour,8
 Annual Hourly Integrated Peak Heating Loads 220_kW,2.7132
-Annual Hourly Integrated Peak Heating Loads 220_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 220_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 220_Day,31
 Annual Hourly Integrated Peak Heating Loads 220_Hour,24
 Annual Hourly Integrated Peak Heating Loads 230_kW,4.33727
-Annual Hourly Integrated Peak Heating Loads 230_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 230_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 230_Day,31
 Annual Hourly Integrated Peak Heating Loads 230_Hour,24
 Annual Hourly Integrated Peak Heating Loads 240_kW,2.52878
-Annual Hourly Integrated Peak Heating Loads 240_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 240_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 240_Day,31
 Annual Hourly Integrated Peak Heating Loads 240_Hour,24
 Annual Hourly Integrated Peak Heating Loads 250_kW,2.70829
-Annual Hourly Integrated Peak Heating Loads 250_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 250_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 250_Day,31
 Annual Hourly Integrated Peak Heating Loads 250_Hour,24
 Annual Hourly Integrated Peak Heating Loads 270_kW,2.5382
-Annual Hourly Integrated Peak Heating Loads 270_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 270_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 270_Day,31
 Annual Hourly Integrated Peak Heating Loads 270_Hour,24
 Annual Hourly Integrated Peak Heating Loads 280_kW,2.54362
-Annual Hourly Integrated Peak Heating Loads 280_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 280_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 280_Day,31
 Annual Hourly Integrated Peak Heating Loads 280_Hour,24
 Annual Hourly Integrated Peak Heating Loads 290_kW,2.52503
-Annual Hourly Integrated Peak Heating Loads 290_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 290_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 290_Day,31
 Annual Hourly Integrated Peak Heating Loads 290_Hour,24
 Annual Hourly Integrated Peak Heating Loads 300_kW,2.54519
-Annual Hourly Integrated Peak Heating Loads 300_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 300_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 300_Day,31
 Annual Hourly Integrated Peak Heating Loads 300_Hour,24
 Annual Hourly Integrated Peak Heating Loads 310_kW,2.52226
-Annual Hourly Integrated Peak Heating Loads 310_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 310_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 310_Day,31
 Annual Hourly Integrated Peak Heating Loads 310_Hour,24
 Annual Hourly Integrated Peak Heating Loads 320_kW,2.51402
-Annual Hourly Integrated Peak Heating Loads 320_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 320_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 320_Day,31
 Annual Hourly Integrated Peak Heating Loads 320_Hour,24
 Annual Hourly Integrated Peak Heating Loads 395_kW,1.89262
-Annual Hourly Integrated Peak Heating Loads 395_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 395_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 395_Day,31
 Annual Hourly Integrated Peak Heating Loads 395_Hour,24
 Annual Hourly Integrated Peak Heating Loads 400_kW,2.7132
-Annual Hourly Integrated Peak Heating Loads 400_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 400_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 400_Day,31
 Annual Hourly Integrated Peak Heating Loads 400_Hour,24
 Annual Hourly Integrated Peak Heating Loads 410_kW,3.52523
-Annual Hourly Integrated Peak Heating Loads 410_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 410_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 410_Day,31
 Annual Hourly Integrated Peak Heating Loads 410_Hour,24
 Annual Hourly Integrated Peak Heating Loads 420_kW,3.34081
-Annual Hourly Integrated Peak Heating Loads 420_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 420_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 420_Day,31
 Annual Hourly Integrated Peak Heating Loads 420_Hour,24
 Annual Hourly Integrated Peak Heating Loads 430_kW,3.33777
-Annual Hourly Integrated Peak Heating Loads 430_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 430_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 430_Day,31
 Annual Hourly Integrated Peak Heating Loads 430_Hour,24
 Annual Hourly Integrated Peak Heating Loads 440_kW,3.15936
-Annual Hourly Integrated Peak Heating Loads 440_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 440_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 440_Day,31
 Annual Hourly Integrated Peak Heating Loads 440_Hour,24
 Annual Hourly Integrated Peak Heating Loads 450_kW,3.41201
-Annual Hourly Integrated Peak Heating Loads 450_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 450_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 450_Day,31
 Annual Hourly Integrated Peak Heating Loads 450_Hour,24
 Annual Hourly Integrated Peak Heating Loads 460_kW,3.26367
-Annual Hourly Integrated Peak Heating Loads 460_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 460_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 460_Day,31
 Annual Hourly Integrated Peak Heating Loads 460_Hour,24
 Annual Hourly Integrated Peak Heating Loads 470_kW,3.25477
-Annual Hourly Integrated Peak Heating Loads 470_DATE},31-DEC
+Annual Hourly Integrated Peak Heating Loads 470_Month*,DEC
+Annual Hourly Integrated Peak Heating Loads 470_Day,31
 Annual Hourly Integrated Peak Heating Loads 470_Hour,24
 Annual Hourly Integrated Peak Heating Loads 800_kW,2.94224
-Annual Hourly Integrated Peak Heating Loads 800_DATE},09-FEB
+Annual Hourly Integrated Peak Heating Loads 800_Month*,FEB
+Annual Hourly Integrated Peak Heating Loads 800_Day,9
 Annual Hourly Integrated Peak Heating Loads 800_Hour,6
 Annual Hourly Integrated Peak Heating Loads 810_kW,2.69458
-Annual Hourly Integrated Peak Heating Loads 810_DATE},09-FEB
+Annual Hourly Integrated Peak Heating Loads 810_Month*,FEB
+Annual Hourly Integrated Peak Heating Loads 810_Day,9
 Annual Hourly Integrated Peak Heating Loads 810_Hour,6
 Annual Hourly Integrated Peak Cooling Loads 600_kW,6.35953
-Annual Hourly Integrated Peak Cooling Loads 600_DATE,22-JAN
-Annual Hourly Integrated Peak Cooling Loads 600_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 600_Month*,JAN
+Annual Hourly Integrated Peak Cooling Loads 600_Day,22
+Annual Hourly Integrated Peak Cooling Loads 600_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 610_kW,6.13436
-Annual Hourly Integrated Peak Cooling Loads 610_DATE,01-DEC
-Annual Hourly Integrated Peak Cooling Loads 610_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 610_Month*,DEC
+Annual Hourly Integrated Peak Cooling Loads 610_Day,1
+Annual Hourly Integrated Peak Cooling Loads 610_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 620_kW,4.75997
-Annual Hourly Integrated Peak Cooling Loads 620_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 620_Hour,16
+Annual Hourly Integrated Peak Cooling Loads 620_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 620_Day,26
+Annual Hourly Integrated Peak Cooling Loads 620_Hour,17
 Annual Hourly Integrated Peak Cooling Loads 630_kW,4.17438
-Annual Hourly Integrated Peak Cooling Loads 630_DATE,26-JUN
+Annual Hourly Integrated Peak Cooling Loads 630_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 630_Day,26
 Annual Hourly Integrated Peak Cooling Loads 630_Hour,17
 Annual Hourly Integrated Peak Cooling Loads 640_kW,6.32055
-Annual Hourly Integrated Peak Cooling Loads 640_DATE,22-JAN
-Annual Hourly Integrated Peak Cooling Loads 640_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 640_Month*,JAN
+Annual Hourly Integrated Peak Cooling Loads 640_Day,22
+Annual Hourly Integrated Peak Cooling Loads 640_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 650_kW,6.27764
-Annual Hourly Integrated Peak Cooling Loads 650_DATE,22-JAN
-Annual Hourly Integrated Peak Cooling Loads 650_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 650_Month*,JAN
+Annual Hourly Integrated Peak Cooling Loads 650_Day,22
+Annual Hourly Integrated Peak Cooling Loads 650_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 660_kW,4.34901
-Annual Hourly Integrated Peak Cooling Loads 660_DATE,18-OCT
-Annual Hourly Integrated Peak Cooling Loads 660_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 660_Month*,OCT
+Annual Hourly Integrated Peak Cooling Loads 660_Day,18
+Annual Hourly Integrated Peak Cooling Loads 660_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 670_kW,8.11177
-Annual Hourly Integrated Peak Cooling Loads 670_DATE,22-JAN
-Annual Hourly Integrated Peak Cooling Loads 670_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 670_Month*,JAN
+Annual Hourly Integrated Peak Cooling Loads 670_Day,22
+Annual Hourly Integrated Peak Cooling Loads 670_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 680_kW,6.31207
-Annual Hourly Integrated Peak Cooling Loads 680_DATE,22-JAN
-Annual Hourly Integrated Peak Cooling Loads 680_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 680_Month*,JAN
+Annual Hourly Integrated Peak Cooling Loads 680_Day,22
+Annual Hourly Integrated Peak Cooling Loads 680_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 685_kW,7.11377
-Annual Hourly Integrated Peak Cooling Loads 685_DATE,22-JAN
-Annual Hourly Integrated Peak Cooling Loads 685_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 685_Month*,JAN
+Annual Hourly Integrated Peak Cooling Loads 685_Day,22
+Annual Hourly Integrated Peak Cooling Loads 685_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 695_kW,7.06906
-Annual Hourly Integrated Peak Cooling Loads 695_DATE,22-JAN
-Annual Hourly Integrated Peak Cooling Loads 695_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 695_Month*,JAN
+Annual Hourly Integrated Peak Cooling Loads 695_Day,22
+Annual Hourly Integrated Peak Cooling Loads 695_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 900_kW,3.03511
-Annual Hourly Integrated Peak Cooling Loads 900_DATE,01-OCT
-Annual Hourly Integrated Peak Cooling Loads 900_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 900_Month*,OCT
+Annual Hourly Integrated Peak Cooling Loads 900_Day,1
+Annual Hourly Integrated Peak Cooling Loads 900_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 910_kW,2.23885
-Annual Hourly Integrated Peak Cooling Loads 910_DATE,18-OCT
-Annual Hourly Integrated Peak Cooling Loads 910_Hour,14
+Annual Hourly Integrated Peak Cooling Loads 910_Month*,OCT
+Annual Hourly Integrated Peak Cooling Loads 910_Day,18
+Annual Hourly Integrated Peak Cooling Loads 910_Hour,15
 Annual Hourly Integrated Peak Cooling Loads 920_kW,3.2341
-Annual Hourly Integrated Peak Cooling Loads 920_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 920_Hour,17
+Annual Hourly Integrated Peak Cooling Loads 920_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 920_Day,26
+Annual Hourly Integrated Peak Cooling Loads 920_Hour,18
 Annual Hourly Integrated Peak Cooling Loads 930_kW,2.75557
-Annual Hourly Integrated Peak Cooling Loads 930_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 930_Hour,17
+Annual Hourly Integrated Peak Cooling Loads 930_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 930_Day,26
+Annual Hourly Integrated Peak Cooling Loads 930_Hour,18
 Annual Hourly Integrated Peak Cooling Loads 940_kW,3.03496
-Annual Hourly Integrated Peak Cooling Loads 940_DATE,01-OCT
-Annual Hourly Integrated Peak Cooling Loads 940_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 940_Month*,OCT
+Annual Hourly Integrated Peak Cooling Loads 940_Day,1
+Annual Hourly Integrated Peak Cooling Loads 940_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 950_kW,2.27775
-Annual Hourly Integrated Peak Cooling Loads 950_DATE,11-SEP
-Annual Hourly Integrated Peak Cooling Loads 950_Hour,14
+Annual Hourly Integrated Peak Cooling Loads 950_Month*,SEP
+Annual Hourly Integrated Peak Cooling Loads 950_Day,11
+Annual Hourly Integrated Peak Cooling Loads 950_Hour,15
 Annual Hourly Integrated Peak Cooling Loads 960_kW,1.44457
-Annual Hourly Integrated Peak Cooling Loads 960_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 960_Hour,16
+Annual Hourly Integrated Peak Cooling Loads 960_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 960_Day,26
+Annual Hourly Integrated Peak Cooling Loads 960_Hour,17
 Annual Hourly Integrated Peak Cooling Loads 980_kW,3.03149
-Annual Hourly Integrated Peak Cooling Loads 980_DATE,01-OCT
-Annual Hourly Integrated Peak Cooling Loads 980_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 980_Month*,OCT
+Annual Hourly Integrated Peak Cooling Loads 980_Day,1
+Annual Hourly Integrated Peak Cooling Loads 980_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 985_kW,3.92067
-Annual Hourly Integrated Peak Cooling Loads 985_DATE,18-OCT
-Annual Hourly Integrated Peak Cooling Loads 985_Hour,14
+Annual Hourly Integrated Peak Cooling Loads 985_Month*,OCT
+Annual Hourly Integrated Peak Cooling Loads 985_Day,18
+Annual Hourly Integrated Peak Cooling Loads 985_Hour,15
 Annual Hourly Integrated Peak Cooling Loads 995_kW,3.89087
-Annual Hourly Integrated Peak Cooling Loads 995_DATE,18-OCT
-Annual Hourly Integrated Peak Cooling Loads 995_Hour,14
+Annual Hourly Integrated Peak Cooling Loads 995_Month*,OCT
+Annual Hourly Integrated Peak Cooling Loads 995_Day,18
+Annual Hourly Integrated Peak Cooling Loads 995_Hour,15
 Annual Hourly Integrated Peak Cooling Loads 195_kW,1.00567
-Annual Hourly Integrated Peak Cooling Loads 195_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 195_Hour,16
+Annual Hourly Integrated Peak Cooling Loads 195_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 195_Day,26
+Annual Hourly Integrated Peak Cooling Loads 195_Hour,17
 Annual Hourly Integrated Peak Cooling Loads 200_kW,1.29463
-Annual Hourly Integrated Peak Cooling Loads 200_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 200_Hour,16
+Annual Hourly Integrated Peak Cooling Loads 200_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 200_Day,26
+Annual Hourly Integrated Peak Cooling Loads 200_Hour,17
 Annual Hourly Integrated Peak Cooling Loads 210_kW,1.07166
-Annual Hourly Integrated Peak Cooling Loads 210_DATE,26-JUN
+Annual Hourly Integrated Peak Cooling Loads 210_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 210_Day,26
 Annual Hourly Integrated Peak Cooling Loads 210_Hour,17
 Annual Hourly Integrated Peak Cooling Loads 215_kW,1.39908
-Annual Hourly Integrated Peak Cooling Loads 215_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 215_Hour,16
+Annual Hourly Integrated Peak Cooling Loads 215_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 215_Day,26
+Annual Hourly Integrated Peak Cooling Loads 215_Hour,17
 Annual Hourly Integrated Peak Cooling Loads 220_kW,1.18546
-Annual Hourly Integrated Peak Cooling Loads 220_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 220_Hour,17
+Annual Hourly Integrated Peak Cooling Loads 220_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 220_Day,26
+Annual Hourly Integrated Peak Cooling Loads 220_Hour,18
 Annual Hourly Integrated Peak Cooling Loads 230_kW,1.84374
-Annual Hourly Integrated Peak Cooling Loads 230_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 230_Hour,16
+Annual Hourly Integrated Peak Cooling Loads 230_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 230_Day,26
+Annual Hourly Integrated Peak Cooling Loads 230_Hour,17
 Annual Hourly Integrated Peak Cooling Loads 240_kW,1.36646
-Annual Hourly Integrated Peak Cooling Loads 240_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 240_Hour,17
+Annual Hourly Integrated Peak Cooling Loads 240_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 240_Day,26
+Annual Hourly Integrated Peak Cooling Loads 240_Hour,18
 Annual Hourly Integrated Peak Cooling Loads 250_kW,2.99583
-Annual Hourly Integrated Peak Cooling Loads 250_DATE,12-SEP
+Annual Hourly Integrated Peak Cooling Loads 250_Month*,SEP
+Annual Hourly Integrated Peak Cooling Loads 250_Day,12
 Annual Hourly Integrated Peak Cooling Loads 250_Hour,13
 Annual Hourly Integrated Peak Cooling Loads 270_kW,6.84528
-Annual Hourly Integrated Peak Cooling Loads 270_DATE,22-JAN
-Annual Hourly Integrated Peak Cooling Loads 270_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 270_Month*,JAN
+Annual Hourly Integrated Peak Cooling Loads 270_Day,22
+Annual Hourly Integrated Peak Cooling Loads 270_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 280_kW,4.73436
-Annual Hourly Integrated Peak Cooling Loads 280_DATE,22-JAN
-Annual Hourly Integrated Peak Cooling Loads 280_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 280_Month*,JAN
+Annual Hourly Integrated Peak Cooling Loads 280_Day,22
+Annual Hourly Integrated Peak Cooling Loads 280_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 290_kW,6.60105
-Annual Hourly Integrated Peak Cooling Loads 290_DATE,22-DEC
+Annual Hourly Integrated Peak Cooling Loads 290_Month*,DEC
+Annual Hourly Integrated Peak Cooling Loads 290_Day,22
 Annual Hourly Integrated Peak Cooling Loads 290_Hour,13
 Annual Hourly Integrated Peak Cooling Loads 300_kW,4.43701
-Annual Hourly Integrated Peak Cooling Loads 300_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 300_Hour,16
+Annual Hourly Integrated Peak Cooling Loads 300_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 300_Day,26
+Annual Hourly Integrated Peak Cooling Loads 300_Hour,17
 Annual Hourly Integrated Peak Cooling Loads 310_kW,3.93136
-Annual Hourly Integrated Peak Cooling Loads 310_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 310_Hour,17
+Annual Hourly Integrated Peak Cooling Loads 310_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 310_Day,26
+Annual Hourly Integrated Peak Cooling Loads 310_Hour,18
 Annual Hourly Integrated Peak Cooling Loads 320_kW,6.21669
-Annual Hourly Integrated Peak Cooling Loads 320_DATE,22-JAN
-Annual Hourly Integrated Peak Cooling Loads 320_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 320_Month*,JAN
+Annual Hourly Integrated Peak Cooling Loads 320_Day,22
+Annual Hourly Integrated Peak Cooling Loads 320_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 395_kW,0.326553
-Annual Hourly Integrated Peak Cooling Loads 395_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 395_Hour,18
+Annual Hourly Integrated Peak Cooling Loads 395_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 395_Day,26
+Annual Hourly Integrated Peak Cooling Loads 395_Hour,19
 Annual Hourly Integrated Peak Cooling Loads 400_kW,0.591884
-Annual Hourly Integrated Peak Cooling Loads 400_DATE,26-JUN
+Annual Hourly Integrated Peak Cooling Loads 400_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 400_Day,26
 Annual Hourly Integrated Peak Cooling Loads 400_Hour,18
 Annual Hourly Integrated Peak Cooling Loads 410_kW,0.812772
-Annual Hourly Integrated Peak Cooling Loads 410_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 410_Hour,17
+Annual Hourly Integrated Peak Cooling Loads 410_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 410_Day,26
+Annual Hourly Integrated Peak Cooling Loads 410_Hour,18
 Annual Hourly Integrated Peak Cooling Loads 420_kW,1.01613
-Annual Hourly Integrated Peak Cooling Loads 420_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 420_Hour,17
+Annual Hourly Integrated Peak Cooling Loads 420_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 420_Day,26
+Annual Hourly Integrated Peak Cooling Loads 420_Hour,18
 Annual Hourly Integrated Peak Cooling Loads 430_kW,1.95201
-Annual Hourly Integrated Peak Cooling Loads 430_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 430_Hour,15
+Annual Hourly Integrated Peak Cooling Loads 430_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 430_Day,26
+Annual Hourly Integrated Peak Cooling Loads 430_Hour,16
 Annual Hourly Integrated Peak Cooling Loads 440_kW,4.67866
-Annual Hourly Integrated Peak Cooling Loads 440_DATE,18-OCT
-Annual Hourly Integrated Peak Cooling Loads 440_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 440_Month*,OCT
+Annual Hourly Integrated Peak Cooling Loads 440_Day,18
+Annual Hourly Integrated Peak Cooling Loads 440_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 450_kW,5.92504
-Annual Hourly Integrated Peak Cooling Loads 450_DATE,22-JAN
-Annual Hourly Integrated Peak Cooling Loads 450_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 450_Month*,JAN
+Annual Hourly Integrated Peak Cooling Loads 450_Day,22
+Annual Hourly Integrated Peak Cooling Loads 450_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 460_kW,6.11115
-Annual Hourly Integrated Peak Cooling Loads 460_DATE,22-JAN
-Annual Hourly Integrated Peak Cooling Loads 460_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 460_Month*,JAN
+Annual Hourly Integrated Peak Cooling Loads 460_Day,22
+Annual Hourly Integrated Peak Cooling Loads 460_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 470_kW,6.16578
-Annual Hourly Integrated Peak Cooling Loads 470_DATE,22-JAN
-Annual Hourly Integrated Peak Cooling Loads 470_Hour,13
+Annual Hourly Integrated Peak Cooling Loads 470_Month*,JAN
+Annual Hourly Integrated Peak Cooling Loads 470_Day,22
+Annual Hourly Integrated Peak Cooling Loads 470_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 800_kW,1.05199
-Annual Hourly Integrated Peak Cooling Loads 800_DATE,26-JUN
-Annual Hourly Integrated Peak Cooling Loads 800_Hour,15
+Annual Hourly Integrated Peak Cooling Loads 800_Month*,JUN
+Annual Hourly Integrated Peak Cooling Loads 800_Day,26
+Annual Hourly Integrated Peak Cooling Loads 800_Hour,16
 Annual Hourly Integrated Peak Cooling Loads 810_kW,2.2564
-Annual Hourly Integrated Peak Cooling Loads 810_DATE,11-SEP
-Annual Hourly Integrated Peak Cooling Loads 810_Hour,14
+Annual Hourly Integrated Peak Cooling Loads 810_Month*,SEP
+Annual Hourly Integrated Peak Cooling Loads 810_Day,11
+Annual Hourly Integrated Peak Cooling Loads 810_Hour,15
 FF Average Hourly Zone Temperature 600FF,25.0598
 FF Average Hourly Zone Temperature 900FF,25.2621
 FF Average Hourly Zone Temperature 650FF,19.4301
@@ -448,13 +540,13 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,2.28
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,1
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,3
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,29
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,7
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,6
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,6.41
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,2.17
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,22
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,22
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,15
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,843.12
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,360.3
 Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,392.6
@@ -462,15 +554,15 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,14.23
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,3.42
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,3.04
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,9
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,6
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,5
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,9
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,6
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,5
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,5.62
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,1.09
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,2
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,15
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,15
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,628.78
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,184.32
 Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,488.22
@@ -478,13 +570,13 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,69.19
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,2.41
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,2.03
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,17
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,6
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,5
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,17
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,6
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,5
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,5.1
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,1.6
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,24
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,12
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,11
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,622.56
@@ -494,9 +586,9 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,19.79
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,2.65
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,2.28
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,11
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,5
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,4
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,3
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,3
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,2
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,4.0
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,0.99
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,12
@@ -516,7 +608,7 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,5
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,3.13
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,1.54
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,10
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,12
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,11
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,55.65
@@ -532,7 +624,7 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,13
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,3.5
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,1.96
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,13
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,12
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,35.07
@@ -542,7 +634,7 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,397.61
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,0.54
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,0.24
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,26
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,5
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,4
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,4
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,12
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,3.63
@@ -550,7 +642,7 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,2.08
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,17
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,17
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,13
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,36.53
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,38.93
 Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,648.2
@@ -574,7 +666,7 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,491.4
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,1.29
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,0.52
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,28
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,24
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,23
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,17
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,10
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,5.77
@@ -590,7 +682,7 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,296.84
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,1.93
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,1.48
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,15
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,5
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,4
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,7
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,7
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,6.28
@@ -606,13 +698,13 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,71.3
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,3.47
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,2.71
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,26
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,7
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,6
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,26
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,8
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,6.35
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,2.1
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,28
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,12
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,22
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,914.74
@@ -622,13 +714,13 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,64.05
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,3.61
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,2.5
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,31
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,24
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,23
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,31
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,24
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,23
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,6.39
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,2.02
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,1
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,12
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,2
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,15
 Hourly Incident Solar Radiation Cloudy Day May 4th Case 600 - Horizontal 1,0.0

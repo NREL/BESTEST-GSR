@@ -58,6 +58,24 @@ puts "Populating #{category}"
   historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}",worksheet.sheet_data[i][3].value.to_s]
 end
 
+# example string 28-NOV-12:00
+# aything in first hour of day is 1 not 0
+def self.return_date_time_from_string(string)
+
+  date = {}
+  date['dd'] = string[0..1].to_i
+  date['mmm'] = string[3..5]
+  min = string[10..11].to_i
+  if min > 0
+    date['hh'] = string[7..8].to_i + 1
+  else # at full hour don't round up or will get some values of 25 for hour
+    date['hh'] = string[7..8].to_i
+  end
+
+  return date
+
+end
+
 category = "Annual Hourly Integrated Peak Heating Loads"
 puts "Populating #{category}"
 (69..114).each do |i|
@@ -65,12 +83,9 @@ puts "Populating #{category}"
 
   # get date and time from raw value
   raw_value = csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingpeak_heating_time]
-  date = raw_value[0,6] 
-  # takes month and day of month instead of date now)
-  month = raw_value[3,3] # TODO - TYP confirm if month has to CamCase Capital (is JAN ok instead of Jan)
-  day_of_month = raw_value[0,2] 
-  # TODO - TYP investigate throughout this section, looking at std 140 2020 docs may want to increase hour to next hour (if time is x:mm where mm is anything but 00 then increase x by 1)
-  time = raw_value[7,2].to_i
+  month = return_date_time_from_string(raw_value)['mmm']
+  day_of_month = return_date_time_from_string(raw_value)['dd'] 
+  time = return_date_time_from_string(raw_value)['hh'] 
 
   # populate value date and time columns
   worksheet.sheet_data[i][4].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingpeak_heating_value])
@@ -78,7 +93,8 @@ puts "Populating #{category}"
   worksheet.sheet_data[i][6].change_contents(day_of_month)
   worksheet.sheet_data[i][7].change_contents(time)
   historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][4].value.to_s}",worksheet.sheet_data[i][4].value.to_s]
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_DATE}",date]
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][5].value.to_s}",worksheet.sheet_data[i][5].value.to_s]
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][6].value.to_s}",worksheet.sheet_data[i][6].value.to_s]
   historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][7].value.to_s}",worksheet.sheet_data[i][7].value.to_s]
 end
 
@@ -89,18 +105,18 @@ puts "Populating #{category}"
 
   # get date and time from raw value
   raw_value = csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingpeak_cooling_time]
-  date = raw_value[0,6]
-  month = raw_value[3,3]
-  day_of_month = raw_value[0,2]  
-  time = raw_value[7,2].to_i
+  month = return_date_time_from_string(raw_value)['mmm']
+  day_of_month = return_date_time_from_string(raw_value)['dd'] 
+  time = return_date_time_from_string(raw_value)['hh'] 
 
   # populate value date and time columns
   worksheet.sheet_data[i][8].change_contents(csv_hash[target_case][:bestest_building_thermal_envelope_and_fabric_load_reportingpeak_cooling_value])
-  worksheet.sheet_data[i][9].change_contents(date)
-  worksheet.sheet_data[i][10].change_contents(time)
+  worksheet.sheet_data[i][9].change_contents(month)
+  worksheet.sheet_data[i][10].change_contents(day_of_month)
   worksheet.sheet_data[i][11].change_contents(time)
   historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][8].value.to_s}",worksheet.sheet_data[i][8].value.to_s]
-  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_DATE",date]
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][9].value.to_s}",worksheet.sheet_data[i][9].value.to_s]
+  historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][10].value.to_s}",worksheet.sheet_data[i][10].value.to_s]
   historical_rows << ["#{category} #{worksheet.sheet_data[i][1].value.to_s}_#{worksheet.sheet_data[68][11].value.to_s}",worksheet.sheet_data[i][11].value.to_s]
 end
 
@@ -143,19 +159,6 @@ def self.return_date_time_from_8760_index(index)
     end
   end
   return nil # shouldn't hit this
-end
-
-# example string 28-NOV-12:00
-# aything in first hour of day is 1 not 0
-def self.return_date_time_from_string(string)
-
-  date = {}
-  date['dd'] = string[0..1].to_i
-  date['mmm'] = string[3..5].to_i
-  date['hh'] = string[7..8].to_i + 1
-
-  return date
-
 end
 
 category = "FF Average Hourly Zone Temperature"
