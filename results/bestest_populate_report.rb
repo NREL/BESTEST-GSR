@@ -497,7 +497,7 @@ column_target = 2
   test_case_str = worksheet.sheet_data[291][j].value.to_s
   array_0201 = csv_hash[test_case_str][:bestest_building_thermal_envelope_and_fabric_load_reportingtemp_0201].split(",")
   array_0714 = csv_hash[test_case_str][:bestest_building_thermal_envelope_and_fabric_load_reportingtemp_0714].split(",")
-  counter = 2
+  counter = 1
   (293..316).each do |i|
     if j > 3 && j < 6
       worksheet.sheet_data[i][column_target].change_contents(array_0714[counter].to_f)
