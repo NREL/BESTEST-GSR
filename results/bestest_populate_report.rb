@@ -477,8 +477,8 @@ column_target = 2
   array_0714 = csv_hash[test_case_str][:bestest_building_thermal_envelope_and_fabric_load_reportingsens_htg_clg_0714].split(",")
   counter = 2
   (261..284).each do |i|
-    if j > 23 # 0201 temp
-      worksheet.sheet_data[i][column_target].change_contents(array_0201_c[counter].to_f)
+    if j > 23 # 0201 temp (this reg value array only has one prefix value instead of two)
+      worksheet.sheet_data[i][column_target].change_contents(array_0201_c[counter - 1].to_f)
     elsif j > 13 # 0714 kWh
       worksheet.sheet_data[i][column_target].change_contents(array_0714[counter].to_f)
     else # 0201 kWh
