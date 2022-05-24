@@ -385,8 +385,8 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Measure::ModelMe
         ideal_loads.addToThermalZone(zone)
         ideal_loads.setMaximumHeatingSupplyAirHumidityRatio(0.01)
         ideal_loads.setMinimumCoolingSupplyAirHumidityRatio(0.01)
-        ideal_loads.setDehumidificationControlType('ConstantSupplyHumidityRatio')
-        ideal_loads.setHumidificationControlType('ConstantSupplyHumidityRatio')
+        ideal_loads.setDehumidificationControlType('None')
+        ideal_loads.setHumidificationControlType('None')
 
         runner.registerInfo("HVAC > Adding ideal air loads to #{zone.name}.")
       end
