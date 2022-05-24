@@ -76,7 +76,7 @@ module BestestModelMethods
       # alter material in place (could add to resrouce but will just modify in place for this)
       ext_mat.setName('Foam insulation')
       ext_mat.setThickness(0.25)
-      ext_mat.setThermalConductivity(0.16)
+      ext_mat.setThermalConductivity(0.04)
       ext_mat.setDensity(10)
       ext_mat.setSpecificHeat(1400)
       altered_insulation_materials << ext_mat
@@ -84,7 +84,9 @@ module BestestModelMethods
     exterior_roof_insulation_materials.uniq.each do |ext_mat|
       ext_mat.setName('Fiberglass quilt')
       ext_mat.setThickness(0.4)
-      ext_mat.setThermalConductivity(0.1)
+      ext_mat.setThermalConductivity(0.04)
+      ext_mat.setDensity(12)
+      ext_mat.setSpecificHeat(840)
       # other fields not changed
       altered_insulation_materials << ext_mat
     end
