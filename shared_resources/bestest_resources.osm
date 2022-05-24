@@ -776,7 +776,7 @@ OS:Schedule:Day,
   100,                                    !- Value Until Time 1
   18,                                     !- Hour 2
   0,                                      !- Minute 2
-  27.0000019073486,                       !- Value Until Time 2
+  27,                                     !- Value Until Time 2
   24,                                     !- Hour 3
   0,                                      !- Minute 3
   100;                                    !- Value Until Time 3
