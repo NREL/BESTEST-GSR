@@ -123,7 +123,8 @@ module BestestModelMethods
         # set outer pane glass properties
         glazing_mat.setName('Outer Low E Glazing')
         glazing_mat.setThickness(0.003180)
-        glazing_mat.setThermalConductance(1.0)
+        #glazing_mat.setThermalConductance(1.0) # issue with method
+        glazing_mat.setDouble(14,1.0) # work around for issue
         glazing_mat.setFrontSideInfraredHemisphericalEmissivity(0.84)
         glazing_mat.setBackSideInfraredHemisphericalEmissivity(0.047)
         glazing_mat.setSolarTransmittanceatNormalIncidence(0.452)
@@ -133,7 +134,8 @@ module BestestModelMethods
         # set inner pane glass properties
         new_inner_mat.setName('Inner Low E Glazing')
         new_inner_mat.setThickness(0.003048)
-        glazing_mat.setThermalConductance(1.0)
+        #glazing_mat.setThermalConductance(1.0) # issue with method
+        glazing_mat.setDouble(14,1.0) # work around for issue        
         new_inner_mat.setFrontSideInfraredHemisphericalEmissivity(0.84)
         new_inner_mat.setBackSideInfraredHemisphericalEmissivity(0.84)
         new_inner_mat.setSolarTransmittanceatNormalIncidence(0.834)
@@ -152,7 +154,6 @@ module BestestModelMethods
 
         # remove extra layers
         glazing_mat = ext_const.layers[0].to_FenestrationMaterial.get.to_Glazing.get.to_StandardGlazing.get
-        new_innter_mat = glazing_mat.clone(model)
         ext_const.eraseLayer(1)
         ext_const.eraseLayer(1)
         ext_const.setName("Single Pane Assembly")
@@ -160,12 +161,12 @@ module BestestModelMethods
         # set outer pane glass properties
         glazing_mat.setName('Single Pane')
         glazing_mat.setThickness(0.003048)
-        glazing_mat.setThermalConductance(1.0)
-        # TODO - set density
-        # TODO - set specific heat
+        #glazing_mat.setThermalConductance(1.0) # issue with method
+        #glazing_mat.setThermalResistance(1.0)  # issue with method
+        glazing_mat.setDouble(14,1.0) # work around for issue
         glazing_mat.setFrontSideInfraredHemisphericalEmissivity(0.84)
         glazing_mat.setBackSideInfraredHemisphericalEmissivity(0.84)
-        glazing_mat.setSolarTransmittanceatNormalIncidence(0.84)
+        glazing_mat.setSolarTransmittanceatNormalIncidence(0.834)
         glazing_mat.setFrontSideSolarReflectanceatNormalIncidence(0.075)
         glazing_mat.setBackSideSolarReflectanceatNormalIncidence(0.075)
 
