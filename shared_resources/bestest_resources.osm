@@ -844,30 +844,30 @@ OS:Material,
   {aaaf3fbf-fdb2-4e02-a2dd-86260bddb11d}, !- Handle
   HIGH CONDUCTANCE WALL-OUTSIDE,          !- Name
   VerySmooth,                             !- Roughness
-  0.003175,                               !- Thickness {m}
-  1.06,                                   !- Conductivity {W/m-K}
-  2500,                                   !- Density {kg/m3}
+  0.003048,                               !- Thickness {m}
+  1.00,                                   !- Conductivity {W/m-K}
+  2470,                                   !- Density {kg/m3}
   750,                                    !- Specific Heat {J/kg-K}
-  0.1,                                    !- Thermal Absorptance
+  0.9,                                    !- Thermal Absorptance
   0.1,                                    !- Solar Absorptance
   0.1;                                    !- Visible Absorptance
 
 OS:Material:AirGap,
   {4afcb0c0-40e8-495f-8dcf-ae2dfba24a3f}, !- Handle
   Air Space Resistance 1,                 !- Name
-  0.1588;                                 !- Thermal Resistance {m2-K/W}
+  0.1920;                                 !- Thermal Resistance {m2-K/W}
 
 OS:Material,
   {9e9c65e6-7ff1-41b6-943a-fc820bd8b884}, !- Handle
   HIGH CONDUCTANCE WALL-INSIDE,           !- Name
   VerySmooth,                             !- Roughness
-  0.003175,                               !- Thickness {m}
-  1.06,                                   !- Conductivity {W/m-K}
-  2500,                                   !- Density {kg/m3}
+  0.003048,                               !- Thickness {m}
+  1.00,                                   !- Conductivity {W/m-K}
+  2470,                                   !- Density {kg/m3}
   750,                                    !- Specific Heat {J/kg-K}
-  0.1,                                    !- Thermal Absorptance
-  0.1,                                    !- Solar Absorptance
-  0.1;                                    !- Visible Absorptance
+  0.9,                                    !- Thermal Absorptance
+  0.6,                                    !- Solar Absorptance
+  0.6;                                    !- Visible Absorptance
 
 OS:StandardsInformation:Construction,
   {b759166f-ba26-4d12-821a-e4d67eba4a33}, !- Handle
