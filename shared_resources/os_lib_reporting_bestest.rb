@@ -437,6 +437,7 @@ module OsLib_Reporting_Bestest
       next if OpenStudio::convert(sub_surface.azimuth,"rad","deg").get.round != 180
       next if OpenStudio::convert(sub_surface.tilt,"rad","deg").get.round != 90
       key = sub_surface.name.to_s.upcase
+      sub_surface_area = sub_surface.grossArea
 
       # get parent surface to use in registerValue
       parent_surf_name = sub_surface.surface.get.name.get.downcase.gsub(" ","_")
@@ -455,6 +456,7 @@ module OsLib_Reporting_Bestest
           date_string = "2009-02-01 #{hour}:00:00.000"
           date_time = OpenStudio::DateTime.new(date_string)
           val_at_date_time = output_timeseries.get.value(date_time)
+          val_at_date_time = val_at_date_time/sub_surface_area # get as W/m^2
           row_data << val_at_date_time.round(2)
         end
         runner.registerValue("surf_win_trans_rad_0201_#{parent_surf_name}",row_data.to_s)
@@ -467,6 +469,7 @@ module OsLib_Reporting_Bestest
           date_string = "2009-05-04 #{hour}:00:00.000"
           date_time = OpenStudio::DateTime.new(date_string)
           val_at_date_time = output_timeseries.get.value(date_time)
+          val_at_date_time = val_at_date_time/sub_surface_area # get as W/m^2
           row_data << val_at_date_time.round(2)
         end
         runner.registerValue("surf_win_trans_rad_0504_#{parent_surf_name}",row_data.to_s)
@@ -479,6 +482,7 @@ module OsLib_Reporting_Bestest
           date_string = "2009-07-14 #{hour}:00:00.000"
           date_time = OpenStudio::DateTime.new(date_string)
           val_at_date_time = output_timeseries.get.value(date_time)
+          val_at_date_time = val_at_date_time/sub_surface_area # get as W/m^2          
           row_data << val_at_date_time.round(2)
         end
         runner.registerValue("surf_win_trans_rad_0714_#{parent_surf_name}",row_data.to_s)
