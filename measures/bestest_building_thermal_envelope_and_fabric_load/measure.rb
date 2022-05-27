@@ -250,8 +250,8 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Measure::ModelMe
       runner.registerInfo("Exterior Wall/Roof Insulation Properties > altered #{altered_constructions.uniq.size} insulation materials.")
     end
 
-    # increase roof and wall insulation if specified
-    if variable_hash.key?(:glazing_special)
+    # setup low-e and single pane cases and custom glazing for constant surface coefficient test cases
+    if variable_hash.key?(:glazing_special) || variable_hash[:constant_ext_surf_coef] || variable_hash[:constant_int_surf_coef]
       altered_glazing_constructions =  BestestModelMethods.set_custom_glazing_materials(model,variable_hash)
       runner.registerInfo("Window Properties > altered #{altered_glazing_constructions.uniq.size} glazing materials.")
     end

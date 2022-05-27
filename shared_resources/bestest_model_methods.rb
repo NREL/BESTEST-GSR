@@ -36,6 +36,10 @@ module BestestModelMethods
         int_mat.setSolarAbsorptance(int_opt_double)
         int_mat.setVisibleAbsorptance(int_opt_double)
       end
+      # alter for constant_int_surf_coef
+      if variable_hash[:constant_int_surf_coef]
+        int_mat.setThermalAbsorptance(0.000001)
+      end
       altered_materials << int_mat
     end
     exterior_materials.uniq.each do |ext_mat|
@@ -45,6 +49,10 @@ module BestestModelMethods
         ext_mat.setSolarAbsorptance(ext_opt_double)
         ext_mat.setVisibleAbsorptance(ext_opt_double)
       end
+      # alter for constant_ext_surf_coef
+      if variable_hash[:constant_ext_surf_coef]
+        ext_mat.setThermalAbsorptance(0.000001)
+      end      
       altered_materials << ext_mat
     end
 
@@ -167,6 +175,29 @@ module BestestModelMethods
         glazing_mat.setBackSideSolarReflectanceatNormalIncidence(0.075)
 
         altered_glazing_construction << ext_const
+
+      elsif variable_hash[:glazing_special].to_s == 'const_coef_adjust' # this is know to be 3 layer window so layers positions are known
+
+        # alter front side of outside pane
+        if variable_hash[:constant_ext_surf_coef]
+
+          glazing_mat_out = ext_const.layers[0].to_FenestrationMaterial.get.to_Glazing.get.to_StandardGlazing.get
+          new_outer_mat = glazing_mat_out.clone(model).to_FenestrationMaterial.get.to_StandardGlazing.get
+          new_outer_mat.setName("#{glazing_mat_out.name.get.to_s}_coef_out")
+          new_outer_mat.setFrontSideInfraredHemisphericalEmissivity(0.000001)
+          ext_const.eraseLayer(0)
+          ext_const.insertLayer(0,new_outer_mat)
+        end
+
+        # alter back side of inside pane
+        if variable_hash[:constant_int_surf_coef]
+          glazing_mat_out = ext_const.layers[2].to_FenestrationMaterial.get.to_Glazing.get.to_StandardGlazing.get
+          new_outer_mat = glazing_mat_out.clone(model).to_FenestrationMaterial.get.to_StandardGlazing.get
+          new_outer_mat.setName("#{glazing_mat_out.name.get.to_s}_coef_in")
+          new_outer_mat.setBackSideInfraredHemisphericalEmissivity(0.000001)
+          ext_const.eraseLayer(2)
+          ext_const.insertLayer(2,new_outer_mat)
+        end
 
       else
         puts "#{variable_hash[:glazing_special]} is an undefined value for glazing_special."

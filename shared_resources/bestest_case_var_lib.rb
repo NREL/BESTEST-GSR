@@ -403,7 +403,8 @@ module BestestCaseVarLib
         :b1_1_note_02 => false,
         :b1_1_note_03 => false,
         :constant_ext_surf_coef => true,
-        :constant_int_surf_coef => true
+        :constant_int_surf_coef => true,
+        :glazing_special => 'const_coef_adjust'
     ]
     variable_hash_lookup['460 - Constant Interior Surface Coefficients'] = [
         :htg_set => 20.0,
@@ -424,7 +425,8 @@ module BestestCaseVarLib
         :b1_1_note_02 => false,
         :b1_1_note_03 => false,
         :constant_ext_surf_coef => false,
-        :constant_int_surf_coef => true
+        :constant_int_surf_coef => true,
+        :glazing_special => 'const_coef_adjust'
     ]
     variable_hash_lookup['470 - Constant Exterior Surface Coefficients'] = [
         :htg_set => 20.0,
@@ -445,7 +447,8 @@ module BestestCaseVarLib
         :b1_1_note_02 => false,
         :b1_1_note_03 => false,
         :constant_ext_surf_coef => true,
-        :constant_int_surf_coef => false
+        :constant_int_surf_coef => false,
+        :glazing_special => 'const_coef_adjust'
     ]
     variable_hash_lookup['600 - Base Case'] = [
         :htg_set => 20.0,
