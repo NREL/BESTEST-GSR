@@ -6,6 +6,7 @@ Building Energy Simulation Test - Generation Simulation and Reporting (BESTEST-G
 - [Supported Tools](#supported-tools)<br/>
 - [Dependencies](#dependencies)<br/>
 - [Steps to Run BESTEST Test Cases and Generate Submission Spreadsheets](#steps-to-run-bestest-test-cases-and-generate-submission-spreadsheets)<br/>
+- [Releases](#releases)<br/>
 - [Workflow Details](#workflow-details)<br/>
 - [Measures](#measures)<br/>
 - [Integration Testing Files](#integration-testing-files)<br/>
@@ -41,13 +42,22 @@ The default IDF generation is based on the OpenStudio CLI, but the workflow supp
     * The Summary Excel files are saved to the 'results' directory.
         * 'RESULTS5-#.xlsx' and 'RESULTS5-#_OS.xlsx' have the same content
     * zip file for each datapoint are saved to 'results/bestest_zips'
-    * A CSV file is saved to "historical" directory with a name unique too this release that is not overwritten in the future.
+    * A CSV file is saved to `historical` directory with a name unique too this release that is not overwritten in the future.
         * Currently an Excel file with aggregated historical data is saved manually to look at at changes from one release of a tool to the next.
         * The historical data collection for Section 5.2 changed drastically for Standard 140 Version 2020. As a result a version of the historical Excel file will be archived and a new one created.
 
 ![Workflow Diagram](docs/BESTEST-GSR_diagram.jpg "Workflow Diagram")
 
 *The image above gives an overview of the process automated by the `run_all_generate_reports.rb` script.*
+
+### Releases
+
+* Generally a release is made every 6 months shortly after each EnergyPus and OpenStudio release.
+* Development is done on a branch and then merged to main.
+    * A pull request to main triggers an NREL Continuous Integration (CI) test which runs the test cases and reporting on remote resources.
+* To minimize the repository size test case zip files are not included in the repository. They are attached as assets to a release and are posted on [Amazon S3](http://besttest-gsr.s3-website-us-west-2.amazonaws.com/?prefix=)
+    * You can also checkout the repository and run any testcase in less than a minute or the suite in less than 30 minutes on most computers.
+* If you are interested in contributing please see our [contribution policy] (.github/COntributing. md)
 
 ### Workflow Details
 
@@ -77,7 +87,7 @@ Currently not all ASHRAE Standard 140-2020 test cases are made. Only test cases 
     
 ### Measures
  
-The measures are contained in the "measures" directory at the top level of the repository. These are used by workflows. to generate test cases or to gather necessary simulation results.
+The measures are contained in the `measures` directory at the top level of the repository. These are used by workflows. to generate test cases or to gather necessary simulation results.
 
 ##### Running the measures
 * Each measure has one or more unit tests
@@ -129,7 +139,7 @@ The measures are contained in the "measures" directory at the top level of the r
 
 #### Workflow
 
-There is a sub directory under `integratio_testing/workflow` for each BESTEST test case. Each directory has a unique 'data_flow.osw' file that used to generate the OSM, IDF file, and the simulation results. See link for documentation on the OpenStudio CLI. http://nrel.github.io/OpenStudio-user-documentation/reference/command_line_interface/
+There is a sub directory under `integratio_testing/workflow` for each BESTEST test case. Each directory has a unique 'data_flow.osw' file that used to generate the OSM, IDF file, and the simulation results. See link for documentation on the [OpenStudio CLI.](http://nrel.github.io/OpenStudio-user-documentation/reference/command_line_interface/)
 
 There are 97 test case that start with `BESTEST Case ...`. There are two sample workflows in the 'workflow' directory, both generate test case 600EN. One articulates the model with OpenStudio and runs an OpenStudio reporting measure. The other imports an externally generated IDF file and run the same OpenStudio reporting measure as the osm generated test case. The only change the reporting measure makes to the IDF is to inject output variable requests needed by the reporting measure. The IDF file for the "Bring your own IDF" example comes from the `workflow_resources` directory.
 
