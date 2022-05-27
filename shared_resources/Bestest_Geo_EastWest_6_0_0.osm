@@ -744,7 +744,7 @@ OS:Surface,
   Floor,                                  !- Surface Type
   ,                                       !- Construction Name
   {1e241bfb-9f2e-4676-987a-5fba4a8a7d78}, !- Space Name
-  Ground,                                 !- Outside Boundary Condition
+  Outdoors,                               !- Outside Boundary Condition
   ,                                       !- Outside Boundary Condition Object
   NoSun,                                  !- Sun Exposure
   NoWind,                                 !- Wind Exposure

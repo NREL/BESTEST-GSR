@@ -107,7 +107,7 @@ OS:DefaultConstructionSet,
 OS:DefaultSurfaceConstructions,
   {8f46085e-386d-4fa5-97fe-400141cb4aca}, !- Handle
   Default Surface Constructions 1,        !- Name
-  ,                                       !- Floor Construction Name
+  {731d0645-89aa-4668-bdc7-906c47fd00fb}, !- Floor Construction Name
   {03043333-ffdc-4f45-9f67-1dd397d4ff19}, !- Wall Construction Name
   {ec3132e5-d01d-402b-959e-d95c4cd2168b}; !- Roof Ceiling Construction Name
 
@@ -515,7 +515,7 @@ OS:Material,
 OS:DefaultSurfaceConstructions,
   {6e3dbed7-11fe-4063-a9af-a0a933b65528}, !- Handle
   Default Surface Constructions 7,        !- Name
-  ,                                       !- Floor Construction Name
+  {cfb06c81-4081-41ce-bfe8-3c45f42d8dc6}, !- Floor Construction Name
   {6926776e-bb14-4c7a-a008-6fc21741f628}, !- Wall Construction Name
   {ec3132e5-d01d-402b-959e-d95c4cd2168b}; !- Roof Ceiling Construction Name
 
