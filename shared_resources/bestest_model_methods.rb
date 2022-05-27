@@ -123,8 +123,7 @@ module BestestModelMethods
         # set outer pane glass properties
         glazing_mat.setName('Outer Low E Glazing')
         glazing_mat.setThickness(0.003180)
-        #glazing_mat.setThermalConductance(1.0) # issue with method
-        glazing_mat.setDouble(14,1.0) # work around for issue
+        glazing_mat.setThermalConductivity(1.0)
         glazing_mat.setFrontSideInfraredHemisphericalEmissivity(0.84)
         glazing_mat.setBackSideInfraredHemisphericalEmissivity(0.047)
         glazing_mat.setSolarTransmittanceatNormalIncidence(0.452)
@@ -134,8 +133,7 @@ module BestestModelMethods
         # set inner pane glass properties
         new_inner_mat.setName('Inner Low E Glazing')
         new_inner_mat.setThickness(0.003048)
-        #glazing_mat.setThermalConductance(1.0) # issue with method
-        glazing_mat.setDouble(14,1.0) # work around for issue        
+        new_inner_mat.setThermalConductivity(1.0)
         new_inner_mat.setFrontSideInfraredHemisphericalEmissivity(0.84)
         new_inner_mat.setBackSideInfraredHemisphericalEmissivity(0.84)
         new_inner_mat.setSolarTransmittanceatNormalIncidence(0.834)
@@ -161,9 +159,7 @@ module BestestModelMethods
         # set outer pane glass properties
         glazing_mat.setName('Single Pane')
         glazing_mat.setThickness(0.003048)
-        #glazing_mat.setThermalConductance(1.0) # issue with method
-        #glazing_mat.setThermalResistance(1.0)  # issue with method
-        glazing_mat.setDouble(14,1.0) # work around for issue
+        glazing_mat.setThermalConductivity(1.0)
         glazing_mat.setFrontSideInfraredHemisphericalEmissivity(0.84)
         glazing_mat.setBackSideInfraredHemisphericalEmissivity(0.84)
         glazing_mat.setSolarTransmittanceatNormalIncidence(0.834)
