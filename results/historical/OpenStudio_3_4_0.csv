@@ -55,7 +55,7 @@ Annual Cooling Loads 610,4.33889
 Annual Cooling Loads 620,4.05278
 Annual Cooling Loads 630,2.82222
 Annual Cooling Loads 640,5.77222
-Annual Cooling Loads 650,5.16667
+Annual Cooling Loads 650,4.83333
 Annual Cooling Loads 660,3.23611
 Annual Cooling Loads 670,6.63333
 Annual Cooling Loads 680,6.45833
@@ -300,9 +300,9 @@ Annual Hourly Integrated Peak Cooling Loads 640_kW,6.30611
 Annual Hourly Integrated Peak Cooling Loads 640_Month*,JAN
 Annual Hourly Integrated Peak Cooling Loads 640_Day,22
 Annual Hourly Integrated Peak Cooling Loads 640_Hour,14
-Annual Hourly Integrated Peak Cooling Loads 650_kW,6.27836
-Annual Hourly Integrated Peak Cooling Loads 650_Month*,JAN
-Annual Hourly Integrated Peak Cooling Loads 650_Day,22
+Annual Hourly Integrated Peak Cooling Loads 650_kW,6.13429
+Annual Hourly Integrated Peak Cooling Loads 650_Month*,OCT
+Annual Hourly Integrated Peak Cooling Loads 650_Day,18
 Annual Hourly Integrated Peak Cooling Loads 650_Hour,14
 Annual Hourly Integrated Peak Cooling Loads 660_kW,3.76364
 Annual Hourly Integrated Peak Cooling Loads 660_Month*,OCT
@@ -344,7 +344,7 @@ Annual Hourly Integrated Peak Cooling Loads 940_kW,3.03507
 Annual Hourly Integrated Peak Cooling Loads 940_Month*,OCT
 Annual Hourly Integrated Peak Cooling Loads 940_Day,1
 Annual Hourly Integrated Peak Cooling Loads 940_Hour,14
-Annual Hourly Integrated Peak Cooling Loads 950_kW,2.29087
+Annual Hourly Integrated Peak Cooling Loads 950_kW,2.35317
 Annual Hourly Integrated Peak Cooling Loads 950_Month*,SEP
 Annual Hourly Integrated Peak Cooling Loads 950_Day,11
 Annual Hourly Integrated Peak Cooling Loads 950_Hour,15
@@ -466,8 +466,8 @@ Annual Hourly Integrated Peak Cooling Loads 810_Day,11
 Annual Hourly Integrated Peak Cooling Loads 810_Hour,15
 FF Average Hourly Zone Temperature 600FF,25.0598
 FF Average Hourly Zone Temperature 900FF,25.2621
-FF Average Hourly Zone Temperature 650FF,19.4793
-FF Average Hourly Zone Temperature 950FF,15.2268
+FF Average Hourly Zone Temperature 650FF,18.4798
+FF Average Hourly Zone Temperature 950FF,14.8377
 FF Average Hourly Zone Temperature 680FF,31.1618
 FF Average Hourly Zone Temperature 980FF,31.4078
 FF Average Hourly Zone Temperature 960,27.5392
@@ -477,10 +477,10 @@ FF Min Hourly Zone Temperature 600FF_Hour,6
 FF Min Hourly Zone Temperature 900FF_°C,1.72352
 FF Min Hourly Zone Temperature 900FF_DATE,10-FEB
 FF Min Hourly Zone Temperature 900FF_Hour,6
-FF Min Hourly Zone Temperature 650FF_°C,-16.7853
+FF Min Hourly Zone Temperature 650FF_°C,-16.9791
 FF Min Hourly Zone Temperature 650FF_DATE,32-DEC
 FF Min Hourly Zone Temperature 650FF_Hour,23
-FF Min Hourly Zone Temperature 950FF_°C,-12.4791
+FF Min Hourly Zone Temperature 950FF_°C,-12.712
 FF Min Hourly Zone Temperature 950FF_DATE,10-FEB
 FF Min Hourly Zone Temperature 950FF_Hour,5
 FF Min Hourly Zone Temperature 680FF_°C,-6.14549
@@ -498,10 +498,10 @@ FF Max Hourly Zone Temperature 600FF_Hour,15
 FF Max Hourly Zone Temperature 900FF_°C,44.2069
 FF Max Hourly Zone Temperature 900FF_DATE,13-SEP
 FF Max Hourly Zone Temperature 900FF_Hour,14
-FF Max Hourly Zone Temperature 650FF_°C,67.6896
+FF Max Hourly Zone Temperature 650FF_°C,62.4839
 FF Max Hourly Zone Temperature 650FF_DATE,19-OCT
 FF Max Hourly Zone Temperature 650FF_Hour,15
-FF Max Hourly Zone Temperature 950FF_°C,37.2413
+FF Max Hourly Zone Temperature 950FF_°C,36.6214
 FF Max Hourly Zone Temperature 950FF_DATE,12-SEP
 FF Max Hourly Zone Temperature 950FF_Hour,15
 FF Max Hourly Zone Temperature 680FF_°C,70.4113
@@ -1781,51 +1781,51 @@ Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 23
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 24,15.8
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 1,19.9
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 2,19.1
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 3,18.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 4,17.1
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 3,18.1
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 4,17.0
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 5,15.9
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 6,16.4
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 7,18.8
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 8,20.9
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 9,23.3
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 10,26.3
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 11,30.3
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 10,26.4
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 11,30.6
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 12,35.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 13,39.9
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 14,43.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 15,45.5
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 16,46.6
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 17,46.5
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 18,45.8
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 19,35.1
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 20,31.3
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 21,28.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 22,26.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 23,24.7
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 24,23.1
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 1,21.3
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 2,20.8
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 3,20.1
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 4,19.3
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 5,18.4
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 6,18.7
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 13,39.1
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 14,42.0
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 15,44.1
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 16,44.8
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 17,44.5
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 18,43.6
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 19,34.4
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 20,30.8
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 21,27.9
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 22,26.0
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 23,24.5
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 24,23.0
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 1,21.2
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 2,20.7
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 3,20.0
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 4,19.1
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 5,18.2
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 6,18.6
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 7,20.3
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 8,23.1
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 9,24.6
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 10,25.6
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 8,22.9
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 9,24.4
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 10,25.5
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 11,26.9
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 12,28.2
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 13,29.1
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 14,29.8
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 15,30.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 16,30.3
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 15,30.3
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 16,30.4
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 17,30.4
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 18,30.4
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 18,30.3
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 19,29.0
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 20,27.7
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 21,26.4
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 22,25.6
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 23,24.9
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 20,27.6
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 21,26.3
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 22,25.5
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 23,24.8
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 24,23.9
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 1,15.9
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 2,14.2

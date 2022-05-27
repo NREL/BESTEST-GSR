@@ -303,7 +303,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Measure::ModelMe
 
       # should be true for 650,950,650FF,950FF
       if variable_hash[:vent]
-        infil.setDesignFlowRate (0.4722) # From Standard 140 2020 Table 5.1
+        infil.setDesignFlowRate (0.4902) # From Standard 140 2020 Table 5.1
         infil.setSchedule(bestest_night_vent.clone(model).to_ScheduleRuleset.get)
       else
         infil.setAirChangesperHour(ach)
