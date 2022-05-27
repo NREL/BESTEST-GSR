@@ -1,10 +1,15 @@
 <?xml version="1.0"?>
 <measure>
   <schema_version>3.0</schema_version>
+  <error>Wrong arguments for overloaded method 'OSMeasureInfo.new'.
+Possible C/C++ prototypes are:
+    OSMeasureInfo.new(std::string const &amp;error)
+    OSMeasureInfo.new(openstudio::MeasureType const &amp;measureType, std::string const &amp;className, std::string const &amp;name, std::string const &amp;description, std::string const &amp;taxonomy, std::string const &amp;modelerDescription, std::vector&lt; openstudio::measure::OSArgument,std::allocator&lt; openstudio::measure::OSArgument &gt; &gt; const &amp;arguments, std::vector&lt; openstudio::measure::OSOutput,std::allocator&lt; openstudio::measure::OSOutput &gt; &gt; const &amp;outputs)
+</error>
   <name>bestest_building_thermal_envelope_and_fabric_load_reporting</name>
   <uid>a0b598a6-96b9-4704-bc23-ac403d9f6b1b</uid>
-  <version_id>7c2d2e0f-e119-4e7e-9e0b-6040a9809761</version_id>
-  <version_modified>20220513T185925Z</version_modified>
+  <version_id>25891e70-1d7d-4a0a-80e9-ba4c58c5b129</version_id>
+  <version_modified>20220527T215257Z</version_modified>
   <xml_checksum>69BA4D91</xml_checksum>
   <class_name>BestestBuildingThermalEnvelopeAndFabricLoadReporting</class_name>
   <display_name>Bestest Building Thermal Envelope and Fabric Load Reporting</display_name>
@@ -132,7 +137,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>579AF73A</checksum>
+      <checksum>5DDF70F9</checksum>
     </file>
   </files>
 </measure>
