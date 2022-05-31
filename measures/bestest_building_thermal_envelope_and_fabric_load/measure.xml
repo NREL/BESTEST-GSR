@@ -1,9 +1,10 @@
+<?xml version="1.0"?>
 <measure>
   <schema_version>3.0</schema_version>
   <name>bestest_building_thermal_envelope_and_fabric_load</name>
   <uid>2ea72aae-b05a-4ca3-b47c-1b140b7eef43</uid>
-  <version_id>ace8df70-927c-4bd1-b9ca-92cfcd757ce5</version_id>
-  <version_modified>20180119T170326Z</version_modified>
+  <version_id>4ddff962-b33f-4c68-930d-9e4272428d28</version_id>
+  <version_modified>20220527T215256Z</version_modified>
   <xml_checksum>28AD5222</xml_checksum>
   <class_name>BestestBuildingThermalEnvelopeAndFabricLoad</class_name>
   <display_name>Bestest Building Thermal Envelope and Fabric Load</display_name>
@@ -100,6 +101,18 @@
           <display_name>440 - Cavity Albedo</display_name>
         </choice>
         <choice>
+          <value>450 - Constant Interior and Exterior Surface Coefficients</value>
+          <display_name>450 - Constant Interior and Exterior Surface Coefficients</display_name>
+        </choice>
+        <choice>
+          <value>460 - Constant Interior Surface Coefficients</value>
+          <display_name>460 - Constant Interior Surface Coefficients</display_name>
+        </choice>
+        <choice>
+          <value>470 - Constant Exterior Surface Coefficients</value>
+          <display_name>470 - Constant Exterior Surface Coefficients</display_name>
+        </choice>
+        <choice>
           <value>600 - Base Case</value>
           <display_name>600 - Base Case</display_name>
         </choice>
@@ -122,6 +135,26 @@
         <choice>
           <value>650 - Night Ventilation</value>
           <display_name>650 - Night Ventilation</display_name>
+        </choice>
+        <choice>
+          <value>660 - Glazing Low E</value>
+          <display_name>660 - Glazing Low E</display_name>
+        </choice>
+        <choice>
+          <value>670 - Glazing Single Pane</value>
+          <display_name>670 - Glazing Single Pane</display_name>
+        </choice>
+        <choice>
+          <value>680 - Increased Opaque Surface Insulation</value>
+          <display_name>680 - Increased Opaque Surface Insulation</display_name>
+        </choice>
+        <choice>
+          <value>685 - Thermostat Deadband</value>
+          <display_name>685 - Thermostat Deadband</display_name>
+        </choice>
+        <choice>
+          <value>695 - Thermostat Deadband and Increased Opaque Surface Insulation</value>
+          <display_name>695 - Thermostat Deadband and Increased Opaque Surface Insulation</display_name>
         </choice>
         <choice>
           <value>800 - High-Mass without Solar Gains</value>
@@ -160,6 +193,18 @@
           <display_name>960 - Sunspace</display_name>
         </choice>
         <choice>
+          <value>980 - Increased Opaque Surface Insulation</value>
+          <display_name>980 - Increased Opaque Surface Insulation</display_name>
+        </choice>
+        <choice>
+          <value>985 - Thermostat Deadband</value>
+          <display_name>985 - Thermostat Deadband</display_name>
+        </choice>
+        <choice>
+          <value>995 - Thermostat Deadband and Increased Opaque Surface Insulation</value>
+          <display_name>995 - Thermostat Deadband and Increased Opaque Surface Insulation</display_name>
+        </choice>
+        <choice>
           <value>600FF</value>
           <display_name>600FF</display_name>
         </choice>
@@ -175,11 +220,19 @@
           <value>950FF</value>
           <display_name>950FF</display_name>
         </choice>
+        <choice>
+          <value>680FF - Increased Opaque Surface Insulation</value>
+          <display_name>680FF - Increased Opaque Surface Insulation</display_name>
+        </choice>
+        <choice>
+          <value>980FF - Increased Opaque Surface Insulation</value>
+          <display_name>980FF - Increased Opaque Surface Insulation</display_name>
+        </choice>
       </choices>
     </argument>
   </arguments>
-  <outputs/>
-  <provenances/>
+  <outputs />
+  <provenances />
   <tags>
     <tag>Whole Building.Space Types</tag>
   </tags>
@@ -217,148 +270,10 @@
   </attributes>
   <files>
     <file>
-      <filename>DRYCOLDTMY.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>08DEB5B3</checksum>
-    </file>
-    <file>
-      <filename>epw.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>32A9564D</checksum>
-    </file>
-    <file>
-      <filename>CE100ATM2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>5F480EBD</checksum>
-    </file>
-    <file>
-      <filename>CE110ATM2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>A0DB1D54</checksum>
-    </file>
-    <file>
-      <filename>CE165ATM2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>659530A0</checksum>
-    </file>
-    <file>
-      <filename>CE200ATM2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>53932B90</checksum>
-    </file>
-    <file>
-      <filename>CE300TM2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>96FC79DF</checksum>
-    </file>
-    <file>
-      <filename>HE100WWY2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>FB484A5B</checksum>
-    </file>
-    <file>
-      <filename>HE120WWY2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>559784AA</checksum>
-    </file>
-    <file>
-      <filename>HE130WWY2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>0C47A954</checksum>
-    </file>
-    <file>
-      <filename>HE140WWY2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>003B129F</checksum>
-    </file>
-    <file>
-      <filename>HE210WWY2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>CFF75E65</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_EastWest_6_0_0.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>72619382</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_South_0_0_0.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>2DBFA8B2</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_South_12_0_0.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>2B0D8DB6</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_South_12_1_0.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>619B4059</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_Sunspace.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>C146694E</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_EastWest_6_1_1.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>940F5679</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_HE100.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>8ED56459</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_CE100.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>ED429B37</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_CE300.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>7B2088F0</checksum>
-    </file>
-    <file>
       <filename>seed_empty.osm</filename>
       <filetype>osm</filetype>
       <usage_type>test</usage_type>
       <checksum>3DFC9D37</checksum>
-    </file>
-    <file>
-      <filename>bestest_resources.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>50D7A429</checksum>
-    </file>
-    <file>
-      <filename>besttest_case_var_lib.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>25375833</checksum>
     </file>
     <file>
       <filename>bestest_building_thermal_envelope_and_fabric_load_test.rb</filename>
@@ -375,13 +290,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>F3341B68</checksum>
-    </file>
-    <file>
-      <filename>besttest_model_methods.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>0E20BE86</checksum>
+      <checksum>ADC1F6EB</checksum>
     </file>
   </files>
 </measure>

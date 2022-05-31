@@ -1,0 +1,29 @@
+{
+  "seed_file": "seed_empty.osm",
+  "weather_file": "USA_MA_Boston-Logan.Intl.AP.725090_TMY3.epw",
+  "measure_paths": [
+    "../../../measures"
+  ],
+  "file_paths": [
+    "../../weather",
+    "../../seeds",
+    "../../seed"
+  ],
+  "run_directory": "./run",
+  "steps": [
+    {
+      "measure_dir_name": "bestest_building_thermal_envelope_and_fabric_load",
+      "arguments": {
+        "case_num": "470 - Constant Exterior Surface Coefficients"
+      },
+      "name": "470"
+    },
+    {
+      "measure_dir_name": "bestest_building_thermal_envelope_and_fabric_load_reporting",
+      "arguments": {
+      },
+      "name" : "Envelope Reporting"
+    }
+  ],
+  "name": "EF470"
+}

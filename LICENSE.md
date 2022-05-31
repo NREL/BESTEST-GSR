@@ -1,4 +1,4 @@
-Building Energy Simulation Test - Generation Simulation and Reporting, Copyright (c) 2018, Alliance for Sustainable Energy, LLC. All rights reserved.
+Building Energy Simulation Test - Generation Simulation and Reporting, Copyright (c) 2022, Alliance for Sustainable Energy, LLC. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 

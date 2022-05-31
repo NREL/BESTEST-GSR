@@ -1,9 +1,10 @@
+<?xml version="1.0"?>
 <measure>
   <schema_version>3.0</schema_version>
   <name>replace_idf</name>
   <uid>05229e67-7ca0-439e-a5fe-2328b6a05066</uid>
-  <version_id>a41318de-e589-4a89-96bb-adcc1c78b098</version_id>
-  <version_modified>20180119T170329Z</version_modified>
+  <version_id>7012463b-34dc-4c28-b21f-e25a80381494</version_id>
+  <version_modified>20220513T185925Z</version_modified>
   <xml_checksum>08362F07</xml_checksum>
   <class_name>ReplaceIdf</class_name>
   <display_name>Replace Idf</display_name>
@@ -19,8 +20,8 @@
       <model_dependent>false</model_dependent>
     </argument>
   </arguments>
-  <outputs/>
-  <provenances/>
+  <outputs />
+  <provenances />
   <tags>
     <tag>Whole Building.Space Types</tag>
   </tags>
@@ -53,17 +54,6 @@
   </attributes>
   <files>
     <file>
-      <version>
-        <software_program>OpenStudio</software_program>
-        <identifier>2.3.0</identifier>
-        <min_compatible>2.3.0</min_compatible>
-      </version>
-      <filename>measure.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>script</usage_type>
-      <checksum>7893A560</checksum>
-    </file>
-    <file>
       <filename>replace_idf_test.rb</filename>
       <filetype>rb</filetype>
       <usage_type>test</usage_type>
@@ -86,6 +76,17 @@
       <filetype>osw</filetype>
       <usage_type>test</usage_type>
       <checksum>E27BA28A</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>2.3.0</identifier>
+        <min_compatible>2.3.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>F7F983E1</checksum>
     </file>
   </files>
 </measure>

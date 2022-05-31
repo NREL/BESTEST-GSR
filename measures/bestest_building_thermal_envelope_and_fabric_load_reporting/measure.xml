@@ -1,17 +1,23 @@
+<?xml version="1.0"?>
 <measure>
   <schema_version>3.0</schema_version>
+  <error>Wrong arguments for overloaded method 'OSMeasureInfo.new'.
+Possible C/C++ prototypes are:
+    OSMeasureInfo.new(std::string const &amp;error)
+    OSMeasureInfo.new(openstudio::MeasureType const &amp;measureType, std::string const &amp;className, std::string const &amp;name, std::string const &amp;description, std::string const &amp;taxonomy, std::string const &amp;modelerDescription, std::vector&lt; openstudio::measure::OSArgument,std::allocator&lt; openstudio::measure::OSArgument &gt; &gt; const &amp;arguments, std::vector&lt; openstudio::measure::OSOutput,std::allocator&lt; openstudio::measure::OSOutput &gt; &gt; const &amp;outputs)
+</error>
   <name>bestest_building_thermal_envelope_and_fabric_load_reporting</name>
   <uid>a0b598a6-96b9-4704-bc23-ac403d9f6b1b</uid>
-  <version_id>cb7804c2-f468-4659-87ce-6454aa348407</version_id>
-  <version_modified>20171228T040303Z</version_modified>
+  <version_id>25891e70-1d7d-4a0a-80e9-ba4c58c5b129</version_id>
+  <version_modified>20220527T215257Z</version_modified>
   <xml_checksum>69BA4D91</xml_checksum>
   <class_name>BestestBuildingThermalEnvelopeAndFabricLoadReporting</class_name>
   <display_name>Bestest Building Thermal Envelope and Fabric Load Reporting</display_name>
   <description>Simple example of modular code to create tables and charts in OpenStudio reporting measures. This is not meant to use as is, it is an example to help with reporting measure development.</description>
   <modeler_description>This measure uses the same framework and technologies (bootstrap and dimple) that the standard OpenStudio results report uses to create an html report with tables and charts. Download this measure and copy it to your Measures directory using PAT or the OpenStudio application. Then alter the data in os_lib_reporting_custom.rb to suit your needs. Make new sections and tables as needed.</modeler_description>
-  <arguments/>
-  <outputs/>
-  <provenances/>
+  <arguments />
+  <outputs />
+  <provenances />
   <tags>
     <tag>Reporting.QAQC</tag>
   </tags>
@@ -69,46 +75,10 @@
   </attributes>
   <files>
     <file>
-      <filename>os_lib_helper_methods.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>A6430141</checksum>
-    </file>
-    <file>
       <filename>report.html.erb</filename>
       <filetype>erb</filetype>
       <usage_type>resource</usage_type>
       <checksum>6AD259AE</checksum>
-    </file>
-    <file>
-      <filename>DRYCOLDTMY.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>test</usage_type>
-      <checksum>08DEB5B3</checksum>
-    </file>
-    <file>
-      <filename>600_test_output.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>test</usage_type>
-      <checksum>FB5EEFB8</checksum>
-    </file>
-    <file>
-      <filename>950FF_test_output.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>test</usage_type>
-      <checksum>D5A0A847</checksum>
-    </file>
-    <file>
-      <filename>910_test_output.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>test</usage_type>
-      <checksum>36AF3CEF</checksum>
-    </file>
-    <file>
-      <filename>measure_Test.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>test</usage_type>
-      <checksum>3F3B9B4C</checksum>
     </file>
     <file>
       <filename>600_test_output.idf</filename>
@@ -129,6 +99,36 @@
       <checksum>2F7B6F25</checksum>
     </file>
     <file>
+      <filename>725650TYCST.epw</filename>
+      <filetype>epw</filetype>
+      <usage_type>test</usage_type>
+      <checksum>0A405657</checksum>
+    </file>
+    <file>
+      <filename>600_test_output.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>6B6C08B3</checksum>
+    </file>
+    <file>
+      <filename>950FF_test_output.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>547721ED</checksum>
+    </file>
+    <file>
+      <filename>910_test_output.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>786709A9</checksum>
+    </file>
+    <file>
+      <filename>measure_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>83E3C998</checksum>
+    </file>
+    <file>
       <version>
         <software_program>OpenStudio</software_program>
         <identifier>1.7.5</identifier>
@@ -137,13 +137,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>BB49E6BC</checksum>
-    </file>
-    <file>
-      <filename>os_lib_reporting_bestest.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>306E047B</checksum>
+      <checksum>5DDF70F9</checksum>
     </file>
   </files>
 </measure>

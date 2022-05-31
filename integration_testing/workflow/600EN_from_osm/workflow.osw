@@ -1,6 +1,6 @@
 {
    "seed_file" : "seed_empty.osm",
-   "weather_file": "DRYCOLDTMY.epw",
+   "weather_file": "725650TYCST.epw",
    "measure_paths": [
     "../../../measures/"
    ],

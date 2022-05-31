@@ -1,9 +1,10 @@
+<?xml version="1.0"?>
 <measure>
   <schema_version>3.0</schema_version>
   <name>bestest_space_heating_equipment_performance</name>
   <uid>65d31bac-6024-4b64-8029-006e82cd4b87</uid>
-  <version_id>c57b1a54-7ab4-4285-8ab4-8a7fe2d42194</version_id>
-  <version_modified>20180119T170329Z</version_modified>
+  <version_id>a8482c38-c3d7-43ff-b8be-41d91feb6c97</version_id>
+  <version_modified>20220513T185925Z</version_modified>
   <xml_checksum>2438005F</xml_checksum>
   <class_name>BestestSpaceHeatingEquipmentPerformance</class_name>
   <display_name>Bestest Space Heating Equipment Performance</display_name>
@@ -66,8 +67,8 @@
       </choices>
     </argument>
   </arguments>
-  <outputs/>
-  <provenances/>
+  <outputs />
+  <provenances />
   <tags>
     <tag>Whole Building.Space Types</tag>
   </tags>
@@ -155,148 +156,10 @@
   </attributes>
   <files>
     <file>
-      <filename>DRYCOLDTMY.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>08DEB5B3</checksum>
-    </file>
-    <file>
-      <filename>epw.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>32A9564D</checksum>
-    </file>
-    <file>
-      <filename>CE100ATM2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>5F480EBD</checksum>
-    </file>
-    <file>
-      <filename>CE110ATM2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>A0DB1D54</checksum>
-    </file>
-    <file>
-      <filename>CE165ATM2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>659530A0</checksum>
-    </file>
-    <file>
-      <filename>CE200ATM2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>53932B90</checksum>
-    </file>
-    <file>
-      <filename>CE300TM2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>96FC79DF</checksum>
-    </file>
-    <file>
-      <filename>HE100WWY2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>FB484A5B</checksum>
-    </file>
-    <file>
-      <filename>HE120WWY2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>559784AA</checksum>
-    </file>
-    <file>
-      <filename>HE130WWY2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>0C47A954</checksum>
-    </file>
-    <file>
-      <filename>HE140WWY2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>003B129F</checksum>
-    </file>
-    <file>
-      <filename>HE210WWY2.epw</filename>
-      <filetype>epw</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>CFF75E65</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_EastWest_6_0_0.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>72619382</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_South_0_0_0.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>2DBFA8B2</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_South_12_0_0.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>2B0D8DB6</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_South_12_1_0.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>619B4059</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_Sunspace.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>C146694E</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_EastWest_6_1_1.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>940F5679</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_CE100.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>ED429B37</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_CE300.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>7B2088F0</checksum>
-    </file>
-    <file>
-      <filename>Bestest_Geo_HE100.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>8ED56459</checksum>
-    </file>
-    <file>
       <filename>seed_empty.osm</filename>
       <filetype>osm</filetype>
       <usage_type>test</usage_type>
       <checksum>3DFC9D37</checksum>
-    </file>
-    <file>
-      <filename>bestest_resources.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>50D7A429</checksum>
-    </file>
-    <file>
-      <filename>besttest_case_var_lib.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>25375833</checksum>
     </file>
     <file>
       <filename>bestest_space_heating_equipment_performance_test.rb</filename>
@@ -313,13 +176,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>5590847C</checksum>
-    </file>
-    <file>
-      <filename>besttest_model_methods.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>0E20BE86</checksum>
+      <checksum>78318674</checksum>
     </file>
   </files>
 </measure>

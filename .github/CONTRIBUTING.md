@@ -102,10 +102,10 @@ how to use your new functionality.
 
 For further questions or information:
 
-&nbsp;&nbsp;&nbsp;&nbsp;Luigi Gentile Polese<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;David Goldwasser<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;BESTEST-GSR Project Management<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;luigi.gentile.polese@nrel.gov<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;303.275.4362<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;david.goldwasser@nrel.gov<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;303.275.3000<br/>
     
 BESTEST-GSR is funded by the U.S. Department of Energy’s (DOE) Building Technologies Office (BTO), and 
 managed by the National Renewable Energy Laboratory (NREL).
@@ -114,4 +114,4 @@ BESTEST-GSR is developed in collaboration with NREL and private firms.
 
 **Documents**
  
-[BESTEST-GSR_Contribution_Proposal_v1.0_2018-04-04.doc](BESTEST-GSR_Contribution_Proposal_v1.0_2018-04-04.doc)
+[BESTEST-GSR_Contribution_Proposal_v1.0_2022-05-27.doc](BESTEST-GSR_Contribution_Proposal_v1.0_2022-05-27.doc)

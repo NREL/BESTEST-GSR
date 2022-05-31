@@ -11,7 +11,7 @@ results_hash = {}
 
 # loop through resoruce files
 results_directories = Dir.glob("#{path_datapoints}/*")
-results_directories.each do |results_directory|
+results_directories.sort.each do |results_directory|
 
   next if not results_directory.include?("BESTEST Case ")
 

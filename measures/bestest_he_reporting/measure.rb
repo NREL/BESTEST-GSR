@@ -1,10 +1,10 @@
 # see the URL below for information on how to write OpenStudio measures
 # http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/
 
-require "#{File.dirname(__FILE__)}/resources/os_lib_reporting_bestest"
+require File.expand_path("../../shared_resources/os_lib_reporting_bestest", File.dirname(__FILE__))
 
 #start the measure
-class BestestHeReporting < OpenStudio::Ruleset::ReportingUserScript
+class BestestHeReporting < OpenStudio::Measure::ReportingMeasure
 
   # human readable name
   def name
@@ -22,8 +22,8 @@ class BestestHeReporting < OpenStudio::Ruleset::ReportingUserScript
   end
 
   # define the arguments that the user will input
-  def arguments()
-    args = OpenStudio::Ruleset::OSArgumentVector.new
+  def arguments(model = nil)
+    args = OpenStudio::Measure::OSArgumentVector.new
 
     # this measure does not require any user arguments, return an empty list
 

@@ -1,11 +1,14 @@
 require 'erb'
 require 'json'
 
-require "#{File.dirname(__FILE__)}/resources/os_lib_reporting_bestest"
-require "#{File.dirname(__FILE__)}/resources/os_lib_helper_methods"
+require File.expand_path("../../shared_resources/os_lib_reporting_bestest", File.dirname(__FILE__))
+
+# load OpenStudio measure libraries from openstudio-extension gem
+require 'openstudio-extension'
+require 'openstudio/extension/core/os_lib_helper_methods'
 
 # start the measure
-class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset::ReportingUserScript
+class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Measure::ReportingMeasure
   # define the name that a user will see, this method may be deprecated as
   # the display name in PAT comes from the name field in measure.xml
   def name
@@ -35,8 +38,8 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
   end
 
   # define the arguments that the user will input
-  def arguments()
-    args = OpenStudio::Ruleset::OSArgumentVector.new
+  def arguments(model)
+    args = OpenStudio::Measure::OSArgumentVector.new
 
     # this measure does not require any user arguments, return an empty list
 
@@ -68,6 +71,11 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
       hourly_variables << 'Zone Air System Sensible Heating Energy'
       hourly_variables << 'Zone Air System Sensible Cooling Energy' # not sure why 630,640,650 dont' have anything below here
 
+      # getsite variables for subset of cases
+      if bldg_name.include? "600"
+        hourly_variables << 'Site Sky Temperature'
+      end
+
       # get surface variables for subset of cases
       if bldg_name.include? "600"
         hourly_variables << 'Surface Outside Face Sunlit Area'
@@ -76,7 +84,9 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
       end
 
       # get windows variables for subset of cases
-      if bldg_name.include? "600" or bldg_name.include? "610" or bldg_name.include? "620" or bldg_name.include? "630"
+      name_test = bldg_name.gsub('BESTEST Case ','')[0..2] # change logic if FF case added that has more characters
+      hourly_win_cases = ['600','610','620','630','660','670','900','910','920','930']
+      if hourly_win_cases.include?(name_test)
         hourly_variables << 'Surface Window Transmitted Solar Radiation Rate'
         hourly_variables << 'Surface Window Transmitted Beam Solar Radiation Rate'
         hourly_variables << 'Surface Window Transmitted Diffuse Solar Radiation Rate'
@@ -85,8 +95,8 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
         hourly_variables << 'Surface Window Transmitted Diffuse Solar Radiation Energy'
       end
 
-      # get windows variables for subset of cases
-      if bldg_name.include? "900" or bldg_name.include? "910" or bldg_name.include? "920" or bldg_name.include? "930" or bldg_name.include? "600" or bldg_name.include? "620"
+      # get zone windows variables for subset of cases
+      if hourly_win_cases.include?(name_test)
         hourly_variables << 'Zone Windows Total Transmitted Solar Radiation Rate'
       end
 
@@ -95,36 +105,16 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Ruleset
       result << OpenStudio::IdfObject.load("Output:Variable,,#{variable},hourly;").get
     end
 
+    # TODO - add in monthly variables
+
     result
   end
 
   def outputs
     result = OpenStudio::IdfObjectVector.new
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('annual_heating')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('annual_cooling')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('peak_heating_value')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('peak_cooling_value')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('peak_heating_time')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('peak_cooling_time')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('sens_htg_clg_0104')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('temp_0104')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('temp_0727')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('surf_out_inst_slr_rad_0305_zone_surface_south')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('surf_out_inst_slr_rad_0305_zone_surface_west')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('surf_out_inst_slr_rad_0727_zone_surface_south')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('surf_out_inst_slr_rad_0727_zone_surface_west')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('temp_bins')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('max_temp')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('min_temp')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('avg_temp')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('north_incident_solar_radiation')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('east_incident_solar_radiation')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('west_incident_solar_radiation')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('south_incident_solar_radiation')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('horizontal_incident_solar_radiation')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('zone_total_transmitted_solar_radiation')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('max_index_position')
-    result << OpenStudio::Measure::OSOutput.makeDoubleOutput('min_index_position')
+
+    # items here are out date for Std 140 2020. Since these are not used now, since we are in PAT it isn't useful to mainain
+    # results.csv is generated by a post proessing script and it grabs all runner.registerValues
 
     return result
 

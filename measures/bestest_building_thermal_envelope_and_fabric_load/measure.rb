@@ -2,12 +2,12 @@
 # http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/
 
 # load library to map case to model variables
-require "#{File.dirname(__FILE__)}/resources/besttest_case_var_lib"
-require "#{File.dirname(__FILE__)}/resources/besttest_model_methods"
-require "#{File.dirname(__FILE__)}/resources/epw"
+require_relative "../../shared_resources/bestest_case_var_lib"
+require_relative "../../shared_resources/bestest_model_methods"
+require_relative "../../shared_resources/epw"
 
 # start the measure
-class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUserScript
+class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Measure::ModelMeasure
 
   # human readable name
   def name
@@ -26,7 +26,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
 
   # define the arguments that the user will input
   def arguments(model)
-    args = OpenStudio::Ruleset::OSArgumentVector.new
+    args = OpenStudio::Measure::OSArgumentVector.new
 
     #make choice argument for test case
     choices = OpenStudio::StringVector.new
@@ -83,8 +83,8 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
 
     # Add weather file and design day objects (won't work in apply measures now)
     top_dir = File.dirname(__FILE__)
-    weather_dir = "#{top_dir}/resources/"
-    weather_file_name = "DRYCOLDTMY.epw"
+    weather_dir = File.expand_path("../../shared_resources/", top_dir)
+    weather_file_name = "725650TYCST.epw"
     weather_file = File.join(weather_dir, weather_file_name)
     epw_file = OpenStudio::EpwFile.new(weather_file)
     weather_object = OpenStudio::Model::WeatherFile.setWeatherFile(model, epw_file).get
@@ -139,7 +139,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
     # Add envelope from external file
     runner.registerInfo("Envelope > Adding spaces and zones from #{file_to_clone}")
     translator = OpenStudio::OSVersion::VersionTranslator.new
-    geo_path = OpenStudio::Path.new(File.dirname(__FILE__) + "/resources/" + "#{file_to_clone}")
+    geo_path = OpenStudio::Path.new(File.dirname(__FILE__) + "/../../shared_resources/" + "#{file_to_clone}")
     geo_model = translator.loadModel(geo_path).get
     geo_model.getBuilding.clone(model)
 
@@ -189,7 +189,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
     file_resource = "bestest_resources.osm"
     runner.registerInfo("Shared Resources > Loading #{file_resource}")
     translator = OpenStudio::OSVersion::VersionTranslator.new
-    resource_path = OpenStudio::Path.new(File.dirname(__FILE__) + "/resources/" + "#{file_resource}")
+    resource_path = OpenStudio::Path.new(File.dirname(__FILE__) + "/../../shared_resources/" + "#{file_resource}")
     resource_model = translator.loadModel(resource_path).get
 
     # Lookup construction sets
@@ -241,8 +241,26 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
     end
 
     # set opaque surface properties (no special logic needed for sun space. Internal wall from const set is correct)
-    altered_materials =  BestestModelMethods.set_opqaue_surface_properties(model,variable_hash)
+    altered_materials =  BestestModelMethods.set_opaque_surface_properties(model,variable_hash)
     runner.registerInfo("Surface Properties > altered #{altered_materials.uniq.size} materials.")
+
+    # increase roof and wall insulation if specified
+    if variable_hash[:wall_roof_increased_insulation] # run code if variable exists and if value is set to true
+      altered_constructions =  BestestModelMethods.set_wall_roof_insulation(model,variable_hash)
+      runner.registerInfo("Exterior Wall/Roof Insulation Properties > altered #{altered_constructions.uniq.size} insulation materials.")
+    end
+
+    # setup low-e and single pane cases and custom glazing for constant surface coefficient test cases
+    if variable_hash.key?(:glazing_special) || variable_hash[:constant_ext_surf_coef] || variable_hash[:constant_int_surf_coef]
+      altered_glazing_constructions =  BestestModelMethods.set_custom_glazing_materials(model,variable_hash)
+      runner.registerInfo("Window Properties > altered #{altered_glazing_constructions.uniq.size} glazing materials.")
+    end
+
+    # set custom ext and/or int surf coef
+    if variable_hash[:constant_ext_surf_coef] || variable_hash[:constant_int_surf_coef]
+      num_new_coef_objects =  BestestModelMethods.set_custom_surf_coef(model,variable_hash)
+      runner.registerInfo("Surface Properties > made #{num_new_coef_objects.size} new SurfacePropertyConvectionCoefficientsMultipleSurfaces objects.")
+    end
 
     # lookup schedules that might be needed
     bestest_htg_setback = resource_model.getModelObjectByName("BESTEST htg SETBACK").get.to_ScheduleRuleset.get
@@ -285,7 +303,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
 
       # should be true for 650,950,650FF,950FF
       if variable_hash[:vent]
-        infil.setDesignFlowRate (0.4911) # value from legacy IDF. Combined infiltraiton and night ventilation
+        infil.setDesignFlowRate (0.4902) # From Standard 140 2020 Table 5.1
         infil.setSchedule(bestest_night_vent.clone(model).to_ScheduleRuleset.get)
       else
         infil.setAirChangesperHour(ach)
@@ -367,8 +385,8 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
         ideal_loads.addToThermalZone(zone)
         ideal_loads.setMaximumHeatingSupplyAirHumidityRatio(0.01)
         ideal_loads.setMinimumCoolingSupplyAirHumidityRatio(0.01)
-        ideal_loads.setDehumidificationControlType('ConstantSupplyHumidityRatio')
-        ideal_loads.setHumidificationControlType('ConstantSupplyHumidityRatio')
+        ideal_loads.setDehumidificationControlType('None')
+        ideal_loads.setHumidificationControlType('None')
 
         runner.registerInfo("HVAC > Adding ideal air loads to #{zone.name}.")
       end
@@ -378,25 +396,48 @@ class BestestBuildingThermalEnvelopeAndFabricLoad < OpenStudio::Ruleset::ModelUs
     model.getBuilding.setName("BESTEST Case #{case_num}")
     runner.registerInfo("Renaming Building > #{model.getBuilding.name}")
 
-
     # set timesteps per hour
     timestep = model.getTimestep
-    timestep.setNumberOfTimestepsPerHour(4)
+    timestep.setNumberOfTimestepsPerHour(6)
 
     # set shadow calcs
     shadow_calc_freq = model.getShadowCalculation
     shadow_calc_freq.setShadingCalculationUpdateFrequency(1)
 
     # set ground temps
-    ground_temps = model.getSiteGroundTemperatureBuildingSurface
-    (1..12).each do |i|
-      ground_temps.setTemperatureByMonth(i,10.0)
-    end
+    # disabled I don't see any mention of setting ground temps to 10C
+    #ground_temps = model.getSiteGroundTemperatureBuildingSurface
+    #(1..12).each do |i|
+    #  ground_temps.setTemperatureByMonth(i,10.0)
+    #end
 
     # set ground reflectance (default is 0.2 which is what has been used in the past)
-    # ground_reflectance = model.getSiteGroundReflectance
+    # while 0.2 is default in E+ I wanted to explicityly ad to make sure weather file ground reflectance isn't being used
+    ground_reflectance = model.getSiteGroundReflectance
+    ground_reflectance.setJanuaryGroundReflectance(0.2)
+    ground_reflectance.setFebruaryGroundReflectance(0.2)
+    ground_reflectance.setMarchGroundReflectance(0.2)
+    ground_reflectance.setAprilGroundReflectance(0.2)
+    ground_reflectance.setMayGroundReflectance(0.2)
+    ground_reflectance.setJuneGroundReflectance(0.2)
+    ground_reflectance.setJulyGroundReflectance(0.2)
+    ground_reflectance.setAugustGroundReflectance(0.2)
+    ground_reflectance.setSeptemberGroundReflectance(0.2)
+    ground_reflectance.setOctoberGroundReflectance(0.2)
+    ground_reflectance.setNovemberGroundReflectance(0.2)
+    ground_reflectance.setDecemberGroundReflectance(0.2)
 
     # note: set interior solar distribution fractions isn't needed if E+ auto calcualtes it
+
+    # SurfaceConvectionAlgorithm insde defaults to TARP and outside defaults to DOE-2 in E+
+
+    # ShadowCalculation 
+    # Shading Caluclation Method default is PolygonClipping
+    # Shading Calculation Update Frequency Method default is Periodic
+    # Shading Calculation Update Frequency default is 20 (days)
+    # Polygon Clipping Algorithm default is SutherlandHodgman
+    shadow_calculation = model.getShadowCalculation
+    shadow_calculation.setShadingCalculationUpdateFrequency(1) # changing from default of 20 days
 
     # report final condition of model
     runner.registerFinalCondition("The final model named #{model.getBuilding.name} has #{model.numObjects} objects.")

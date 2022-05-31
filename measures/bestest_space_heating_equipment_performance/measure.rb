@@ -2,12 +2,12 @@
 # http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/
 
 # load library to map case to model variables
-require "#{File.dirname(__FILE__)}/resources/besttest_case_var_lib"
-require "#{File.dirname(__FILE__)}/resources/besttest_model_methods"
-require "#{File.dirname(__FILE__)}/resources/epw"
+require_relative "../../shared_resources/bestest_case_var_lib"
+require_relative "../../shared_resources/bestest_model_methods"
+require_relative "../../shared_resources/epw"
 
 # start the measure
-class BestestSpaceHeatingEquipmentPerformance < OpenStudio::Ruleset::ModelUserScript
+class BestestSpaceHeatingEquipmentPerformance < OpenStudio::Measure::ModelMeasure
 
   # human readable name
   def name
@@ -23,7 +23,7 @@ class BestestSpaceHeatingEquipmentPerformance < OpenStudio::Ruleset::ModelUserSc
   end
   # define the arguments that the user will input
   def arguments(model)
-    args = OpenStudio::Ruleset::OSArgumentVector.new
+    args = OpenStudio::Measure::OSArgumentVector.new
 
     #make choice argument for test case
     choices = OpenStudio::StringVector.new
@@ -81,7 +81,7 @@ class BestestSpaceHeatingEquipmentPerformance < OpenStudio::Ruleset::ModelUserSc
 
     # Add weather file(won't work in apply measures now)
     top_dir = File.dirname(__FILE__)
-    weather_dir = "#{top_dir}/resources/"
+    weather_dir = File.expand_path("../../shared_resources/", top_dir)
     weather_file_name = "#{variable_hash[:epw]}WY2.epw"
     weather_file = File.join(weather_dir, weather_file_name)
     epw_file = OpenStudio::EpwFile.new(weather_file)
@@ -122,7 +122,7 @@ class BestestSpaceHeatingEquipmentPerformance < OpenStudio::Ruleset::ModelUserSc
     # Add envelope from external file
     runner.registerInfo("Envelope > Adding spaces and zones from #{file_to_clone}")
     translator = OpenStudio::OSVersion::VersionTranslator.new
-    geo_path = OpenStudio::Path.new(File.dirname(__FILE__) + "/resources/" + "#{file_to_clone}")
+    geo_path = OpenStudio::Path.new(File.dirname(__FILE__) + "/../../shared_resources/" + "#{file_to_clone}")
     geo_model = translator.loadModel(geo_path).get
     geo_model.getBuilding.clone(model)
 
@@ -152,7 +152,7 @@ class BestestSpaceHeatingEquipmentPerformance < OpenStudio::Ruleset::ModelUserSc
     file_resource = "bestest_resources.osm"
     runner.registerInfo("Shared Resources > Loading #{file_resource}")
     translator = OpenStudio::OSVersion::VersionTranslator.new
-    resource_path = OpenStudio::Path.new(File.dirname(__FILE__) + "/resources/" + "#{file_resource}")
+    resource_path = OpenStudio::Path.new(File.dirname(__FILE__) + "/../../shared_resources/" + "#{file_resource}")
     resource_model = translator.loadModel(resource_path).get
 
     # no internal loads in HE cases
