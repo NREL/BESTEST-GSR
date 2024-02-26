@@ -11,7 +11,7 @@ module BestestResults
       hash[:program_name_short] = "OS"
     else
       hash[:program_name_and_version] = "EnergyPlus 22.2"
-      hash[:program_version_release_date] = "09/27/22"
+      hash[:program_version_release_date] = "09/27/2022"
       hash[:program_name_short] = "E+"
     end
 
