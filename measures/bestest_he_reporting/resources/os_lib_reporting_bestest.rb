@@ -722,7 +722,7 @@ module OsLib_Reporting_Bestest
     end
 
     # zone_total_transmitted_beam_solar_radiation
-    key_value =  "ZONE ONE"
+    key_value =  "ZONE ONE SPACE"
     variable_name = "Zone Windows Total Transmitted Solar Radiation Rate"
     timeseries_hash = process_output_timeseries(sqlFile, runner, ann_env_pd, 'Hourly', variable_name, key_value)
     value_kwh = OpenStudio.convert(timeseries_hash[:sum],'Wh','kWh').get # using Wh since timestep is hourly
