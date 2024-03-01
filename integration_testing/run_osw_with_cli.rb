@@ -8,7 +8,7 @@ results_directories = Dir.glob("#{path_datapoints}/*")
 results_directories.each do |directory|
 	puts "queueing up #{directory}"
 	test_dir = "#{directory}/data_point.osw"
-	string = "openstudio run -w '#{test_dir}'"
+	string = "openstudio run -w \"#{test_dir}\""
 	if not File.file?(test_dir)
 	  puts "data_point.osw not found for #{directory}"
 	  next
