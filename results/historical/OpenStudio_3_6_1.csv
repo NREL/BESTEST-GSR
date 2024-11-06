@@ -1,7 +1,7 @@
-program_name_and_version,EnergyPlus 22.2
-program_version_release_date,09/27/2022
+program_name_and_version,EnergyPlus 23.1
+program_version_release_date,03/28/2023
 program_name_short,E+
-results_submission_date,11/03/2022
+results_submission_date,11/05/2024
 organization,National Renewable Energy Laboratory
 organization_short,NREL
 Annual Heating Loads 600,4.32222
@@ -538,15 +538,15 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,53.39
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,2.99
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,1.97
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,1
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,2
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,3
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,29
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,6
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,7
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,6.4
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,2.14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,22
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,22
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,15
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,682.47
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,293.68
 Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,388.18
@@ -554,15 +554,15 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,12.47
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,3.08
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,2.71
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,9
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,5
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,6
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,9
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,5
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,6
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,5.6
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,1.04
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,2
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,15
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,15
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,472.07
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,125.3
 Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,485.09
@@ -570,13 +570,13 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,65.76
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,2.15
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,1.78
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,17
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,5
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,6
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,17
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,5
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,6
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,5.09
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,1.58
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,24
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,12
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,11
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,509.84
@@ -586,9 +586,9 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,18.62
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,2.35
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,2.01
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,11
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,4
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,5
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,3
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,2
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,3
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,4.0
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,0.97
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,12
@@ -608,7 +608,7 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,5
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,3.14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,1.55
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,10
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,12
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,11
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,10.08
@@ -618,13 +618,13 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,404.25
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,0.77
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,0.0
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,9
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,4
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,5
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,1
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,1
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,3.53
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,1.98
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,13
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,12
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,12.01
@@ -634,7 +634,7 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,399.74
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,0.54
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,0.0
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,26
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,4
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,5
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,1
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,1
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,3.65
@@ -642,7 +642,7 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,2.1
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,17
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,17
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,13
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,6.58
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,0.0
 Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,650.39
@@ -666,7 +666,7 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,493.39
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,1.16
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,0.07
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,28
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,23
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,24
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,29
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,7
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,5.78
@@ -682,7 +682,7 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,293.12
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,1.71
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,1.33
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,15
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,4
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,5
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,7
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,7
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,6.29
@@ -698,13 +698,13 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,68.27
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,3.12
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,2.37
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,26
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,6
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,7
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,26
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,8
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,6.34
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,2.07
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,28
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,12
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,22
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,735.62
@@ -714,13 +714,13 @@ Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,61.09
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,3.25
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,2.2
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,31
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,23
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,24
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,31
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,8
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,6.39
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,1.98
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,1
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,12
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,2
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,15
 Hourly Incident Solar Radiation Cloudy Day May 4th Case 600 - Horizontal 1,0.0

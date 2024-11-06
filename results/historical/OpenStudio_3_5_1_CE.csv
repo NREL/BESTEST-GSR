@@ -1,17 +1,17 @@
 program_name_and_version,EnergyPlus 22.2
 program_version_release_date,09/27/2022
 program_name_short,E+
-results_submission_date,11/03/2022
+results_submission_date,11/05/2024
 organization,National Renewable Energy Laboratory
 organization_short,NREL
 CE100 clg_energy_consumption_total,1521.32
 CE100 clg_energy_consumption_supply_fan,143.72
 CE100 evaporator_coil_load_total,3797.78
 CE100 evaporator_coil_load_sensible,3797.78
-CE100 evaporator_coil_load_latent,-1.7053e-14
+CE100 evaporator_coil_load_latent,1.02318e-14
 CE100 zone_load_total,3654.07
 CE100 zone_load_sensible,3654.07
-CE100 zone_load_latent,4.88399e-13
+CE100 zone_load_latent,4.64297e-13
 CE100 feb_mean_cop,2.4019
 CE100 feb_mean_idb,22.2098
 CE100 feb_mean_humidity_ratio,0.00740074
@@ -25,10 +25,10 @@ CE110 clg_energy_consumption_total,1070.17
 CE110 clg_energy_consumption_supply_fan,127.739
 CE110 evaporator_coil_load_total,3763.19
 CE110 evaporator_coil_load_sensible,3763.19
-CE110 evaporator_coil_load_latent,1.45519e-14
+CE110 evaporator_coil_load_latent,-3.61524e-14
 CE110 zone_load_total,3635.45
 CE110 zone_load_sensible,3635.45
-CE110 zone_load_latent,3.94039e-13
+CE110 zone_load_latent,3.65389e-13
 CE110 feb_mean_cop,3.39707
 CE110 feb_mean_idb,22.2
 CE110 feb_mean_humidity_ratio,0.00650555
@@ -42,10 +42,10 @@ CE120 clg_energy_consumption_total,1007.53
 CE120 clg_energy_consumption_supply_fan,116.592
 CE120 evaporator_coil_load_total,3746.96
 CE120 evaporator_coil_load_sensible,3746.96
-CE120 evaporator_coil_load_latent,-7.27596e-15
+CE120 evaporator_coil_load_latent,5.45697e-15
 CE120 zone_load_total,3630.36
 CE120 zone_load_sensible,3630.36
-CE120 zone_load_latent,3.68118e-13
+CE120 zone_load_latent,3.87445e-13
 CE120 feb_mean_cop,3.60323
 CE120 feb_mean_idb,26.7001
 CE120 feb_mean_humidity_ratio,0.00793847
@@ -59,10 +59,10 @@ CE130 clg_energy_consumption_total,108.722
 CE130 clg_energy_consumption_supply_fan,10.2709
 CE130 evaporator_coil_load_total,216.987
 CE130 evaporator_coil_load_sensible,216.987
-CE130 evaporator_coil_load_latent,-1.02318e-15
+CE130 evaporator_coil_load_latent,8.95284e-16
 CE130 zone_load_total,206.716
 CE130 zone_load_sensible,206.716
-CE130 zone_load_latent,2.66454e-14
+CE130 zone_load_latent,2.67022e-14
 CE130 feb_mean_cop,1.90132
 CE130 feb_mean_idb,22.2001
 CE130 feb_mean_humidity_ratio,0.00740283
@@ -76,10 +76,10 @@ CE140 clg_energy_consumption_total,67.9637
 CE140 clg_energy_consumption_supply_fan,8.11163
 CE140 evaporator_coil_load_total,196.205
 CE140 evaporator_coil_load_sensible,196.205
-CE140 evaporator_coil_load_latent,4.54747e-16
+CE140 evaporator_coil_load_latent,1.53477e-15
 CE140 zone_load_total,188.093
 CE140 zone_load_sensible,188.093
-CE140 zone_load_latent,2.0691e-14
+CE140 zone_load_latent,2.08473e-14
 CE140 feb_mean_cop,2.76755
 CE140 feb_mean_idb,22.2001
 CE140 feb_mean_humidity_ratio,0.00651125
@@ -410,7 +410,7 @@ CE545 ann_sum_clg_energy_consumption_total,16610.1
 CE545 ann_sum_clg_energy_consumption_supply_fan,1865.43
 CE545 ann_sum_evap_coil_load_total,46636.8
 CE545 ann_sum_evap_coil_load_sensible,46636.8
-CE545 ann_sum_evap_coil_load_latent,7.09469e-14
+CE545 ann_sum_evap_coil_load_latent,6.59113e-14
 CE545 ann_mean_cop_2,3.16295
 CE545 ann_mean_idb,27.3198
 CE545 ann_mean_zone_humidity_ratio,0.00674762
@@ -673,8 +673,8 @@ CE540 energy_consumption_comp_both_fans_hr,15
 CE540 evap_coil_load_sensible_wh,19538.9
 CE540 evap_coil_load_sensible_date,20-Jul
 CE540 evap_coil_load_sensible_hr,15
-CE540 evap_coil_load_latent_wh,7.27596e-12
-CE540 evap_coil_load_latent_date,26-Apr
+CE540 evap_coil_load_latent_wh,8.18545e-12
+CE540 evap_coil_load_latent_date,14-Aug
 CE540 evap_coil_load_latent_hr,16
 CE540 evap_coil_load_sensible_and_latent_wh,19538.9
 CE540 evap_coil_load_sensible_and_latent_date,20-Jul
@@ -1100,8 +1100,8 @@ Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_min_idb,8.
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_min_date,21-Dec
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_idb_min_hr,0
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_max_humidity_ratio,0.00639918
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_max_date,12-Apr
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_max_hr,19
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_max_date,13-Apr
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_max_hr,8
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_min_humidity_ratio,0.00637429
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_min_date,17-Oct
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 18 apr_dec_hr_min_hr,10
@@ -1125,7 +1125,7 @@ Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_min_date,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_idb_min_hr,0
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_max_humidity_ratio,0.00377524
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_max_date,13-Oct
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_max_hr,3
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_max_hr,4
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_min_humidity_ratio,0.00377139
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_min_date,17-Oct
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 19 apr_dec_hr_min_hr,10
@@ -1149,7 +1149,7 @@ Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_min_date,2
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_idb_min_hr,0
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_max_humidity_ratio,0.00679005
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_max_date,31-Dec
-Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_max_hr,9
+Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_max_hr,1
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_min_humidity_ratio,0.00679005
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_min_date,01-Apr
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_hr_min_hr,1
@@ -1159,149 +1159,149 @@ Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_max_hr,11
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_min_relative_humidity,19.2458
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_min_date,18-Apr
 Annual Hourly Integrated Maxima - cop_2 and Zone Table 20 apr_dec_rh_min_hr,17
-Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_energy_consumpton_compressor,2158.811631131276
-Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_energy_consumpton_compressor,2172.7778432238356
-Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_energy_consumpton_compressor,2153.529928506041
-Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_energy_consumpton_compressor,2115.3848041059073
-Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_energy_consumpton_compressor,2036.9032343386746
-Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_energy_consumpton_compressor,2187.9729334784142
-Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_energy_consumpton_compressor,2936.135862809257
-Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_energy_consumpton_compressor,3581.770582528824
-Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_energy_consumpton_compressor,4783.970824836326
-Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_energy_consumpton_compressor,5040.711809421019
-Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_energy_consumpton_compressor,5497.658333975919
-Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_energy_consumpton_compressor,5719.441190301908
-Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_energy_consumpton_compressor,7242.735138860604
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_energy_consumpton_compressor,2158.8116311312738
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_energy_consumpton_compressor,2172.7778432238374
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_energy_consumpton_compressor,2153.5299285060437
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_energy_consumpton_compressor,2115.384804105904
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_energy_consumpton_compressor,2036.9032343386777
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_energy_consumpton_compressor,2187.9729334784183
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_energy_consumpton_compressor,2936.135862809256
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_energy_consumpton_compressor,3581.770582528823
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_energy_consumpton_compressor,4783.970824836327
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_energy_consumpton_compressor,5040.711809421021
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_energy_consumpton_compressor,5497.658333975923
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_energy_consumpton_compressor,5719.441190301909
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_energy_consumpton_compressor,7242.7351388606
 Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_energy_consumpton_compressor,7097.049369361037
 Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_energy_consumpton_compressor,8703.251819501816
-Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_energy_consumpton_compressor,8855.955803544193
-Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_energy_consumpton_compressor,5804.026491644479
-Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_energy_consumpton_compressor,5964.138430824538
-Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_energy_consumpton_compressor,5626.777678801544
-Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_energy_consumpton_compressor,5325.077939958583
-Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_energy_consumpton_compressor,4378.161961267933
-Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_energy_consumpton_compressor,4332.364573995079
-Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_energy_consumpton_compressor,4224.327650121143
-Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_energy_consumpton_compressor,4202.647638569576
-Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_evaporator_coil_load_total,7622.865853264022
-Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_evaporator_coil_load_total,7649.300514798468
-Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_evaporator_coil_load_total,7600.230207884661
-Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_evaporator_coil_load_total,7484.53723263097
-Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_evaporator_coil_load_total,7238.553227641587
-Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_evaporator_coil_load_total,7586.231976953933
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_energy_consumpton_compressor,8855.955803544191
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_energy_consumpton_compressor,5804.026491644487
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_energy_consumpton_compressor,5964.138430824545
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_energy_consumpton_compressor,5626.7776788015435
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_energy_consumpton_compressor,5325.077939958575
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_energy_consumpton_compressor,4378.161961267932
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_energy_consumpton_compressor,4332.364573995078
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_energy_consumpton_compressor,4224.327650121144
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_energy_consumpton_compressor,4202.647638569574
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_evaporator_coil_load_total,7622.865853264027
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_evaporator_coil_load_total,7649.300514798463
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_evaporator_coil_load_total,7600.23020788467
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_evaporator_coil_load_total,7484.537232630961
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_evaporator_coil_load_total,7238.553227641588
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_evaporator_coil_load_total,7586.231976953924
 Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_evaporator_coil_load_total,9424.706583829431
-Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_evaporator_coil_load_total,10852.988275955644
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_evaporator_coil_load_total,10852.988275955653
 Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_evaporator_coil_load_total,14320.61460853968
-Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_evaporator_coil_load_total,15041.372379569004
-Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_evaporator_coil_load_total,16166.458578431013
-Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_evaporator_coil_load_total,16775.955971521875
-Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_evaporator_coil_load_total,21905.398712852155
-Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_evaporator_coil_load_total,20969.19646815216
-Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_evaporator_coil_load_total,26478.556735255555
-Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_evaporator_coil_load_total,26987.678112624533
-Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_evaporator_coil_load_total,16564.434780928226
-Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_evaporator_coil_load_total,17440.568598570946
-Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_evaporator_coil_load_total,17110.35949441004
-Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_evaporator_coil_load_total,16772.661893339304
-Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_evaporator_coil_load_total,13638.960764613505
-Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_evaporator_coil_load_total,13589.028756799704
-Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_evaporator_coil_load_total,13392.311318685479
-Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_evaporator_coil_load_total,13398.280239882575
-Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_evaporator_coil_load_sensible,5807.175800699382
-Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_evaporator_coil_load_sensible,5849.9146177560415
-Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_evaporator_coil_load_sensible,5805.906890301609
-Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_evaporator_coil_load_sensible,5740.267135830634
-Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_evaporator_coil_load_sensible,5610.60379706732
-Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_evaporator_coil_load_sensible,6012.3778086046905
-Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_evaporator_coil_load_sensible,7529.5778158485045
-Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_evaporator_coil_load_sensible,8750.604327679615
-Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_evaporator_coil_load_sensible,11757.531973484729
-Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_evaporator_coil_load_sensible,11985.116628759573
-Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_evaporator_coil_load_sensible,12475.024409092803
-Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_evaporator_coil_load_sensible,12653.604929284544
-Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_evaporator_coil_load_sensible,17367.10312634701
-Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_evaporator_coil_load_sensible,17569.369976311336
-Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_evaporator_coil_load_sensible,22450.396470051295
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_evaporator_coil_load_total,15041.372379569013
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_evaporator_coil_load_total,16166.458578431037
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_evaporator_coil_load_total,16775.95597152188
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_evaporator_coil_load_total,21905.39871285214
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_evaporator_coil_load_total,20969.19646815215
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_evaporator_coil_load_total,26478.556735255563
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_evaporator_coil_load_total,26987.67811262453
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_evaporator_coil_load_total,16564.43478092823
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_evaporator_coil_load_total,17440.56859857097
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_evaporator_coil_load_total,17110.359494410015
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_evaporator_coil_load_total,16772.661893339282
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_evaporator_coil_load_total,13638.960764613512
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_evaporator_coil_load_total,13589.028756799707
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_evaporator_coil_load_total,13392.311318685472
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_evaporator_coil_load_total,13398.28023988257
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_evaporator_coil_load_sensible,5807.1758006993805
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_evaporator_coil_load_sensible,5849.914617756038
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_evaporator_coil_load_sensible,5805.90689030162
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_evaporator_coil_load_sensible,5740.2671358306325
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_evaporator_coil_load_sensible,5610.603797067324
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_evaporator_coil_load_sensible,6012.3778086047005
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_evaporator_coil_load_sensible,7529.577815848506
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_evaporator_coil_load_sensible,8750.604327679623
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_evaporator_coil_load_sensible,11757.53197348473
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_evaporator_coil_load_sensible,11985.116628759575
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_evaporator_coil_load_sensible,12475.024409092812
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_evaporator_coil_load_sensible,12653.604929284542
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_evaporator_coil_load_sensible,17367.103126346992
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_evaporator_coil_load_sensible,17569.36997631133
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_evaporator_coil_load_sensible,22450.396470051288
 Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_evaporator_coil_load_sensible,22526.39356535607
-Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_evaporator_coil_load_sensible,13054.34583338065
-Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_evaporator_coil_load_sensible,12853.248316488356
-Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_evaporator_coil_load_sensible,12150.224503472344
-Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_evaporator_coil_load_sensible,11538.016211353377
-Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_evaporator_coil_load_sensible,9051.760693767812
-Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_evaporator_coil_load_sensible,8940.519472634442
-Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_evaporator_coil_load_sensible,8741.597637252435
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_evaporator_coil_load_sensible,13054.345833380652
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_evaporator_coil_load_sensible,12853.24831648836
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_evaporator_coil_load_sensible,12150.224503472335
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_evaporator_coil_load_sensible,11538.016211353366
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_evaporator_coil_load_sensible,9051.760693767814
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_evaporator_coil_load_sensible,8940.519472634436
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_evaporator_coil_load_sensible,8741.59763725243
 Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_evaporator_coil_load_sensible,8662.158634681822
-Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_evaporator_coil_load_latent,1815.6900525646397
-Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_evaporator_coil_load_latent,1799.385897042426
-Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_evaporator_coil_load_latent,1794.3233175830524
-Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_evaporator_coil_load_latent,1744.2700968003358
-Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_evaporator_coil_load_latent,1627.9494305742674
-Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_evaporator_coil_load_latent,1573.854168349242
-Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_evaporator_coil_load_latent,1895.1287679809259
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_evaporator_coil_load_latent,1815.6900525646458
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_evaporator_coil_load_latent,1799.3858970424258
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_evaporator_coil_load_latent,1794.3233175830503
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_evaporator_coil_load_latent,1744.2700968003294
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_evaporator_coil_load_latent,1627.9494305742635
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_evaporator_coil_load_latent,1573.854168349223
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_evaporator_coil_load_latent,1895.128767980924
 Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_evaporator_coil_load_latent,2102.383948276029
-Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_evaporator_coil_load_latent,2563.0826350549464
-Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_evaporator_coil_load_latent,3056.2557508094314
-Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_evaporator_coil_load_latent,3691.43416933821
-Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_evaporator_coil_load_latent,4122.351042237332
-Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_evaporator_coil_load_latent,4538.295586505142
-Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_evaporator_coil_load_latent,3399.826491840823
-Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_evaporator_coil_load_latent,4028.1602652042593
-Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_evaporator_coil_load_latent,4461.284547268461
-Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_evaporator_coil_load_latent,3510.0889475475774
-Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_evaporator_coil_load_latent,4587.320282082591
-Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_evaporator_coil_load_latent,4960.134990937695
-Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_evaporator_coil_load_latent,5234.645681985925
-Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_evaporator_coil_load_latent,4587.200070845693
-Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_evaporator_coil_load_latent,4648.509284165262
-Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_evaporator_coil_load_latent,4650.713681433043
-Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_evaporator_coil_load_latent,4736.121605200753
-Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_zone_humidity_ratio,0.009231630617540761
-Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_zone_humidity_ratio,0.009195405170318194
-Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_zone_humidity_ratio,0.00920210506298867
-Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_zone_humidity_ratio,0.009145586694279222
-Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_zone_humidity_ratio,0.009023929687454281
-Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_zone_humidity_ratio,0.00887741610257323
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_evaporator_coil_load_latent,2563.0826350549473
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_evaporator_coil_load_latent,3056.2557508094374
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_evaporator_coil_load_latent,3691.4341693382225
+Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_evaporator_coil_load_latent,4122.3510422373365
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_evaporator_coil_load_latent,4538.295586505145
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_evaporator_coil_load_latent,3399.8264918408213
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_evaporator_coil_load_latent,4028.160265204271
+Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_evaporator_coil_load_latent,4461.2845472684585
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_evaporator_coil_load_latent,3510.0889475475797
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_evaporator_coil_load_latent,4587.32028208261
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_evaporator_coil_load_latent,4960.13499093768
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_evaporator_coil_load_latent,5234.645681985916
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_evaporator_coil_load_latent,4587.200070845702
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_evaporator_coil_load_latent,4648.5092841652695
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_evaporator_coil_load_latent,4650.713681433042
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_evaporator_coil_load_latent,4736.121605200748
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_zone_humidity_ratio,0.009231630617540766
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_zone_humidity_ratio,0.009195405170318196
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_zone_humidity_ratio,0.009202105062988674
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_zone_humidity_ratio,0.009145586694279229
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_zone_humidity_ratio,0.009023929687454286
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_zone_humidity_ratio,0.008877416102573234
 Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_zone_humidity_ratio,0.00914381115808233
-Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_zone_humidity_ratio,0.009451050611753978
-Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_zone_humidity_ratio,0.009585252751264059
-Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_zone_humidity_ratio,0.00993884329215801
-Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_zone_humidity_ratio,0.01035210877252405
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_zone_humidity_ratio,0.00945105061175398
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_zone_humidity_ratio,0.009585252751264062
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_zone_humidity_ratio,0.009938843292158016
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_zone_humidity_ratio,0.010352108772524057
 Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_zone_humidity_ratio,0.010660293161834488
-Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_zone_humidity_ratio,0.010086027725592207
-Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_zone_humidity_ratio,0.009649805615701192
-Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_zone_humidity_ratio,0.00947319677584245
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_zone_humidity_ratio,0.010086027725592214
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_zone_humidity_ratio,0.0096498056157012
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_zone_humidity_ratio,0.009473196775842452
 Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_zone_humidity_ratio,0.009573863898715555
-Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_zone_humidity_ratio,0.010315012207262352
-Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_zone_humidity_ratio,0.010881649963259443
-Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_zone_humidity_ratio,0.011034926954273421
-Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_zone_humidity_ratio,0.01108924991698211
-Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_zone_humidity_ratio,0.011320309422332017
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_zone_humidity_ratio,0.010315012207262348
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_zone_humidity_ratio,0.010881649963259436
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_zone_humidity_ratio,0.011034926954273416
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_zone_humidity_ratio,0.011089249916982112
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_zone_humidity_ratio,0.011320309422332019
 Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_zone_humidity_ratio,0.011370870577336118
 Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_zone_humidity_ratio,0.011388676829797512
 Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_zone_humidity_ratio,0.011445450401778778
-Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_cop_2,3.5310472406846505
-Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_cop_2,3.5205166228356326
-Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_cop_2,3.5291964635741726
-Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_cop_2,3.538144557956395
-Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_cop_2,3.5537050094535996
-Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_cop_2,3.4672421495148154
-Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_cop_2,3.2099013888315078
-Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_cop_2,3.030062374428557
-Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_cop_2,2.99345776403844
-Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_cop_2,2.9839778484175374
-Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_cop_2,2.940608090997789
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_cop_2,3.5310472406846563
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_cop_2,3.5205166228356277
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_cop_2,3.529196463574172
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_cop_2,3.5381445579563957
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_cop_2,3.5537050094535942
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_cop_2,3.4672421495148047
+Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_cop_2,3.2099013888315087
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_cop_2,3.03006237442856
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_cop_2,2.9934577640384394
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_cop_2,2.983977848417538
+Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_cop_2,2.9406080909977907
 Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_cop_2,2.9331459863540155
-Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_cop_2,3.0244649697763513
-Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_cop_2,2.9546358460854365
-Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_cop_2,3.042375112704853
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_cop_2,3.024464969776351
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_cop_2,2.9546358460854347
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_cop_2,3.0423751127048537
 Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_cop_2,3.0474043357154
-Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_cop_2,2.8539557503354804
-Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_cop_2,2.9242394020287352
-Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_cop_2,3.040880672942173
-Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_cop_2,3.1497495590589906
-Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_cop_2,3.1152252669665073
-Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_cop_2,3.1366309378410913
-Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_cop_2,3.1702823331664205
+Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_cop_2,2.8539557503354773
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_cop_2,2.924239402028736
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_cop_2,3.040880672942169
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_cop_2,3.149749559058991
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_cop_2,3.1152252669665095
+Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_cop_2,3.1366309378410926
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_cop_2,3.170282333166418
 Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_cop_2,3.1880570040944116
 Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_odb,17.9875
 Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_odb,18.1125
@@ -1327,30 +1327,30 @@ Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_odb,27.2
 Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_odb,26.8875
 Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_odb,26.325000000000003
 Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_odb,26.1
-Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_edb,23.944887656287367
-Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_edb,23.96346157221069
-Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_edb,23.94483278166196
-Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_edb,23.916760715382246
-Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_edb,23.861212823863664
-Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_edb,24.033603709149993
+Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_edb,23.944887656287364
+Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_edb,23.9634615722107
+Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_edb,23.944832781661965
+Case 300 June 28th Hourly Table 4 mmdd_0628_hourly_edb,23.916760715382242
+Case 300 June 28th Hourly Table 5 mmdd_0628_hourly_edb,23.861212823863667
+Case 300 June 28th Hourly Table 6 mmdd_0628_hourly_edb,24.03360370914999
 Case 300 June 28th Hourly Table 7 mmdd_0628_hourly_edb,24.683572992449616
-Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_edb,25.206949811605096
-Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_edb,25.491008066681434
-Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_edb,25.587351006211925
+Case 300 June 28th Hourly Table 8 mmdd_0628_hourly_edb,25.206949811605092
+Case 300 June 28th Hourly Table 9 mmdd_0628_hourly_edb,25.491008066681438
+Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_edb,25.58735100621193
 Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_edb,25.795923260596112
 Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_edb,25.87237923822719
-Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_edb,25.88997816751135
-Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_edb,25.979059541550214
-Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_edb,26.06080688411811
+Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_edb,25.889978167511355
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_edb,25.979059541550217
+Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_edb,26.060806884118108
 Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_edb,26.090508583450028
 Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_edb,26.042276255581953
-Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_edb,25.95564475470132
-Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_edb,25.656547998602168
-Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_edb,25.394864293344188
-Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_edb,25.332849574468774
+Case 300 June 28th Hourly Table 18 mmdd_0628_hourly_edb,25.955644754701325
+Case 300 June 28th Hourly Table 19 mmdd_0628_hourly_edb,25.656547998602164
+Case 300 June 28th Hourly Table 20 mmdd_0628_hourly_edb,25.39486429334418
+Case 300 June 28th Hourly Table 21 mmdd_0628_hourly_edb,25.332849574468778
 Case 300 June 28th Hourly Table 22 mmdd_0628_hourly_edb,25.285528023264554
-Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_edb,25.200444003694734
-Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_edb,25.166476786934933
+Case 300 June 28th Hourly Table 23 mmdd_0628_hourly_edb,25.20044400369473
+Case 300 June 28th Hourly Table 24 mmdd_0628_hourly_edb,25.16647678693493
 Case 300 June 28th Hourly Table 1 mmdd_0628_hourly_ewb,17.260759215053017
 Case 300 June 28th Hourly Table 2 mmdd_0628_hourly_ewb,17.23801643882788
 Case 300 June 28th Hourly Table 3 mmdd_0628_hourly_ewb,17.23716284250796
@@ -1364,7 +1364,7 @@ Case 300 June 28th Hourly Table 10 mmdd_0628_hourly_ewb,18.40556545308894
 Case 300 June 28th Hourly Table 11 mmdd_0628_hourly_ewb,18.897731391445998
 Case 300 June 28th Hourly Table 12 mmdd_0628_hourly_ewb,19.17993694148209
 Case 300 June 28th Hourly Table 13 mmdd_0628_hourly_ewb,18.741843913594337
-Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_ewb,18.31192454600803
+Case 300 June 28th Hourly Table 14 mmdd_0628_hourly_ewb,18.311924546008026
 Case 300 June 28th Hourly Table 15 mmdd_0628_hourly_ewb,18.27775819005865
 Case 300 June 28th Hourly Table 16 mmdd_0628_hourly_ewb,18.449092607481465
 Case 300 June 28th Hourly Table 17 mmdd_0628_hourly_ewb,18.927816658412205
@@ -1408,7 +1408,7 @@ Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_evaporator_coil_lo
 Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_evaporator_coil_load_sensible,9850.99
 Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_evaporator_coil_load_sensible,9780.15
 Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_evaporator_coil_load_latent,3803.78
-Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_evaporator_coil_load_latent,-1.23161e-13
+Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_evaporator_coil_load_latent,-1.80004e-13
 Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_zone_humidity_ratio,0.0106009
 Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_zone_humidity_ratio,0.00639658
 Case 500 and 530 Average Daily Outputs April 30 mmdd_0430_day_cop_2,3.89856
@@ -1426,7 +1426,7 @@ Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_evaporator_coil_loa
 Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_evaporator_coil_load_sensible,9923.88
 Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_evaporator_coil_load_sensible,9843.74
 Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_evaporator_coil_load_latent,3810.08
-Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_evaporator_coil_load_latent,5.02117e-13
+Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_evaporator_coil_load_latent,2.93691e-13
 Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_zone_humidity_ratio,0.0110992
 Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_zone_humidity_ratio,0.00639658
 Case 500 and 530 Average Daily Outputs June 25 mmdd_0625_day_cop_2,2.91695
