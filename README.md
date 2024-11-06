@@ -23,13 +23,13 @@ The default IDF generation is based on the OpenStudio CLI, but the workflow supp
 
 ### Dependencies
 
-* Install [OpenStudio 3.4.0](https://www.openstudio.net/downloads)
+* Install [OpenStudio 3.5.0](https://www.openstudio.net/downloads)
     * make sure command line can recognize the 'openstudio' command
-    * This includes EnergyPlus 22.1
+    * This includes EnergyPlus 22.2
 * Install [Ruby](https://www.ruby-lang.org/en/) on your system if it isn't already setup.
     * 2.7 is used for development but other versions may work
     * Since OpenStudio has its own embedded Ruby, which is used for running measures, you don't necessarily have to use a version of Ruby supported by OpenStudio.
-* Install [RubyXL](https://rubygems.org/gems/rubyXL) Ruby gem
+* Install [rubyXL](https://rubygems.org/gems/rubyXL) Ruby gem
     * This is used to modify Microsoft Excel spreadsheets
 * Install [Parallel](https://rubygems.org/gems/parallel/versions/1.11.2) Ruby gem
     * This allows the CLI to run simulations in parallel
