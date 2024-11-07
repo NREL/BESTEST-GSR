@@ -1128,11 +1128,11 @@ module OsLib_Reporting_Bestest
 
       # gather monthly heating from BUILDING ENERGY PERFORMANCE - DISTRICT HEATING Custom Monthly Report
       query = 'SELECT Value FROM tabulardatawithstrings WHERE '
-      query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING' and "
+      query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING WATER' and "
       query << "ReportForString='Meter' and "
       query << "TableName='Custom Monthly Report' and "
       query << "RowName='#{month}' and "
-      query << "ColumnName='HEATING:DISTRICTHEATING' and "
+      query << "ColumnName='HEATING:DISTRICTHEATINGWATER' and "
       query << "Units='J';"
       query_results = sqlFile.execAndReturnFirstDouble(query)
       if query_results.empty?
@@ -1166,11 +1166,11 @@ module OsLib_Reporting_Bestest
 
       # gather monthly heating from BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND Custom Monthly Report
       query = 'SELECT Value FROM tabulardatawithstrings WHERE '
-      query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' and "
+      query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING WATER PEAK DEMAND' and "
       query << "ReportForString='Meter' and "
       query << "TableName='Custom Monthly Report' and "
       query << "RowName='#{month}' and "
-      query << "ColumnName='DISTRICTHEATING:FACILITY {Maximum}' and "
+      query << "ColumnName='DISTRICTHEATINGWATER:FACILITY {Maximum}' and "
       query << "Units='W';"
       query_results = sqlFile.execAndReturnFirstDouble(query)
       if query_results.empty?
@@ -1236,6 +1236,9 @@ module OsLib_Reporting_Bestest
     end
 
     # populated runnerRegisterValues for each column. Each is Jan-Dec
+    runner.registerInfo("Writing out Monthly heating and cooling values")
+    runner.registerInfo("help: #{monthly_htg_cons.join(",")}")
+    runner.registerInfo("help2: #{monthly_clg_cons.join(",")}")
     runner.registerValue("monthly_htg_cons",monthly_htg_cons.join(",")) #kWh
     runner.registerValue("monthly_clg_cons",monthly_clg_cons.join(",")) #kWh
     runner.registerValue("monthly_htg_peak_val",monthly_htg_peak_val.join(",")) #kW
