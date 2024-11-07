@@ -101,30 +101,30 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Measure
       result << OpenStudio::IdfObject.load("Output:Variable,,#{variable},hourly;").get
     end
 
-=begin     
     # add in monthly variables (needed for OpenStudio 3.7 but not 3.8 and later)
     category_strs = []
     OpenStudio::EndUseCategoryType.getValues.each do |category_type|
       category_str = OpenStudio::EndUseCategoryType.new(category_type).valueDescription
-      category_strs << category_str
+      category_strs << category_str.gsub(" ","")
     end
     monthly_array = ['Output:Table:Monthly']
     monthly_array << "Building Energy Performance - District Heating Water"
     monthly_array << '2'
     category_strs.each do |category_string|
-      monthly_array << "#{category_string}:District Heating Water"
+      monthly_array << "#{category_string}:DistrictHeatingWater"
       monthly_array << 'SumOrAverage'
     end
     result << OpenStudio::IdfObject.load("#{monthly_array.join(',')};").get
     monthly_array = ['Output:Table:Monthly']
     monthly_array << "Building Energy Performance - District Heating Water Peak Demand"
     monthly_array << '2'
+    monthly_array << "DistrictHeatingWater:Facility"
+    monthly_array << "Maximum"
     category_strs.each do |category_string|
-      monthly_array << "#{category_string}:District Heating Water"
-      monthly_array << 'SumOrAverage'
+      monthly_array << "#{category_string}:DistrictHeatingWater"
+      monthly_array << 'ValueWhenMaximumOrMinimum'
     end
     result << OpenStudio::IdfObject.load("#{monthly_array.join(',')};").get
-=end
 
     result
   end
