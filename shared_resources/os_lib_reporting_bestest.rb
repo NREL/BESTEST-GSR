@@ -624,7 +624,7 @@ module OsLib_Reporting_Bestest
         end
       end
 
-      runner.registerInfo("End of method, Adding values for heating and coooling on Febuary 1st and July 14th.")
+      runner.registerInfo("End of method, Adding values for heating and cooling on February 1st and July 14th.")
       runner.registerValue("sens_htg_clg_0201",combined_hourly_0201.to_s)
       runner.registerValue("sens_htg_clg_0714",combined_hourly_0714.to_s)
 
@@ -1120,6 +1120,7 @@ module OsLib_Reporting_Bestest
       return @monthly_htg_clg_section
     end
 
+    runner.registerInfo("Starting to get monthly heating and cooling data.")
     months = ['January','February','March','April','May','June','July','August','September','October','November','December']
     months.each do |month|
 
@@ -1184,11 +1185,11 @@ module OsLib_Reporting_Bestest
       end
       # time of peak
       query = 'SELECT Value FROM tabulardatawithstrings WHERE '
-      query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' and "
+      query << "ReportName='BUILDING ENERGY PERFORMANCE - DISTRICT HEATING WATER PEAK DEMAND' and "
       query << "ReportForString='Meter' and "
       query << "TableName='Custom Monthly Report' and "
       query << "RowName='#{month}' and "
-      query << "ColumnName LIKE '%DISTRICTHEATING:FACILITY {TIMESTAMP}%' and "
+      query << "ColumnName LIKE '%DISTRICTHEATINGWATER:FACILITY {TIMESTAMP}%' and "
       query << "Units='';"
       query_results = sqlFile.execAndReturnFirstString(query)
       if query_results.empty?
@@ -1236,7 +1237,7 @@ module OsLib_Reporting_Bestest
     end
 
     # populated runnerRegisterValues for each column. Each is Jan-Dec
-    runner.registerInfo("Writing out Monthly heating and cooling values")
+    runner.registerInfo("Writing out monthly heating and cooling values")
     runner.registerInfo("help: #{monthly_htg_cons.join(",")}")
     runner.registerInfo("help2: #{monthly_clg_cons.join(",")}")
     runner.registerValue("monthly_htg_cons",monthly_htg_cons.join(",")) #kWh
