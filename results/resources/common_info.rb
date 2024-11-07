@@ -7,11 +7,11 @@ module BestestResults
 
     if program == "OS"
       hash[:program_name_and_version] = "OpenStudio 3.7.0"
-      hash[:program_version_release_date] = "11/18/2023"
+      hash[:program_version_release_date] = "5/18/2024"
       hash[:program_name_short] = "OS"
     else
       hash[:program_name_and_version] = "EnergyPlus 23.2"
-      hash[:program_version_release_date] = "09/28/2023"
+      hash[:program_version_release_date] = "03/28/2024"
       hash[:program_name_short] = "E+"
     end
 
