@@ -15,7 +15,7 @@ module BestestResults
       hash[:program_name_short] = "E+"
     end
 
-    hash[:results_submission_date] = "11/18/2023"
+    hash[:results_submission_date] = "11/06/2024"
     hash[:organization] = "National Renewable Energy Laboratory"
     hash[:organization_short] = "NREL"
 
