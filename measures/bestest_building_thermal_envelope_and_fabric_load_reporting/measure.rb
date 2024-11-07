@@ -3,10 +3,6 @@ require 'json'
 
 require File.expand_path("../../shared_resources/os_lib_reporting_bestest", File.dirname(__FILE__))
 
-# load OpenStudio measure libraries from openstudio-extension gem
-require 'openstudio-extension'
-require 'openstudio/extension/core/os_lib_helper_methods'
-
 # start the measure
 class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Measure::ReportingMeasure
   # define the name that a user will see, this method may be deprecated as
@@ -105,7 +101,30 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Measure
       result << OpenStudio::IdfObject.load("Output:Variable,,#{variable},hourly;").get
     end
 
-    # TODO - add in monthly variables
+    # add in monthly variables (needed for OpenStudio 3.7 but not 3.8 and later)
+    category_strs = []
+    OpenStudio::EndUseCategoryType.getValues.each do |category_type|
+      category_str = OpenStudio::EndUseCategoryType.new(category_type).valueDescription
+      category_strs << category_str.gsub(" ","")
+    end
+    monthly_array = ['Output:Table:Monthly']
+    monthly_array << "Building Energy Performance - District Heating Water"
+    monthly_array << '2'
+    category_strs.each do |category_string|
+      monthly_array << "#{category_string}:DistrictHeatingWater"
+      monthly_array << 'SumOrAverage'
+    end
+    result << OpenStudio::IdfObject.load("#{monthly_array.join(',')};").get
+    monthly_array = ['Output:Table:Monthly']
+    monthly_array << "Building Energy Performance - District Heating Water Peak Demand"
+    monthly_array << '2'
+    monthly_array << "DistrictHeatingWater:Facility"
+    monthly_array << "Maximum"
+    category_strs.each do |category_string|
+      monthly_array << "#{category_string}:DistrictHeatingWater"
+      monthly_array << 'ValueWhenMaximumOrMinimum'
+    end
+    result << OpenStudio::IdfObject.load("#{monthly_array.join(',')};").get
 
     result
   end
