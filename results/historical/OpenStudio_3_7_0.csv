@@ -1,14 +1,14 @@
 program_name_and_version,EnergyPlus 23.2
-program_version_release_date,03/28/2024
+program_version_release_date,09/28/2023
 program_name_short,E+
 results_submission_date,11/06/2024
 organization,National Renewable Energy Laboratory
 organization_short,NREL
-Annual Heating Loads 600,4.325
-Annual Heating Loads 610,4.375
-Annual Heating Loads 620,4.48333
+Annual Heating Loads 600,4.32222
+Annual Heating Loads 610,4.37222
+Annual Heating Loads 620,4.48056
 Annual Heating Loads 630,4.78056
-Annual Heating Loads 640,2.65833
+Annual Heating Loads 640,2.66111
 Annual Heating Loads 650,0
 Annual Heating Loads 660,3.70556
 Annual Heating Loads 670,5.61389
@@ -19,7 +19,7 @@ Annual Heating Loads 900,1.66111
 Annual Heating Loads 910,1.95278
 Annual Heating Loads 920,3.33056
 Annual Heating Loads 930,3.98889
-Annual Heating Loads 940,1.06389
+Annual Heating Loads 940,1.06667
 Annual Heating Loads 950,0
 Annual Heating Loads 960,2.70278
 Annual Heating Loads 980,0.405556
@@ -38,7 +38,7 @@ Annual Heating Loads 280,4.56944
 Annual Heating Loads 290,4.425
 Annual Heating Loads 300,4.42222
 Annual Heating Loads 310,4.68889
-Annual Heating Loads 320,3.77222
+Annual Heating Loads 320,3.76944
 Annual Heating Loads 395,4.64167
 Annual Heating Loads 400,6.34722
 Annual Heating Loads 410,8.07778
@@ -46,19 +46,19 @@ Annual Heating Loads 420,6.90556
 Annual Heating Loads 430,5.61389
 Annual Heating Loads 440,4.5
 Annual Heating Loads 450,3.96389
-Annual Heating Loads 460,4.19444
+Annual Heating Loads 460,4.19167
 Annual Heating Loads 470,4.09444
 Annual Heating Loads 800,5.10833
 Annual Heating Loads 810,2.33889
-Annual Cooling Loads 600,6.04167
-Annual Cooling Loads 610,4.34444
-Annual Cooling Loads 620,4.06944
-Annual Cooling Loads 630,2.84167
-Annual Cooling Loads 640,5.77778
-Annual Cooling Loads 650,4.83889
-Annual Cooling Loads 660,3.24167
-Annual Cooling Loads 670,6.63611
-Annual Cooling Loads 680,6.45278
+Annual Cooling Loads 600,6.03333
+Annual Cooling Loads 610,4.33889
+Annual Cooling Loads 620,4.06389
+Annual Cooling Loads 630,2.83889
+Annual Cooling Loads 640,5.76944
+Annual Cooling Loads 650,4.82222
+Annual Cooling Loads 660,3.23611
+Annual Cooling Loads 670,6.63056
+Annual Cooling Loads 680,6.44722
 Annual Cooling Loads 685,9.125
 Annual Cooling Loads 695,9.175
 Annual Cooling Loads 900,2.49167
@@ -66,7 +66,7 @@ Annual Cooling Loads 910,1.38611
 Annual Cooling Loads 920,2.73333
 Annual Cooling Loads 930,1.92222
 Annual Cooling Loads 940,2.42778
-Annual Cooling Loads 950,0.694444
+Annual Cooling Loads 950,0.691667
 Annual Cooling Loads 960,0.902778
 Annual Cooling Loads 980,3.72778
 Annual Cooling Loads 985,6.36389
@@ -84,23 +84,23 @@ Annual Cooling Loads 280,5.18611
 Annual Cooling Loads 290,5.74444
 Annual Cooling Loads 300,5.15278
 Annual Cooling Loads 310,3.66944
-Annual Cooling Loads 320,4.99444
+Annual Cooling Loads 320,4.98889
 Annual Cooling Loads 395,0.0111111
 Annual Cooling Loads 400,0.0305556
 Annual Cooling Loads 410,0.0583333
 Annual Cooling Loads 420,0.152778
 Annual Cooling Loads 430,0.858333
-Annual Cooling Loads 440,4.09722
-Annual Cooling Loads 450,6.51111
-Annual Cooling Loads 460,6.48333
-Annual Cooling Loads 470,6.03611
+Annual Cooling Loads 440,4.09167
+Annual Cooling Loads 450,6.50556
+Annual Cooling Loads 460,6.48056
+Annual Cooling Loads 470,6.02778
 Annual Cooling Loads 800,0.375
 Annual Cooling Loads 810,1.51111
-Annual Hourly Integrated Peak Heating Loads 600_kW,3.20416
+Annual Hourly Integrated Peak Heating Loads 600_kW,3.20413
 Annual Hourly Integrated Peak Heating Loads 600_Month*,DEC
 Annual Hourly Integrated Peak Heating Loads 600_Day,31
 Annual Hourly Integrated Peak Heating Loads 600_Hour,24
-Annual Hourly Integrated Peak Heating Loads 610_kW,3.19156
+Annual Hourly Integrated Peak Heating Loads 610_kW,3.19152
 Annual Hourly Integrated Peak Heating Loads 610_Month*,DEC
 Annual Hourly Integrated Peak Heating Loads 610_Day,31
 Annual Hourly Integrated Peak Heating Loads 610_Hour,24
@@ -112,7 +112,7 @@ Annual Hourly Integrated Peak Heating Loads 630_kW,3.20674
 Annual Hourly Integrated Peak Heating Loads 630_Month*,DEC
 Annual Hourly Integrated Peak Heating Loads 630_Day,31
 Annual Hourly Integrated Peak Heating Loads 630_Hour,24
-Annual Hourly Integrated Peak Heating Loads 640_kW,4.54654
+Annual Hourly Integrated Peak Heating Loads 640_kW,4.55852
 Annual Hourly Integrated Peak Heating Loads 640_Month*,FEB
 Annual Hourly Integrated Peak Heating Loads 640_Day,8
 Annual Hourly Integrated Peak Heating Loads 640_Hour,8
@@ -140,7 +140,7 @@ Annual Hourly Integrated Peak Heating Loads 695_kW,2.0715
 Annual Hourly Integrated Peak Heating Loads 695_Month*,DEC
 Annual Hourly Integrated Peak Heating Loads 695_Day,31
 Annual Hourly Integrated Peak Heating Loads 695_Hour,24
-Annual Hourly Integrated Peak Heating Loads 900_kW,2.68747
+Annual Hourly Integrated Peak Heating Loads 900_kW,2.68748
 Annual Hourly Integrated Peak Heating Loads 900_Month*,FEB
 Annual Hourly Integrated Peak Heating Loads 900_Day,9
 Annual Hourly Integrated Peak Heating Loads 900_Hour,6
@@ -156,7 +156,7 @@ Annual Hourly Integrated Peak Heating Loads 930_kW,2.78517
 Annual Hourly Integrated Peak Heating Loads 930_Month*,FEB
 Annual Hourly Integrated Peak Heating Loads 930_Day,9
 Annual Hourly Integrated Peak Heating Loads 930_Hour,6
-Annual Hourly Integrated Peak Heating Loads 940_kW,3.1423
+Annual Hourly Integrated Peak Heating Loads 940_kW,3.1407
 Annual Hourly Integrated Peak Heating Loads 940_Month*,FEB
 Annual Hourly Integrated Peak Heating Loads 940_Day,9
 Annual Hourly Integrated Peak Heating Loads 940_Hour,8
@@ -164,11 +164,11 @@ Annual Hourly Integrated Peak Heating Loads 950_kW,0
 Annual Hourly Integrated Peak Heating Loads 950_Month*,JAN
 Annual Hourly Integrated Peak Heating Loads 950_Day,1
 Annual Hourly Integrated Peak Heating Loads 950_Hour,1
-Annual Hourly Integrated Peak Heating Loads 960_kW,2.26285
+Annual Hourly Integrated Peak Heating Loads 960_kW,2.26286
 Annual Hourly Integrated Peak Heating Loads 960_Month*,FEB
 Annual Hourly Integrated Peak Heating Loads 960_Day,9
 Annual Hourly Integrated Peak Heating Loads 960_Hour,6
-Annual Hourly Integrated Peak Heating Loads 980_kW,1.53069
+Annual Hourly Integrated Peak Heating Loads 980_kW,1.53073
 Annual Hourly Integrated Peak Heating Loads 980_Month*,FEB
 Annual Hourly Integrated Peak Heating Loads 980_Day,9
 Annual Hourly Integrated Peak Heating Loads 980_Hour,6
@@ -232,7 +232,7 @@ Annual Hourly Integrated Peak Heating Loads 310_kW,2.58027
 Annual Hourly Integrated Peak Heating Loads 310_Month*,DEC
 Annual Hourly Integrated Peak Heating Loads 310_Day,31
 Annual Hourly Integrated Peak Heating Loads 310_Hour,24
-Annual Hourly Integrated Peak Heating Loads 320_kW,2.57323
+Annual Hourly Integrated Peak Heating Loads 320_kW,2.57319
 Annual Hourly Integrated Peak Heating Loads 320_Month*,DEC
 Annual Hourly Integrated Peak Heating Loads 320_Day,31
 Annual Hourly Integrated Peak Heating Loads 320_Hour,24
@@ -256,19 +256,19 @@ Annual Hourly Integrated Peak Heating Loads 430_kW,3.31597
 Annual Hourly Integrated Peak Heating Loads 430_Month*,DEC
 Annual Hourly Integrated Peak Heating Loads 430_Day,31
 Annual Hourly Integrated Peak Heating Loads 430_Hour,24
-Annual Hourly Integrated Peak Heating Loads 440_kW,3.21833
+Annual Hourly Integrated Peak Heating Loads 440_kW,3.21834
 Annual Hourly Integrated Peak Heating Loads 440_Month*,DEC
 Annual Hourly Integrated Peak Heating Loads 440_Day,31
 Annual Hourly Integrated Peak Heating Loads 440_Hour,24
-Annual Hourly Integrated Peak Heating Loads 450_kW,3.10007
+Annual Hourly Integrated Peak Heating Loads 450_kW,3.10004
 Annual Hourly Integrated Peak Heating Loads 450_Month*,DEC
 Annual Hourly Integrated Peak Heating Loads 450_Day,31
 Annual Hourly Integrated Peak Heating Loads 450_Hour,24
-Annual Hourly Integrated Peak Heating Loads 460_kW,3.09096
+Annual Hourly Integrated Peak Heating Loads 460_kW,3.09093
 Annual Hourly Integrated Peak Heating Loads 460_Month*,DEC
 Annual Hourly Integrated Peak Heating Loads 460_Day,31
 Annual Hourly Integrated Peak Heating Loads 460_Hour,24
-Annual Hourly Integrated Peak Heating Loads 470_kW,3.20694
+Annual Hourly Integrated Peak Heating Loads 470_kW,3.20691
 Annual Hourly Integrated Peak Heating Loads 470_Month*,DEC
 Annual Hourly Integrated Peak Heating Loads 470_Day,31
 Annual Hourly Integrated Peak Heating Loads 470_Hour,24
@@ -276,43 +276,43 @@ Annual Hourly Integrated Peak Heating Loads 800_kW,2.92358
 Annual Hourly Integrated Peak Heating Loads 800_Month*,FEB
 Annual Hourly Integrated Peak Heating Loads 800_Day,9
 Annual Hourly Integrated Peak Heating Loads 800_Hour,6
-Annual Hourly Integrated Peak Heating Loads 810_kW,2.74901
+Annual Hourly Integrated Peak Heating Loads 810_kW,2.74902
 Annual Hourly Integrated Peak Heating Loads 810_Month*,FEB
 Annual Hourly Integrated Peak Heating Loads 810_Day,9
 Annual Hourly Integrated Peak Heating Loads 810_Hour,6
-Annual Hourly Integrated Peak Cooling Loads 600_kW,6.35244
+Annual Hourly Integrated Peak Cooling Loads 600_kW,6.35213
 Annual Hourly Integrated Peak Cooling Loads 600_Month*,JAN
 Annual Hourly Integrated Peak Cooling Loads 600_Day,22
 Annual Hourly Integrated Peak Cooling Loads 600_Hour,14
-Annual Hourly Integrated Peak Cooling Loads 610_kW,6.13659
+Annual Hourly Integrated Peak Cooling Loads 610_kW,6.13616
 Annual Hourly Integrated Peak Cooling Loads 610_Month*,DEC
 Annual Hourly Integrated Peak Cooling Loads 610_Day,1
 Annual Hourly Integrated Peak Cooling Loads 610_Hour,14
-Annual Hourly Integrated Peak Cooling Loads 620_kW,4.79724
+Annual Hourly Integrated Peak Cooling Loads 620_kW,4.79723
 Annual Hourly Integrated Peak Cooling Loads 620_Month*,JUN
 Annual Hourly Integrated Peak Cooling Loads 620_Day,26
 Annual Hourly Integrated Peak Cooling Loads 620_Hour,17
-Annual Hourly Integrated Peak Cooling Loads 630_kW,4.21205
+Annual Hourly Integrated Peak Cooling Loads 630_kW,4.21204
 Annual Hourly Integrated Peak Cooling Loads 630_Month*,JUN
 Annual Hourly Integrated Peak Cooling Loads 630_Day,26
 Annual Hourly Integrated Peak Cooling Loads 630_Hour,17
-Annual Hourly Integrated Peak Cooling Loads 640_kW,6.29866
+Annual Hourly Integrated Peak Cooling Loads 640_kW,6.29797
 Annual Hourly Integrated Peak Cooling Loads 640_Month*,JAN
 Annual Hourly Integrated Peak Cooling Loads 640_Day,22
 Annual Hourly Integrated Peak Cooling Loads 640_Hour,14
-Annual Hourly Integrated Peak Cooling Loads 650_kW,6.14135
+Annual Hourly Integrated Peak Cooling Loads 650_kW,6.13839
 Annual Hourly Integrated Peak Cooling Loads 650_Month*,OCT
 Annual Hourly Integrated Peak Cooling Loads 650_Day,18
 Annual Hourly Integrated Peak Cooling Loads 650_Hour,14
-Annual Hourly Integrated Peak Cooling Loads 660_kW,3.77073
+Annual Hourly Integrated Peak Cooling Loads 660_kW,3.77057
 Annual Hourly Integrated Peak Cooling Loads 660_Month*,OCT
 Annual Hourly Integrated Peak Cooling Loads 660_Day,18
 Annual Hourly Integrated Peak Cooling Loads 660_Hour,14
-Annual Hourly Integrated Peak Cooling Loads 670_kW,6.8069
+Annual Hourly Integrated Peak Cooling Loads 670_kW,6.8067
 Annual Hourly Integrated Peak Cooling Loads 670_Month*,DEC
 Annual Hourly Integrated Peak Cooling Loads 670_Day,1
 Annual Hourly Integrated Peak Cooling Loads 670_Hour,13
-Annual Hourly Integrated Peak Cooling Loads 680_kW,6.7709
+Annual Hourly Integrated Peak Cooling Loads 680_kW,6.77077
 Annual Hourly Integrated Peak Cooling Loads 680_Month*,JAN
 Annual Hourly Integrated Peak Cooling Loads 680_Day,22
 Annual Hourly Integrated Peak Cooling Loads 680_Hour,14
@@ -324,11 +324,11 @@ Annual Hourly Integrated Peak Cooling Loads 695_kW,7.33486
 Annual Hourly Integrated Peak Cooling Loads 695_Month*,JAN
 Annual Hourly Integrated Peak Cooling Loads 695_Day,22
 Annual Hourly Integrated Peak Cooling Loads 695_Hour,14
-Annual Hourly Integrated Peak Cooling Loads 900_kW,3.04149
+Annual Hourly Integrated Peak Cooling Loads 900_kW,3.0414
 Annual Hourly Integrated Peak Cooling Loads 900_Month*,OCT
 Annual Hourly Integrated Peak Cooling Loads 900_Day,1
 Annual Hourly Integrated Peak Cooling Loads 900_Hour,14
-Annual Hourly Integrated Peak Cooling Loads 910_kW,2.22357
+Annual Hourly Integrated Peak Cooling Loads 910_kW,2.22324
 Annual Hourly Integrated Peak Cooling Loads 910_Month*,OCT
 Annual Hourly Integrated Peak Cooling Loads 910_Day,18
 Annual Hourly Integrated Peak Cooling Loads 910_Hour,15
@@ -340,19 +340,19 @@ Annual Hourly Integrated Peak Cooling Loads 930_kW,2.78166
 Annual Hourly Integrated Peak Cooling Loads 930_Month*,JUN
 Annual Hourly Integrated Peak Cooling Loads 930_Day,26
 Annual Hourly Integrated Peak Cooling Loads 930_Hour,18
-Annual Hourly Integrated Peak Cooling Loads 940_kW,3.04101
+Annual Hourly Integrated Peak Cooling Loads 940_kW,3.04092
 Annual Hourly Integrated Peak Cooling Loads 940_Month*,OCT
 Annual Hourly Integrated Peak Cooling Loads 940_Day,1
 Annual Hourly Integrated Peak Cooling Loads 940_Hour,14
-Annual Hourly Integrated Peak Cooling Loads 950_kW,2.37002
+Annual Hourly Integrated Peak Cooling Loads 950_kW,2.36846
 Annual Hourly Integrated Peak Cooling Loads 950_Month*,SEP
 Annual Hourly Integrated Peak Cooling Loads 950_Day,11
 Annual Hourly Integrated Peak Cooling Loads 950_Hour,15
-Annual Hourly Integrated Peak Cooling Loads 960_kW,1.48004
+Annual Hourly Integrated Peak Cooling Loads 960_kW,1.48003
 Annual Hourly Integrated Peak Cooling Loads 960_Month*,JUN
 Annual Hourly Integrated Peak Cooling Loads 960_Day,26
 Annual Hourly Integrated Peak Cooling Loads 960_Hour,17
-Annual Hourly Integrated Peak Cooling Loads 980_kW,3.45446
+Annual Hourly Integrated Peak Cooling Loads 980_kW,3.45443
 Annual Hourly Integrated Peak Cooling Loads 980_Month*,OCT
 Annual Hourly Integrated Peak Cooling Loads 980_Day,18
 Annual Hourly Integrated Peak Cooling Loads 980_Hour,15
@@ -416,7 +416,7 @@ Annual Hourly Integrated Peak Cooling Loads 310_kW,3.96907
 Annual Hourly Integrated Peak Cooling Loads 310_Month*,JUN
 Annual Hourly Integrated Peak Cooling Loads 310_Day,26
 Annual Hourly Integrated Peak Cooling Loads 310_Hour,18
-Annual Hourly Integrated Peak Cooling Loads 320_kW,6.20944
+Annual Hourly Integrated Peak Cooling Loads 320_kW,6.20914
 Annual Hourly Integrated Peak Cooling Loads 320_Month*,JAN
 Annual Hourly Integrated Peak Cooling Loads 320_Day,22
 Annual Hourly Integrated Peak Cooling Loads 320_Hour,14
@@ -428,31 +428,31 @@ Annual Hourly Integrated Peak Cooling Loads 400_kW,0.605717
 Annual Hourly Integrated Peak Cooling Loads 400_Month*,JUN
 Annual Hourly Integrated Peak Cooling Loads 400_Day,26
 Annual Hourly Integrated Peak Cooling Loads 400_Hour,18
-Annual Hourly Integrated Peak Cooling Loads 410_kW,0.82673
+Annual Hourly Integrated Peak Cooling Loads 410_kW,0.826633
 Annual Hourly Integrated Peak Cooling Loads 410_Month*,JUN
 Annual Hourly Integrated Peak Cooling Loads 410_Day,26
 Annual Hourly Integrated Peak Cooling Loads 410_Hour,18
-Annual Hourly Integrated Peak Cooling Loads 420_kW,1.03133
+Annual Hourly Integrated Peak Cooling Loads 420_kW,1.03127
 Annual Hourly Integrated Peak Cooling Loads 420_Month*,JUN
 Annual Hourly Integrated Peak Cooling Loads 420_Day,26
 Annual Hourly Integrated Peak Cooling Loads 420_Hour,18
-Annual Hourly Integrated Peak Cooling Loads 430_kW,1.92915
+Annual Hourly Integrated Peak Cooling Loads 430_kW,1.92913
 Annual Hourly Integrated Peak Cooling Loads 430_Month*,JUN
 Annual Hourly Integrated Peak Cooling Loads 430_Day,26
 Annual Hourly Integrated Peak Cooling Loads 430_Hour,16
-Annual Hourly Integrated Peak Cooling Loads 440_kW,4.68682
+Annual Hourly Integrated Peak Cooling Loads 440_kW,4.68625
 Annual Hourly Integrated Peak Cooling Loads 440_Month*,OCT
 Annual Hourly Integrated Peak Cooling Loads 440_Day,18
 Annual Hourly Integrated Peak Cooling Loads 440_Hour,14
-Annual Hourly Integrated Peak Cooling Loads 450_kW,6.46637
+Annual Hourly Integrated Peak Cooling Loads 450_kW,6.46611
 Annual Hourly Integrated Peak Cooling Loads 450_Month*,JAN
 Annual Hourly Integrated Peak Cooling Loads 450_Day,22
 Annual Hourly Integrated Peak Cooling Loads 450_Hour,14
-Annual Hourly Integrated Peak Cooling Loads 460_kW,6.37524
+Annual Hourly Integrated Peak Cooling Loads 460_kW,6.37509
 Annual Hourly Integrated Peak Cooling Loads 460_Month*,JAN
 Annual Hourly Integrated Peak Cooling Loads 460_Day,22
 Annual Hourly Integrated Peak Cooling Loads 460_Hour,14
-Annual Hourly Integrated Peak Cooling Loads 470_kW,6.4438
+Annual Hourly Integrated Peak Cooling Loads 470_kW,6.44346
 Annual Hourly Integrated Peak Cooling Loads 470_Month*,JAN
 Annual Hourly Integrated Peak Cooling Loads 470_Day,22
 Annual Hourly Integrated Peak Cooling Loads 470_Hour,14
@@ -464,53 +464,53 @@ Annual Hourly Integrated Peak Cooling Loads 810_kW,2.27058
 Annual Hourly Integrated Peak Cooling Loads 810_Month*,SEP
 Annual Hourly Integrated Peak Cooling Loads 810_Day,11
 Annual Hourly Integrated Peak Cooling Loads 810_Hour,15
-FF Average Hourly Zone Temperature 600FF,24.9606
-FF Average Hourly Zone Temperature 900FF,25.1333
-FF Average Hourly Zone Temperature 650FF,18.4821
-FF Average Hourly Zone Temperature 950FF,14.8046
-FF Average Hourly Zone Temperature 680FF,31.0045
-FF Average Hourly Zone Temperature 980FF,31.2218
-FF Average Hourly Zone Temperature 960,27.4748
-FF Min Hourly Zone Temperature 600FF_°C,-12.5606
+FF Average Hourly Zone Temperature 600FF,24.9287
+FF Average Hourly Zone Temperature 900FF,25.132
+FF Average Hourly Zone Temperature 650FF,18.4254
+FF Average Hourly Zone Temperature 950FF,14.7922
+FF Average Hourly Zone Temperature 680FF,30.9707
+FF Average Hourly Zone Temperature 980FF,31.2205
+FF Average Hourly Zone Temperature 960,27.4716
+FF Min Hourly Zone Temperature 600FF_°C,-12.5596
 FF Min Hourly Zone Temperature 600FF_DATE,10-FEB
 FF Min Hourly Zone Temperature 600FF_Hour,6
-FF Min Hourly Zone Temperature 900FF_°C,1.24666
+FF Min Hourly Zone Temperature 900FF_°C,1.24587
 FF Min Hourly Zone Temperature 900FF_DATE,10-FEB
 FF Min Hourly Zone Temperature 900FF_Hour,6
-FF Min Hourly Zone Temperature 650FF_°C,-17.0741
+FF Min Hourly Zone Temperature 650FF_°C,-17.0749
 FF Min Hourly Zone Temperature 650FF_DATE,32-DEC
 FF Min Hourly Zone Temperature 650FF_Hour,23
-FF Min Hourly Zone Temperature 950FF_°C,-12.811
+FF Min Hourly Zone Temperature 950FF_°C,-12.812
 FF Min Hourly Zone Temperature 950FF_DATE,10-FEB
 FF Min Hourly Zone Temperature 950FF_Hour,5
-FF Min Hourly Zone Temperature 680FF_°C,-7.04932
+FF Min Hourly Zone Temperature 680FF_°C,-7.05128
 FF Min Hourly Zone Temperature 680FF_DATE,10-FEB
 FF Min Hourly Zone Temperature 680FF_Hour,6
-FF Min Hourly Zone Temperature 980FF_°C,9.98359
+FF Min Hourly Zone Temperature 980FF_°C,9.98307
 FF Min Hourly Zone Temperature 980FF_DATE,05-NOV
 FF Min Hourly Zone Temperature 980FF_Hour,6
-FF Min Hourly Zone Temperature 960_°C,4.98973
+FF Min Hourly Zone Temperature 960_°C,4.98947
 FF Min Hourly Zone Temperature 960_DATE,10-FEB
 FF Min Hourly Zone Temperature 960_Hour,6
-FF Max Hourly Zone Temperature 600FF_°C,63.92
+FF Max Hourly Zone Temperature 600FF_°C,63.8611
 FF Max Hourly Zone Temperature 600FF_DATE,19-OCT
 FF Max Hourly Zone Temperature 600FF_Hour,15
-FF Max Hourly Zone Temperature 900FF_°C,44.2992
+FF Max Hourly Zone Temperature 900FF_°C,44.2975
 FF Max Hourly Zone Temperature 900FF_DATE,13-SEP
 FF Max Hourly Zone Temperature 900FF_Hour,14
-FF Max Hourly Zone Temperature 650FF_°C,62.5791
+FF Max Hourly Zone Temperature 650FF_°C,62.4886
 FF Max Hourly Zone Temperature 650FF_DATE,19-OCT
 FF Max Hourly Zone Temperature 650FF_Hour,15
-FF Max Hourly Zone Temperature 950FF_°C,36.691
+FF Max Hourly Zone Temperature 950FF_°C,36.6825
 FF Max Hourly Zone Temperature 950FF_DATE,12-SEP
 FF Max Hourly Zone Temperature 950FF_Hour,15
-FF Max Hourly Zone Temperature 680FF_°C,70.3371
+FF Max Hourly Zone Temperature 680FF_°C,70.1476
 FF Max Hourly Zone Temperature 680FF_DATE,23-JAN
 FF Max Hourly Zone Temperature 680FF_Hour,15
-FF Max Hourly Zone Temperature 980FF_°C,49.6734
+FF Max Hourly Zone Temperature 980FF_°C,49.6731
 FF Max Hourly Zone Temperature 980FF_DATE,13-SEP
 FF Max Hourly Zone Temperature 980FF_Hour,14
-FF Max Hourly Zone Temperature 960_°C,49.0823
+FF Max Hourly Zone Temperature 960_°C,49.0734
 FF Max Hourly Zone Temperature 960_DATE,13-OCT
 FF Max Hourly Zone Temperature 960_Hour,14
 Annual Incident Total Case 600 600NORTH,438.241
@@ -531,10 +531,10 @@ Sky Temperature Output 600_Hour,23
 Sky Temperature Output 600_°C,24.7306
 Sky Temperature Output 600_DATE,05-AUG
 Sky Temperature Output 600_Hour,15
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,712.08
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,711.73
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,255.36
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,523.18
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,53.41
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,522.41
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,53.39
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,2.99
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,1.97
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,1
@@ -547,10 +547,10 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,22
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,22
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,15
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,682.83
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,293.66
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,388.87
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,12.48
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,682.47
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,293.68
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,388.18
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,12.47
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,3.08
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,2.71
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,9
@@ -563,26 +563,26 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,2
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,15
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,15
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,472.18
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,125.29
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,485.77
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,65.79
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,472.07
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,125.3
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,485.09
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,65.76
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,2.15
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,1.78
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,17
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 600,6
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 900,17
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Hour 900,6
-Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,5.1
+Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 600,5.09
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Value 900,1.58
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,24
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,11
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,509.87
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,268.29
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,241.13
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,18.63
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,509.84
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,268.3
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,240.82
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,18.62
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,2.35
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,2.01
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,11
@@ -595,9 +595,9 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,12
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,7
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,15
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,136.75
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,136.74
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,33.28
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,340.91
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,340.53
 Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,114.91
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,1.63
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,1.27
@@ -613,7 +613,7 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,11
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,10.08
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,0.0
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,542.19
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,541.98
 Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,404.25
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,0.77
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,0.0
@@ -627,9 +627,9 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,13
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,12.02
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,12.01
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,0.0
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,537.21
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,536.94
 Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,399.74
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,0.54
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,0.0
@@ -645,8 +645,8 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,17
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,6.58
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,0.0
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,650.81
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,512.94
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,650.39
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,512.93
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,0.5
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,0.0
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,17
@@ -659,10 +659,10 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,27
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,29
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,15
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,73.33
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,73.32
 Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,0.11
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,735.08
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,493.44
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,734.3
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,493.39
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,1.16
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,0.07
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,28
@@ -675,10 +675,10 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,30
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,11
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,15
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,347.66
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,80.96
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,676.95
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,293.16
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,347.6
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,80.97
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,675.86
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,293.12
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,1.71
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,1.33
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,15
@@ -691,10 +691,10 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,18
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,14
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,1
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,625.41
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,296.63
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,438.99
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,68.29
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,625.1
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,296.65
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,438.4
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,68.27
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,3.12
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,2.37
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,26
@@ -707,10 +707,10 @@ Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 600,28
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 600,13
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Day 900,22
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Cooling Hour 900,14
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,735.97
-Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,307.59
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,482.98
-Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,61.12
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 600,735.62
+Monthly Conditioned Zone Loads Case 600 and 900 Total Heating 900,307.61
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 600,482.27
+Monthly Conditioned Zone Loads Case 600 and 900 Total Cooling 900,61.09
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 600,3.25
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Value 900,2.2
 Monthly Conditioned Zone Loads Case 600 and 900 Peak Heating Day 600,31
@@ -1165,7 +1165,7 @@ Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 7
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 8,1.88
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 9,0.48
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 10,0.0
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 11,-1.36
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 11,-1.35
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 12,-3.48
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 13,-4.71
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 14,-4.95
@@ -1173,23 +1173,23 @@ Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 1
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 16,-2.93
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 17,-1.24
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 18,-0.02
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 19,0.12
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 20,0.99
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 19,0.09
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 20,0.98
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 21,1.64
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 22,2.06
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 23,2.33
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 23,2.32
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 24,2.44
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 1,0.08
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 2,0.57
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 3,0.93
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 2,0.55
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 3,0.92
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 4,1.15
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 5,1.28
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 6,1.34
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 7,1.39
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 8,3.37
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 7,1.38
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 8,3.38
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 9,1.73
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 10,0.05
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 11,-0.72
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 11,-0.7
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 12,-3.08
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 13,-4.54
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 14,-4.88
@@ -1197,11 +1197,11 @@ Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 1
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 16,-2.92
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 17,-1.24
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 18,-0.02
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 19,0.12
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 20,0.99
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 21,1.65
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 19,0.09
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 20,0.98
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 21,1.64
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 22,2.06
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 23,2.33
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 23,2.32
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 24,0.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 1,1.85
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 2,1.9
@@ -1245,8 +1245,8 @@ Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 1
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 16,-2.78
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 17,-0.99
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 18,0.0
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 19,0.49
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 20,1.63
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 19,0.46
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 20,1.62
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 21,2.22
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 22,2.6
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 23,2.88
@@ -1260,7 +1260,7 @@ Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 6
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 7,1.55
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 8,1.16
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 9,0.15
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 10,-0.18
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 10,-0.12
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 11,-2.29
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 12,-4.38
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 13,-5.55
@@ -1354,10 +1354,10 @@ Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 4
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 5,0.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 6,0.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 7,0.0
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 8,1.24
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 8,1.26
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 9,1.53
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 10,0.82
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 11,0.29
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 11,0.28
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 12,0.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 13,0.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 14,0.0
@@ -1376,7 +1376,7 @@ Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 2
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 3,0.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 4,0.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 5,0.1
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 6,0.21
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 6,0.22
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 7,0.31
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 8,0.18
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 9,0.0
@@ -1683,7 +1683,7 @@ Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 2
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 22,-1.01
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 23,-0.92
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 24,-0.82
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 1,10.5
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 1,10.7
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 2,10.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 3,10.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 4,10.0
@@ -1692,7 +1692,7 @@ Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 6
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 7,10.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 8,15.8
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 9,20.0
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 10,21.4
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 10,21.3
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 11,26.5
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 12,27.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 13,27.0
@@ -1700,13 +1700,13 @@ Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 1
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 15,27.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 16,27.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 17,27.0
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 18,25.3
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 19,21.0
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 18,25.5
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 19,21.1
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 20,20.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 21,20.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 22,20.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 23,20.0
-Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 24,12.8
+Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 24,12.9
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 1,15.6
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 2,15.0
 Hourly Heating and Cooling Load February 1st and July 14th Multiple Test Cases 3,14.4
@@ -1738,23 +1738,23 @@ Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 4,
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 5,0.0
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 6,-0.9
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 7,-1.7
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 8,-1.4
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 9,3.1
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 10,10.4
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 11,19.1
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 12,28.4
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 13,36.8
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 14,43.7
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 15,47.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 16,47.8
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 8,-1.5
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 9,2.7
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 10,10.0
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 11,18.8
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 12,28.2
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 13,36.6
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 14,43.5
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 15,47.1
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 16,47.7
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 17,45.0
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 18,38.8
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 19,32.0
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 19,32.2
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 20,26.3
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 21,21.3
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 22,17.0
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 23,13.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 24,10.0
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 21,21.6
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 22,17.1
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 23,13.3
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 24,10.2
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 1,13.0
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 2,12.4
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 3,11.9
@@ -1788,16 +1788,16 @@ Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 6,
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 7,18.8
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 8,20.9
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 9,23.3
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 10,26.5
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 10,26.4
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 11,30.6
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 12,35.2
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 13,39.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 14,42.4
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 15,44.3
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 16,45.0
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 17,44.7
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 14,42.1
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 15,44.2
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 16,44.9
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 17,44.6
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 18,43.8
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 19,34.4
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 19,34.5
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 20,30.9
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 21,28.0
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 22,26.0
@@ -1810,7 +1810,7 @@ Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 4,
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 5,18.3
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 6,18.6
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 7,20.3
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 8,23.0
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 8,22.9
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 9,24.4
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 10,25.6
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 11,26.9
@@ -1822,7 +1822,7 @@ Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 16
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 17,30.4
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 18,30.4
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 19,29.0
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 20,27.7
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 20,27.6
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 21,26.3
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 22,25.5
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 23,24.9
@@ -1835,22 +1835,22 @@ Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 5,
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 6,7.5
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 7,6.4
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 8,6.3
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 9,10.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 10,16.9
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 11,25.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 12,34.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 13,42.9
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 14,50.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 15,54.7
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 16,56.6
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 17,55.2
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 18,50.4
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 9,10.1
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 10,16.6
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 11,24.8
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 12,34.1
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 13,42.7
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 14,50.0
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 15,54.6
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 16,56.5
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 17,55.1
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 18,50.3
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 19,45.0
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 20,40.1
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 21,35.7
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 22,31.8
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 22,31.7
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 23,28.1
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 24,24.7
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 24,24.9
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 1,22.8
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 2,22.3
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 3,21.9
@@ -1862,7 +1862,7 @@ Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 8,
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 9,21.8
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 10,23.7
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 11,25.7
-Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 12,28.0
+Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 12,27.9
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 13,30.1
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 14,31.6
 Hourly Free Float Temperatures February 1st and July 14th Multiple Test Cases 15,32.2
@@ -1903,29 +1903,29 @@ Hourly Annual Zone Temperature Bin Data - Case 900FF 5,51.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 6,63.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 7,70.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 8,83.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 9,124.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 10,168.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 11,214.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 12,189.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 9,126.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 10,166.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 11,216.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 12,187.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 13,196.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 14,250.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 15,272.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 14,251.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 15,271.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 16,236.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 17,317.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 18,318.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 19,331.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 20,310.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 19,332.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 20,309.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 21,325.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 22,302.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 23,278.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 24,298.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 25,283.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 26,309.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 27,303.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 28,327.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 27,304.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 28,326.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 29,358.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 30,383.0
-Hourly Annual Zone Temperature Bin Data - Case 900FF 31,367.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 30,384.0
+Hourly Annual Zone Temperature Bin Data - Case 900FF 31,366.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 32,400.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 33,374.0
 Hourly Annual Zone Temperature Bin Data - Case 900FF 34,313.0

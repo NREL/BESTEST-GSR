@@ -1,5 +1,5 @@
 program_name_and_version,EnergyPlus 23.2
-program_version_release_date,03/28/2024
+program_version_release_date,09/28/2023
 program_name_short,E+
 results_submission_date,11/06/2024
 organization,National Renewable Energy Laboratory
@@ -13,8 +13,8 @@ Total Furnace Load HE150: Continuous Circ. Fan,31.226
 Total Furnace Load HE160: Cycling Circ. Fan,31.19
 Total Furnace Load HE170: Draft Fan,31.226
 Total Furnace Load HE210: Realistic Weather,43.034
-Total Furnace Load HE220: Setback Thermostat,40.743
-Total Furnace Load HE230: Undersized Furnace,35.821
+Total Furnace Load HE220: Setback Thermostat,40.742
+Total Furnace Load HE230: Undersized Furnace,35.815
 Total Furnace Input HE100: 100% eff.,77.76
 Total Furnace Input HE110: 80% eff.,97.2
 "Total Furnace Input HE120: 80% eff., PLR=0.4",38.38
@@ -44,11 +44,11 @@ Fan Energy HE210: Realistic Weather,294.444
 Fan Energy HE220: Setback Thermostat,277.778
 Fan Energy HE230: Undersized Furnace,483.333
 Mean Zone Temperature HE210: Realistic Weather,20.0003
-Mean Zone Temperature HE220: Setback Thermostat,18.537
-Mean Zone Temperature HE230: Undersized Furnace,15.3752
+Mean Zone Temperature HE220: Setback Thermostat,18.5368
+Mean Zone Temperature HE230: Undersized Furnace,15.3747
 Maximum Zone Temperature HE210: Realistic Weather,20.0014
 Maximum Zone Temperature HE220: Setback Thermostat,20.0014
 Maximum Zone Temperature HE230: Undersized Furnace,20.0014
 Minimum Zone Temperature HE210: Realistic Weather,20
 Minimum Zone Temperature HE220: Setback Thermostat,15
-Minimum Zone Temperature HE230: Undersized Furnace,1.85752
+Minimum Zone Temperature HE230: Undersized Furnace,1.85761
