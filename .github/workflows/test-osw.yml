@@ -4,7 +4,7 @@ on: push
 jobs:
   test-osw:
     runs-on: ubuntu-latest
-    container:  nrel/openstudio:3.4.0
+    container:  nrel/develop
     steps:
     - name: check out repository
       uses: actions/checkout@v2
