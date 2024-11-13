@@ -590,3 +590,5 @@ CSV.open(historical_file, "w") do |csv|
     csv << row
   end
 end
+
+# todo - add check with assert looking for blank values being passed in
