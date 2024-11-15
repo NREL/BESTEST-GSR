@@ -976,7 +976,7 @@ Output:Variable,
 
 Output:Variable,
   ,                                       !- Key Value
-  Zone Windows Total Transmitted Solar Radiation Rate, !- Variable Name
+  Enclosure Windows Total Transmitted Solar Radiation Rate, !- Variable Name
   Hourly;                                 !- Reporting Frequency
 
 Output:Variable,

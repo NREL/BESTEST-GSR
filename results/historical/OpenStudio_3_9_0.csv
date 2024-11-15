@@ -518,12 +518,12 @@ Annual Incident Total Case 600 600EAST,1062.16
 Annual Incident Total Case 600 600WEST,967.278
 Annual Incident Total Case 600 600SOUTH,1370.48
 Annual Incident Total Case 600 600HORZ.,1664.34
-Unshaded Annual Transmitted Cases 620 and 600 620/West,""
-Unshaded Annual Transmitted Cases 620 and 600 600/South,""
-Unshaded Annual Transmitted Cases 660 and 670 660/South,""
-Unshaded Annual Transmitted Cases 660 and 670 670/South,""
-Shaded Annual Transmitted Cases 930 and 910 630/West,""
-Shaded Annual Transmitted Cases 930 and 910 610/South,""
+Unshaded Annual Transmitted Cases 620 and 600 620/West,612.304
+Unshaded Annual Transmitted Cases 620 and 600 600/South,804.021
+Unshaded Annual Transmitted Cases 660 and 670 660/South,435.995
+Unshaded Annual Transmitted Cases 660 and 670 670/South,1024.2
+Shaded Annual Transmitted Cases 930 and 910 630/West,445.215
+Shaded Annual Transmitted Cases 930 and 910 610/South,646.673
 Sky Temperature Output 600,-2.01695
 Sky Temperature Output 600_°C,-37.9796
 Sky Temperature Output 600_DATE,32-DEC
