@@ -93,7 +93,7 @@ class BestestBuildingThermalEnvelopeAndFabricLoadReporting < OpenStudio::Measure
 
       # get zone windows variables for subset of cases
       if hourly_win_cases.include?(name_test)
-        hourly_variables << 'Zone Windows Total Transmitted Solar Radiation Rate'
+        hourly_variables << 'Enclosure Windows Total Transmitted Solar Radiation Rate'
       end
 
     end
