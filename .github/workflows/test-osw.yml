@@ -4,11 +4,11 @@ on: push
 jobs:
   test-osw:
     runs-on: ubuntu-latest
-    container:  nrel/openstudio:dev-3.9.0-rc3
+    container:  nrel/openstudio:3.10.0
     steps:
     - name: check out repository
       uses: actions/checkout@v2
-    - name: enviroment info
+    - name: environment info
       shell: bash 
       run: |
           openstudio --version
